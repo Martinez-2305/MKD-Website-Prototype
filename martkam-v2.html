@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MartKam Digital – Web Design & SEO Surrey & South West London</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red:       #E31B23;
+  --red-mid:   #c0161d;
+  --red-dark:  #8a0f14;
+  --ink:       #111111;
+  --ink-light: #444444;
+  --mist:      #f5f4f2;
+  --white:     #ffffff;
+  --border:    #e2e0dc;
+  --serif:     'Fraunces', Georgia, serif;
+  --sans:      'DM Sans', system-ui, sans-serif;
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:var(--sans); color:var(--ink); background:var(--white); overflow-x:hidden; line-height:1.65; }
+a { text-decoration:none; color:inherit; }
+img { display:block; max-width:100%; }
+
+/* NAV */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:200;
+  background:rgba(255,255,255,0.95); backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+  padding:0 48px; height:68px;
+  display:flex; align-items:center; justify-content:space-between;
+  overflow:hidden;
+}
+.nav-logo img { height:148px; }
+.nav-cta { background:var(--ink); color:var(--white); font-size:0.82rem; font-weight:600; padding:10px 22px; border-radius:100px; transition:background .2s; }
+.nav-cta:hover { background:var(--red); }
+
+/* TUBELIGHT NAV */
+.tubelight-nav {
+  display:flex; align-items:center; gap:2px; position:relative;
+  background:rgba(0,0,0,0.04); border:1px solid var(--border);
+  backdrop-filter:blur(8px); padding:4px; border-radius:100px;
+  box-shadow:0 4px 16px rgba(0,0,0,0.06); overflow:visible;
+}
+.tl-bg-pill {
+  position:absolute; background:rgba(227,27,35,0.07); border-radius:100px;
+  width:0; height:0;
+  transition:left .35s cubic-bezier(.34,1.56,.64,1), top .35s cubic-bezier(.34,1.56,.64,1), width .35s cubic-bezier(.34,1.56,.64,1), height .35s;
+  z-index:0; pointer-events:none;
+}
+.tl-lamp-wrap {
+  position:absolute; pointer-events:none; z-index:10;
+  transition:left .35s cubic-bezier(.34,1.56,.64,1);
+  width:0; height:0;
+}
+.tl-lamp-bar {
+  position:absolute; bottom:100%; left:50%; transform:translateX(-50%);
+  width:32px; height:4px; background:var(--red); border-radius:4px 4px 0 0;
+  margin-bottom:2px;
+}
+.tl-lamp-bar::before {
+  content:''; position:absolute;
+  width:48px; height:24px; background:rgba(227,27,35,0.25);
+  border-radius:50%; filter:blur(10px); top:-8px; left:-8px;
+}
+.tl-lamp-bar::after {
+  content:''; position:absolute;
+  width:32px; height:20px; background:rgba(227,27,35,0.2);
+  border-radius:50%; filter:blur(8px); top:-4px; left:0;
+}
+.tl-lamp-glow3 {
+  position:absolute; width:16px; height:16px;
+  background:rgba(227,27,35,0.15); border-radius:50%; filter:blur(4px);
+  top:0; left:8px;
+}
+.tl-item {
+  position:relative; z-index:1; cursor:pointer;
+  font-size:0.82rem; font-weight:600; padding:8px 20px;
+  border-radius:100px; transition:color .2s; color:var(--ink-light);
+  text-decoration:none; white-space:nowrap;
+}
+.tl-item:hover { color:var(--ink); }
+.tl-item.active { color:var(--red); }
+
+/* HAMBURGER */
+.ham-btn {
+  display:none; flex-direction:column; gap:5px;
+  background:none; border:none; cursor:pointer; padding:8px; z-index:300;
+}
+.ham-btn span {
+  display:block; width:24px; height:2px; background:var(--ink);
+  border-radius:2px; transition:transform .3s ease, opacity .3s ease;
+}
+.ham-btn.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+.ham-btn.open span:nth-child(2) { opacity:0; }
+.ham-btn.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+
+/* MOBILE MENU OVERLAY */
+.mob-menu {
+  display:none; position:fixed; inset:0; z-index:250;
+  background:rgba(255,255,255,0.97); backdrop-filter:blur(20px);
+  flex-direction:column; align-items:center; justify-content:center;
+  opacity:0; transition:opacity .25s ease; pointer-events:none;
+}
+.mob-menu.open { opacity:1; pointer-events:all; }
+.mob-menu-inner { display:flex; flex-direction:column; align-items:center; gap:4px; }
+.mob-item {
+  font-size:1.7rem; font-weight:600; color:var(--ink); padding:12px 32px;
+  border-radius:100px; transition:color .2s; text-decoration:none;
+}
+.mob-item:hover { color:var(--red); }
+.mob-cta {
+  margin-top:28px; background:var(--ink); color:var(--white);
+  font-size:1rem; font-weight:600; padding:14px 36px; border-radius:100px;
+  transition:background .2s; text-decoration:none;
+}
+.mob-cta:hover { background:var(--red); }
+
+/* HERO */
+.hero { min-height:100vh; padding-top:68px; position:relative; overflow:hidden; display:flex; flex-direction:column; }
+.hero-slides { flex:1; position:relative; display:grid; grid-template-columns:1fr; }
+.hero-slide { grid-area:1/1; position:relative; opacity:0; transition:opacity 1s ease; min-height:calc(100vh - 68px); }
+.hero-slide.active { opacity:1; }
+.hero-slide-bg { position:absolute; inset:0; background-size:cover; background-position:center; }
+.hero-slide-bg::after { content:''; position:absolute; inset:0; background:linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.28) 100%); }
+.hero-slide-content {
+  position:relative; z-index:2;
+  display:flex; flex-direction:column; justify-content:center;
+  height:100%; min-height:calc(100vh - 68px);
+  padding:80px; max-width:920px;
+}
+.hero-tag { display:inline-block; background:var(--red); color:#fff; font-size:0.72rem; font-weight:600; letter-spacing:1px; padding:5px 14px; border-radius:100px; margin-bottom:22px; }
+.hero-slide-content h1 { font-family:var(--serif); font-size:clamp(2.8rem, 5.5vw, 5.2rem); font-weight:300; color:#fff; line-height:1.1; letter-spacing:-0.5px; margin-bottom:22px; }
+.hero-slide-content h1 em { font-style:italic; color:rgba(255,255,255,0.72); }
+.hero-slide-content p { font-size:1.05rem; color:rgba(255,255,255,0.75); max-width:540px; line-height:1.75; margin-bottom:36px; }
+.hero-btns { display:flex; gap:14px; align-items:center; flex-wrap:wrap; }
+.btn-hero-primary { background:var(--red); color:#fff; font-size:0.9rem; font-weight:600; padding:14px 28px; border-radius:100px; transition:background .2s, transform .2s; }
+.btn-hero-primary:hover { background:var(--red-mid); transform:translateY(-1px); }
+.btn-hero-outline { background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.35); color:#fff; font-size:0.9rem; font-weight:500; padding:14px 28px; border-radius:100px; backdrop-filter:blur(6px); transition:background .2s; }
+.btn-hero-outline:hover { background:rgba(255,255,255,0.2); }
+.hero-indicators { position:absolute; bottom:40px; right:80px; z-index:10; display:flex; gap:10px; align-items:center; }
+.hero-dot { width:28px; height:3px; border-radius:2px; background:rgba(255,255,255,0.3); cursor:pointer; transition:background .3s, width .3s; }
+.hero-dot.active { background:#fff; width:44px; }
+
+/* TICKER */
+.ticker { border-top:1px solid var(--border); border-bottom:1px solid var(--border); background:var(--white); overflow:hidden; padding:22px 0; }
+.ticker-track { display:flex; gap:64px; align-items:center; animation:ticker 32s linear infinite; width:max-content; }
+.ticker-track:hover { animation-play-state:paused; }
+.ticker-item { font-family:var(--serif); font-size:1rem; font-weight:400; color:var(--ink-light); white-space:nowrap; letter-spacing:0.5px; display:flex; align-items:center; gap:16px; }
+.ticker-item::before { content:''; width:5px; height:5px; background:var(--red); border-radius:50%; flex-shrink:0; }
+@keyframes ticker { from { transform:translateX(0) } to { transform:translateX(-50%) } }
+
+/* COMMONS */
+.wrap { max-width:1220px; margin:0 auto; padding:0 48px; }
+.section { padding:110px 0; }
+.label { font-size:0.75rem; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:var(--red); margin-bottom:18px; display:block; }
+.section-title { font-family:var(--serif); font-size:clamp(2rem, 3.8vw, 3.2rem); font-weight:400; line-height:1.15; letter-spacing:-0.3px; color:var(--ink); margin-bottom:18px; }
+.section-title em { font-style:italic; color:var(--ink-light); }
+.section-intro { font-size:1rem; color:var(--ink-light); max-width:580px; line-height:1.8; }
+
+/* INTRO SPLIT */
+.intro-split { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+.intro-right p { color:var(--ink-light); line-height:1.85; margin-bottom:20px; font-size:0.97rem; }
+.intro-stats { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:48px; }
+.istat { border-top:2px solid var(--red); padding-top:16px; }
+.istat-num { font-family:var(--serif); font-size:2.6rem; font-weight:300; color:var(--ink); line-height:1; }
+.istat-label { font-size:0.8rem; color:var(--ink-light); margin-top:6px; }
+.area-pill { display:inline-flex; align-items:center; gap:8px; background:var(--mist); border:1px solid var(--border); border-radius:100px; padding:8px 16px; font-size:0.8rem; font-weight:500; color:var(--ink-light); margin-top:24px; }
+.area-pill b { color:var(--red); font-weight:700; }
+
+/* SERVICES */
+.services-bg { background:var(--mist); }
+.services-header { text-align:center; margin-bottom:64px; }
+.services-header .label { font-size:1rem; letter-spacing:3px; }
+.srv-primary { display:grid; grid-template-columns:1fr 1fr; gap:2px; background:var(--border); margin-bottom:2px; }
+.srv-item { background:var(--white); padding:48px 40px; position:relative; overflow:hidden; transition:background .3s; cursor:pointer; display:flex; flex-direction:column; gap:16px; }
+.srv-item::after { content:''; position:absolute; bottom:0; left:0; right:0; height:3px; background:var(--red); transform:scaleX(0); transform-origin:left; transition:transform .3s ease; }
+.srv-item:hover { background:#faf9f7; }
+.srv-item:hover::after { transform:scaleX(1); }
+.srv-badge { display:inline-block; background:rgba(227,27,35,0.08); color:var(--red); font-size:0.68rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:4px 12px; border-radius:100px; border:1px solid rgba(227,27,35,0.15); width:fit-content; }
+.srv-badge.alt { background:rgba(17,17,17,0.05); color:var(--ink-light); border-color:var(--border); }
+.srv-icon { font-size:2.2rem; }
+.srv-item h3 { font-family:var(--serif); font-size:1.5rem; font-weight:400; color:var(--ink); }
+.srv-item p { font-size:0.88rem; color:var(--ink-light); line-height:1.8; flex:1; }
+.srv-feats { list-style:none; display:flex; flex-direction:column; gap:7px; margin-top:4px; }
+.srv-feats li { font-size:0.82rem; color:var(--ink-light); display:flex; align-items:center; gap:10px; }
+.srv-feats li::before { content:''; width:14px; height:1.5px; background:var(--red); flex-shrink:0; }
+.srv-item-footer { display:flex; align-items:center; justify-content:space-between; margin-top:12px; border-top:1px solid var(--border); padding-top:16px; }
+.srv-tag { font-size:0.7rem; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:var(--red); }
+.srv-arrow { font-size:1.2rem; color:var(--ink-light); transition:transform .2s; }
+.srv-item:hover .srv-arrow { transform:translate(4px,-4px); }
+.srv-secondary { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--border); }
+.srv-item-sm { background:#fafaf8; padding:32px 30px; display:flex; flex-direction:column; gap:12px; position:relative; overflow:hidden; transition:background .3s; cursor:pointer; }
+.srv-item-sm::after { content:''; position:absolute; bottom:0; left:0; right:0; height:2px; background:var(--ink); transform:scaleX(0); transform-origin:left; transition:transform .3s ease; }
+.srv-item-sm:hover { background:var(--white); }
+.srv-item-sm:hover::after { transform:scaleX(1); }
+.srv-item-sm h4 { font-family:var(--serif); font-size:1.1rem; font-weight:400; color:var(--ink); }
+.srv-item-sm p { font-size:0.82rem; color:var(--ink-light); line-height:1.75; flex:1; }
+.srv-item-sm-cta { font-size:0.7rem; font-weight:600; color:var(--ink-light); letter-spacing:0.5px; margin-top:4px; }
+
+/* TESTIMONIALS */
+.testi-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:56px; }
+.tcard { position:relative; border-radius:16px; overflow:hidden; aspect-ratio:3/4; display:flex; flex-direction:column; justify-content:flex-end; transition:transform .3s; }
+.tcard:hover { transform:translateY(-4px); }
+.tcard-bg { position:absolute; inset:0; }
+.tcard:nth-child(1) .tcard-bg { background:linear-gradient(160deg,#1c1414,#2d1010,#1a0d0d); }
+.tcard:nth-child(2) .tcard-bg { background:linear-gradient(160deg,#0f1a18,#122820,#0f1a18); }
+.tcard:nth-child(3) .tcard-bg { background:linear-gradient(160deg,#131218,#1e1428,#131218); }
+.tcard-overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.92) 40%, transparent 100%); }
+.tcard-body { position:relative; z-index:2; padding:32px; }
+.tcard-logo { display:inline-block; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.15); border-radius:8px; padding:8px 14px; font-size:0.72rem; font-weight:700; color:rgba(255,255,255,0.6); letter-spacing:1px; margin-bottom:16px; text-transform:uppercase; }
+.tcard blockquote { font-family:var(--serif); font-size:1rem; font-weight:300; color:#fff; line-height:1.65; font-style:italic; margin-bottom:20px; }
+.tcard-name { font-size:0.85rem; font-weight:600; color:#fff; display:block; }
+.tcard-role { font-size:0.75rem; color:rgba(255,255,255,0.5); display:block; margin-top:2px; }
+.tcard-stars { color:var(--red); font-size:0.8rem; letter-spacing:2px; margin-bottom:12px; }
+.tcard-top { position:relative; z-index:2; padding:28px 32px 0; }
+.tcard-decor { width:40px; height:40px; border-radius:50%; background:rgba(227,27,35,0.2); border:1px solid rgba(227,27,35,0.35); display:flex; align-items:center; justify-content:center; font-size:1.1rem; }
+
+/* AREAS */
+.areas-bg { background:var(--mist); }
+.areas-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:52px; }
+.area-card { background:var(--white); border:1px solid var(--border); border-radius:14px; padding:28px 22px; text-align:center; transition:border-color .2s, box-shadow .2s, transform .2s; }
+.area-card:hover { border-color:var(--red); box-shadow:0 8px 28px rgba(227,27,35,0.08); transform:translateY(-2px); }
+.area-emoji { font-size:1.8rem; margin-bottom:10px; }
+.area-region { display:inline-block; font-size:0.65rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--red); margin-bottom:8px; }
+.area-card h4 { font-family:var(--serif); font-size:1rem; font-weight:400; color:var(--ink); margin-bottom:6px; }
+.area-card p { font-size:0.76rem; color:var(--ink-light); line-height:1.6; }
+
+/* WHY */
+.why-bg { background:var(--ink); }
+.why-inner { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+.why-right { display:flex; flex-direction:column; }
+.why-item { display:flex; gap:24px; align-items:flex-start; padding:28px 0; border-bottom:1px solid rgba(255,255,255,0.08); }
+.why-item:last-child { border-bottom:none; }
+.why-num { font-family:var(--serif); font-size:1.1rem; font-weight:300; color:rgba(255,255,255,0.2); width:36px; flex-shrink:0; padding-top:3px; }
+.why-text h3 { font-size:1rem; font-weight:600; color:#fff; margin-bottom:6px; }
+.why-text p { font-size:0.86rem; color:rgba(255,255,255,0.5); line-height:1.75; }
+.btn-light { background:#fff; color:var(--ink); font-size:0.88rem; font-weight:600; padding:14px 28px; border-radius:100px; display:inline-block; transition:background .2s; margin-top:40px; }
+.btn-light:hover { background:var(--mist); }
+
+/* PROCESS */
+.process-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:32px; margin-top:60px; }
+.pstep { position:relative; }
+.pstep-line { position:absolute; top:26px; left:calc(50% + 28px); right:calc(-50% + 28px); height:1px; background:var(--border); }
+.pstep:last-child .pstep-line { display:none; }
+.pstep-circle { width:52px; height:52px; border-radius:50%; border:1.5px solid var(--border); background:var(--white); display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-size:1rem; font-weight:400; color:var(--red); margin-bottom:24px; position:relative; z-index:1; }
+.pstep h3 { font-family:var(--serif); font-size:1.1rem; font-weight:400; color:var(--ink); margin-bottom:10px; }
+.pstep p { font-size:0.84rem; color:var(--ink-light); line-height:1.8; }
+
+/* CONTACT */
+.contact-bg { background:var(--mist); }
+.contact-inner { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+.contact-left > p { color:var(--ink-light); line-height:1.8; margin:16px 0 36px; font-size:0.97rem; }
+.cdetails { display:flex; flex-direction:column; gap:20px; }
+.cdetail { display:flex; gap:16px; align-items:flex-start; }
+.cdetail-icon { width:40px; height:40px; border-radius:10px; background:var(--white); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0; }
+.cdetail-text strong { display:block; font-size:0.72rem; font-weight:600; color:var(--ink-light); margin-bottom:3px; }
+.cdetail-text span { font-size:0.95rem; font-weight:600; color:var(--ink); }
+.cguarantee { margin-top:32px; padding:20px 24px; background:var(--white); border:1px solid var(--border); border-radius:12px; font-size:0.85rem; color:var(--ink-light); line-height:1.7; }
+.cguarantee strong { color:var(--ink); }
+.cform { background:var(--white); border:1px solid var(--border); border-radius:20px; padding:44px; }
+.cform h3 { font-family:var(--serif); font-size:1.5rem; font-weight:400; color:var(--ink); margin-bottom:28px; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+.fg { margin-bottom:14px; }
+.fg label { display:block; font-size:0.77rem; font-weight:600; color:var(--ink-light); margin-bottom:7px; }
+.fg input, .fg select, .fg textarea { width:100%; background:#fafafa; border:1.5px solid var(--border); border-radius:10px; padding:12px 16px; color:var(--ink); font-size:0.9rem; font-family:var(--sans); outline:none; transition:border-color .2s, box-shadow .2s; }
+.fg input:focus, .fg select:focus, .fg textarea:focus { border-color:var(--red); box-shadow:0 0 0 3px rgba(227,27,35,0.08); }
+.fg textarea { min-height:100px; resize:vertical; }
+.fg select { appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 16px center; }
+.fsub { width:100%; background:var(--ink); color:#fff; font-family:var(--sans); font-size:0.92rem; font-weight:600; padding:15px; border:none; cursor:pointer; border-radius:100px; transition:background .2s; margin-top:4px; }
+.fsub:hover { background:var(--red); }
+.fnote { text-align:center; margin-top:10px; font-size:0.72rem; color:var(--ink-light); opacity:0.55; }
+
+/* CTA BANNER */
+.cta-banner { background:var(--red); padding:100px 0; text-align:center; position:relative; overflow:hidden; }
+.cta-banner::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 80% at 50% 50%, rgba(255,255,255,0.06) 0%, transparent 70%); }
+.cta-banner h2 { font-family:var(--serif); font-size:clamp(2.2rem,4.5vw,4rem); font-weight:300; color:#fff; line-height:1.15; letter-spacing:-0.3px; margin-bottom:16px; position:relative; }
+.cta-banner h2 em { font-style:italic; color:rgba(255,255,255,0.65); }
+.cta-banner p { color:rgba(255,255,255,0.7); font-size:1rem; margin-bottom:36px; position:relative; }
+.btn-cta { background:#fff; color:var(--red); font-size:0.92rem; font-weight:700; padding:16px 36px; border-radius:100px; display:inline-block; transition:transform .2s, box-shadow .2s; position:relative; }
+.btn-cta:hover { transform:translateY(-2px); box-shadow:0 12px 36px rgba(0,0,0,0.2); }
+
+/* FOOTER */
+footer { background:var(--ink); color:rgba(255,255,255,0.5); padding:64px 48px 40px; }
+.footer-top { max-width:1220px; margin:0 auto; display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:64px; padding-bottom:48px; border-bottom:1px solid rgba(255,255,255,0.08); }
+.footer-brand img { height:44px; margin-bottom:18px; filter:brightness(0) invert(1); }
+.footer-brand p { font-size:0.85rem; line-height:1.75; max-width:280px; }
+.footer-col h4 { font-size:0.75rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-bottom:16px; }
+.footer-col ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
+.footer-col ul a { font-size:0.88rem; color:rgba(255,255,255,0.5); transition:color .2s; }
+.footer-col ul a:hover { color:#fff; }
+.footer-bottom { max-width:1220px; margin:32px auto 0; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; font-size:0.78rem; }
+.footer-bottom-links { display:flex; gap:20px; }
+.footer-bottom-links a { color:rgba(255,255,255,0.3); font-size:0.75rem; transition:color .2s; }
+.footer-bottom-links a:hover { color:rgba(255,255,255,0.7); }
+
+/* ANIMATIONS */
+.fade-up { opacity:0; transform:translateY(30px); transition:opacity .7s ease, transform .7s ease; }
+.fade-up.visible { opacity:1; transform:translateY(0); }
+.fade-up-d1 { transition-delay:.1s; } .fade-up-d2 { transition-delay:.2s; }
+.fade-up-d3 { transition-delay:.3s; } .fade-up-d4 { transition-delay:.4s; }
+
+@media(max-width:1060px){
+  .areas-grid { grid-template-columns:repeat(2,1fr); }
+  .process-grid { grid-template-columns:repeat(2,1fr); }
+  .pstep:nth-child(2) .pstep-line { display:none; }
+}
+@media(max-width:980px){
+  nav { padding:0 20px; } .tubelight-nav { display:none; } .nav-cta { display:none; }
+  .ham-btn { display:flex; } .mob-menu { display:flex; }
+  .hero-slide-content { padding:48px 28px 60px; }
+  .hero-indicators { right:28px; bottom:24px; }
+  .wrap { padding:0 24px; } .section { padding:72px 0; }
+  .intro-split, .why-inner, .contact-inner { grid-template-columns:1fr; gap:48px; }
+  .srv-primary, .srv-secondary { grid-template-columns:1fr; }
+  .testi-grid, .areas-grid { grid-template-columns:1fr; }
+  .process-grid { grid-template-columns:1fr; } .pstep-line { display:none; }
+  .services-header { flex-direction:column; gap:16px; }
+  footer { padding:48px 24px 32px; }
+  .footer-top { grid-template-columns:1fr; gap:36px; }
+  .footer-bottom { flex-direction:column; align-items:flex-start; }
+  .form-row { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo"><img src="logo.png" alt="MartKam Digital"></div>
+  <div class="tubelight-nav" id="tlNav">
+    <div class="tl-bg-pill" id="tlBg"></div>
+    <div class="tl-lamp-wrap" id="tlLamp"><div class="tl-lamp-bar"><div class="tl-lamp-glow3"></div></div></div>
+    <a href="#" class="tl-item active" data-section="home">Home</a>
+    <a href="#services" class="tl-item" data-section="services">Services</a>
+    <a href="#areas" class="tl-item" data-section="areas">Areas</a>
+    <a href="#why" class="tl-item" data-section="why">Why Us</a>
+    <a href="#contact" class="tl-item" data-section="contact">Contact</a>
+  </div>
+  <a href="#contact" class="nav-cta">Let's Talk</a>
+  <button class="ham-btn" id="hamBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <div class="mob-menu-inner">
+    <a href="#" class="mob-item">Home</a>
+    <a href="#services" class="mob-item">Services</a>
+    <a href="#areas" class="mob-item">Areas</a>
+    <a href="#why" class="mob-item">Why Us</a>
+    <a href="#contact" class="mob-item">Contact</a>
+    <a href="#contact" class="mob-cta">Let's Talk</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-slides">
+
+    <div class="hero-slide active" id="slide-0">
+      <div class="hero-slide-bg" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1800&q=80')"></div>
+      <div class="hero-slide-content">
+        
+        <h1>Websites that bring<br><em>real customers to your door</em></h1>
+        <p>We build beautiful, conversion-focused websites for local businesses — designed to rank on Google and turn visitors into enquiries from day one.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-hero-primary">Get a Free Quote</a>
+          <a href="#services" class="btn-hero-outline">See What We Do</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-slide" id="slide-1">
+      <div class="hero-slide-bg" style="background-image:url('https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=1800&q=80')"></div>
+      <div class="hero-slide-content">
+        
+        <h1>Get found by customers<br><em>who are ready to buy</em></h1>
+        <p>From Google Business Profile setup to local SEO that gets you ranking — we make sure the right people find your business at exactly the right time.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-hero-primary">Boost My Google Visibility</a>
+          <a href="#services" class="btn-hero-outline">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-slide" id="slide-2">
+      <div class="hero-slide-bg" style="background-image:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1800&q=80')"></div>
+      <div class="hero-slide-content">
+        
+        <h1>Your local digital partner<br><em>in Surrey & South West London</em></h1>
+        <p>We're not a big agency. We're a local team who care about your results — affordable prices, plain English, and a website you'll actually be proud to share.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-hero-primary">Book a Free Chat</a>
+          <a href="#why" class="btn-hero-outline">Why MartKam?</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-indicators">
+      <div class="hero-dot active" onclick="goToSlide(0)"></div>
+      <div class="hero-dot" onclick="goToSlide(1)"></div>
+      <div class="hero-dot" onclick="goToSlide(2)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track">
+    <div class="ticker-item">Custom Website Design</div>
+    <div class="ticker-item">Google Business Profile Setup</div>
+    <div class="ticker-item">Local SEO</div>
+    <div class="ticker-item">Surrey & South West London</div>
+    <div class="ticker-item">5★ Google Rated</div>
+    <div class="ticker-item">Mobile-First Websites</div>
+    <div class="ticker-item">Websites That Convert</div>
+    <div class="ticker-item">Guildford · Woking · Wimbledon · Kingston</div>
+    <div class="ticker-item">Transparent Fixed Pricing</div>
+    <div class="ticker-item">No Jargon Guaranteed</div>
+    <div class="ticker-item">Custom Website Design</div>
+    <div class="ticker-item">Google Business Profile Setup</div>
+    <div class="ticker-item">Local SEO</div>
+    <div class="ticker-item">Surrey & South West London</div>
+    <div class="ticker-item">5★ Google Rated</div>
+    <div class="ticker-item">Mobile-First Websites</div>
+    <div class="ticker-item">Websites That Convert</div>
+    <div class="ticker-item">Guildford · Woking · Wimbledon · Kingston</div>
+    <div class="ticker-item">Transparent Fixed Pricing</div>
+    <div class="ticker-item">No Jargon Guaranteed</div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="section">
+  <div class="wrap">
+    <div class="intro-split">
+      <div class="fade-up">
+        <span class="label">About MartKam Digital</span>
+        <h2 class="section-title">Your local web design partner — <em>no agency fluff</em></h2>
+        <div class="intro-stats">
+          <div class="istat fade-up fade-up-d1">
+            <div class="istat-num">150+</div>
+            <div class="istat-label">Local businesses helped to grow online</div>
+          </div>
+          <div class="istat fade-up fade-up-d2">
+            <div class="istat-num">7+</div>
+            <div class="istat-label">Years serving Surrey & South West London</div>
+          </div>
+          <div class="istat fade-up fade-up-d3">
+            <div class="istat-num">5.0★</div>
+            <div class="istat-label">Google rating from verified local clients</div>
+          </div>
+          <div class="istat fade-up fade-up-d4">
+            <div class="istat-num">100%</div>
+            <div class="istat-label">Custom-built — no templates, no shortcuts</div>
+          </div>
+        </div>
+      </div>
+      <div class="intro-right fade-up fade-up-d2">
+        <p>We help local businesses across Surrey and South West London get online properly — with websites that look professional, load fast, and are built to bring in real enquiries from Google.</p>
+        <p>Too many small businesses have websites that were expensive, took ages to build, and still don't bring in any customers. We do things differently: clear pricing, fast turnaround, and results you can measure.</p>
+        <p>From your first website to a full rebrand, Google visibility to ongoing support — we're the team in your corner, not a faceless agency that disappears after launch.</p>
+        <div style="margin-top:32px;">
+          <a href="#contact" style="display:inline-flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:600;color:var(--red);border-bottom:1.5px solid var(--red);padding-bottom:3px;">
+            Book a free consultation →
+          </a>
+        </div>
+        <div class="area-pill">📍 Serving <b>Surrey</b> &amp; <b>South West London</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services-bg" id="services">
+  <div class="wrap">
+    <div class="services-header fade-up">
+      <span class="label">What We Do</span>
+      <h2 class="section-title">Web design & digital services<br><em>that get real results</em></h2>
+    </div>
+
+    <!-- Core services -->
+    <div class="srv-primary">
+      <div class="srv-item fade-up">
+        <div class="srv-badge">Core Service</div>
+        <div class="srv-icon">🎨</div>
+        <h3>Website Design & Build</h3>
+        <p>A custom-designed website built around your business, your brand, and your goals. Not a template — a hand-crafted site that looks great on every device and is built to convert visitors into real enquiries.</p>
+        <ul class="srv-feats">
+          <li>Fully custom design — unique to your brand</li>
+          <li>Mobile-first, fast-loading pages</li>
+          <li>Clear calls-to-action that drive enquiries</li>
+          <li>Contact forms, booking integrations & more</li>
+          <li>Handed over with full training included</li>
+        </ul>
+        <div class="srv-item-footer">
+          <span class="srv-tag">Web Design</span>
+          <span class="srv-arrow">↗</span>
+        </div>
+      </div>
+
+      <div class="srv-item fade-up fade-up-d2">
+        <div class="srv-badge">Core Service</div>
+        <div class="srv-icon">📍</div>
+        <h3>SEO & Google Business Profile</h3>
+        <p>Get your business found by local customers actively searching for what you offer. We set up and optimise your Google Business Profile, and build the on-page SEO foundations that help you rank in Surrey and South West London.</p>
+        <ul class="srv-feats">
+          <li>Google Business Profile setup & optimisation</li>
+          <li>Local SEO to rank in your area</li>
+          <li>Keyword research & on-page optimisation</li>
+          <li>Google Maps visibility & review strategy</li>
+          <li>Monthly performance reporting</li>
+        </ul>
+        <div class="srv-item-footer">
+          <span class="srv-tag">SEO & Google</span>
+          <span class="srv-arrow">↗</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional services -->
+    <div class="srv-secondary">
+      <div class="srv-item-sm fade-up">
+        <div class="srv-badge alt">Additional Service</div>
+        <div style="font-size:1.6rem;">🔧</div>
+        <h4>Basic IT Troubleshooting</h4>
+        <p>Having a tech problem slowing you down? We offer straightforward troubleshooting for common issues — slow computers, software problems, email issues, connectivity faults — so you can get back to business quickly.</p>
+        <div class="srv-item-sm-cta">General IT Support →</div>
+      </div>
+
+      <div class="srv-item-sm fade-up fade-up-d2">
+        <div class="srv-badge alt">Additional Service</div>
+        <div style="font-size:1.6rem;">☁️</div>
+        <h4>Backups & Cloud Setup</h4>
+        <p>Don't risk losing everything. We set up reliable, automated backup solutions so your files and business data are always safe — whether that's cloud backups, OneDrive, or an external drive setup.</p>
+        <div class="srv-item-sm-cta">Data Backup →</div>
+      </div>
+
+      <div class="srv-item-sm fade-up fade-up-d3">
+        <div class="srv-badge alt">Additional Service</div>
+        <div style="font-size:1.6rem;">💾</div>
+        <h4>Data Recovery</h4>
+        <p>Accidentally deleted something important? Hard drive failed? We offer data recovery support to help retrieve lost files and get you back up and running — calmly and without the panic.</p>
+        <div class="srv-item-sm-cta">Data Recovery →</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" id="testimonials">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:56px;" class="fade-up">
+      <span class="label" style="font-size:1rem;letter-spacing:3px;">Client Stories</span>
+      <h2 class="section-title">Real businesses.<br><em>Real results.</em></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="tcard fade-up">
+        <div class="tcard-bg"></div>
+        <div class="tcard-overlay"></div>
+        <div class="tcard-top"><div class="tcard-decor">🌐</div></div>
+        <div class="tcard-body">
+          <div class="tcard-stars">★★★★★</div>
+          <div class="tcard-logo">Blake Plumbing · Woking</div>
+          <blockquote>"Our old website was embarrassing. MartKam built us a new one and within six weeks we had more enquiries than we'd ever had online. Worth every penny."</blockquote>
+          <span class="tcard-name">Richard Blake</span>
+          <span class="tcard-role">Director · Woking, Surrey</span>
+        </div>
+      </div>
+      <div class="tcard fade-up fade-up-d2">
+        <div class="tcard-bg"></div>
+        <div class="tcard-overlay"></div>
+        <div class="tcard-top"><div class="tcard-decor">📍</div></div>
+        <div class="tcard-body">
+          <div class="tcard-stars">★★★★★</div>
+          <div class="tcard-logo">Marsh Accountancy · Reigate</div>
+          <blockquote>"Before MartKam, we didn't show up on Google Maps at all. Now we're getting calls every week from local searches. The Google Profile setup alone changed everything."</blockquote>
+          <span class="tcard-name">Jenny Marsh</span>
+          <span class="tcard-role">Owner · Reigate, Surrey</span>
+        </div>
+      </div>
+      <div class="tcard fade-up fade-up-d3">
+        <div class="tcard-bg"></div>
+        <div class="tcard-overlay"></div>
+        <div class="tcard-top"><div class="tcard-decor">🎨</div></div>
+        <div class="tcard-body">
+          <div class="tcard-stars">★★★★★</div>
+          <div class="tcard-logo">Hale & Co · Wimbledon</div>
+          <blockquote>"Genuinely the best decision we made for our business. A brilliant new website, easy to find on Google, and the team were a pleasure to work with from start to finish."</blockquote>
+          <span class="tcard-name">Marcus Hale</span>
+          <span class="tcard-role">Founder · Wimbledon, SW London</span>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:right;margin-top:32px;">
+      <a href="#contact" style="font-size:0.88rem;font-weight:600;color:var(--ink-light);border-bottom:1.5px solid var(--border);padding-bottom:2px;">View all reviews →</a>
+    </div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section class="section areas-bg" id="areas">
+  <div class="wrap">
+    <div style="text-align:center;max-width:560px;margin:0 auto;" class="fade-up">
+      <span class="label" style="font-size:1rem;letter-spacing:3px;">Where We Work</span>
+      <h2 class="section-title">Serving Surrey &<br><em>South West London</em></h2>
+      <p class="section-intro" style="margin:0 auto;">We're a local team — not a remote agency. We work with businesses across Surrey and South West London and know these areas inside out.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area-card fade-up">
+        <div class="area-emoji">🏘️</div>
+        <div class="area-region">Surrey</div>
+        <h4>Guildford</h4>
+        <p>Websites & SEO for Guildford businesses of all sizes</p>
+      </div>
+      <div class="area-card fade-up fade-up-d1">
+        <div class="area-emoji">🏘️</div>
+        <div class="area-region">Surrey</div>
+        <h4>Woking</h4>
+        <p>Local web design and Google visibility in Woking</p>
+      </div>
+      <div class="area-card fade-up fade-up-d2">
+        <div class="area-emoji">🏘️</div>
+        <div class="area-region">Surrey</div>
+        <h4>Reigate & Redhill</h4>
+        <p>Custom sites and SEO across Reigate and Redhill</p>
+      </div>
+      <div class="area-card fade-up fade-up-d3">
+        <div class="area-emoji">🏘️</div>
+        <div class="area-region">Surrey</div>
+        <h4>Camberley & Farnham</h4>
+        <p>Digital growth for businesses across west Surrey</p>
+      </div>
+      <div class="area-card fade-up">
+        <div class="area-emoji">🌆</div>
+        <div class="area-region">South West London</div>
+        <h4>Wimbledon & Merton</h4>
+        <p>Web design for SW19 and surrounding areas</p>
+      </div>
+      <div class="area-card fade-up fade-up-d1">
+        <div class="area-emoji">🌆</div>
+        <div class="area-region">South West London</div>
+        <h4>Kingston upon Thames</h4>
+        <p>Helping Kingston businesses stand out online</p>
+      </div>
+      <div class="area-card fade-up fade-up-d2">
+        <div class="area-emoji">🌆</div>
+        <div class="area-region">South West London</div>
+        <h4>Richmond & Twickenham</h4>
+        <p>Local SEO and custom websites in Richmond</p>
+      </div>
+      <div class="area-card fade-up fade-up-d3">
+        <div class="area-emoji">🌆</div>
+        <div class="area-region">South West London</div>
+        <h4>Putney & Wandsworth</h4>
+        <p>Digital presence for SW London small businesses</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="section why-bg" id="why">
+  <div class="wrap">
+    <div class="why-inner">
+      <div class="fade-up">
+        <span class="label" style="color:rgba(255,255,255,0.35);">Why Choose Us</span>
+        <h2 class="section-title" style="color:#fff;max-width:420px;">Why local businesses choose <em style="color:rgba(255,255,255,0.4)">MartKam Digital</em></h2>
+        <p style="color:rgba(255,255,255,0.5);margin-top:20px;font-size:0.97rem;line-height:1.85;max-width:400px;">We're not an anonymous agency with big city prices. We're a local team who know your area, understand your customers, and care deeply about your results.</p>
+        <a href="#contact" class="btn-light">Start a conversation →</a>
+      </div>
+      <div class="why-right fade-up fade-up-d2">
+        <div class="why-item">
+          <div class="why-num">01</div>
+          <div class="why-text">
+            <h3>Web Design Is Our Primary Focus</h3>
+            <p>We specialise in websites and digital visibility — not spread thin across dozens of services. You get specialists who live and breathe web design and local SEO, not generalists.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-num">02</div>
+          <div class="why-text">
+            <h3>Built to Rank on Google</h3>
+            <p>Every site we build has SEO baked in from the start — not bolted on as an afterthought. We build for search engines and humans, so you get traffic that actually converts into business.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-num">03</div>
+          <div class="why-text">
+            <h3>Genuinely Local Knowledge</h3>
+            <p>We're based in the area we serve. We know Surrey and South West London, and that local knowledge shapes everything — from your copy to your SEO keyword strategy.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-num">04</div>
+          <div class="why-text">
+            <h3>Transparent, Fixed Pricing</h3>
+            <p>No surprise invoices, no hidden fees. You'll know exactly what you're getting and what it costs before we start. Simple, honest, upfront pricing every time.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-num">05</div>
+          <div class="why-text">
+            <h3>We Don't Disappear After Launch</h3>
+            <p>We offer ongoing support, updates and SEO monitoring after your site goes live — so you always have someone to call. We're in it for the long term with you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section">
+  <div class="wrap">
+    <div style="text-align:center;max-width:540px;margin:0 auto 60px;" class="fade-up">
+      <span class="label">How It Works</span>
+      <h2 class="section-title">From idea to live website — <em>simply</em></h2>
+      <p class="section-intro" style="margin:0 auto;">No lengthy briefs, confusing processes, or disappearing project managers. Just four clear steps to a website you're proud of.</p>
+    </div>
+    <div class="process-grid">
+      <div class="pstep fade-up">
+        <div class="pstep-line"></div>
+        <div class="pstep-circle">01</div>
+        <h3>Free Consultation</h3>
+        <p>A relaxed chat about your business, your goals, and what you need. No pressure, no jargon — just an honest conversation about what will help.</p>
+      </div>
+      <div class="pstep fade-up fade-up-d1">
+        <div class="pstep-line"></div>
+        <div class="pstep-circle">02</div>
+        <h3>Design & Quote</h3>
+        <p>We put together your design concept and a clear, fixed quote. You'll see exactly how your site will look before you commit to anything.</p>
+      </div>
+      <div class="pstep fade-up fade-up-d2">
+        <div class="pstep-line"></div>
+        <div class="pstep-circle">03</div>
+        <h3>Build & Refine</h3>
+        <p>We build your site and keep you involved throughout — with chances to review and request tweaks. We're not done until you're happy.</p>
+      </div>
+      <div class="pstep fade-up fade-up-d3">
+        <div class="pstep-circle">04</div>
+        <h3>Launch & Grow</h3>
+        <p>We go live, set up your Google presence, and make sure everything is working perfectly. Then we're here for ongoing support whenever you need us.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact-bg" id="contact">
+  <div class="wrap">
+    <div class="contact-inner">
+      <div class="contact-left fade-up">
+        <span class="label">Get in Touch</span>
+        <h2 class="section-title">Ready to grow<br><em>your business online?</em></h2>
+        <p>Whether you need a brand new website, want to show up on Google, or just want an honest chat about your options — we're here. No sales pressure, just straight-talking advice.</p>
+        <div class="cdetails">
+          <div class="cdetail">
+            <div class="cdetail-icon">📞</div>
+            <div class="cdetail-text"><strong>Phone</strong><span>01276 000 000</span></div>
+          </div>
+          <div class="cdetail">
+            <div class="cdetail-icon">📧</div>
+            <div class="cdetail-text"><strong>Email</strong><span>hello@martkamdigital.co.uk</span></div>
+          </div>
+          <div class="cdetail">
+            <div class="cdetail-icon">📍</div>
+            <div class="cdetail-text"><strong>Areas Covered</strong><span>Surrey & South West London</span></div>
+          </div>
+        </div>
+        <div class="cguarantee">
+          <strong>Our promise:</strong> We respond to every enquiry within a few hours. No automated replies, no call centres — just a real person who wants to help your business grow online.
+        </div>
+      </div>
+      <div class="cform fade-up fade-up-d2">
+        <h3>Request a free consultation</h3>
+        <div class="form-row">
+          <div class="fg"><label>Your name</label><input type="text" placeholder="John Smith"></div>
+          <div class="fg"><label>Business name</label><input type="text" placeholder="Smith & Co"></div>
+        </div>
+        <div class="form-row">
+          <div class="fg"><label>Email address</label><input type="email" placeholder="john@smithco.co.uk"></div>
+          <div class="fg"><label>Phone number</label><input type="tel" placeholder="07700 000 000"></div>
+        </div>
+        <div class="fg">
+          <label>Your area</label>
+          <select>
+            <option>Surrey (Guildford, Woking, Reigate...)</option>
+            <option>South West London (Wimbledon, Kingston, Richmond...)</option>
+            <option>Other nearby area</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label>What do you need help with?</label>
+          <select>
+            <option>New Website Design & Build</option>
+            <option>SEO & Google Rankings</option>
+            <option>Google Business Profile Setup</option>
+            <option>Website Refresh / Redesign</option>
+            <option>IT Troubleshooting / Backups</option>
+            <option>Data Recovery</option>
+            <option>Not Sure Yet — Just Exploring</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label>Tell us about your business</label>
+          <textarea placeholder="What does your business do, and what's the main thing you'd like to achieve online?"></textarea>
+        </div>
+        <button class="fsub">Send my free consultation request</button>
+        <div class="fnote">No obligation · We'll reply within a few hours · 🔒 Details never shared</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <h2>Ready to get started?<br><em>Let's build something great together.</em></h2>
+  <p>Free consultation · No pressure · Serving Surrey & South West London</p>
+  <a href="tel:01276000000" class="btn-cta">📞 Call 01276 000 000</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="logo.png" alt="MartKam Digital">
+      <p>Web design, SEO and digital services for local businesses across Surrey and South West London.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Website Design & Build</a></li>
+        <li><a href="#services">SEO & Google Rankings</a></li>
+        <li><a href="#services">Google Business Profile</a></li>
+        <li><a href="#services">IT Troubleshooting</a></li>
+        <li><a href="#services">Backups & Data Recovery</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Areas We Serve</h4>
+      <ul>
+        <li><a href="#areas">Guildford & Woking</a></li>
+        <li><a href="#areas">Reigate & Redhill</a></li>
+        <li><a href="#areas">Wimbledon & Kingston</a></li>
+        <li><a href="#areas">Richmond & Twickenham</a></li>
+        <li><a href="#areas">Putney & Wandsworth</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 MartKam Digital Ltd. Web Design & SEO · Surrey & South West London.</span>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+let current = 0;
+const slides = document.querySelectorAll('.hero-slide');
+const dots   = document.querySelectorAll('.hero-dot');
+let timer = setInterval(() => goToSlide((current + 1) % slides.length), 5500);
+function goToSlide(n) {
+  slides[current].classList.remove('active'); dots[current].classList.remove('active');
+  current = n;
+  slides[current].classList.add('active'); dots[current].classList.add('active');
+  clearInterval(timer);
+  timer = setInterval(() => goToSlide((current + 1) % slides.length), 5500);
+}
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// HAMBURGER MENU
+(function() {
+  const btn  = document.getElementById('hamBtn');
+  const menu = document.getElementById('mobMenu');
+  function close() {
+    btn.classList.remove('open');
+    menu.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  btn.addEventListener('click', () => {
+    const opening = !menu.classList.contains('open');
+    btn.classList.toggle('open');
+    menu.classList.toggle('open');
+    document.body.style.overflow = opening ? 'hidden' : '';
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+})();
+
+// TUBELIGHT NAV
+(function() {
+  const nav    = document.getElementById('tlNav');
+  const bg     = document.getElementById('tlBg');
+  const lamp   = document.getElementById('tlLamp');
+  const items  = nav.querySelectorAll('.tl-item');
+
+  function moveTo(el, instant) {
+    const navRect  = nav.getBoundingClientRect();
+    const itemRect = el.getBoundingClientRect();
+    const left   = itemRect.left - navRect.left;
+    const top    = itemRect.top  - navRect.top;
+    const width  = itemRect.width;
+    const height = itemRect.height;
+    const lampX  = left + width / 2;
+
+    if (instant) {
+      bg.style.transition   = 'none';
+      lamp.style.transition = 'none';
+    } else {
+      bg.style.transition   = '';
+      lamp.style.transition = '';
+    }
+
+    bg.style.left   = left   + 'px';
+    bg.style.top    = top    + 'px';
+    bg.style.width  = width  + 'px';
+    bg.style.height = height + 'px';
+    lamp.style.left = lampX  + 'px';
+    lamp.style.top  = top    + 'px';
+  }
+
+  function setActive(el) {
+    items.forEach(i => i.classList.remove('active'));
+    el.classList.add('active');
+    moveTo(el, false);
+  }
+
+  items.forEach(item => {
+    item.addEventListener('click', () => setActive(item));
+  });
+
+  // Scroll-spy: highlight nav item based on visible section
+  const sections = ['services','areas','why','contact'];
+  const sectionEls = sections.map(id => document.getElementById(id)).filter(Boolean);
+
+  function onScroll() {
+    let active = null;
+    const mid = window.scrollY + window.innerHeight * 0.4;
+    for (let i = sectionEls.length - 1; i >= 0; i--) {
+      if (sectionEls[i].offsetTop <= mid) { active = sections[i]; break; }
+    }
+    const target = nav.querySelector('[data-section="' + (active || 'home') + '"]');
+    if (target && !target.classList.contains('active')) setActive(target);
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Initial position (no animation on load)
+  requestAnimationFrame(() => {
+    const activeEl = nav.querySelector('.tl-item.active');
+    if (activeEl) moveTo(activeEl, true);
+    requestAnimationFrame(() => {
+      bg.style.transition   = '';
+      lamp.style.transition = '';
+    });
+  });
+})();
+</script>
+</body>
+</html>
