@@ -10,11 +10,11 @@
   --red:       #E31B23;
   --red-mid:   #c0161d;
   --red-dark:  #8a0f14;
-  --ink:       #111111;
-  --ink-light: #444444;
-  --mist:      #f5f4f2;
-  --white:     #ffffff;
-  --border:    #e2e0dc;
+  --ink:       #f5eaea;
+  --ink-light: #c4a8a8;
+  --mist:      #180404;
+  --white:     #0d0101;
+  --border:    #3a0808;
   --serif:     'Fraunces', Georgia, serif;
   --sans:      'DM Sans', system-ui, sans-serif;
 }
@@ -27,25 +27,25 @@ img { display:block; max-width:100%; }
 /* NAV */
 nav {
   position:fixed; top:0; left:0; right:0; z-index:200;
-  background:rgba(255,255,255,0.95); backdrop-filter:blur(16px);
+  background:rgba(13,1,1,0.95); backdrop-filter:blur(16px);
   border-bottom:1px solid var(--border);
   padding:0 48px; height:68px;
   display:flex; align-items:center; justify-content:space-between;
   overflow:hidden;
 }
-.nav-logo img { height:148px; }
+.nav-logo img { height:148px; clip-path:inset(6px); }
 .nav-cta { background:var(--ink); color:var(--white); font-size:0.82rem; font-weight:600; padding:10px 22px; border-radius:100px; transition:background .2s; }
 .nav-cta:hover { background:var(--red); }
 
 /* TUBELIGHT NAV */
 .tubelight-nav {
   display:flex; align-items:center; gap:2px; position:relative;
-  background:rgba(0,0,0,0.04); border:1px solid var(--border);
+  background:rgba(255,255,255,0.06); border:1px solid var(--border);
   backdrop-filter:blur(8px); padding:4px; border-radius:100px;
   box-shadow:0 4px 16px rgba(0,0,0,0.06); overflow:visible;
 }
 .tl-bg-pill {
-  position:absolute; background:rgba(227,27,35,0.07); border-radius:100px;
+  position:absolute; background:rgba(227,27,35,0.18); border-radius:100px;
   width:0; height:0;
   transition:left .35s cubic-bezier(.34,1.56,.64,1), top .35s cubic-bezier(.34,1.56,.64,1), width .35s cubic-bezier(.34,1.56,.64,1), height .35s;
   z-index:0; pointer-events:none;
@@ -100,7 +100,7 @@ nav {
 /* MOBILE MENU OVERLAY */
 .mob-menu {
   display:none; position:fixed; inset:0; z-index:250;
-  background:rgba(255,255,255,0.97); backdrop-filter:blur(20px);
+  background:rgba(13,1,1,0.97); backdrop-filter:blur(20px);
   flex-direction:column; align-items:center; justify-content:center;
   opacity:0; transition:opacity .25s ease; pointer-events:none;
 }
@@ -112,7 +112,7 @@ nav {
 }
 .mob-item:hover { color:var(--red); }
 .mob-cta {
-  margin-top:28px; background:var(--ink); color:var(--white);
+  margin-top:28px; background:var(--red); color:#fff;
   font-size:1rem; font-weight:600; padding:14px 36px; border-radius:100px;
   transition:background .2s; text-decoration:none;
 }
@@ -156,28 +156,41 @@ nav {
 .wrap { max-width:1220px; margin:0 auto; padding:0 48px; }
 .section { padding:110px 0; }
 .label { font-size:0.75rem; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:var(--red); margin-bottom:18px; display:block; }
-.section-title { font-family:var(--serif); font-size:clamp(2rem, 3.8vw, 3.2rem); font-weight:400; line-height:1.15; letter-spacing:-0.3px; color:var(--ink); margin-bottom:18px; }
-.section-title em { font-style:italic; color:var(--ink-light); }
+.section-title { font-family:var(--serif); font-size:clamp(2.2rem, 4vw, 3.6rem); font-weight:400; line-height:1.15; letter-spacing:-0.3px; color:#ffffff; margin-bottom:18px; }
+.section-title em { font-style:italic; color:rgba(255,255,255,0.4); }
 .section-intro { font-size:1rem; color:var(--ink-light); max-width:580px; line-height:1.8; }
 
-/* INTRO SPLIT */
-.intro-split { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
-.intro-right p { color:var(--ink-light); line-height:1.85; margin-bottom:20px; font-size:0.97rem; }
-.intro-stats { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:48px; }
-.istat { border-top:2px solid var(--red); padding-top:16px; }
-.istat-num { font-family:var(--serif); font-size:2.6rem; font-weight:300; color:var(--ink); line-height:1; }
-.istat-label { font-size:0.8rem; color:var(--ink-light); margin-top:6px; }
-.area-pill { display:inline-flex; align-items:center; gap:8px; background:var(--mist); border:1px solid var(--border); border-radius:100px; padding:8px 16px; font-size:0.8rem; font-weight:500; color:var(--ink-light); margin-top:24px; }
-.area-pill b { color:var(--red); font-weight:700; }
+/* ABOUT */
+.about-header { text-align:center; max-width:700px; margin:0 auto 72px; }
+.about-label-wrap { display:inline-flex; align-items:center; gap:8px; margin-bottom:20px; }
+.about-label-icon { display:flex; gap:3px; align-items:center; }
+.about-label-icon span { width:10px; height:10px; border-radius:50%; background:var(--red); display:block; }
+.about-label-icon span:first-child { opacity:0.45; }
+.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
+.about-imgs { position:relative; display:flex; flex-direction:column; gap:32px; padding-right:32px; }
+.about-img { border-radius:16px; overflow:hidden; }
+.about-img img { width:100%; height:280px; object-fit:cover; display:block; filter:grayscale(15%); }
+.about-badge { position:absolute; bottom:68px; right:8px; width:80px; height:80px; border-radius:50%; background:var(--red); border:3px solid var(--white); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; z-index:2; box-shadow:0 8px 24px rgba(0,0,0,0.3); }
+.about-badge-num { font-size:1.1rem; font-weight:700; color:#fff; line-height:1; }
+.about-badge-text { font-size:0.48rem; font-weight:700; color:rgba(255,255,255,0.75); letter-spacing:1px; text-transform:uppercase; margin-top:3px; }
+.about-right p { color:var(--ink-light); line-height:1.85; margin-bottom:20px; font-size:0.97rem; }
+.about-bars { display:flex; flex-direction:column; gap:20px; margin:28px 0 32px; }
+.about-bar-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.about-bar-label { font-size:0.85rem; font-weight:600; color:var(--ink); }
+.about-bar-pct { font-size:0.85rem; font-weight:600; color:var(--ink); }
+.about-bar-track { height:5px; background:rgba(255,255,255,0.08); border-radius:100px; position:relative; }
+.about-bar-fill { height:100%; border-radius:100px; background:var(--red); position:relative; }
+.about-bar-fill::after { content:''; width:14px; height:14px; border-radius:50%; background:var(--red); border:2px solid var(--white); position:absolute; right:-7px; top:50%; transform:translateY(-50%); }
+.about-cta { display:inline-flex; align-items:center; gap:10px; background:#080101; color:#fff; font-size:0.88rem; font-weight:600; padding:14px 28px; border-radius:100px; border:1px solid rgba(255,255,255,0.15); transition:background .2s, border-color .2s; }
+.about-cta:hover { background:var(--red); border-color:var(--red); }
 
 /* SERVICES */
 .services-bg { background:var(--mist); }
 .services-header { text-align:center; margin-bottom:64px; }
-.services-header .label { font-size:1rem; letter-spacing:3px; }
 .srv-primary { display:grid; grid-template-columns:1fr 1fr; gap:2px; background:var(--border); margin-bottom:2px; }
 .srv-item { background:var(--white); padding:48px 40px; position:relative; overflow:hidden; transition:background .3s; cursor:pointer; display:flex; flex-direction:column; gap:16px; }
 .srv-item::after { content:''; position:absolute; bottom:0; left:0; right:0; height:3px; background:var(--red); transform:scaleX(0); transform-origin:left; transition:transform .3s ease; }
-.srv-item:hover { background:#faf9f7; }
+.srv-item:hover { background:#200606; }
 .srv-item:hover::after { transform:scaleX(1); }
 .srv-badge { display:inline-block; background:rgba(227,27,35,0.08); color:var(--red); font-size:0.68rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:4px 12px; border-radius:100px; border:1px solid rgba(227,27,35,0.15); width:fit-content; }
 .srv-badge.alt { background:rgba(17,17,17,0.05); color:var(--ink-light); border-color:var(--border); }
@@ -192,7 +205,7 @@ nav {
 .srv-arrow { font-size:1.2rem; color:var(--ink-light); transition:transform .2s; }
 .srv-item:hover .srv-arrow { transform:translate(4px,-4px); }
 .srv-secondary { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--border); }
-.srv-item-sm { background:#fafaf8; padding:32px 30px; display:flex; flex-direction:column; gap:12px; position:relative; overflow:hidden; transition:background .3s; cursor:pointer; }
+.srv-item-sm { background:#150404; padding:32px 30px; display:flex; flex-direction:column; gap:12px; position:relative; overflow:hidden; transition:background .3s; cursor:pointer; }
 .srv-item-sm::after { content:''; position:absolute; bottom:0; left:0; right:0; height:2px; background:var(--ink); transform:scaleX(0); transform-origin:left; transition:transform .3s ease; }
 .srv-item-sm:hover { background:var(--white); }
 .srv-item-sm:hover::after { transform:scaleX(1); }
@@ -207,7 +220,9 @@ nav {
 .tcard-bg { position:absolute; inset:0; }
 .tcard:nth-child(1) .tcard-bg { background:linear-gradient(160deg,#1c1414,#2d1010,#1a0d0d); }
 .tcard:nth-child(2) .tcard-bg { background:linear-gradient(160deg,#0f1a18,#122820,#0f1a18); }
-.tcard:nth-child(3) .tcard-bg { background:linear-gradient(160deg,#131218,#1e1428,#131218); }
+.tcard:nth-child(3) .tcard-bg { background:linear-gradient(160deg,#141414,#1e1e1e,#111111); }
+.tcard:nth-child(3) .tcard-decor { background:rgba(245,245,245,0.1); border-color:rgba(245,245,245,0.2); }
+.modernus-logo { background:#ffffff; border-color:#ffffff; padding:8px 12px; display:inline-flex; align-items:center; }
 .tcard-overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.92) 40%, transparent 100%); }
 .tcard-body { position:relative; z-index:2; padding:32px; }
 .tcard-logo { display:inline-block; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.15); border-radius:8px; padding:8px 14px; font-size:0.72rem; font-weight:700; color:rgba(255,255,255,0.6); letter-spacing:1px; margin-bottom:16px; text-transform:uppercase; }
@@ -229,25 +244,72 @@ nav {
 .area-card p { font-size:0.76rem; color:var(--ink-light); line-height:1.6; }
 
 /* WHY */
-.why-bg { background:var(--ink); }
-.why-inner { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
-.why-right { display:flex; flex-direction:column; }
-.why-item { display:flex; gap:24px; align-items:flex-start; padding:28px 0; border-bottom:1px solid rgba(255,255,255,0.08); }
-.why-item:last-child { border-bottom:none; }
-.why-num { font-family:var(--serif); font-size:1.1rem; font-weight:300; color:rgba(255,255,255,0.2); width:36px; flex-shrink:0; padding-top:3px; }
-.why-text h3 { font-size:1rem; font-weight:600; color:#fff; margin-bottom:6px; }
-.why-text p { font-size:0.86rem; color:rgba(255,255,255,0.5); line-height:1.75; }
-.btn-light { background:#fff; color:var(--ink); font-size:0.88rem; font-weight:600; padding:14px 28px; border-radius:100px; display:inline-block; transition:background .2s; margin-top:40px; }
-.btn-light:hover { background:var(--mist); }
+.why-bg { background:radial-gradient(ellipse 70% 50% at 15% 85%, rgba(107,15,20,0.35) 0%, transparent 55%), #080101; }
+.why-header { text-align:center; max-width:640px; margin:0 auto 64px; }
+.why-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.why-card { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.09); border-radius:16px; padding:32px; display:flex; flex-direction:column; gap:20px; transition:transform .25s, border-color .25s, box-shadow .25s; }
+.why-card:hover { transform:translateY(-4px); border-color:rgba(227,27,35,0.35); box-shadow:0 16px 48px rgba(0,0,0,0.3); }
+.why-card.featured { background:linear-gradient(135deg,#7a1018 0%,#5a0c10 100%); border-color:rgba(255,255,255,0.12); }
+.why-card.featured:hover { border-color:rgba(255,255,255,0.25); box-shadow:0 16px 48px rgba(107,15,20,0.45); }
+.why-card-top { display:flex; align-items:flex-start; justify-content:space-between; }
+.why-card-icon { width:52px; height:52px; border-radius:12px; background:rgba(227,27,35,0.15); border:1px solid rgba(227,27,35,0.2); display:flex; align-items:center; justify-content:center; font-size:1.4rem; }
+.why-card.featured .why-card-icon { background:rgba(255,255,255,0.15); border-color:rgba(255,255,255,0.2); }
+.why-card-arrow { width:36px; height:36px; border-radius:50%; border:1px solid rgba(255,255,255,0.15); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.4); font-size:1rem; flex-shrink:0; }
+.why-card.featured .why-card-arrow { border-color:rgba(255,255,255,0.3); color:rgba(255,255,255,0.7); }
+.why-card h3 { font-family:var(--serif); font-size:1.1rem; font-weight:400; color:#fff; line-height:1.3; }
+.why-card p { font-size:0.86rem; color:rgba(255,255,255,0.45); line-height:1.75; flex:1; }
+.why-card.featured p { color:rgba(255,255,255,0.8); }
+.btn-light { background:rgba(255,255,255,0.1); color:#fff; font-size:0.88rem; font-weight:600; padding:14px 28px; border-radius:100px; display:inline-block; transition:background .2s; margin-top:40px; border:1px solid rgba(255,255,255,0.2); }
+.btn-light:hover { background:rgba(255,255,255,0.2); }
 
 /* PROCESS */
-.process-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:32px; margin-top:60px; }
-.pstep { position:relative; }
-.pstep-line { position:absolute; top:26px; left:calc(50% + 28px); right:calc(-50% + 28px); height:1px; background:var(--border); }
-.pstep:last-child .pstep-line { display:none; }
-.pstep-circle { width:52px; height:52px; border-radius:50%; border:1.5px solid var(--border); background:var(--white); display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-size:1rem; font-weight:400; color:var(--red); margin-bottom:24px; position:relative; z-index:1; }
-.pstep h3 { font-family:var(--serif); font-size:1.1rem; font-weight:400; color:var(--ink); margin-bottom:10px; }
-.pstep p { font-size:0.84rem; color:var(--ink-light); line-height:1.8; }
+.process-section { overflow:hidden; }
+.process-track { margin:56px 0 48px; overflow:hidden; }
+.process-inner {
+  display:flex; width:max-content;
+  animation:process-scroll 28s linear infinite;
+  padding:8px 0;
+}
+.process-track:hover .process-inner { animation-play-state:paused; }
+@keyframes process-scroll {
+  from { transform:translateX(0); }
+  to { transform:translateX(-50%); }
+}
+.pcard {
+  width:360px; flex-shrink:0; margin-right:20px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.09);
+  border-radius:16px; padding:32px;
+  display:flex; flex-direction:column;
+  position:relative;
+  transition:border-color .25s, transform .25s;
+}
+.pcard:hover { border-color:rgba(227,27,35,0.3); transform:translateY(-4px); }
+.pcard-num {
+  position:absolute; top:20px; right:24px;
+  font-size:1rem; font-weight:600; color:rgba(255,255,255,0.3);
+}
+.pcard-icon { font-size:1.8rem; margin-bottom:28px; }
+.pcard h3 { font-size:1rem; font-weight:700; color:#fff; margin-bottom:12px; }
+.pcard p { font-size:0.84rem; color:rgba(255,255,255,0.45); line-height:1.75; flex:1; margin-bottom:28px; }
+.pcard-step {
+  display:inline-flex; align-items:center;
+  border:1px solid rgba(255,255,255,0.15); border-radius:100px;
+  padding:6px 18px; font-size:0.74rem; font-weight:600;
+  color:rgba(255,255,255,0.4); width:fit-content;
+}
+.process-banner {
+  background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.09);
+  border-radius:16px; padding:28px 40px;
+  display:flex; align-items:center; justify-content:space-between; gap:24px;
+}
+.process-banner-text strong { display:block; color:#fff; font-size:0.95rem; margin-bottom:4px; }
+.process-banner-text span { color:rgba(255,255,255,0.45); font-size:0.82rem; }
+.process-banner-btns { display:flex; gap:12px; align-items:center; flex-shrink:0; }
+.pbtn-ghost { padding:10px 24px; border-radius:100px; border:1px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.7); font-size:0.85rem; font-weight:600; transition:border-color .2s, color .2s; }
+.pbtn-ghost:hover { border-color:rgba(255,255,255,0.5); color:#fff; }
+.pbtn-solid { padding:10px 24px; border-radius:100px; background:#fff; color:#0d0101; font-size:0.85rem; font-weight:700; transition:opacity .2s; }
+.pbtn-solid:hover { opacity:0.85; }
 
 /* CONTACT */
 .contact-bg { background:var(--mist); }
@@ -265,16 +327,16 @@ nav {
 .form-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
 .fg { margin-bottom:14px; }
 .fg label { display:block; font-size:0.77rem; font-weight:600; color:var(--ink-light); margin-bottom:7px; }
-.fg input, .fg select, .fg textarea { width:100%; background:#fafafa; border:1.5px solid var(--border); border-radius:10px; padding:12px 16px; color:var(--ink); font-size:0.9rem; font-family:var(--sans); outline:none; transition:border-color .2s, box-shadow .2s; }
+.fg input, .fg select, .fg textarea { width:100%; background:#1c0505; border:1.5px solid var(--border); border-radius:10px; padding:12px 16px; color:var(--ink); font-size:0.9rem; font-family:var(--sans); outline:none; transition:border-color .2s, box-shadow .2s; }
 .fg input:focus, .fg select:focus, .fg textarea:focus { border-color:var(--red); box-shadow:0 0 0 3px rgba(227,27,35,0.08); }
 .fg textarea { min-height:100px; resize:vertical; }
 .fg select { appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 16px center; }
-.fsub { width:100%; background:var(--ink); color:#fff; font-family:var(--sans); font-size:0.92rem; font-weight:600; padding:15px; border:none; cursor:pointer; border-radius:100px; transition:background .2s; margin-top:4px; }
+.fsub { width:100%; background:#080101; color:#fff; font-family:var(--sans); font-size:0.92rem; font-weight:600; padding:15px; border:none; cursor:pointer; border-radius:100px; transition:background .2s; margin-top:4px; }
 .fsub:hover { background:var(--red); }
 .fnote { text-align:center; margin-top:10px; font-size:0.72rem; color:var(--ink-light); opacity:0.55; }
 
 /* CTA BANNER */
-.cta-banner { background:var(--red); padding:100px 0; text-align:center; position:relative; overflow:hidden; }
+.cta-banner { background:#6b0f14; padding:100px 0; text-align:center; position:relative; overflow:hidden; }
 .cta-banner::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 80% at 50% 50%, rgba(255,255,255,0.06) 0%, transparent 70%); }
 .cta-banner h2 { font-family:var(--serif); font-size:clamp(2.2rem,4.5vw,4rem); font-weight:300; color:#fff; line-height:1.15; letter-spacing:-0.3px; margin-bottom:16px; position:relative; }
 .cta-banner h2 em { font-style:italic; color:rgba(255,255,255,0.65); }
@@ -283,9 +345,9 @@ nav {
 .btn-cta:hover { transform:translateY(-2px); box-shadow:0 12px 36px rgba(0,0,0,0.2); }
 
 /* FOOTER */
-footer { background:var(--ink); color:rgba(255,255,255,0.5); padding:64px 48px 40px; }
+footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px; }
 .footer-top { max-width:1220px; margin:0 auto; display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:64px; padding-bottom:48px; border-bottom:1px solid rgba(255,255,255,0.08); }
-.footer-brand img { height:44px; margin-bottom:18px; filter:brightness(0) invert(1); }
+.footer-brand img { height:44px; margin-bottom:18px; }
 .footer-brand p { font-size:0.85rem; line-height:1.75; max-width:280px; }
 .footer-col h4 { font-size:0.75rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-bottom:16px; }
 .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
@@ -303,9 +365,6 @@ footer { background:var(--ink); color:rgba(255,255,255,0.5); padding:64px 48px 4
 .fade-up-d3 { transition-delay:.3s; } .fade-up-d4 { transition-delay:.4s; }
 
 @media(max-width:1060px){
-  .areas-grid { grid-template-columns:repeat(2,1fr); }
-  .process-grid { grid-template-columns:repeat(2,1fr); }
-  .pstep:nth-child(2) .pstep-line { display:none; }
 }
 @media(max-width:980px){
   nav { padding:0 20px; } .tubelight-nav { display:none; } .nav-cta { display:none; }
@@ -313,10 +372,14 @@ footer { background:var(--ink); color:rgba(255,255,255,0.5); padding:64px 48px 4
   .hero-slide-content { padding:48px 28px 60px; }
   .hero-indicators { right:28px; bottom:24px; }
   .wrap { padding:0 24px; } .section { padding:72px 0; }
-  .intro-split, .why-inner, .contact-inner { grid-template-columns:1fr; gap:48px; }
+  .about-grid, .contact-inner { grid-template-columns:1fr; gap:48px; }
+  .about-imgs { padding-right:0; }
+  .why-cards { grid-template-columns:1fr; }
   .srv-primary, .srv-secondary { grid-template-columns:1fr; }
-  .testi-grid, .areas-grid { grid-template-columns:1fr; }
-  .process-grid { grid-template-columns:1fr; } .pstep-line { display:none; }
+  .testi-grid { grid-template-columns:1fr; }
+  .pcard { width:280px; }
+  .process-banner { flex-direction:column; align-items:flex-start; padding:24px; }
+  .process-banner-btns { width:100%; }
   .services-header { flex-direction:column; gap:16px; }
   footer { padding:48px 24px 32px; }
   .footer-top { grid-template-columns:1fr; gap:36px; }
@@ -334,9 +397,11 @@ footer { background:var(--ink); color:rgba(255,255,255,0.5); padding:64px 48px 4
     <div class="tl-bg-pill" id="tlBg"></div>
     <div class="tl-lamp-wrap" id="tlLamp"><div class="tl-lamp-bar"><div class="tl-lamp-glow3"></div></div></div>
     <a href="#" class="tl-item active" data-section="home">Home</a>
+    <a href="#about" class="tl-item" data-section="about">About Us</a>
     <a href="#services" class="tl-item" data-section="services">Services</a>
-    <a href="#areas" class="tl-item" data-section="areas">Areas</a>
+    <a href="#testimonials" class="tl-item" data-section="testimonials">Reviews</a>
     <a href="#why" class="tl-item" data-section="why">Why Us</a>
+    <a href="#process" class="tl-item" data-section="process">Our Process</a>
     <a href="#contact" class="tl-item" data-section="contact">Contact</a>
   </div>
   <a href="#contact" class="nav-cta">Let's Talk</a>
@@ -349,9 +414,11 @@ footer { background:var(--ink); color:rgba(255,255,255,0.5); padding:64px 48px 4
 <div class="mob-menu" id="mobMenu">
   <div class="mob-menu-inner">
     <a href="#" class="mob-item">Home</a>
+    <a href="#about" class="mob-item">About Us</a>
     <a href="#services" class="mob-item">Services</a>
-    <a href="#areas" class="mob-item">Areas</a>
+    <a href="#testimonials" class="mob-item">Reviews</a>
     <a href="#why" class="mob-item">Why Us</a>
+    <a href="#process" class="mob-item">Our Process</a>
     <a href="#contact" class="mob-item">Contact</a>
     <a href="#contact" class="mob-cta">Let's Talk</a>
   </div>
@@ -362,7 +429,7 @@ footer { background:var(--ink); color:rgba(255,255,255,0.5); padding:64px 48px 4
   <div class="hero-slides">
 
     <div class="hero-slide active" id="slide-0">
-      <div class="hero-slide-bg" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1800&q=80')"></div>
+      <div class="hero-slide-bg" style="background-image:url('hero-slide.png')"></div>
       <div class="hero-slide-content">
         
         <h1>Websites that bring<br><em>real customers to your door</em></h1>
@@ -375,7 +442,7 @@ footer { background:var(--ink); color:rgba(255,255,255,0.5); padding:64px 48px 4
     </div>
 
     <div class="hero-slide" id="slide-1">
-      <div class="hero-slide-bg" style="background-image:url('https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=1800&q=80')"></div>
+      <div class="hero-slide-bg" style="background-image:url('hero-slider-2.png')"></div>
       <div class="hero-slide-content">
         
         <h1>Get found by customers<br><em>who are ready to buy</em></h1>
@@ -435,41 +502,51 @@ footer { background:var(--ink); color:rgba(255,255,255,0.5); padding:64px 48px 4
 </div>
 
 <!-- INTRO -->
-<section class="section">
+<section class="section" id="about">
   <div class="wrap">
-    <div class="intro-split">
-      <div class="fade-up">
-        <span class="label">About MartKam Digital</span>
-        <h2 class="section-title">Your local web design partner — <em>no agency fluff</em></h2>
-        <div class="intro-stats">
-          <div class="istat fade-up fade-up-d1">
-            <div class="istat-num">150+</div>
-            <div class="istat-label">Local businesses helped to grow online</div>
-          </div>
-          <div class="istat fade-up fade-up-d2">
-            <div class="istat-num">7+</div>
-            <div class="istat-label">Years serving Surrey & South West London</div>
-          </div>
-          <div class="istat fade-up fade-up-d3">
-            <div class="istat-num">5.0★</div>
-            <div class="istat-label">Google rating from verified local clients</div>
-          </div>
-          <div class="istat fade-up fade-up-d4">
-            <div class="istat-num">100%</div>
-            <div class="istat-label">Custom-built — no templates, no shortcuts</div>
-          </div>
+    <div class="about-header fade-up">
+      <div class="about-label-wrap">
+        <div class="about-label-icon"><span></span><span></span></div>
+        <span class="label" style="margin:0;">About MartKam Digital</span>
+      </div>
+      <h2 class="section-title">Your local web design partner — <em>no agency fluff</em></h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-imgs fade-up">
+        <div class="about-img">
+          <img src="about-image.jpg" alt="MartKam team at work">
+        </div>
+        <div class="about-img">
+          <img src="about-image-2.jpg" alt="Supporting local businesses">
         </div>
       </div>
-      <div class="intro-right fade-up fade-up-d2">
+      <div class="about-right fade-up fade-up-d2">
         <p>We help local businesses across Surrey and South West London get online properly — with websites that look professional, load fast, and are built to bring in real enquiries from Google.</p>
         <p>Too many small businesses have websites that were expensive, took ages to build, and still don't bring in any customers. We do things differently: clear pricing, fast turnaround, and results you can measure.</p>
-        <p>From your first website to a full rebrand, Google visibility to ongoing support — we're the team in your corner, not a faceless agency that disappears after launch.</p>
-        <div style="margin-top:32px;">
-          <a href="#contact" style="display:inline-flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:600;color:var(--red);border-bottom:1.5px solid var(--red);padding-bottom:3px;">
-            Book a free consultation →
-          </a>
+        <div class="about-bars">
+          <div class="about-bar">
+            <div class="about-bar-top">
+              <span class="about-bar-label">Web Design & Development</span>
+              <span class="about-bar-pct">95%</span>
+            </div>
+            <div class="about-bar-track"><div class="about-bar-fill" style="width:95%"></div></div>
+          </div>
+          <div class="about-bar">
+            <div class="about-bar-top">
+              <span class="about-bar-label">Google SEO & Local Search</span>
+              <span class="about-bar-pct">88%</span>
+            </div>
+            <div class="about-bar-track"><div class="about-bar-fill" style="width:88%"></div></div>
+          </div>
+          <div class="about-bar">
+            <div class="about-bar-top">
+              <span class="about-bar-label">Client Satisfaction</span>
+              <span class="about-bar-pct">100%</span>
+            </div>
+            <div class="about-bar-track"><div class="about-bar-fill" style="width:100%"></div></div>
+          </div>
         </div>
-        <div class="area-pill">📍 Serving <b>Surrey</b> &amp; <b>South West London</b></div>
+        <a href="#contact" class="about-cta">Book a free consultation →</a>
       </div>
     </div>
   </div>
@@ -555,7 +632,7 @@ footer { background:var(--ink); color:rgba(255,255,255,0.5); padding:64px 48px 4
 <section class="section" id="testimonials">
   <div class="wrap">
     <div style="text-align:center;margin-bottom:56px;" class="fade-up">
-      <span class="label" style="font-size:1rem;letter-spacing:3px;">Client Stories</span>
+      <span class="label">Client Stories</span>
       <h2 class="section-title">Real businesses.<br><em>Real results.</em></h2>
     </div>
     <div class="testi-grid">
@@ -586,13 +663,15 @@ footer { background:var(--ink); color:rgba(255,255,255,0.5); padding:64px 48px 4
       <div class="tcard fade-up fade-up-d3">
         <div class="tcard-bg"></div>
         <div class="tcard-overlay"></div>
-        <div class="tcard-top"><div class="tcard-decor">🎨</div></div>
+        <div class="tcard-top"><div class="tcard-decor">🖌️</div></div>
         <div class="tcard-body">
           <div class="tcard-stars">★★★★★</div>
-          <div class="tcard-logo">Hale & Co · Wimbledon</div>
-          <blockquote>"Genuinely the best decision we made for our business. A brilliant new website, easy to find on Google, and the team were a pleasure to work with from start to finish."</blockquote>
-          <span class="tcard-name">Marcus Hale</span>
-          <span class="tcard-role">Founder · Wimbledon, SW London</span>
+          <div class="tcard-logo modernus-logo">
+            <img src="modernus-logo.png.png" alt="Modernus Decoration Projects" style="height:36px;display:block;border-radius:4px;">
+          </div>
+          <blockquote>"We relied on word of mouth for years but never had a proper online presence. MartKam built us a website and got us ranking on Google — within weeks we were getting enquiries from customers we'd never have reached before."</blockquote>
+          <span class="tcard-name">Kamil</span>
+          <span class="tcard-role">Director · Cheam, Surrey</span>
         </div>
       </div>
     </div>
@@ -602,149 +681,148 @@ footer { background:var(--ink); color:rgba(255,255,255,0.5); padding:64px 48px 4
   </div>
 </section>
 
-<!-- AREAS -->
-<section class="section areas-bg" id="areas">
-  <div class="wrap">
-    <div style="text-align:center;max-width:560px;margin:0 auto;" class="fade-up">
-      <span class="label" style="font-size:1rem;letter-spacing:3px;">Where We Work</span>
-      <h2 class="section-title">Serving Surrey &<br><em>South West London</em></h2>
-      <p class="section-intro" style="margin:0 auto;">We're a local team — not a remote agency. We work with businesses across Surrey and South West London and know these areas inside out.</p>
-    </div>
-    <div class="areas-grid">
-      <div class="area-card fade-up">
-        <div class="area-emoji">🏘️</div>
-        <div class="area-region">Surrey</div>
-        <h4>Guildford</h4>
-        <p>Websites & SEO for Guildford businesses of all sizes</p>
-      </div>
-      <div class="area-card fade-up fade-up-d1">
-        <div class="area-emoji">🏘️</div>
-        <div class="area-region">Surrey</div>
-        <h4>Woking</h4>
-        <p>Local web design and Google visibility in Woking</p>
-      </div>
-      <div class="area-card fade-up fade-up-d2">
-        <div class="area-emoji">🏘️</div>
-        <div class="area-region">Surrey</div>
-        <h4>Reigate & Redhill</h4>
-        <p>Custom sites and SEO across Reigate and Redhill</p>
-      </div>
-      <div class="area-card fade-up fade-up-d3">
-        <div class="area-emoji">🏘️</div>
-        <div class="area-region">Surrey</div>
-        <h4>Camberley & Farnham</h4>
-        <p>Digital growth for businesses across west Surrey</p>
-      </div>
-      <div class="area-card fade-up">
-        <div class="area-emoji">🌆</div>
-        <div class="area-region">South West London</div>
-        <h4>Wimbledon & Merton</h4>
-        <p>Web design for SW19 and surrounding areas</p>
-      </div>
-      <div class="area-card fade-up fade-up-d1">
-        <div class="area-emoji">🌆</div>
-        <div class="area-region">South West London</div>
-        <h4>Kingston upon Thames</h4>
-        <p>Helping Kingston businesses stand out online</p>
-      </div>
-      <div class="area-card fade-up fade-up-d2">
-        <div class="area-emoji">🌆</div>
-        <div class="area-region">South West London</div>
-        <h4>Richmond & Twickenham</h4>
-        <p>Local SEO and custom websites in Richmond</p>
-      </div>
-      <div class="area-card fade-up fade-up-d3">
-        <div class="area-emoji">🌆</div>
-        <div class="area-region">South West London</div>
-        <h4>Putney & Wandsworth</h4>
-        <p>Digital presence for SW London small businesses</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- WHY -->
 <section class="section why-bg" id="why">
   <div class="wrap">
-    <div class="why-inner">
-      <div class="fade-up">
-        <span class="label" style="color:rgba(255,255,255,0.35);">Why Choose Us</span>
-        <h2 class="section-title" style="color:#fff;max-width:420px;">Why local businesses choose <em style="color:rgba(255,255,255,0.4)">MartKam Digital</em></h2>
-        <p style="color:rgba(255,255,255,0.5);margin-top:20px;font-size:0.97rem;line-height:1.85;max-width:400px;">We're not an anonymous agency with big city prices. We're a local team who know your area, understand your customers, and care deeply about your results.</p>
-        <a href="#contact" class="btn-light">Start a conversation →</a>
+    <div class="why-header fade-up">
+      <span class="label">Why Choose Us</span>
+      <h2 class="section-title">Why local businesses choose <em>MartKam Digital</em></h2>
+      <p style="color:rgba(255,255,255,0.5);margin-top:16px;font-size:1rem;line-height:1.8;">We're not an anonymous agency with big city prices. We're a local team who know your area, understand your customers, and care deeply about your results.</p>
+    </div>
+    <div class="why-cards">
+      <div class="why-card featured fade-up">
+        <div class="why-card-top">
+          <div class="why-card-icon">🎨</div>
+          <div class="why-card-arrow">↗</div>
+        </div>
+        <h3>Web Design Is Our Primary Focus</h3>
+        <p>We specialise exclusively in web design and local SEO — so you get true specialists, not generalists spread thin.</p>
       </div>
-      <div class="why-right fade-up fade-up-d2">
-        <div class="why-item">
-          <div class="why-num">01</div>
-          <div class="why-text">
-            <h3>Web Design Is Our Primary Focus</h3>
-            <p>We specialise in websites and digital visibility — not spread thin across dozens of services. You get specialists who live and breathe web design and local SEO, not generalists.</p>
-          </div>
+      <div class="why-card fade-up fade-up-d1">
+        <div class="why-card-top">
+          <div class="why-card-icon">📈</div>
+          <div class="why-card-arrow">↗</div>
         </div>
-        <div class="why-item">
-          <div class="why-num">02</div>
-          <div class="why-text">
-            <h3>Built to Rank on Google</h3>
-            <p>Every site we build has SEO baked in from the start — not bolted on as an afterthought. We build for search engines and humans, so you get traffic that actually converts into business.</p>
-          </div>
+        <h3>Built to Rank on Google</h3>
+        <p>Every site we build has SEO baked in from day one, so you get traffic that actually converts into enquiries.</p>
+      </div>
+      <div class="why-card fade-up fade-up-d2">
+        <div class="why-card-top">
+          <div class="why-card-icon">📍</div>
+          <div class="why-card-arrow">↗</div>
         </div>
-        <div class="why-item">
-          <div class="why-num">03</div>
-          <div class="why-text">
-            <h3>Genuinely Local Knowledge</h3>
-            <p>We're based in the area we serve. We know Surrey and South West London, and that local knowledge shapes everything — from your copy to your SEO keyword strategy.</p>
-          </div>
+        <h3>Genuinely Local Knowledge</h3>
+        <p>We're based in the area we serve, so local knowledge shapes every decision — from your copy to your SEO strategy.</p>
+      </div>
+      <div class="why-card fade-up fade-up-d1">
+        <div class="why-card-top">
+          <div class="why-card-icon">💰</div>
+          <div class="why-card-arrow">↗</div>
         </div>
-        <div class="why-item">
-          <div class="why-num">04</div>
-          <div class="why-text">
-            <h3>Transparent, Fixed Pricing</h3>
-            <p>No surprise invoices, no hidden fees. You'll know exactly what you're getting and what it costs before we start. Simple, honest, upfront pricing every time.</p>
-          </div>
+        <h3>Transparent, Fixed Pricing</h3>
+        <p>You'll know exactly what you're getting and what it costs before we start — no surprises, ever.</p>
+      </div>
+      <div class="why-card fade-up fade-up-d2">
+        <div class="why-card-top">
+          <div class="why-card-icon">🛡️</div>
+          <div class="why-card-arrow">↗</div>
         </div>
-        <div class="why-item">
-          <div class="why-num">05</div>
-          <div class="why-text">
-            <h3>We Don't Disappear After Launch</h3>
-            <p>We offer ongoing support, updates and SEO monitoring after your site goes live — so you always have someone to call. We're in it for the long term with you.</p>
-          </div>
+        <h3>We Don't Disappear After Launch</h3>
+        <p>We offer ongoing support, updates and SEO monitoring after launch — so you always have someone in your corner.</p>
+      </div>
+      <div class="why-card fade-up fade-up-d3">
+        <div class="why-card-top">
+          <div class="why-card-icon">💬</div>
+          <div class="why-card-arrow">↗</div>
         </div>
+        <h3>Plain English, No Jargon</h3>
+        <p>We keep you informed at every stage with honest, straight-talking advice and zero technical jargon.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PROCESS -->
-<section class="section">
+<section class="section process-section" id="process">
   <div class="wrap">
-    <div style="text-align:center;max-width:540px;margin:0 auto 60px;" class="fade-up">
+    <div style="text-align:center;max-width:540px;margin:0 auto;" class="fade-up">
       <span class="label">How It Works</span>
       <h2 class="section-title">From idea to live website — <em>simply</em></h2>
       <p class="section-intro" style="margin:0 auto;">No lengthy briefs, confusing processes, or disappearing project managers. Just four clear steps to a website you're proud of.</p>
     </div>
-    <div class="process-grid">
-      <div class="pstep fade-up">
-        <div class="pstep-line"></div>
-        <div class="pstep-circle">01</div>
+  </div>
+  <div class="process-track">
+    <div class="process-inner">
+      <!-- Set 1 -->
+      <div class="pcard">
+        <div class="pcard-num">1</div>
+        <div class="pcard-icon">💬</div>
         <h3>Free Consultation</h3>
         <p>A relaxed chat about your business, your goals, and what you need. No pressure, no jargon — just an honest conversation about what will help.</p>
+        <span class="pcard-step">Step 1</span>
       </div>
-      <div class="pstep fade-up fade-up-d1">
-        <div class="pstep-line"></div>
-        <div class="pstep-circle">02</div>
+      <div class="pcard">
+        <div class="pcard-num">2</div>
+        <div class="pcard-icon">🎨</div>
         <h3>Design & Quote</h3>
         <p>We put together your design concept and a clear, fixed quote. You'll see exactly how your site will look before you commit to anything.</p>
+        <span class="pcard-step">Step 2</span>
       </div>
-      <div class="pstep fade-up fade-up-d2">
-        <div class="pstep-line"></div>
-        <div class="pstep-circle">03</div>
+      <div class="pcard">
+        <div class="pcard-num">3</div>
+        <div class="pcard-icon">⚙️</div>
         <h3>Build & Refine</h3>
         <p>We build your site and keep you involved throughout — with chances to review and request tweaks. We're not done until you're happy.</p>
+        <span class="pcard-step">Step 3</span>
       </div>
-      <div class="pstep fade-up fade-up-d3">
-        <div class="pstep-circle">04</div>
+      <div class="pcard">
+        <div class="pcard-num">4</div>
+        <div class="pcard-icon">🚀</div>
         <h3>Launch & Grow</h3>
         <p>We go live, set up your Google presence, and make sure everything is working perfectly. Then we're here for ongoing support whenever you need us.</p>
+        <span class="pcard-step">Step 4</span>
+      </div>
+      <!-- Set 2 — duplicate for seamless loop -->
+      <div class="pcard">
+        <div class="pcard-num">1</div>
+        <div class="pcard-icon">💬</div>
+        <h3>Free Consultation</h3>
+        <p>A relaxed chat about your business, your goals, and what you need. No pressure, no jargon — just an honest conversation about what will help.</p>
+        <span class="pcard-step">Step 1</span>
+      </div>
+      <div class="pcard">
+        <div class="pcard-num">2</div>
+        <div class="pcard-icon">🎨</div>
+        <h3>Design & Quote</h3>
+        <p>We put together your design concept and a clear, fixed quote. You'll see exactly how your site will look before you commit to anything.</p>
+        <span class="pcard-step">Step 2</span>
+      </div>
+      <div class="pcard">
+        <div class="pcard-num">3</div>
+        <div class="pcard-icon">⚙️</div>
+        <h3>Build & Refine</h3>
+        <p>We build your site and keep you involved throughout — with chances to review and request tweaks. We're not done until you're happy.</p>
+        <span class="pcard-step">Step 3</span>
+      </div>
+      <div class="pcard">
+        <div class="pcard-num">4</div>
+        <div class="pcard-icon">🚀</div>
+        <h3>Launch & Grow</h3>
+        <p>We go live, set up your Google presence, and make sure everything is working perfectly. Then we're here for ongoing support whenever you need us.</p>
+        <span class="pcard-step">Step 4</span>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="process-banner fade-up">
+      <div class="process-banner-text">
+        <strong>🤝 We're with you at every step</strong>
+        <span>From first conversation to launch day — and long after.</span>
+      </div>
+      <div class="process-banner-btns">
+        <a href="#services" class="pbtn-ghost">View Services</a>
+        <a href="#contact" class="pbtn-solid">Book a Free Chat</a>
       </div>
     </div>
   </div>
@@ -866,13 +944,13 @@ footer { background:var(--ink); color:rgba(255,255,255,0.5); padding:64px 48px 4
 let current = 0;
 const slides = document.querySelectorAll('.hero-slide');
 const dots   = document.querySelectorAll('.hero-dot');
-let timer = setInterval(() => goToSlide((current + 1) % slides.length), 5500);
+let timer = setInterval(() => goToSlide((current + 1) % slides.length), 8500);
 function goToSlide(n) {
   slides[current].classList.remove('active'); dots[current].classList.remove('active');
   current = n;
   slides[current].classList.add('active'); dots[current].classList.add('active');
   clearInterval(timer);
-  timer = setInterval(() => goToSlide((current + 1) % slides.length), 5500);
+  timer = setInterval(() => goToSlide((current + 1) % slides.length), 8500);
 }
 (function() {
   const heroSlides = document.querySelector('.hero-slides');
@@ -950,7 +1028,7 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
   });
 
   // Scroll-spy: highlight nav item based on visible section
-  const sections = ['services','areas','why','contact'];
+  const sections = ['about','services','testimonials','process','why','contact'];
   const sectionEls = sections.map(id => document.getElementById(id)).filter(Boolean);
 
   function onScroll() {
