@@ -977,11 +977,18 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
 const barObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => {
+    const fills = e.target.querySelectorAll('.about-bar-fill');
     if (e.isIntersecting) {
-      e.target.querySelectorAll('.about-bar-fill').forEach((fill, i) => {
-        setTimeout(() => { fill.style.width = fill.dataset.w + '%'; }, i * 200);
+      fills.forEach((fill, i) => {
+        fill.style.transition = 'none';
+        fill.style.width = '0';
+        setTimeout(() => {
+          fill.style.transition = 'width 1.4s cubic-bezier(0.25,0.46,0.45,0.94)';
+          fill.style.width = fill.dataset.w + '%';
+        }, i * 200 + 50);
       });
-      barObserver.unobserve(e.target);
+    } else {
+      fills.forEach(fill => { fill.style.transition = 'none'; fill.style.width = '0'; });
     }
   });
 }, { threshold: 0.3 });
