@@ -220,8 +220,16 @@ nav {
 .tcard-bg { position:absolute; inset:0; }
 .tcard:nth-child(1) .tcard-bg { background:linear-gradient(160deg,#1c1414,#2d1010,#1a0d0d); }
 .tcard:nth-child(2) .tcard-bg { background:linear-gradient(160deg,#0f1a18,#122820,#0f1a18); }
-.tcard:nth-child(3) .tcard-bg { background:linear-gradient(160deg,#141414,#1e1e1e,#111111); }
+.tcard:nth-child(3) .tcard-bg { background:#ffffff; }
 .tcard:nth-child(3) .tcard-decor { background:rgba(245,245,245,0.1); border-color:rgba(245,245,245,0.2); }
+.tcard:nth-child(3) .tcard-overlay { opacity:0; }
+.tcard:nth-child(3) blockquote { color:#1a1a1a; }
+.tcard:nth-child(3) .tcard-name { color:#1a1a1a; }
+.tcard:nth-child(3) .tcard-role { color:#666; }
+.tcard.coming-soon { justify-content:center; align-items:center; }
+.tcard-coming { text-align:center; position:relative; z-index:2; }
+.tcard-coming-icon { font-size:2.8rem; margin-bottom:14px; opacity:0.35; }
+.tcard-coming-text { font-family:var(--serif); font-size:1.1rem; font-style:italic; color:rgba(255,255,255,0.45); letter-spacing:2px; }
 .modernus-logo { background:#ffffff; border-color:#ffffff; padding:8px 12px; display:inline-flex; align-items:center; }
 .tcard-overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.92) 40%, transparent 100%); }
 .tcard-body { position:relative; z-index:2; padding:32px; }
@@ -644,28 +652,20 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
       <h2 class="section-title">Real businesses.<br><em>Real results.</em></h2>
     </div>
     <div class="testi-grid">
-      <div class="tcard fade-up">
+      <div class="tcard coming-soon fade-up">
         <div class="tcard-bg"></div>
         <div class="tcard-overlay"></div>
-        <div class="tcard-top"><div class="tcard-decor">🌐</div></div>
-        <div class="tcard-body">
-          <div class="tcard-stars">★★★★★</div>
-          <div class="tcard-logo">Blake Plumbing · Woking</div>
-          <blockquote>"Our old website was embarrassing. MartKam built us a new one and within six weeks we had more enquiries than we'd ever had online. Worth every penny."</blockquote>
-          <span class="tcard-name">Richard Blake</span>
-          <span class="tcard-role">Director · Woking, Surrey</span>
+        <div class="tcard-coming">
+          <div class="tcard-coming-icon">⏳</div>
+          <div class="tcard-coming-text">Coming Soon</div>
         </div>
       </div>
-      <div class="tcard fade-up fade-up-d2">
+      <div class="tcard coming-soon fade-up fade-up-d2">
         <div class="tcard-bg"></div>
         <div class="tcard-overlay"></div>
-        <div class="tcard-top"><div class="tcard-decor">📍</div></div>
-        <div class="tcard-body">
-          <div class="tcard-stars">★★★★★</div>
-          <div class="tcard-logo">Marsh Accountancy · Reigate</div>
-          <blockquote>"Before MartKam, we didn't show up on Google Maps at all. Now we're getting calls every week from local searches. The Google Profile setup alone changed everything."</blockquote>
-          <span class="tcard-name">Jenny Marsh</span>
-          <span class="tcard-role">Owner · Reigate, Surrey</span>
+        <div class="tcard-coming">
+          <div class="tcard-coming-icon">⏳</div>
+          <div class="tcard-coming-text">Coming Soon</div>
         </div>
       </div>
       <div class="tcard fade-up fade-up-d3">
