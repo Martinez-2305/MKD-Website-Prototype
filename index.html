@@ -179,7 +179,7 @@ nav {
 .about-bar-label { font-size:0.85rem; font-weight:600; color:var(--ink); }
 .about-bar-pct { font-size:0.85rem; font-weight:600; color:var(--ink); }
 .about-bar-track { height:5px; background:rgba(255,255,255,0.08); border-radius:100px; position:relative; }
-.about-bar-fill { height:100%; border-radius:100px; background:var(--red); position:relative; }
+.about-bar-fill { height:100%; border-radius:100px; background:var(--red); position:relative; width:0; transition:width 1.4s cubic-bezier(0.25,0.46,0.45,0.94); }
 .about-bar-fill::after { content:''; width:14px; height:14px; border-radius:50%; background:var(--red); border:2px solid var(--white); position:absolute; right:-7px; top:50%; transform:translateY(-50%); }
 .about-cta { display:inline-flex; align-items:center; gap:10px; background:#080101; color:#fff; font-size:0.88rem; font-weight:600; padding:14px 28px; border-radius:100px; border:1px solid rgba(255,255,255,0.15); transition:background .2s, border-color .2s; }
 .about-cta:hover { background:var(--red); border-color:var(--red); }
@@ -537,21 +537,21 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
               <span class="about-bar-label">Web Design & Development</span>
               <span class="about-bar-pct">95%</span>
             </div>
-            <div class="about-bar-track"><div class="about-bar-fill" style="width:95%"></div></div>
+            <div class="about-bar-track"><div class="about-bar-fill" data-w="95"></div></div>
           </div>
           <div class="about-bar">
             <div class="about-bar-top">
               <span class="about-bar-label">Google SEO & Local Search</span>
               <span class="about-bar-pct">88%</span>
             </div>
-            <div class="about-bar-track"><div class="about-bar-fill" style="width:88%"></div></div>
+            <div class="about-bar-track"><div class="about-bar-fill" data-w="88"></div></div>
           </div>
           <div class="about-bar">
             <div class="about-bar-top">
               <span class="about-bar-label">Client Satisfaction</span>
               <span class="about-bar-pct">100%</span>
             </div>
-            <div class="about-bar-track"><div class="about-bar-fill" style="width:100%"></div></div>
+            <div class="about-bar-track"><div class="about-bar-fill" data-w="100"></div></div>
           </div>
         </div>
         <a href="#contact" class="about-cta">Book a free consultation →</a>
@@ -974,6 +974,19 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.about-bar-fill').forEach((fill, i) => {
+        setTimeout(() => { fill.style.width = fill.dataset.w + '%'; }, i * 200);
+      });
+      barObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+const barsEl = document.querySelector('.about-bars');
+if (barsEl) barObserver.observe(barsEl);
 
 // HAMBURGER MENU
 (function() {
