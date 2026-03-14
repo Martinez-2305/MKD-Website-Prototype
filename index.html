@@ -902,40 +902,42 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
       </div>
       <div class="cform fade-up fade-up-d2">
         <h3>Request a free consultation</h3>
-        <div class="form-row">
-          <div class="fg"><label>Your name</label><input type="text" placeholder="John Smith"></div>
-          <div class="fg"><label>Business name</label><input type="text" placeholder="Smith & Co"></div>
-        </div>
-        <div class="form-row">
-          <div class="fg"><label>Email address</label><input type="email" placeholder="john@smithco.co.uk"></div>
-          <div class="fg"><label>Phone number</label><input type="tel" placeholder="07700 000 000"></div>
-        </div>
-        <div class="fg">
-          <label>Your area</label>
-          <select>
-            <option>Surrey (Guildford, Woking, Reigate...)</option>
-            <option>South West London (Wimbledon, Kingston, Richmond...)</option>
-            <option>Other nearby area</option>
-          </select>
-        </div>
-        <div class="fg">
-          <label>What do you need help with?</label>
-          <select>
-            <option>New Website Design & Build</option>
-            <option>SEO & Google Rankings</option>
-            <option>Google Business Profile Setup</option>
-            <option>Website Refresh / Redesign</option>
-            <option>IT Troubleshooting / Backups</option>
-            <option>Data Recovery</option>
-            <option>Not Sure Yet — Just Exploring</option>
-          </select>
-        </div>
-        <div class="fg">
-          <label>Tell us about your business</label>
-          <textarea placeholder="What does your business do, and what's the main thing you'd like to achieve online?"></textarea>
-        </div>
-        <button class="fsub">Send my free consultation request</button>
-        <div class="fnote">No obligation · We'll reply within a few hours · 🔒 Details never shared</div>
+        <form action="https://formspree.io/f/mlgplkez" method="POST">
+          <div class="form-row">
+            <div class="fg"><label>Your name</label><input type="text" name="name" placeholder="John Smith" required></div>
+            <div class="fg"><label>Business name</label><input type="text" name="business" placeholder="Smith & Co"></div>
+          </div>
+          <div class="form-row">
+            <div class="fg"><label>Email address</label><input type="email" name="email" placeholder="john@smithco.co.uk" required></div>
+            <div class="fg"><label>Phone number</label><input type="tel" name="phone" placeholder="07700 000 000"></div>
+          </div>
+          <div class="fg">
+            <label>Your area</label>
+            <select name="area">
+              <option>Surrey (Guildford, Woking, Reigate...)</option>
+              <option>South West London (Wimbledon, Kingston, Richmond...)</option>
+              <option>Other nearby area</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>What do you need help with?</label>
+            <select name="service">
+              <option>New Website Design & Build</option>
+              <option>SEO & Google Rankings</option>
+              <option>Google Business Profile Setup</option>
+              <option>Website Refresh / Redesign</option>
+              <option>IT Troubleshooting / Backups</option>
+              <option>Data Recovery</option>
+              <option>Not Sure Yet — Just Exploring</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Tell us about your business</label>
+            <textarea name="message" placeholder="What does your business do, and what's the main thing you'd like to achieve online?"></textarea>
+          </div>
+          <button type="submit" class="fsub">Send my free consultation request</button>
+          <div class="fnote">No obligation · We'll reply within a few hours · 🔒 Details never shared</div>
+        </form>
       </div>
     </div>
   </div>
