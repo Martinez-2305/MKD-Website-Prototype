@@ -259,7 +259,7 @@ nav {
 /* SERVICES */
 .services-bg { background:var(--mist); }
 .services-header { text-align:center; margin-bottom:64px; }
-.srv-primary { display:grid; grid-template-columns:1fr 1fr; gap:2px; background:var(--border); margin-bottom:2px; }
+.srv-primary { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--border); margin-bottom:2px; }
 .srv-item { background:var(--white); padding:48px 40px; position:relative; overflow:hidden; transition:background .3s; cursor:pointer; display:flex; flex-direction:column; gap:16px; }
 .srv-item::after { content:''; position:absolute; bottom:0; left:0; right:0; height:3px; background:var(--red); transform:scaleX(0); transform-origin:left; transition:transform .3s ease; }
 .srv-item:hover { background:#200606; }
@@ -276,7 +276,7 @@ nav {
 .srv-tag { font-size:0.7rem; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:var(--red); }
 .srv-arrow { font-size:1.2rem; color:var(--ink-light); transition:transform .2s; }
 .srv-item:hover .srv-arrow { transform:translate(4px,-4px); }
-.srv-secondary { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--border); }
+.srv-secondary { display:grid; grid-template-columns:repeat(2,1fr); gap:2px; background:var(--border); }
 .srv-item-sm { background:#150404; padding:32px 30px; display:flex; flex-direction:column; gap:12px; position:relative; overflow:hidden; transition:background .3s; cursor:pointer; }
 .srv-item-sm::after { content:''; position:absolute; bottom:0; left:0; right:0; height:2px; background:var(--ink); transform:scaleX(0); transform-origin:left; transition:transform .3s ease; }
 .srv-item-sm:hover { background:var(--white); }
@@ -290,14 +290,14 @@ nav {
 .tcard { position:relative; border-radius:16px; overflow:hidden; aspect-ratio:3/4; display:flex; flex-direction:column; justify-content:flex-end; transition:transform .3s; }
 .tcard:hover { transform:translateY(-4px); }
 .tcard-bg { position:absolute; inset:0; }
-.tcard:nth-child(1) .tcard-bg { background:linear-gradient(160deg,#1c1414,#2d1010,#1a0d0d); }
-.tcard:nth-child(2) .tcard-bg { background:linear-gradient(160deg,#0f1a18,#122820,#0f1a18); }
-.tcard:nth-child(3) .tcard-bg { background:#ffffff; }
-.tcard:nth-child(3) .tcard-decor { background:rgba(245,245,245,0.1); border-color:rgba(245,245,245,0.2); }
-.tcard:nth-child(3) .tcard-overlay { opacity:0; }
-.tcard:nth-child(3) blockquote { color:#1a1a1a; }
-.tcard:nth-child(3) .tcard-name { color:#1a1a1a; }
-.tcard:nth-child(3) .tcard-role { color:#666; }
+.tcard:nth-child(1) .tcard-bg { background:#ffffff; }
+.tcard:nth-child(1) .tcard-decor { background:rgba(245,245,245,0.1); border-color:rgba(245,245,245,0.2); }
+.tcard:nth-child(1) .tcard-overlay { opacity:0; }
+.tcard:nth-child(1) blockquote { color:#1a1a1a; }
+.tcard:nth-child(1) .tcard-name { color:#1a1a1a; }
+.tcard:nth-child(1) .tcard-role { color:#666; }
+.tcard:nth-child(2) .tcard-bg { background:linear-gradient(160deg,#1c1414,#2d1010,#1a0d0d); }
+.tcard:nth-child(3) .tcard-bg { background:linear-gradient(160deg,#0f1a18,#122820,#0f1a18); }
 .tcard.coming-soon { justify-content:center; align-items:center; }
 .tcard-coming { text-align:center; position:relative; z-index:2; }
 .tcard-coming-icon { font-size:2.8rem; margin-bottom:14px; opacity:0.35; }
@@ -391,6 +391,19 @@ nav {
 .pbtn-solid { padding:10px 24px; border-radius:100px; background:#fff; color:#0d0101; font-size:0.85rem; font-weight:700; transition:opacity .2s; }
 .pbtn-solid:hover { opacity:0.85; }
 
+/* AREAS */
+.areas-section { background:radial-gradient(ellipse 70% 50% at 85% 15%, rgba(107,15,20,0.3) 0%, transparent 55%), #080101; }
+.areas-header { text-align:center; max-width:560px; margin:0 auto 64px; }
+.areas-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.area-group { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.09); border-radius:16px; padding:32px; }
+.area-region { font-family:var(--serif); font-size:1.1rem; font-weight:400; color:#fff; margin-bottom:20px; }
+.area-list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px; }
+.area-list li { font-family:var(--sans); color:var(--ink-light); font-size:0.9rem; padding-left:16px; position:relative; }
+.area-list li::before { content:''; position:absolute; left:0; top:50%; transform:translateY(-50%); width:5px; height:5px; border-radius:50%; background:var(--red); }
+.areas-note p { font-family:var(--sans); color:var(--ink-light); font-size:0.9rem; line-height:1.8; margin:0; }
+.areas-note a { color:var(--red); text-decoration:none; }
+.areas-note a:hover { text-decoration:underline; }
+
 /* CONTACT */
 .contact-bg { background:var(--mist); }
 .contact-inner { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
@@ -461,6 +474,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   .hero-indicators { bottom:10px; }
   .wrap { padding:0 24px; } .section { padding:72px 0; }
   .about-grid, .contact-inner { grid-template-columns:1fr; gap:48px; }
+  .areas-grid { grid-template-columns:1fr; gap:24px; }
   .about-imgs { padding-right:0; }
   .why-cards { grid-template-columns:1fr; }
   .srv-primary, .srv-secondary { grid-template-columns:1fr; }
@@ -685,6 +699,23 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
           <span class="srv-arrow">↗</span>
         </div>
       </div>
+      <div class="srv-item fade-up fade-up-d3">
+        <div class="srv-badge">Core Service</div>
+        <div class="srv-icon">🌐</div>
+        <h3>Hosting & Domain Packages</h3>
+        <p>We offer flexible hosting and domain options to suit every business. Whether you want us to handle everything end-to-end or you already have your own hosting and domain provider — we work around you.</p>
+        <ul class="srv-feats">
+          <li>Managed hosting & domain setup included</li>
+          <li>Happy to work with your existing provider</li>
+          <li>Free SSL certificate & fast UK-based servers</li>
+          <li>Ongoing website support with every package</li>
+          <li>Updates, fixes & maintenance taken care of</li>
+        </ul>
+        <div class="srv-item-footer">
+          <span class="srv-tag">Hosting & Support</span>
+          <span class="srv-arrow">↗</span>
+        </div>
+      </div>
     </div>
 
     <!-- Additional services -->
@@ -705,13 +736,6 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
         <div class="srv-item-sm-cta">Data Backup →</div>
       </div>
 
-      <div class="srv-item-sm fade-up fade-up-d3">
-        <div class="srv-badge alt">Additional Service</div>
-        <div style="font-size:1.6rem;">💾</div>
-        <h4>Data Recovery</h4>
-        <p>Accidentally deleted something important? Hard drive failed? We offer data recovery support to help retrieve lost files and get you back up and running — calmly and without the panic.</p>
-        <div class="srv-item-sm-cta">Data Recovery →</div>
-      </div>
     </div>
   </div>
 </section>
@@ -724,23 +748,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
       <h2 class="section-title">Real businesses.<br><em>Real results.</em></h2>
     </div>
     <div class="testi-grid">
-      <div class="tcard coming-soon fade-up">
-        <div class="tcard-bg"></div>
-        <div class="tcard-overlay"></div>
-        <div class="tcard-coming">
-          <div class="tcard-coming-icon">⏳</div>
-          <div class="tcard-coming-text">Coming Soon</div>
-        </div>
-      </div>
-      <div class="tcard coming-soon fade-up fade-up-d2">
-        <div class="tcard-bg"></div>
-        <div class="tcard-overlay"></div>
-        <div class="tcard-coming">
-          <div class="tcard-coming-icon">⏳</div>
-          <div class="tcard-coming-text">Coming Soon</div>
-        </div>
-      </div>
-      <a class="tcard fade-up fade-up-d3" href="https://www.modernusdecorationprojects.co.uk/" target="_blank" rel="noopener">
+      <a class="tcard fade-up" href="https://www.modernusdecorationprojects.co.uk/" target="_blank" rel="noopener">
         <div class="tcard-bg"></div>
         <div class="tcard-overlay"></div>
         <div class="tcard-top"><div class="tcard-decor">🖌️</div></div>
@@ -754,6 +762,22 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
           <span class="tcard-role">Director · Cheam, Surrey</span>
         </div>
       </a>
+      <div class="tcard coming-soon fade-up fade-up-d2">
+        <div class="tcard-bg"></div>
+        <div class="tcard-overlay"></div>
+        <div class="tcard-coming">
+          <div class="tcard-coming-icon">⏳</div>
+          <div class="tcard-coming-text">Coming Soon</div>
+        </div>
+      </div>
+      <div class="tcard coming-soon fade-up fade-up-d3">
+        <div class="tcard-bg"></div>
+        <div class="tcard-overlay"></div>
+        <div class="tcard-coming">
+          <div class="tcard-coming-icon">⏳</div>
+          <div class="tcard-coming-text">Coming Soon</div>
+        </div>
+      </div>
     </div>
     <div style="text-align:right;margin-top:32px;">
       <a href="#contact" style="font-size:0.88rem;font-weight:600;color:var(--ink-light);border-bottom:1.5px solid var(--border);padding-bottom:2px;">View all reviews →</a>
@@ -903,6 +927,53 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
       <div class="process-banner-btns">
         <a href="#services" class="pbtn-ghost">View Services</a>
         <a href="#contact" class="pbtn-solid">Book a Free Chat</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section class="section areas-section" id="areas">
+  <div class="wrap">
+    <div class="areas-header fade-up">
+      <span class="label">Coverage</span>
+      <h2 class="section-title">Areas we <em>cover</em></h2>
+      <p class="section-intro">Based in Surrey, we work with small businesses across Surrey and South West London — in person or remotely.</p>
+    </div>
+    <div class="areas-grid fade-up">
+      <div class="area-group">
+        <h4 class="area-region">Surrey</h4>
+        <ul class="area-list">
+          <li>Woking</li>
+          <li>Guildford</li>
+          <li>Reigate</li>
+          <li>Redhill</li>
+          <li>Camberley</li>
+          <li>Farnham</li>
+          <li>Epsom</li>
+          <li>Leatherhead</li>
+          <li>Dorking</li>
+          <li>Staines-upon-Thames</li>
+        </ul>
+      </div>
+      <div class="area-group">
+        <h4 class="area-region">South West London</h4>
+        <ul class="area-list">
+          <li>Wimbledon</li>
+          <li>Kingston upon Thames</li>
+          <li>Richmond</li>
+          <li>Putney</li>
+          <li>Tooting</li>
+          <li>Clapham</li>
+          <li>Sutton</li>
+          <li>Morden</li>
+          <li>Balham</li>
+          <li>Streatham</li>
+        </ul>
+      </div>
+      <div class="area-group areas-note">
+        <h4 class="area-region">Not on the list?</h4>
+        <p>We work with businesses across the UK remotely. If you're outside our local area, <a href="#contact">get in touch</a> — we'd still love to help.</p>
       </div>
     </div>
   </div>
