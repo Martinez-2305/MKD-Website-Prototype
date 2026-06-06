@@ -126,7 +126,7 @@ nav {
   position:fixed; top:0; left:0; right:0; z-index:200;
   background:rgba(13,1,1,0.95); backdrop-filter:blur(16px);
   border-bottom:1px solid var(--border);
-  padding:0 48px; height:68px;
+  padding:0 48px 0 16px; height:68px;
   display:flex; align-items:center; justify-content:space-between;
   overflow:hidden;
 }
@@ -776,13 +776,6 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
         <div class="srv-item-sm-cta">General IT Support →</div>
       </div>
 
-      <div class="srv-item-sm fade-up fade-up-d2">
-        <div class="srv-badge alt">Additional Service</div>
-        <div style="font-size:1.6rem;">☁️</div>
-        <h4>Backups & Cloud Setup</h4>
-        <p>Don't risk losing everything. We set up reliable, automated backup solutions so your files and business data are always safe — whether that's cloud backups, OneDrive, or an external drive setup.</p>
-        <div class="srv-item-sm-cta">Data Backup →</div>
-      </div>
 
     </div>
   </div>
@@ -1103,12 +1096,12 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
         <form action="https://formspree.io/f/meepbpqw" method="POST">
           <input type="hidden" name="_replyto" value="contact@martkamdigital.com">
           <div class="form-row">
-            <div class="fg"><label>Your name</label><input type="text" name="name" placeholder="John Smith" required></div>
-            <div class="fg"><label>Business name</label><input type="text" name="business" placeholder="Smith & Co"></div>
+            <div class="fg"><label>Your name</label><input type="text" name="name" placeholder="Your name" required></div>
+            <div class="fg"><label>Business name</label><input type="text" name="business" placeholder="Business name"></div>
           </div>
           <div class="form-row">
-            <div class="fg"><label>Email address</label><input type="email" name="email" placeholder="john@smithco.co.uk" required></div>
-            <div class="fg"><label>Phone number</label><input type="tel" name="phone" placeholder="07700 000 000"></div>
+            <div class="fg"><label>Email address</label><input type="email" name="email" placeholder="Email address" required></div>
+            <div class="fg"><label>Phone number</label><input type="tel" name="phone" placeholder="Phone number"></div>
           </div>
           <div class="fg">
             <label>Your area</label>
@@ -1125,14 +1118,14 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
               <option>SEO & Google Rankings</option>
               <option>Google Business Profile Setup</option>
               <option>Website Refresh / Redesign</option>
-              <option>IT Troubleshooting / Backups</option>
+              <option>IT Troubleshooting</option>
               <option>Data Recovery</option>
               <option>Not Sure Yet — Just Exploring</option>
             </select>
           </div>
           <div class="fg">
             <label>Tell us about your business</label>
-            <textarea name="message" placeholder="What does your business do, and what's the main thing you'd like to achieve online?"></textarea>
+            <textarea name="message" placeholder="Tell us a bit about your business and what you're looking for"></textarea>
           </div>
           <button type="submit" class="fsub">Send my free consultation request</button>
           <div class="fnote">No obligation · We'll reply within a few hours · 🔒 Details never shared</div>
@@ -1287,7 +1280,6 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
         <li><a href="services.html">SEO & Google Rankings</a></li>
         <li><a href="services.html">Google Business Profile</a></li>
         <li><a href="services.html">IT Troubleshooting</a></li>
-        <li><a href="services.html">Backups & Data Recovery</a></li>
       </ul>
     </div>
     <div class="footer-col">
