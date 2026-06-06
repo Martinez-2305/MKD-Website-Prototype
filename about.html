@@ -822,6 +822,82 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 }
 
 /* ===== RESPONSIVE ===== */
+/* ===== HERO PORTRAIT ===== */
+.hero-portrait-wrap {
+  position:absolute;
+  right:5%;
+  bottom:0;
+  width:clamp(200px,26vw,380px);
+  z-index:3;
+  pointer-events:none;
+}
+.hero-portrait {
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:cover;
+  object-position:50% 15%;
+  aspect-ratio:3/4;
+  -webkit-mask-image:linear-gradient(to top, transparent 0%, black 22%);
+  mask-image:linear-gradient(to top, transparent 0%, black 22%);
+}
+
+/* ===== STORY PORTRAIT ===== */
+.story-portrait-frame {
+  position:relative;
+  width:100%;
+  max-width:300px;
+  margin-bottom:24px;
+}
+.story-portrait-frame img {
+  width:100%;
+  display:block;
+  object-fit:cover;
+  object-position:50% 18%;
+  aspect-ratio:3/4;
+  border-radius:4px;
+}
+.story-portrait-accent {
+  position:absolute;
+  top:-10px; left:-10px;
+  width:50px; height:50px;
+  border-top:2px solid var(--red);
+  border-left:2px solid var(--red);
+  pointer-events:none;
+}
+.story-portrait-accent-br {
+  position:absolute;
+  bottom:-10px; right:-10px;
+  width:50px; height:50px;
+  border-bottom:2px solid var(--red);
+  border-right:2px solid var(--red);
+  pointer-events:none;
+}
+.story-founder-badge {
+  padding:14px 18px;
+  background:rgba(227,27,35,0.08);
+  border:1px solid rgba(227,27,35,0.18);
+  border-radius:8px;
+  width:100%;
+  max-width:300px;
+  margin-bottom:28px;
+}
+.story-founder-name {
+  display:block;
+  font-size:0.88rem;
+  font-weight:600;
+  color:var(--ink);
+  margin-bottom:2px;
+}
+.story-founder-role {
+  display:block;
+  font-size:0.72rem;
+  color:var(--red);
+  font-weight:600;
+  letter-spacing:0.5px;
+  text-transform:uppercase;
+}
+
 @media (max-width:768px) {
   nav { padding:0 20px; overflow:visible; }
   .tubelight-nav { display:none; }
@@ -836,6 +912,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   .hero-cross { display:none; }
   .hero::before, .hero::after { display:none; }
   .hero-float-num { display:none; }
+  .hero-portrait-wrap { display:none; }
   .hero-content { padding:40px 24px 56px; position:relative; z-index:2; background:#0d0101; }
 
   .story { padding:80px 24px; }
@@ -865,6 +942,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 
 @media (min-width:769px) and (max-width:1024px) {
   .hero { padding:100px 48px 80px; }
+  .hero-portrait-wrap { width:clamp(160px,18vw,240px); right:2%; }
   .story { padding:100px 48px; }
   .story-sec-num { left:48px; }
   .values { padding:100px 48px; }
@@ -982,6 +1060,10 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
     </div>
   </div>
 
+  <div class="hero-portrait-wrap" aria-hidden="true">
+    <img src="faceofMKD.jpeg" alt="Martin Kaminski, Founder of MartKam Digital" class="hero-portrait">
+  </div>
+
 </section>
 
 <!-- ===== OUR STORY ===== -->
@@ -990,8 +1072,17 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 
   <div class="story-grid">
     <div class="story-left fade-up">
+      <div class="story-portrait-frame">
+        <img src="faceofMKD.jpeg" alt="Martin Kaminski, Founder of MartKam Digital" width="300" height="400">
+        <div class="story-portrait-accent" aria-hidden="true"></div>
+        <div class="story-portrait-accent-br" aria-hidden="true"></div>
+      </div>
+      <div class="story-founder-badge">
+        <span class="story-founder-name">Martin Kaminski</span>
+        <span class="story-founder-role">Founder · MartKam Digital</span>
+      </div>
       <blockquote class="story-pull">
-        We started because local businesses deserve better than big agency prices and generic templates.
+        I've worked with my hands, studied sport, and watched great local businesses get overlooked online — so I built something to change that.
       </blockquote>
     </div>
 
@@ -999,10 +1090,13 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 
     <div class="story-right">
       <p class="fade-up delay-1">
-        MartKam Digital was born from a straightforward frustration: watching brilliant local businesses — the independent cafés, the family tradespeople, the boutique specialists — get left behind digitally because <strong>quality web design felt out of reach</strong>. Big agencies charged big-agency rates, and the results were cookie-cutter at best.
+        MartKam Digital was built on a foundation most agencies don't have: real life. I grew up in a hardworking family where <strong>graft and doing right by people</strong> wasn't a brand value — it was just how things were done. From an early age, I knew I wanted to build something of my own. Not for the status, but because helping others succeed has always been the thing that drives me. That hasn't changed.
       </p>
       <p class="fade-up delay-2">
-        So we built something different. A studio where every client gets <strong>genuine expertise, direct communication, and a website that works as hard as they do</strong>. We care about Guildford's high street, Wimbledon's independents, and every local business in between — because we live here too. When you succeed, it shows in the places we all love.
+        My route to digital wasn't a straight line. I've worked across many different sectors, including years in hands-on physical roles that gave me a genuine respect for the effort tradespeople and service workers put in every single day. I also hold a <strong>degree in Sports Science</strong> — which taught me more about performance, discipline, and what it takes to push through resistance than any business course ever could. That combination of backgrounds means I can sit down with a builder, a cleaner, a therapist or a start-up founder and actually understand their world.
+      </p>
+      <p class="fade-up delay-3">
+        MartKam Digital has a particular soft spot for <strong>trades and cleaning businesses</strong> — those industries hit close to home, and they're exactly the kind of businesses that deserve a proper online presence but often get left behind. If you're a plumber, painter, or run a cleaning company, you'll find someone here who gets it. But the door is open to anyone. Whatever your industry, if you want a partner who will treat your business like it matters — because it does — you've found one.
       </p>
     </div>
   </div>
