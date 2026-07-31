@@ -3,24 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="logo.png">
-<link rel="apple-touch-icon" href="logo.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <title>Privacy Policy | MartKam Digital – Web Design & SEO Surrey</title>
 <meta name="description" content="MartKam Digital's privacy policy — how we collect, use and protect your personal data in accordance with UK GDPR and the Data Protection Act 2018.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.martkamdigital.com/privacy-policy.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.martkamdigital.com/privacy-policy.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.martkamdigital.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Privacy Policy",
+          "item": "https://www.martkamdigital.com/privacy-policy.html"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.martkamdigital.com/privacy-policy.html#webpage",
+      "url": "https://www.martkamdigital.com/privacy-policy.html",
+      "name": "Privacy Policy | MartKam Digital – Web Design & SEO Surrey",
+      "description": "MartKam Digital's privacy policy — how we collect, use and protect your personal data in accordance with UK GDPR and the Data Protection Act 2018.",
+      "inLanguage": "en-GB",
+      "isPartOf": {
+        "@id": "https://www.martkamdigital.com/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://www.martkamdigital.com/privacy-policy.html#breadcrumb"
+      },
+      "publisher": {
+        "@id": "https://www.martkamdigital.com/#organization"
+      }
+    }
+  ]
+}
+</script>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.martkamdigital.com/privacy-policy.html">
 <meta property="og:title" content="Privacy Policy | MartKam Digital">
 <meta property="og:description" content="How MartKam Digital collects, uses and protects your personal data under UK GDPR and the Data Protection Act 2018.">
-<meta property="og:image" content="https://www.martkamdigital.com/hero-slide.png">
+<meta property="og:image" content="https://www.martkamdigital.com/img/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Privacy Policy | MartKam Digital">
 <meta name="twitter:description" content="How MartKam Digital collects, uses and protects your personal data under UK GDPR and the Data Protection Act 2018.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-latin.woff2') format('woff2');}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-italic-latin.woff2') format('woff2');}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:300 600;font-display:swap;src:url('fonts/dmsans-latin.woff2') format('woff2');}
+</style>
 
 <style>
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -44,7 +90,7 @@ img { display:block; }
 
 /* NAV */
 nav { position:fixed; top:0; left:0; right:0; z-index:200; background:rgba(13,1,1,0.95); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); padding:0 48px 0 16px; height:68px; display:flex; align-items:center; justify-content:space-between; overflow:hidden; }
-.nav-logo img { height:148px; clip-path:inset(6px); }
+.nav-logo img { height:56px; }
 .nav-cta { background:var(--ink); color:var(--white); font-size:0.82rem; font-weight:600; padding:10px 22px; border-radius:100px; transition:background .2s; }
 .nav-cta:hover { background:var(--red); color:#fff; }
 .tubelight-nav { display:flex; align-items:center; gap:2px; position:relative; background:rgba(255,255,255,0.06); border:1px solid var(--border); backdrop-filter:blur(8px); padding:4px; border-radius:100px; overflow:visible; }
@@ -64,7 +110,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; background:rgba(13,1,
 .mob-menu { display:none; position:fixed; inset:0; z-index:250; background:rgba(13,1,1,0.97); backdrop-filter:blur(20px); flex-direction:column; align-items:center; justify-content:center; opacity:0; transition:opacity .25s ease; pointer-events:none; }
 .mob-menu.open { opacity:1; pointer-events:all; }
 .mob-item { font-size:1.7rem; font-weight:600; color:var(--ink); padding:12px 32px; border-radius:100px; transition:color .2s; text-decoration:none; }
-.mob-item:hover { color:var(--red); }
+.mob-item:hover { color:var(--red-text); }
 .mob-cta { margin-top:28px; background:var(--red); color:#fff; font-size:1rem; font-weight:600; padding:14px 36px; border-radius:100px; }
 .mob-cta:hover { background:var(--red-mid); color:#fff; }
 
@@ -75,11 +121,11 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .footer-brand p { font-size:0.85rem; line-height:1.7; max-width:280px; }
 .footer-social { display:flex; gap:12px; margin-top:20px; }
 .footer-social a { width:44px; height:44px; border-radius:10px; border:1px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.7); transition:border-color .2s, color .2s, background .2s; }
-.footer-social a:hover { border-color:var(--red); color:var(--red); background:rgba(227,27,35,0.1); }
-.footer-col h4 { font-size:0.82rem; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:var(--ink); margin-bottom:20px; }
+.footer-social a:hover { border-color:var(--red-text); color:var(--red-text); background:rgba(227,27,35,0.1); }
+.footer-col h3 { font-size:0.82rem; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:var(--ink); margin-bottom:20px; }
 .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
 .footer-col ul li a { font-size:0.88rem; color:rgba(255,255,255,0.5); transition:color .2s; }
-.footer-col ul li a:hover { color:var(--red); }
+.footer-col ul li a:hover { color:var(--red-text); }
 .footer-bottom { max-width:1220px; margin:0 auto; padding-top:32px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; font-size:0.78rem; }
 .footer-bottom-links { display:flex; gap:24px; }
 .footer-bottom-links a { color:rgba(255,255,255,0.4); transition:color .2s; }
@@ -104,7 +150,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   font-weight:600;
   letter-spacing:3px;
   text-transform:uppercase;
-  color:var(--red);
+  color:var(--red-text);
   margin-bottom:20px;
 }
 .policy-label::before { content:''; display:block; width:24px; height:1.5px; background:var(--red); }
@@ -158,7 +204,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   color:var(--ink-light);
   transition:color .2s;
 }
-.policy-toc ol li a:hover { color:var(--red); }
+.policy-toc ol li a:hover { color:var(--red-text); }
 
 .policy-section {
   margin-bottom:56px;
@@ -214,11 +260,11 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   opacity:0.7;
 }
 .policy-section a {
-  color:var(--red);
+  color:var(--red-text);
   border-bottom:1px solid rgba(227,27,35,0.3);
   transition:border-color .2s;
 }
-.policy-section a:hover { border-color:var(--red); }
+.policy-section a:hover { border-color:var(--red-text); }
 
 .policy-highlight {
   background:rgba(227,27,35,0.06);
@@ -243,17 +289,43 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   .footer-top { grid-template-columns:1fr; gap:40px; }
   .footer-bottom { flex-direction:column; align-items:flex-start; gap:12px; }
 }
+
+/* ===== Accessibility: contrast-safe text colours (WCAG AA) ===== */
+:root { --red-text:#ff3b41; }
+.label,.area-card .area-region,.srv-tag,.faq-eyebrow,.srv-badge,.areas-note a,.faq-answer a,
+.about-label-wrap .label,.cguarantee-label,.hero-founder-role,.loc-eyebrow,.rev-eyebrow { color:var(--red-text); }
+.faq-eyebrow::before { background:var(--red-text); }
+.pcard-num,.pcard-step,.footer-col h3,.footer-col h4,.footer-bottom-links a,
+.why-card-arrow,.tcard-logo { color:rgba(255,255,255,0.72); }
+.pcard p,.why-card p,.process-banner-text span,.tcard-coming-text,
+.footer-brand p,.footer-col ul a,.footer-social a,.footer-bottom { color:rgba(255,255,255,0.75); }
+footer { color:rgba(255,255,255,0.75); }
+.tcard:nth-child(n+2) .tcard-role { color:rgba(255,255,255,0.75); }
+.footer-bottom-links a:hover,.footer-col ul a:hover { color:#fff; }
+/* Images carry width/height attributes; never let them override CSS-driven sizing */
+img { height:auto; }
+.nav-logo img,.footer-brand img,.tcard-logo img,.testi-logo-wrap img { width:auto; }
+
+/* Skip layout & paint for off-screen sections until they are scrolled near.
+   The 'auto' intrinsic size remembers the real height, so CLS stays at 0.
+   The hero and the video section are excluded: both must render immediately
+   and the video deliberately bleeds outside its section box. */
+main > section:not(:first-of-type):not(.about-vid-section),
+body > footer {
+  content-visibility:auto;
+  contain-intrinsic-size:auto 900px;
+}
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo"><img src="logo.png" alt="MartKam Digital"></div>
+  <div class="nav-logo"><img  decoding="async" width="320" height="167" src="img/logo-320.webp" alt="MartKam Digital"></div>
   <div class="tubelight-nav" id="tlNav">
     <div class="tl-bg-pill" id="tlBg"></div>
     <div class="tl-lamp-wrap" id="tlLamp"><div class="tl-lamp-bar"><div class="tl-lamp-glow3"></div></div></div>
-    <a href="index.html" class="tl-item">Home</a>
+    <a href="/" class="tl-item">Home</a>
     <a href="about.html" class="tl-item">About Us</a>
     <a href="services.html" class="tl-item">Services</a>
     <a href="reviews.html" class="tl-item">Reviews</a>
@@ -266,7 +338,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 </nav>
 <div class="mob-menu" id="mobMenu">
   <div class="mob-menu-inner">
-    <a href="index.html" class="mob-item">Home</a>
+    <a href="/" class="mob-item">Home</a>
     <a href="about.html" class="mob-item">About Us</a>
     <a href="services.html" class="mob-item">Services</a>
     <a href="reviews.html" class="mob-item">Reviews</a>
@@ -276,6 +348,8 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
     <a href="contact.html" class="mob-cta">Let's Talk</a>
   </div>
 </div>
+
+<main id="main">
 
 <!-- HERO -->
 <div class="policy-hero">
@@ -499,10 +573,12 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 </div><!-- end policy-body -->
 
 <!-- FOOTER -->
+</main>
+
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
-      <img src="logo.png" alt="MartKam Digital">
+      <img loading="lazy" decoding="async" width="320" height="167" src="img/logo-320.webp" alt="MartKam Digital">
       <p>Web design, SEO and digital services for local businesses across Surrey and South West London.</p>
       <div class="footer-social">
         <a href="https://www.facebook.com/share/1HmyjG7r2K/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
@@ -517,7 +593,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
       </div>
     </div>
     <div class="footer-col">
-      <h4>Services</h4>
+      <h3>Services</h3>
       <ul>
         <li><a href="services.html">Website Design &amp; Build</a></li>
         <li><a href="services.html">SEO &amp; Google Rankings</a></li>
@@ -527,7 +603,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Areas We Serve</h4>
+      <h3>Areas We Serve</h3>
       <ul>
         <li><a href="web-design-cheam.html">Web Design Cheam</a></li>
         <li><a href="web-design-sutton.html">Web Design Sutton</a></li>

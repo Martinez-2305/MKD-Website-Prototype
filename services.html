@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="logo.png">
-<link rel="apple-touch-icon" href="logo.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <title>Web Design & SEO Services | MartKam Digital – Epsom, Sutton, Wimbledon, Surrey & South West London</title>
 <meta name="description" content="Custom web design, local SEO and Google Business Profile setup for small businesses in Surrey and South West London — serving Epsom, Sutton, Wimbledon, Guildford, Woking, Kingston, Redhill, Reigate, Leatherhead and surrounding areas.">
 <meta name="keywords" content="web design services Surrey, local SEO services Surrey, web design Epsom, web design Sutton, web design Wimbledon, web design Guildford, web design Woking, web design Kingston, web design Redhill, web design Reigate, web design Leatherhead, web design Carshalton, web design Mitcham, web design Morden, web design Tooting, web design Raynes Park, web design Surbiton, web design Chessington, web design Weybridge, web design Hersham, web design Sunbury-on-Thames, web design Hampton Court, Google Business Profile setup Surrey, small business website design Surrey">
@@ -12,19 +13,65 @@
 <meta name="geo.placename" content="Surrey, South West London">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.martkamdigital.com/services.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.martkamdigital.com/services.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.martkamdigital.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://www.martkamdigital.com/services.html"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.martkamdigital.com/services.html#webpage",
+      "url": "https://www.martkamdigital.com/services.html",
+      "name": "Web Design & SEO Services | MartKam Digital – Epsom, Sutton, Wimbledon, Surrey & South West London",
+      "description": "Custom web design, local SEO and Google Business Profile setup for small businesses in Surrey and South West London — serving Epsom, Sutton, Wimbledon, Guildford, Woking, Kingston, Redhill, Reigate, Leatherhead and surrounding areas.",
+      "inLanguage": "en-GB",
+      "isPartOf": {
+        "@id": "https://www.martkamdigital.com/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://www.martkamdigital.com/services.html#breadcrumb"
+      },
+      "publisher": {
+        "@id": "https://www.martkamdigital.com/#organization"
+      }
+    }
+  ]
+}
+</script>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.martkamdigital.com/services.html">
 <meta property="og:title" content="Web Design & SEO Services | MartKam Digital – Surrey & South West London">
 <meta property="og:description" content="Custom web design, local SEO and Google Business Profile setup for small businesses in Surrey and South West London. Serving Epsom, Sutton, Wimbledon, Guildford and more.">
-<meta property="og:image" content="https://www.martkamdigital.com/hero-slide.png">
+<meta property="og:image" content="https://www.martkamdigital.com/img/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://www.martkamdigital.com/services.html">
 <meta name="twitter:title" content="Web Design & SEO Services | MartKam Digital – Surrey & South West London">
 <meta name="twitter:description" content="Custom web design, local SEO and Google Business Profile setup for small businesses in Surrey and South West London. Serving Epsom, Sutton, Wimbledon, Guildford and more.">
-<meta name="twitter:image" content="https://www.martkamdigital.com/hero-slide.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,700;1,9..144,900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<meta name="twitter:image" content="https://www.martkamdigital.com/img/og-image.jpg">
+<link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-latin.woff2') format('woff2');}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-italic-latin.woff2') format('woff2');}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:300 600;font-display:swap;src:url('fonts/dmsans-latin.woff2') format('woff2');}
+</style>
 <style>
 
 /* ===== DESIGN TOKENS ===== */
@@ -58,7 +105,7 @@ img { display:block; }
 
 /* ===== NAV ===== */
 nav { position:fixed; top:0; left:0; right:0; z-index:200; background:rgba(13,1,1,0.95); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); padding:0 48px 0 16px; height:68px; display:flex; align-items:center; justify-content:space-between; overflow:hidden; }
-.nav-logo img { height:148px; clip-path:inset(6px); }
+.nav-logo img { height:56px; }
 .nav-cta { background:var(--ink); color:var(--white); font-size:0.82rem; font-weight:600; padding:10px 22px; border-radius:100px; transition:background .2s; }
 .nav-cta:hover { background:var(--red); color:#fff; }
 .tubelight-nav { display:flex; align-items:center; gap:2px; position:relative; background:rgba(255,255,255,0.06); border:1px solid var(--border); backdrop-filter:blur(8px); padding:4px; border-radius:100px; box-shadow:0 4px 16px rgba(0,0,0,0.06); overflow:visible; }
@@ -70,7 +117,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; background:rgba(13,1,
 .tl-lamp-glow3 { position:absolute; width:16px; height:16px; background:rgba(227,27,35,0.15); border-radius:50%; filter:blur(4px); top:0; left:8px; }
 .tl-item { position:relative; z-index:1; cursor:pointer; font-size:0.82rem; font-weight:600; padding:8px 20px; border-radius:100px; transition:color .2s; color:var(--ink-light); text-decoration:none; white-space:nowrap; }
 .tl-item:hover { color:var(--ink); }
-.tl-item.active { color:var(--red); }
+.tl-item.active { color:var(--red-text); }
 .ham-btn { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:8px; z-index:300; }
 .ham-btn span { display:block; width:24px; height:2px; background:var(--ink); border-radius:2px; transition:transform .3s ease, opacity .3s ease; }
 .ham-btn.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
@@ -80,7 +127,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; background:rgba(13,1,
 .mob-menu.open { opacity:1; pointer-events:all; }
 .mob-menu-inner { display:flex; flex-direction:column; align-items:center; gap:4px; }
 .mob-item { font-size:1.7rem; font-weight:600; color:var(--ink); padding:12px 32px; border-radius:100px; transition:color .2s; text-decoration:none; }
-.mob-item:hover, .mob-item.active { color:var(--red); }
+.mob-item:hover, .mob-item.active { color:var(--red-text); }
 .mob-cta { margin-top:28px; background:var(--red); color:#fff; font-size:1rem; font-weight:600; padding:14px 36px; border-radius:100px; }
 
 /* ===== FOOTER ===== */
@@ -90,11 +137,11 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .footer-brand p { font-size:0.85rem; line-height:1.75; max-width:280px; }
 .footer-social { display:flex; gap:12px; margin-top:20px; }
 .footer-social a { width:44px; height:44px; border-radius:10px; border:1px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.7); transition:border-color .2s, color .2s, background .2s; }
-.footer-social a:hover { border-color:var(--red); color:var(--red); background:rgba(227,27,35,0.1); }
-.footer-col h4 { font-size:0.82rem; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:var(--ink); margin-bottom:20px; }
+.footer-social a:hover { border-color:var(--red-text); color:var(--red-text); background:rgba(227,27,35,0.1); }
+.footer-col h3 { font-size:0.82rem; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:var(--ink); margin-bottom:20px; }
 .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
 .footer-col ul li a { font-size:0.88rem; color:rgba(255,255,255,0.5); transition:color .2s; }
-.footer-col ul li a:hover { color:var(--red); }
+.footer-col ul li a:hover { color:var(--red-text); }
 .footer-bottom { max-width:1220px; margin:0 auto; padding-top:32px; display:flex; justify-content:space-between; align-items:center; font-size:0.8rem; flex-wrap:wrap; gap:12px; }
 .footer-bottom-links { display:flex; gap:24px; }
 .footer-bottom-links a { color:rgba(255,255,255,0.4); transition:color .2s; }
@@ -177,7 +224,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   font-weight:600;
   letter-spacing:2.5px;
   text-transform:uppercase;
-  color:var(--red);
+  color:var(--red-text);
   margin-bottom:28px;
 }
 .hero-label::before {
@@ -200,7 +247,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 }
 .hero-heading em {
   font-style:italic;
-  color:var(--red);
+  color:var(--red-text);
   font-weight:300;
 }
 
@@ -331,7 +378,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   font-weight:600;
   letter-spacing:2.5px;
   text-transform:uppercase;
-  color:var(--red);
+  color:var(--red-text);
   margin-bottom:18px;
 }
 .section-label::before {
@@ -353,7 +400,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 }
 .section-title em {
   font-style:italic;
-  color:var(--red);
+  color:var(--red-text);
   font-weight:300;
 }
 
@@ -424,7 +471,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   font-weight:700;
   letter-spacing:1.5px;
   text-transform:uppercase;
-  color:var(--red);
+  color:var(--red-text);
   background:rgba(227,27,35,0.08);
   border:1px solid rgba(227,27,35,0.18);
   padding:4px 10px;
@@ -471,7 +518,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   width:fit-content;
   transition:color .2s, border-color .2s;
 }
-.svc-card-cta:hover { color:var(--red); border-color:var(--red); }
+.svc-card-cta:hover { color:var(--red-text); border-color:var(--red-text); }
 
 /* Visual panel (image placeholder) */
 .svc-card-visual {
@@ -557,13 +604,13 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 }
 .svc-card:hover .svc-visual-icon {
   background:rgba(227,27,35,0.14);
-  border-color:rgba(227,27,35,0.4);
+  border-color:#c98f93;
   transform:scale(1.12);
 }
 .svc-visual-icon svg {
   width:24px;
   height:24px;
-  color:var(--red);
+  color:var(--red-text);
   opacity:0.75;
   transition:opacity .3s;
 }
@@ -621,7 +668,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   font-weight:600;
   letter-spacing:1.5px;
   text-transform:uppercase;
-  color:var(--red);
+  color:var(--red-text);
   border:1px solid rgba(227,27,35,0.28);
   padding:5px 12px;
   border-radius:100px;
@@ -697,7 +744,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 }
 .core-card:hover .core-feats li::before {
   background:var(--red);
-  border-color:var(--red);
+  border-color:var(--red-text);
 }
 
 .core-cta {
@@ -716,7 +763,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 }
 .core-card:hover .core-cta {
   border-color:rgba(227,27,35,0.5);
-  color:var(--red);
+  color:var(--red-text);
 }
 
 /* ===== ADDITIONAL SERVICES ===== */
@@ -763,7 +810,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 }
 .add-card:hover .add-icon-wrap {
   background:rgba(227,27,35,0.18);
-  border-color:rgba(227,27,35,0.4);
+  border-color:#c98f93;
 }
 
 .add-badge {
@@ -830,7 +877,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   font-family:'Fraunces', Georgia, serif;
   font-size:1.15rem;
   font-weight:700;
-  color:var(--red);
+  color:var(--red-text);
   transition:background .3s, box-shadow .3s;
   flex-shrink:0;
 }
@@ -1041,43 +1088,69 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .faq .wrap { padding-left:80px; padding-right:80px; }
 .faq-layout { display:grid; grid-template-columns:1fr 1.9fr; gap:80px; align-items:start; }
 .faq-left { position:sticky; top:100px; }
-.faq-eyebrow { display:inline-flex; align-items:center; gap:10px; font-size:0.72rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--red); margin-bottom:20px; }
+.faq-eyebrow { display:inline-flex; align-items:center; gap:10px; font-size:0.72rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--red-text); margin-bottom:20px; }
 .faq-eyebrow::before { content:''; display:inline-block; width:20px; height:2px; background:var(--red); flex-shrink:0; }
 .faq-title { font-family:var(--serif); font-size:clamp(2rem,3.5vw,3.2rem); font-weight:400; line-height:1.15; letter-spacing:-0.3px; color:#fff; margin-bottom:18px; }
 .faq-title em { font-style:italic; color:rgba(255,255,255,0.35); }
 .faq-subtitle { font-size:0.88rem; line-height:1.8; color:var(--ink-light); margin-bottom:32px; }
 .faq-contact-cta { display:inline-flex; align-items:center; gap:8px; font-size:0.82rem; font-weight:600; color:var(--ink); background:rgba(227,27,35,0.1); border:1px solid rgba(227,27,35,0.22); padding:11px 22px; border-radius:100px; transition:background .2s, border-color .2s, color .2s; }
-.faq-contact-cta:hover { background:var(--red); border-color:var(--red); color:#fff; }
+.faq-contact-cta:hover { background:var(--red); border-color:var(--red-text); color:#fff; }
 .faq-list { display:flex; flex-direction:column; }
 .faq-item { border-bottom:1px solid var(--border); }
 .faq-item:first-child { border-top:1px solid var(--border); }
 .faq-btn { width:100%; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:22px 0; background:none; border:none; cursor:pointer; text-align:left; color:var(--ink); transition:color .2s; }
 .faq-btn:hover { color:#fff; }
-.faq-btn.open { color:var(--red); }
+.faq-btn.open { color:var(--red-text); }
 .faq-question { font-family:var(--serif); font-size:1.05rem; font-weight:400; line-height:1.35; letter-spacing:-0.1px; }
 .faq-icon { flex-shrink:0; width:28px; height:28px; border-radius:50%; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; transition:background .25s, border-color .25s, transform .4s cubic-bezier(.34,1.56,.64,1); }
-.faq-btn.open .faq-icon { background:var(--red); border-color:var(--red); transform:rotate(45deg); }
+.faq-btn.open .faq-icon { background:var(--red); border-color:var(--red-text); transform:rotate(45deg); }
 .faq-icon svg { width:12px; height:12px; color:var(--ink-light); transition:color .25s; }
 .faq-btn.open .faq-icon svg { color:#fff; }
 .faq-body { display:grid; grid-template-rows:0fr; transition:grid-template-rows .38s ease; }
 .faq-body.open { grid-template-rows:1fr; }
 .faq-body-inner { overflow:hidden; }
 .faq-answer { font-size:0.88rem; line-height:1.85; color:var(--ink-light); padding-bottom:22px; max-width:580px; }
-.faq-answer a { color:var(--red); text-decoration:none; border-bottom:1px solid rgba(227,27,35,0.3); transition:border-color .2s; }
-.faq-answer a:hover { border-color:var(--red); }
+.faq-answer a { color:var(--red-text); text-decoration:none; border-bottom:1px solid rgba(227,27,35,0.3); transition:border-color .2s; }
+.faq-answer a:hover { border-color:var(--red-text); }
 @media (max-width:900px) { .faq-layout { grid-template-columns:1fr; gap:40px; } .faq-left { position:static; } }
 @media (max-width:768px) { .faq { padding:72px 0; } .faq .wrap { padding-left:24px; padding-right:24px; } .faq-question { font-size:0.95rem; } }
+
+/* ===== Accessibility: contrast-safe text colours (WCAG AA) ===== */
+:root { --red-text:#ff3b41; }
+.label,.area-card .area-region,.srv-tag,.faq-eyebrow,.srv-badge,.areas-note a,.faq-answer a,
+.about-label-wrap .label,.cguarantee-label,.hero-founder-role,.loc-eyebrow,.rev-eyebrow { color:var(--red-text); }
+.faq-eyebrow::before { background:var(--red-text); }
+.pcard-num,.pcard-step,.footer-col h3,.footer-col h4,.footer-bottom-links a,
+.why-card-arrow,.tcard-logo { color:rgba(255,255,255,0.72); }
+.pcard p,.why-card p,.process-banner-text span,.tcard-coming-text,
+.footer-brand p,.footer-col ul a,.footer-social a,.footer-bottom { color:rgba(255,255,255,0.75); }
+footer { color:rgba(255,255,255,0.75); }
+.tcard:nth-child(n+2) .tcard-role { color:rgba(255,255,255,0.75); }
+.footer-bottom-links a:hover,.footer-col ul a:hover { color:#fff; }
+/* Images carry width/height attributes; never let them override CSS-driven sizing */
+img { height:auto; }
+.nav-logo img,.footer-brand img,.tcard-logo img,.testi-logo-wrap img { width:auto; }
+
+/* Skip layout & paint for off-screen sections until they are scrolled near.
+   The 'auto' intrinsic size remembers the real height, so CLS stays at 0.
+   The hero and the video section are excluded: both must render immediately
+   and the video deliberately bleeds outside its section box. */
+main > section:not(:first-of-type):not(.about-vid-section),
+body > footer {
+  content-visibility:auto;
+  contain-intrinsic-size:auto 900px;
+}
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo"><img src="logo.png" alt="MartKam Digital"></div>
+  <div class="nav-logo"><img  decoding="async" width="320" height="167" src="img/logo-320.webp" alt="MartKam Digital"></div>
   <div class="tubelight-nav" id="tlNav">
     <div class="tl-bg-pill" id="tlBg"></div>
     <div class="tl-lamp-wrap" id="tlLamp"><div class="tl-lamp-bar"><div class="tl-lamp-glow3"></div></div></div>
-    <a href="index.html" class="tl-item" data-section="home">Home</a>
+    <a href="/" class="tl-item" data-section="home">Home</a>
     <a href="about.html" class="tl-item" data-section="about">About Us</a>
     <a href="services.html" class="tl-item active" data-section="services">Services</a>
     <a href="reviews.html" class="tl-item">Reviews</a>
@@ -1090,7 +1163,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 </nav>
 <div class="mob-menu" id="mobMenu">
   <div class="mob-menu-inner">
-    <a href="index.html" class="mob-item">Home</a>
+    <a href="/" class="mob-item">Home</a>
     <a href="about.html" class="mob-item">About Us</a>
     <a href="services.html" class="mob-item active">Services</a>
     <a href="reviews.html" class="mob-item">Reviews</a>
@@ -1100,6 +1173,8 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
     <a href="contact.html" class="mob-cta">Let's Talk</a>
   </div>
 </div>
+
+<main id="main">
 
 <!-- ===== HERO ===== -->
 <section class="hero" id="hero">
@@ -1393,7 +1468,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
         <div class="add-icon-wrap">🔧</div>
         <div>
           <div class="add-badge">Additional Service</div>
-          <h4>Basic IT Troubleshooting</h4>
+          <h3>Basic IT Troubleshooting</h3>
           <p>Having a tech problem slowing you down? We offer straightforward troubleshooting for common issues — slow computers, software problems, email issues, connectivity faults — so you can get back to business quickly.</p>
         </div>
       </div>
@@ -1567,10 +1642,12 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 </section>
 
 <!-- ===== FOOTER ===== -->
+</main>
+
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
-      <img src="logo.png" alt="MartKam Digital">
+      <img loading="lazy" decoding="async" width="320" height="167" src="img/logo-320.webp" alt="MartKam Digital">
       <p>Web design, SEO and digital services for local businesses across Surrey and South West London.</p>
       <div class="footer-social">
         <a href="https://www.facebook.com/share/1HmyjG7r2K/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
@@ -1585,7 +1662,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
       </div>
     </div>
     <div class="footer-col">
-      <h4>Services</h4>
+      <h3>Services</h3>
       <ul>
         <li><a href="services.html">Website Design & Build</a></li>
         <li><a href="services.html">SEO & Google Rankings</a></li>
@@ -1595,7 +1672,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Areas We Serve</h4>
+      <h3>Areas We Serve</h3>
       <ul>
         <li><a href="index.html#areas">Guildford & Woking</a></li>
         <li><a href="index.html#areas">Reigate & Redhill</a></li>
@@ -1648,11 +1725,9 @@ document.querySelectorAll('.mob-item, .mob-cta').forEach(item => {
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
 }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
-document.querySelectorAll('.fade-up').forEach(el => {
-  const rect = el.getBoundingClientRect();
-  if (rect.top < window.innerHeight && rect.bottom > 0) { el.classList.add('visible'); }
-  else { observer.observe(el); }
-});
+// IntersectionObserver reports initial visibility on its first callback, so
+// elements already in view are revealed without reading layout synchronously.
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
 // FAQ ACCORDION
 document.querySelectorAll('.faq-btn').forEach(btn => {

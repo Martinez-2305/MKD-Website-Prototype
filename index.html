@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="logo.png">
-<link rel="apple-touch-icon" href="logo.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
 <!-- Primary SEO -->
 <title>MartKam Digital | Web Design & Local SEO – Surrey & South West London</title>
@@ -15,6 +16,19 @@
 <meta name="geo.region" content="GB-SRY">
 <meta name="geo.placename" content="Surrey, South West London">
 <link rel="canonical" href="https://www.martkamdigital.com/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.martkamdigital.com/#website",
+  "url": "https://www.martkamdigital.com/",
+  "name": "MartKam Digital",
+  "inLanguage": "en-GB",
+  "publisher": {
+    "@id": "https://www.martkamdigital.com/#organization"
+  }
+}
+</script>
 
 <!-- Open Graph (Facebook, LinkedIn, WhatsApp previews) -->
 <meta property="og:type" content="website">
@@ -22,7 +36,7 @@
 <meta property="og:site_name" content="MartKam Digital">
 <meta property="og:title" content="MartKam Digital | Web Design & Local SEO – Surrey & South West London">
 <meta property="og:description" content="Fast, mobile-friendly websites and local SEO for small businesses in Surrey and South West London. Get found on Google — free consultation available.">
-<meta property="og:image" content="https://www.martkamdigital.com/hero-slide.png">
+<meta property="og:image" content="https://www.martkamdigital.com/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_GB">
@@ -32,18 +46,19 @@
 <meta name="twitter:site" content="@martkamdigital">
 <meta name="twitter:title" content="MartKam Digital | Web Design & Local SEO – Surrey & South West London">
 <meta name="twitter:description" content="Fast, mobile-friendly websites and local SEO for small businesses in Surrey and South West London. Get found on Google — free consultation available.">
-<meta name="twitter:image" content="https://www.martkamdigital.com/hero-slide.png">
+<meta name="twitter:image" content="https://www.martkamdigital.com/img/og-image.jpg">
 
 <!-- Local business structured data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
+  "@id": "https://www.martkamdigital.com/#organization",
   "name": "MartKam Digital",
   "description": "Web design and local SEO services for small businesses in Surrey and South West London. Fast, mobile-friendly websites built to rank on Google and generate enquiries.",
   "url": "https://www.martkamdigital.com/",
-  "logo": "https://www.martkamdigital.com/logo.png",
-  "image": "https://www.martkamdigital.com/hero-slide.png",
+  "logo": "https://www.martkamdigital.com/img/favicon-192.png",
+  "image": "https://www.martkamdigital.com/img/og-image.jpg",
   "telephone": "+447456848388",
   "email": "contact@martkamdigital.com",
   "address": {
@@ -101,7 +116,14 @@
 }
 </script>
 
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero-slide-1536.webp" imagesrcset="img/hero-slide-768.webp 768w, img/hero-slide-1200.webp 1200w, img/hero-slide-1536.webp 1536w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-latin.woff2') format('woff2');}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-italic-latin.woff2') format('woff2');}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:300 600;font-display:swap;src:url('fonts/dmsans-latin.woff2') format('woff2');}
+</style>
 <style>
 :root {
   --red:       #E31B23;
@@ -130,7 +152,7 @@ nav {
   display:flex; align-items:center; justify-content:space-between;
   overflow:hidden;
 }
-.nav-logo img { height:148px; clip-path:inset(6px); }
+.nav-logo img { height:56px; }
 .nav-cta { background:var(--ink); color:var(--white); font-size:0.82rem; font-weight:600; padding:10px 22px; border-radius:100px; transition:background .2s; }
 .nav-cta:hover { background:var(--red); }
 
@@ -179,7 +201,7 @@ nav {
   text-decoration:none; white-space:nowrap;
 }
 .tl-item:hover { color:var(--ink); }
-.tl-item.active { color:var(--red); }
+.tl-item.active { color:var(--red-text); }
 
 /* HAMBURGER */
 .ham-btn {
@@ -207,7 +229,7 @@ nav {
   font-size:1.7rem; font-weight:600; color:var(--ink); padding:12px 32px;
   border-radius:100px; transition:color .2s; text-decoration:none;
 }
-.mob-item:hover { color:var(--red); }
+.mob-item:hover { color:var(--red-text); }
 .mob-cta {
   margin-top:28px; background:var(--red); color:#fff;
   font-size:1rem; font-weight:600; padding:14px 36px; border-radius:100px;
@@ -218,7 +240,8 @@ nav {
 /* HERO */
 .hero { min-height:100vh; padding-top:68px; position:relative; overflow:hidden; }
 .hero-slide { position:relative; min-height:calc(100vh - 68px); }
-.hero-slide-bg { position:absolute; inset:0; background-size:cover; background-position:center; }
+.hero-slide-bg { position:absolute; inset:0; overflow:hidden; }
+.hero-slide-bg img { width:100%; height:100%; object-fit:cover; object-position:center; }
 .hero-slide-bg::after { content:''; position:absolute; inset:0; background:linear-gradient(135deg, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.18) 100%); }
 .hero-slide-content {
   position:relative; z-index:2;
@@ -247,7 +270,7 @@ nav {
 /* COMMONS */
 .wrap { max-width:1220px; margin:0 auto; padding:0 48px; }
 .section { padding:110px 0; }
-.label { font-size:0.75rem; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:var(--red); margin-bottom:18px; display:block; }
+.label { font-size:0.75rem; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:var(--red-text); margin-bottom:18px; display:block; }
 .section-title { font-family:var(--serif); font-size:clamp(2.2rem, 4vw, 3.6rem); font-weight:400; line-height:1.15; letter-spacing:-0.3px; color:#ffffff; margin-bottom:18px; }
 .section-title em { font-style:italic; color:rgba(255,255,255,0.85); }
 .section-intro { font-size:1rem; color:var(--ink-light); max-width:580px; line-height:1.8; }
@@ -275,13 +298,13 @@ nav {
 .about-bar-fill { height:100%; border-radius:100px; background:var(--red); position:relative; width:0; transition:width 1.4s cubic-bezier(0.25,0.46,0.45,0.94); }
 .about-bar-fill::after { content:''; width:14px; height:14px; border-radius:50%; background:var(--red); border:2px solid var(--white); position:absolute; right:-7px; top:50%; transform:translateY(-50%); }
 .about-cta { display:inline-flex; align-items:center; gap:10px; background:#080101; color:#fff; font-size:0.88rem; font-weight:600; padding:14px 28px; border-radius:100px; border:1px solid rgba(255,255,255,0.15); transition:background .2s, border-color .2s, color .2s; }
-.about-cta:hover { background:var(--red); border-color:var(--red); color:#fff; }
+.about-cta:hover { background:var(--red); border-color:var(--red-text); color:#fff; }
 .about-cta-ghost { display:inline-flex; align-items:center; gap:10px; background:transparent; color:rgba(255,255,255,0.85); font-size:0.88rem; font-weight:600; padding:14px 28px; border-radius:100px; border:1px solid rgba(255,255,255,0.25); transition:background .2s, border-color .2s, color .2s; }
-.about-cta-ghost:hover { background:var(--red); border-color:var(--red); color:#fff; }
+.about-cta-ghost:hover { background:var(--red); border-color:var(--red-text); color:#fff; }
 .btn-outline-light { display:inline-flex; align-items:center; gap:8px; font-size:0.88rem; font-weight:600; color:var(--ink); padding:12px 26px; border-radius:100px; border:1px solid var(--border); transition:border-color .2s, color .2s, background .2s; }
-.btn-outline-light:hover { border-color:var(--red); color:var(--red); background:rgba(227,27,35,0.05); }
+.btn-outline-light:hover { border-color:var(--red-text); color:var(--red-text); background:rgba(227,27,35,0.05); }
 .loc-area-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 20px; border:1.5px solid var(--border); border-radius:6px; font-size:0.88rem; font-weight:600; color:var(--ink); text-decoration:none; transition:border-color .2s, color .2s, background .2s; }
-.loc-area-btn:hover { border-color:var(--primary,var(--red)); color:var(--red); background:rgba(227,27,35,0.05); }
+.loc-area-btn:hover { border-color:var(--primary,var(--red)); color:var(--red-text); background:rgba(227,27,35,0.05); }
 
 /* SERVICES */
 .services-bg { background:var(--mist); }
@@ -291,7 +314,7 @@ nav {
 .srv-item::after { content:''; position:absolute; bottom:0; left:0; right:0; height:3px; background:var(--red); transform:scaleX(0); transform-origin:left; transition:transform .3s ease; }
 .srv-item:hover { background:#200606; }
 .srv-item:hover::after { transform:scaleX(1); }
-.srv-badge { display:inline-block; background:rgba(227,27,35,0.08); color:var(--red); font-size:0.68rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:4px 12px; border-radius:100px; border:1px solid rgba(227,27,35,0.15); width:fit-content; }
+.srv-badge { display:inline-block; background:rgba(227,27,35,0.08); color:var(--red-text); font-size:0.68rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:4px 12px; border-radius:100px; border:1px solid rgba(227,27,35,0.15); width:fit-content; }
 .srv-badge.alt { background:rgba(17,17,17,0.05); color:var(--ink-light); border-color:var(--border); }
 .srv-icon { font-size:2.2rem; }
 .srv-item h3 { font-family:var(--serif); font-size:1.5rem; font-weight:400; color:var(--ink); }
@@ -300,7 +323,7 @@ nav {
 .srv-feats li { font-size:0.82rem; color:var(--ink-light); display:flex; align-items:center; gap:10px; }
 .srv-feats li::before { content:''; width:14px; height:1.5px; background:var(--red); flex-shrink:0; }
 .srv-item-footer { display:flex; align-items:center; justify-content:space-between; margin-top:12px; border-top:1px solid var(--border); padding-top:16px; }
-.srv-tag { font-size:0.7rem; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:var(--red); }
+.srv-tag { font-size:0.7rem; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:var(--red-text); }
 .srv-arrow { font-size:1.2rem; color:var(--ink-light); transition:transform .2s; }
 .srv-item:hover .srv-arrow { transform:translate(4px,-4px); }
 .srv-secondary { display:grid; grid-template-columns:repeat(2,1fr); gap:2px; background:var(--border); }
@@ -308,7 +331,7 @@ nav {
 .srv-item-sm::after { content:''; position:absolute; bottom:0; left:0; right:0; height:2px; background:var(--ink); transform:scaleX(0); transform-origin:left; transition:transform .3s ease; }
 .srv-item-sm:hover { background:var(--white); }
 .srv-item-sm:hover::after { transform:scaleX(1); }
-.srv-item-sm h4 { font-family:var(--serif); font-size:1.1rem; font-weight:400; color:var(--ink); }
+.srv-item-sm h4, .srv-item-sm h3 { font-family:var(--serif); font-size:1.1rem; font-weight:400; color:var(--ink); }
 .srv-item-sm p { font-size:0.82rem; color:var(--ink-light); line-height:1.75; flex:1; }
 .srv-item-sm-cta { font-size:0.7rem; font-weight:600; color:var(--ink-light); letter-spacing:0.5px; margin-top:4px; }
 
@@ -326,7 +349,7 @@ nav {
 .tcard:nth-child(2) .tcard-bg { background:linear-gradient(160deg,#0d1a14,#122018,#0d1a14); }
 .tcard:nth-child(3) .tcard-bg { background:linear-gradient(160deg,#0b1829,#0f2040,#0b1829); }
 .tcard:nth-child(3) .tcard-decor { background:rgba(184,50,50,0.2); border-color:rgba(184,50,50,0.4); }
-.tcard:nth-child(3) .tcard-stars { color:#b83232; }
+
 .tcard:nth-child(3) .tcard-overlay { background:linear-gradient(to top, rgba(11,24,41,0.96) 40%, transparent 100%); }
 .tcard.coming-soon { justify-content:center; align-items:center; }
 .tcard-coming { text-align:center; position:relative; z-index:2; }
@@ -341,7 +364,7 @@ nav {
 .tcard blockquote { font-family:var(--serif); font-size:1rem; font-weight:300; color:#fff; line-height:1.65; font-style:italic; margin-bottom:20px; display:-webkit-box; -webkit-line-clamp:5; -webkit-box-orient:vertical; overflow:hidden; min-height:calc(1rem * 1.65 * 5); }
 .tcard-name { font-size:0.85rem; font-weight:600; color:#fff; display:block; }
 .tcard-role { font-size:0.75rem; color:rgba(255,255,255,0.5); display:block; margin-top:2px; }
-.tcard-stars { color:var(--red); font-size:0.8rem; letter-spacing:2px; margin-bottom:12px; }
+.tcard-stars { color:var(--red-text); font-size:0.8rem; letter-spacing:2px; margin-bottom:12px; }
 .tcard-top { position:relative; z-index:2; padding:28px 32px 0; }
 .tcard-decor { width:40px; height:40px; border-radius:50%; background:rgba(227,27,35,0.2); border:1px solid rgba(227,27,35,0.35); display:flex; align-items:center; justify-content:center; font-size:1.1rem; }
 
@@ -349,9 +372,9 @@ nav {
 .areas-bg { background:var(--mist); }
 .areas-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:52px; }
 .area-card { background:var(--white); border:1px solid var(--border); border-radius:14px; padding:28px 22px; text-align:center; transition:border-color .2s, box-shadow .2s, transform .2s; }
-.area-card:hover { border-color:var(--red); box-shadow:0 8px 28px rgba(227,27,35,0.08); transform:translateY(-2px); }
+.area-card:hover { border-color:var(--red-text); box-shadow:0 8px 28px rgba(227,27,35,0.08); transform:translateY(-2px); }
 .area-emoji { font-size:1.8rem; margin-bottom:10px; }
-.area-region { display:inline-block; font-size:0.65rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--red); margin-bottom:8px; }
+.area-region { display:inline-block; font-size:0.65rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--red-text); margin-bottom:8px; }
 .area-card h4 { font-family:var(--serif); font-size:1rem; font-weight:400; color:var(--ink); margin-bottom:6px; }
 .area-card p { font-size:0.76rem; color:var(--ink-light); line-height:1.6; }
 
@@ -433,7 +456,7 @@ nav {
 .area-list li { font-family:var(--sans); color:var(--ink-light); font-size:0.9rem; padding-left:16px; position:relative; }
 .area-list li::before { content:''; position:absolute; left:0; top:50%; transform:translateY(-50%); width:5px; height:5px; border-radius:50%; background:var(--red); }
 .areas-note p { font-family:var(--sans); color:var(--ink-light); font-size:0.9rem; line-height:1.8; margin:0; }
-.areas-note a { color:var(--red); text-decoration:none; }
+.areas-note a { color:var(--red-text); text-decoration:none; }
 .areas-note a:hover { text-decoration:underline; }
 
 /* CONTACT */
@@ -453,7 +476,7 @@ nav {
 .fg { margin-bottom:14px; }
 .fg label { display:block; font-size:0.77rem; font-weight:600; color:var(--ink-light); margin-bottom:7px; }
 .fg input, .fg select, .fg textarea { width:100%; background:#1c0505; border:1.5px solid var(--border); border-radius:10px; padding:12px 16px; color:var(--ink); font-size:0.9rem; font-family:var(--sans); outline:none; transition:border-color .2s, box-shadow .2s; }
-.fg input:focus, .fg select:focus, .fg textarea:focus { border-color:var(--red); box-shadow:0 0 0 3px rgba(227,27,35,0.08); }
+.fg input:focus, .fg select:focus, .fg textarea:focus { border-color:var(--red-text); box-shadow:0 0 0 3px rgba(227,27,35,0.08); }
 .fg textarea { min-height:100px; resize:vertical; }
 .fg select { appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 16px center; }
 .fsub { width:100%; background:#080101; color:#fff; font-family:var(--sans); font-size:0.92rem; font-weight:600; padding:15px; border:none; cursor:pointer; border-radius:100px; transition:background .2s; margin-top:4px; }
@@ -466,7 +489,7 @@ nav {
 .cta-banner h2 { font-family:var(--serif); font-size:clamp(2.2rem,4.5vw,4rem); font-weight:300; color:#fff; line-height:1.15; letter-spacing:-0.3px; margin-bottom:16px; position:relative; }
 .cta-banner h2 em { font-style:italic; color:rgba(255,255,255,0.65); }
 .cta-banner p { color:rgba(255,255,255,0.7); font-size:1rem; margin-bottom:36px; position:relative; }
-.btn-cta { background:#fff; color:var(--red); font-size:0.92rem; font-weight:700; padding:16px 36px; border-radius:100px; display:inline-block; transition:transform .2s, box-shadow .2s; position:relative; }
+.btn-cta { background:#fff; color:var(--red-text); font-size:0.92rem; font-weight:700; padding:16px 36px; border-radius:100px; display:inline-block; transition:transform .2s, box-shadow .2s; position:relative; }
 .btn-cta:hover { transform:translateY(-2px); box-shadow:0 12px 36px rgba(0,0,0,0.2); }
 
 /* FOOTER */
@@ -476,8 +499,8 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .footer-brand p { font-size:0.85rem; line-height:1.75; max-width:280px; }
 .footer-social { display:flex; gap:12px; margin-top:20px; }
 .footer-social a { width:44px; height:44px; border-radius:10px; border:1px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.7); transition:border-color .2s, color .2s, background .2s; }
-.footer-social a:hover { border-color:var(--red); color:#fff; background:var(--red); }
-.footer-col h4 { font-size:0.75rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-bottom:16px; }
+.footer-social a:hover { border-color:var(--red-text); color:#fff; background:var(--red); }
+.footer-col h3 { font-size:0.75rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-bottom:16px; }
 .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
 .footer-col ul a { font-size:0.88rem; color:rgba(255,255,255,0.5); transition:color .2s; }
 .footer-col ul a:hover { color:#fff; }
@@ -582,30 +605,30 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .faq .wrap { padding-left:80px; padding-right:80px; }
 .faq-layout { display:grid; grid-template-columns:1fr 1.9fr; gap:80px; align-items:start; }
 .faq-left { position:sticky; top:100px; }
-.faq-eyebrow { display:inline-flex; align-items:center; gap:10px; font-size:0.72rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--red); margin-bottom:20px; }
+.faq-eyebrow { display:inline-flex; align-items:center; gap:10px; font-size:0.72rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--red-text); margin-bottom:20px; }
 .faq-eyebrow::before { content:''; display:inline-block; width:20px; height:2px; background:var(--red); flex-shrink:0; }
 .faq-title { font-family:var(--serif); font-size:clamp(2rem,3.5vw,3.2rem); font-weight:400; line-height:1.15; letter-spacing:-0.3px; color:#fff; margin-bottom:18px; }
 .faq-title em { font-style:italic; color:rgba(255,255,255,0.35); }
 .faq-subtitle { font-size:0.88rem; line-height:1.8; color:var(--ink-light); margin-bottom:32px; }
 .faq-contact-cta { display:inline-flex; align-items:center; gap:8px; font-size:0.82rem; font-weight:600; color:var(--ink); background:rgba(227,27,35,0.1); border:1px solid rgba(227,27,35,0.22); padding:11px 22px; border-radius:100px; transition:background .2s, border-color .2s, color .2s; }
-.faq-contact-cta:hover { background:var(--red); border-color:var(--red); color:#fff; }
+.faq-contact-cta:hover { background:var(--red); border-color:var(--red-text); color:#fff; }
 .faq-list { display:flex; flex-direction:column; }
 .faq-item { border-bottom:1px solid var(--border); }
 .faq-item:first-child { border-top:1px solid var(--border); }
 .faq-btn { width:100%; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:22px 0; background:none; border:none; cursor:pointer; text-align:left; color:var(--ink); transition:color .2s; }
 .faq-btn:hover { color:#fff; }
-.faq-btn.open { color:var(--red); }
+.faq-btn.open { color:var(--red-text); }
 .faq-question { font-family:var(--serif); font-size:1.05rem; font-weight:400; line-height:1.35; letter-spacing:-0.1px; }
 .faq-icon { flex-shrink:0; width:28px; height:28px; border-radius:50%; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; transition:background .25s, border-color .25s, transform .4s cubic-bezier(.34,1.56,.64,1); }
-.faq-btn.open .faq-icon { background:var(--red); border-color:var(--red); transform:rotate(45deg); }
+.faq-btn.open .faq-icon { background:var(--red); border-color:var(--red-text); transform:rotate(45deg); }
 .faq-icon svg { width:12px; height:12px; color:var(--ink-light); transition:color .25s; }
 .faq-btn.open .faq-icon svg { color:#fff; }
 .faq-body { display:grid; grid-template-rows:0fr; transition:grid-template-rows .38s ease; }
 .faq-body.open { grid-template-rows:1fr; }
 .faq-body-inner { overflow:hidden; }
 .faq-answer { font-size:0.88rem; line-height:1.85; color:var(--ink-light); padding-bottom:22px; max-width:580px; }
-.faq-answer a { color:var(--red); text-decoration:none; border-bottom:1px solid rgba(227,27,35,0.3); transition:border-color .2s; }
-.faq-answer a:hover { border-color:var(--red); }
+.faq-answer a { color:var(--red-text); text-decoration:none; border-bottom:1px solid rgba(227,27,35,0.3); transition:border-color .2s; }
+.faq-answer a:hover { border-color:var(--red-text); }
 @media (max-width:900px) { .faq-layout { grid-template-columns:1fr; gap:40px; } .faq-left { position:static; } }
 @media (max-width:768px) { .faq { padding:72px 0; } .faq .wrap { padding-left:24px; padding-right:24px; } .faq-question { font-size:0.95rem; } }
 
@@ -621,13 +644,42 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   .wrap { padding:0 32px; }
   .section { padding:80px 0; }
 }
+
+/* ===== Accessibility: contrast-safe text colours (WCAG AA) ===== */
+:root { --red-text:#ff3b41; }
+.label,.area-card .area-region,.srv-tag,.faq-eyebrow,.srv-badge,.areas-note a,.faq-answer a,
+.about-label-wrap .label,.cguarantee-label,.hero-founder-role,.loc-eyebrow,.rev-eyebrow { color:var(--red-text); }
+.faq-eyebrow::before { background:var(--red-text); }
+.pcard-num,.pcard-step,.footer-col h3,.footer-col h4,.footer-bottom-links a,
+.why-card-arrow,.tcard-logo { color:rgba(255,255,255,0.72); }
+.pcard p,.why-card p,.process-banner-text span,.tcard-coming-text,
+.footer-brand p,.footer-col ul a,.footer-social a,.footer-bottom { color:rgba(255,255,255,0.75); }
+footer { color:rgba(255,255,255,0.75); }
+.tcard:nth-child(n+2) .tcard-role { color:rgba(255,255,255,0.75); }
+.footer-bottom-links a:hover,.footer-col ul a:hover { color:#fff; }
+/* Images carry width/height attributes; never let them override CSS-driven sizing */
+img { height:auto; }
+.nav-logo img,.footer-brand img,.tcard-logo img,.testi-logo-wrap img { width:auto; }
+
+/* Skip layout & paint for off-screen sections until they are scrolled near.
+   The 'auto' intrinsic size remembers the real height, so CLS stays at 0.
+   The hero and the video section are excluded: both must render immediately
+   and the video deliberately bleeds outside its section box. */
+main > section:not(:first-of-type):not(.about-vid-section),
+body > footer {
+  content-visibility:auto;
+  contain-intrinsic-size:auto 900px;
+}
+/* star ratings */
+.tcard-stars{color:var(--red-text);}
+.tcard:nth-child(1) .tcard-stars{color:#b3121a;}
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo"><img src="logo.png" alt="MartKam Digital"></div>
+  <div class="nav-logo"><img  decoding="async" width="320" height="167" src="img/logo-320.webp" alt="MartKam Digital"></div>
   <div class="tubelight-nav" id="tlNav">
     <div class="tl-bg-pill" id="tlBg"></div>
     <div class="tl-lamp-wrap" id="tlLamp"><div class="tl-lamp-bar"><div class="tl-lamp-glow3"></div></div></div>
@@ -659,10 +711,16 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   </div>
 </div>
 
+<main id="main">
+
 <!-- HERO -->
 <section class="hero">
   <div class="hero-slide active">
-    <div class="hero-slide-bg" style="background-image:url('hero-slide.png')"></div>
+    <div class="hero-slide-bg">
+      <img src="img/hero-slide-1536.webp"
+           srcset="img/hero-slide-768.webp 768w, img/hero-slide-1200.webp 1200w, img/hero-slide-1536.webp 1536w"
+           sizes="100vw" width="1536" height="1024" alt="" fetchpriority="high" decoding="async">
+    </div>
     <div class="hero-slide-content">
       <h1>Websites that bring<br><em>real customers to your door</em></h1>
       <p>We build beautiful, conversion-focused websites for local businesses — designed to rank on Google and turn visitors into enquiries from day one.</p>
@@ -673,7 +731,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
     </div>
     <div class="hero-founder">
       <div class="hero-founder-ring">
-        <img src="faceofMKD.jpeg" alt="Martin Kaminski, Founder of MartKam Digital" class="hero-founder-photo">
+        <img decoding="async" width="640" height="460" src="img/faceofmkd-640.webp" alt="Martin Kaminski, Founder of MartKam Digital" class="hero-founder-photo">
       </div>
       <div>
         <span class="hero-founder-name">Martin Kaminski</span>
@@ -754,7 +812,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
           <a href="#contact" class="about-cta-ghost">Book a free consultation →</a>
         </div>
         <div class="founder-sig fade-up fade-up-d3">
-          <img src="faceofMKD.jpeg" alt="Martin Kaminski" class="founder-sig-img">
+          <img loading="lazy" decoding="async" width="640" height="460" src="img/faceofmkd-640.webp" alt="Martin Kaminski" class="founder-sig-img">
           <div>
             <span class="founder-sig-name">Martin Kaminski</span>
             <span class="founder-sig-role">Founder · MartKam Digital</span>
@@ -835,7 +893,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
       <div class="srv-item-sm fade-up">
         <div class="srv-badge alt">Additional Service</div>
         <div style="font-size:1.6rem;">🔧</div>
-        <h4>Basic IT Troubleshooting</h4>
+        <h3>Basic IT Troubleshooting</h3>
         <p>Having a tech problem slowing you down? We offer straightforward troubleshooting for common issues — slow computers, software problems, email issues, connectivity faults — so you can get back to business quickly.</p>
         <div class="srv-item-sm-cta">General IT Support →</div>
       </div>
@@ -853,14 +911,14 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
       <h2 class="section-title">Real businesses.<br><em>Real results.</em></h2>
     </div>
     <div class="testi-grid">
-      <a class="tcard fade-up" href="https://www.modernusdecorationprojects.co.uk/" target="_blank" rel="noopener">
+      <a class="tcard fade-up" href="https://modernusdecorationprojects.co.uk/" target="_blank" rel="noopener">
         <div class="tcard-bg"></div>
         <div class="tcard-overlay"></div>
         <div class="tcard-top"><div class="tcard-decor">🖌️</div></div>
         <div class="tcard-body">
           <div class="tcard-stars">★★★★★</div>
           <div class="tcard-logo modernus-logo">
-            <img src="modernus-logo.png.png" alt="Modernus Decoration Projects" style="height:36px;display:block;border-radius:4px;">
+            <img loading="lazy" decoding="async" width="244" height="105" src="img/modernus-logo.webp" alt="Modernus Decoration Projects" style="width:auto;height:36px;display:block;border-radius:4px;">
           </div>
           <blockquote>"We relied on word of mouth for years but never had a proper online presence. MartKam built us a website and got us ranking on Google — within weeks we were getting enquiries from customers we'd never have reached before."</blockquote>
           <span class="tcard-name">Kamil</span>
@@ -874,21 +932,21 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
         <div class="tcard-body">
           <div class="tcard-stars">★★★★★</div>
           <div class="tcard-logo cs-logo">
-            <img src="C&S logo.jpeg" alt="C&S Cleaning Services" style="height:36px;display:block;border-radius:4px;">
+            <img loading="lazy" decoding="async" width="300" height="141" src="img/cs-logo.webp" alt="C&S Cleaning Services" style="width:auto;height:36px;display:block;border-radius:4px;">
           </div>
           <blockquote>"Before working with MartKam Digital we had no online presence at all. Now we have a professional website and customers are finding us on Google every week — it's made a real difference to the business."</blockquote>
           <span class="tcard-name">Seliha</span>
           <span class="tcard-role">Director · C&S Cleaning Services, Surrey</span>
         </div>
       </a>
-      <a class="tcard fade-up fade-up-d3" href="https://martinez-2305.github.io/St-Paul-s-Cleaning-Services-/" target="_blank" rel="noopener">
+      <a class="tcard fade-up fade-up-d3" href="https://www.stpaulscleaningservices.co.uk/" target="_blank" rel="noopener">
         <div class="tcard-bg"></div>
         <div class="tcard-overlay"></div>
         <div class="tcard-top"><div class="tcard-decor">🧼</div></div>
         <div class="tcard-body">
           <div class="tcard-stars">★★★★★</div>
           <div class="tcard-logo stpauls-logo">
-            <img src="StPauls-logo.png" alt="St Paul's Cleaning Services" style="height:36px;display:block;border-radius:4px;">
+            <img loading="lazy" decoding="async" width="160" height="160" src="img/stpauls-logo.webp" alt="St Paul's Cleaning Services" style="width:auto;height:36px;display:block;border-radius:4px;">
           </div>
           <blockquote>"MartKam Digital completely transformed our online presence. Our website looks professional and we're now showing up on Google when local customers search for cleaning services — the difference has been remarkable."</blockquote>
           <span class="tcard-name">Andreza</span>
@@ -1067,7 +1125,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
     </div>
     <div class="areas-grid fade-up">
       <div class="area-group">
-        <h4 class="area-region">Surrey (North & West)</h4>
+        <h3 class="area-region">Surrey (North & West)</h3>
         <ul class="area-list">
           <li>Woking</li>
           <li>Guildford</li>
@@ -1082,7 +1140,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
         </ul>
       </div>
       <div class="area-group">
-        <h4 class="area-region">Surrey (South)</h4>
+        <h3 class="area-region">Surrey (South)</h3>
         <ul class="area-list">
           <li>Epsom</li>
           <li>Ewell</li>
@@ -1097,7 +1155,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
         </ul>
       </div>
       <div class="area-group">
-        <h4 class="area-region">South West London</h4>
+        <h3 class="area-region">South West London</h3>
         <ul class="area-list">
           <li>Wimbledon</li>
           <li>Raynes Park</li>
@@ -1112,7 +1170,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
         </ul>
       </div>
       <div class="area-group">
-        <h4 class="area-region">South London</h4>
+        <h3 class="area-region">South London</h3>
         <ul class="area-list">
           <li>Sutton</li>
           <li>Carshalton</li>
@@ -1122,7 +1180,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
           <li>Tooting</li>
           <li>Streatham</li>
           <li>Clapham</li>
-          <li>Not on the list? <a href="#contact" style="color:var(--red);">Get in touch</a></li>
+          <li>Not on the list? <a href="#contact" style="color:var(--red-text);">Get in touch</a></li>
         </ul>
       </div>
     </div>
@@ -1153,7 +1211,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
         </div>
         <div class="cguarantee">
           <div class="cguarantee-inner">
-            <img src="faceofMKD.jpeg" alt="Martin Kaminski" class="cguarantee-avatar">
+            <img loading="lazy" decoding="async" width="640" height="460" src="img/faceofmkd-640.webp" alt="Martin Kaminski" class="cguarantee-avatar">
             <div><strong>From Martin, personally:</strong> Every enquiry comes directly to me. I'll review your details and get back to you within a few hours — no call centres, no automated replies, just a real conversation about what you actually need.</div>
           </div>
         </div>
@@ -1163,24 +1221,24 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
         <form action="https://formspree.io/f/meepbpqw" method="POST">
           <input type="hidden" name="_replyto" value="contact@martkamdigital.com">
           <div class="form-row">
-            <div class="fg"><label>Your name</label><input type="text" name="name" placeholder="Your name" required></div>
-            <div class="fg"><label>Business name</label><input type="text" name="business" placeholder="Business name"></div>
+            <div class="fg"><label for="f-name">Your name</label><input type="text" name="name" id="f-name" placeholder="Your name" required></div>
+            <div class="fg"><label for="f-business">Business name</label><input type="text" name="business" id="f-business" placeholder="Business name"></div>
           </div>
           <div class="form-row">
-            <div class="fg"><label>Email address</label><input type="email" name="email" placeholder="Email address" required></div>
-            <div class="fg"><label>Phone number</label><input type="tel" name="phone" placeholder="Phone number"></div>
+            <div class="fg"><label for="f-email">Email address</label><input type="email" name="email" id="f-email" placeholder="Email address" required></div>
+            <div class="fg"><label for="f-phone">Phone number</label><input type="tel" name="phone" id="f-phone" placeholder="Phone number"></div>
           </div>
           <div class="fg">
-            <label>Your area</label>
-            <select name="area">
+            <label for="f-area">Your area</label>
+            <select name="area" id="f-area">
               <option>Surrey (Guildford, Woking, Reigate...)</option>
               <option>South West London (Wimbledon, Kingston, Richmond...)</option>
               <option>Other nearby area</option>
             </select>
           </div>
           <div class="fg">
-            <label>What do you need help with?</label>
-            <select name="service">
+            <label for="f-service">What do you need help with?</label>
+            <select name="service" id="f-service">
               <option>New Website Design & Build</option>
               <option>SEO & Google Rankings</option>
               <option>Google Business Profile Setup</option>
@@ -1191,8 +1249,8 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
             </select>
           </div>
           <div class="fg">
-            <label>Tell us about your business</label>
-            <textarea name="message" placeholder="Tell us a bit about your business and what you're looking for"></textarea>
+            <label for="f-message">Tell us about your business</label>
+            <textarea name="message" id="f-message" placeholder="Tell us a bit about your business and what you're looking for"></textarea>
           </div>
           <button type="submit" class="fsub">Send my free consultation request</button>
           <div class="fnote">No obligation · We'll reply within a few hours · 🔒 Details never shared</div>
@@ -1321,16 +1379,18 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   <p>Free consultation · No pressure · Serving Surrey &amp; South West London</p>
   <a href="tel:+447456848388" class="btn-cta">📞 Call +44 7456848388</a>
   <div class="cta-founder">
-    <img src="faceofMKD.jpeg" alt="Martin Kaminski" class="cta-founder-img">
+    <img loading="lazy" decoding="async" width="640" height="460" src="img/faceofmkd-640.webp" alt="Martin Kaminski" class="cta-founder-img">
     <span>Martin personally handles every call &amp; enquiry</span>
   </div>
 </div>
 
 <!-- FOOTER -->
+</main>
+
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
-      <img src="logo.png" alt="MartKam Digital">
+      <img loading="lazy" decoding="async" width="320" height="167" src="img/logo-320.webp" alt="MartKam Digital">
       <p>Web design, SEO and digital services for local businesses across Surrey and South West London.</p>
       <div class="footer-social">
         <a href="https://www.facebook.com/share/1HmyjG7r2K/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
@@ -1345,7 +1405,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
       </div>
     </div>
     <div class="footer-col">
-      <h4>Services</h4>
+      <h3>Services</h3>
       <ul>
         <li><a href="services.html">Website Design & Build</a></li>
         <li><a href="services.html">SEO & Google Rankings</a></li>
@@ -1354,7 +1414,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Areas We Serve</h4>
+      <h3>Areas We Serve</h3>
       <ul>
         <li><a href="web-design-cheam.html">Web Design Cheam</a></li>
         <li><a href="web-design-sutton.html">Web Design Sutton</a></li>
@@ -1379,15 +1439,9 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
 }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
-document.querySelectorAll('.fade-up').forEach(el => {
-  // If element is already in view on load (e.g. hero), make it visible immediately
-  const rect = el.getBoundingClientRect();
-  if (rect.top < window.innerHeight && rect.bottom > 0) {
-    el.classList.add('visible');
-  } else {
-    observer.observe(el);
-  }
-});
+// IntersectionObserver reports initial visibility on its first callback, so
+// elements already in view are revealed without reading layout synchronously.
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
 const barObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => {
