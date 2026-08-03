@@ -121,7 +121,7 @@ function page(t) {
       telephone: '+447456848388',
       email: 'contact@martkamdigital.com',
       address: { '@type': 'PostalAddress', addressRegion: 'Surrey', addressCountry: 'GB' },
-      geo: { '@type': 'GeoCoordinates', latitude: 51.336, longitude: -0.267 },
+      geo: { '@type': 'GeoCoordinates', latitude: 51.3685, longitude: -0.2642 },
       sameAs: [
         'https://www.facebook.com/share/1HmyjG7r2K/',
         'https://www.instagram.com/martkam_digital',
