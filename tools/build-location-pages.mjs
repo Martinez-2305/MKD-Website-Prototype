@@ -383,7 +383,7 @@ ${t.nearby.map(locLink).join('\n')}
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; 2026 MartKam Digital. Web Design &amp; SEO &middot; Surrey &amp; South West London.</span>
+    <span>&copy; <span class="yr">2026</span> MartKam Digital. Web Design &amp; SEO &middot; Surrey &amp; South West London.</span>
     <div class="footer-bottom-links">
       <a href="privacy-policy.html">Privacy Policy</a>
       <a href="terms.html">Terms &amp; Conditions</a>
@@ -391,6 +391,7 @@ ${t.nearby.map(locLink).join('\n')}
     </div>
   </div>
 </footer>
+<script>document.querySelectorAll(".yr").forEach(function(e){e.textContent=new Date().getFullYear();});</script>
 
 <script>
 const observer = new IntersectionObserver((entries) => {
