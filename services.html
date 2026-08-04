@@ -141,6 +141,9 @@
 @font-face{font-family:'Fraunces';font-style:normal;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-latin.woff2') format('woff2');}
 @font-face{font-family:'Fraunces';font-style:italic;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-italic-latin.woff2') format('woff2');}
 @font-face{font-family:'DM Sans';font-style:normal;font-weight:300 600;font-display:swap;src:url('fonts/dmsans-latin.woff2') format('woff2');}
+
+.core-icon svg{width:30px;height:30px;color:var(--red-text);}
+.add-icon-wrap svg{width:26px;height:26px;color:var(--red-text);}
 </style>
 <style>
 
@@ -1210,6 +1213,12 @@ body > footer {
   content-visibility:auto;
   contain-intrinsic-size:auto 900px;
 }
+
+/* Icon system — inline SVG replaces emoji iconography */
+.srv-icon svg,.pcard-icon svg{width:30px;height:30px;color:var(--red-text);}
+.why-card-icon svg{width:22px;height:22px;color:var(--red-text);}
+.cdetail-icon svg,.tcard-decor svg{width:18px;height:18px;color:var(--red-text);}
+.srv-icon,.pcard-icon{line-height:0;}
 </style>
 </head>
 <body>
@@ -1471,7 +1480,7 @@ body > footer {
       <div class="core-card fade-up">
         <span class="core-card-ghost" aria-hidden="true">01</span>
         <div class="core-badge">Core Service</div>
-        <span class="core-icon">🎨</span>
+        <span class="core-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></span>
         <h3>Website Design & Build</h3>
         <p>A custom-designed website built around your business, your brand, and your goals. Not a template — a hand-crafted site that looks great on every device and is built to convert visitors into real enquiries.</p>
         <div class="core-divider"></div>
@@ -1489,7 +1498,7 @@ body > footer {
       <div class="core-card fade-up delay-1">
         <span class="core-card-ghost" aria-hidden="true">02</span>
         <div class="core-badge">Core Service</div>
-        <span class="core-icon">📍</span>
+        <span class="core-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
         <h3>SEO & Google Business Profile</h3>
         <p>Get your business found by local customers actively searching for what you offer. We set up and optimise your Google Business Profile, and build the on-page SEO foundations that help you rank in Surrey and South West London.</p>
         <div class="core-divider"></div>
@@ -1507,7 +1516,7 @@ body > footer {
       <div class="core-card fade-up delay-2">
         <span class="core-card-ghost" aria-hidden="true">03</span>
         <div class="core-badge">Core Service</div>
-        <span class="core-icon">🌐</span>
+        <span class="core-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
         <h3>Hosting & Domain Packages</h3>
         <p>We offer flexible hosting and domain options to suit every business. Whether you want us to handle everything end-to-end or you already have your own provider — we work around you with no fuss.</p>
         <div class="core-divider"></div>
@@ -1535,7 +1544,7 @@ body > footer {
     <div class="add-grid">
 
       <div class="add-card fade-up">
-        <div class="add-icon-wrap">🔧</div>
+        <div class="add-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
         <div>
           <div class="add-badge">Additional Service</div>
           <h3>Basic IT Troubleshooting</h3>

@@ -59,19 +59,16 @@ export const TOWNS = [
       'Kingston is not a typical suburban high street, and the search landscape reflects that. Three things shape how local businesses get found here.',
     insightCards: [
       {
-        icon: '🏬',
         title: 'You are bidding against national brands',
         body:
           'The Bentall Centre brings together roughly 75 stores of the kind you would normally find in the West End. Those retailers have national SEO budgets. For a local business, competing on generic terms like "shops in Kingston" is a losing game — the win is in specific, high-intent local searches where relevance beats spend.',
       },
       {
-        icon: '🎓',
         title: 'A young, mobile-first audience',
         body:
           'Kingston University puts a large student population in the town centre, alongside commuters and weekend shoppers from across the Royal Borough. This is an audience that finds businesses on a phone, decides in seconds, and never sees a desktop site. If your pages are slow on mobile, you have already lost them.',
       },
       {
-        icon: '🍽️',
         title: 'Hospitality lives and dies on local search',
         body:
           'The riverside restaurant strip and the streets around the Ancient Market Place are dense with food and drink businesses competing for the same evening trade. Google Business Profile, review volume and up-to-date opening hours do more for these businesses than almost anything else you could spend money on.',
@@ -84,7 +81,7 @@ export const TOWNS = [
     servicesHeading: 'Everything your Kingston business<br><em>needs to compete online</em>',
     services: [
       {
-        icon: '🎨',
+        icon: 'design',
         title: 'Website Design & Build',
         body:
           'A fully custom site built for your Kingston business — not a template with your logo dropped in. Designed to look credible next to the national brands you share a high street with.',
@@ -96,7 +93,7 @@ export const TOWNS = [
         ],
       },
       {
-        icon: '📍',
+        icon: 'location',
         title: 'Local SEO & Google Business',
         body:
           'Get found when someone in Kingston searches for what you offer. We set up your Google Business Profile and build the local SEO foundations that put you in the map pack.',
@@ -108,7 +105,7 @@ export const TOWNS = [
         ],
       },
       {
-        icon: '🌐',
+        icon: 'globe',
         title: 'Hosting & Ongoing Support',
         body:
           'We handle hosting, domains, security, updates and maintenance so you can get on with running the business rather than babysitting a website.',
@@ -192,19 +189,16 @@ export const TOWNS = [
       'Wimbledon rewards businesses that understand its geography and its calendar. Most local websites account for neither.',
     insightCards: [
       {
-        icon: '🏘️',
         title: 'Two centres, two search intents',
         body:
           'Wimbledon Village and Wimbledon town centre function as separate markets. The Village skews independent, premium and destination-led; the town centre skews chain, convenience and commuter-led. Naming your actual area on your site — and in your Google Business Profile — is a small change that meaningfully improves who finds you.',
       },
       {
-        icon: '🎾',
         title: 'A genuine seasonal spike',
         body:
           'The Championships bring visitors from around the world into SW19 each summer, and local businesses lean into it — shop windows get tennis-themed displays, and the streets fill with people who have never been here before. That is a large, short, high-intent audience searching on phones, and it is entirely predictable.',
       },
       {
-        icon: '🛍️',
         title: 'A deep independent scene',
         body:
           'Wimbledon Village sustains a large concentration of independent businesses — boutiques, delis, salons, restaurants. That is good for the area and hard for any single business, because you are competing against neighbours who are just as distinctive as you are. Search visibility becomes the tiebreaker.',
@@ -217,7 +211,7 @@ export const TOWNS = [
     servicesHeading: 'Everything your Wimbledon business<br><em>needs to compete online</em>',
     services: [
       {
-        icon: '🎨',
+        icon: 'design',
         title: 'Website Design & Build',
         body:
           'A fully custom site built for your Wimbledon business, designed to match the standard your customers already expect from the area — whether you are in the Village or the town centre.',
@@ -229,7 +223,7 @@ export const TOWNS = [
         ],
       },
       {
-        icon: '📍',
+        icon: 'location',
         title: 'Local SEO & Google Business',
         body:
           'Get found when someone in SW19 searches for what you offer. We set up your Google Business Profile and target the specific area you actually trade in.',
@@ -241,7 +235,7 @@ export const TOWNS = [
         ],
       },
       {
-        icon: '🌐',
+        icon: 'globe',
         title: 'Hosting & Ongoing Support',
         body:
           'Managed hosting built to stay fast when your traffic spikes — plus domains, security, updates and maintenance handled entirely by us.',
@@ -325,19 +319,16 @@ export const TOWNS = [
       'Guildford has an unusual local economy for a market town, and it changes what a website needs to do here.',
     insightCards: [
       {
-        icon: '🎮',
         title: 'A genuine technology cluster',
         body:
           'Guildford hosts one of the largest games development clusters outside London — over fifty studios, with the University of Surrey and Surrey Research Park feeding talent and startups into it. The town is full of people who build digital products for a living, and they notice when something is badly made.',
       },
       {
-        icon: '🏛️',
         title: 'Heritage retail with modern competition',
         body:
           'The cobbled High Street and the Friary Centre give Guildford a strong independent retail and hospitality scene. But it competes with a large surrounding catchment and with online alternatives, so local businesses need to be findable at the exact moment someone decides to come into town.',
       },
       {
-        icon: '💼',
         title: 'A professional-services client base',
         body:
           'Between the research park, the university and the town\'s established professional sector, a lot of Guildford businesses sell to other businesses. That audience researches thoroughly before making contact — which means your site is doing the selling long before anyone calls you.',
@@ -350,7 +341,7 @@ export const TOWNS = [
     servicesHeading: 'Everything your Guildford business<br><em>needs to compete online</em>',
     services: [
       {
-        icon: '🎨',
+        icon: 'design',
         title: 'Website Design & Build',
         body:
           'A fully custom site built for your Guildford business — properly engineered, not assembled from a template. Built to stand up to an audience that knows the difference.',
@@ -362,7 +353,7 @@ export const TOWNS = [
         ],
       },
       {
-        icon: '📍',
+        icon: 'location',
         title: 'Local SEO & Google Business',
         body:
           'Get found when someone in Guildford searches for what you offer. Google Business Profile setup plus the local SEO groundwork that drives real enquiries.',
@@ -374,7 +365,7 @@ export const TOWNS = [
         ],
       },
       {
-        icon: '🌐',
+        icon: 'globe',
         title: 'Hosting & Ongoing Support',
         body:
           'We handle hosting, domains, security, updates and maintenance completely, so the technical side never becomes your problem.',
@@ -458,19 +449,16 @@ export const TOWNS = [
       'Woking\'s local economy has an unusual shape for a Surrey town, and it affects how customers judge your business online.',
     insightCards: [
       {
-        icon: '🏎️',
         title: 'Corporate neighbours set the standard',
         body:
           'McLaren, WWF-UK and Capgemini all have a significant presence in and around Woking. Their brand quality is what local residents see every day. Your website does not need that budget — but it does need to look like it belongs in the same town, because that is the comparison people make without realising it.',
       },
       {
-        icon: '🚆',
         title: 'A commuter audience, searching on the move',
         body:
           'Woking sits around twenty-five minutes from London Waterloo, and a large part of the working population makes that trip. They research local trades and services in transit — brief, mobile, often on imperfect signal. Page speed is not a technical nicety here, it is whether the enquiry happens.',
       },
       {
-        icon: '🏗️',
         title: 'A town centre still being rebuilt',
         body:
           'The £540m Victoria Square scheme brought new retail floorspace, a hotel and residential towers into the centre of Woking. Regeneration on that scale shifts footfall patterns and brings new residents who have no established habits — they find everything by searching, which is an opening for any business that ranks.',
@@ -483,7 +471,7 @@ export const TOWNS = [
     servicesHeading: 'Everything your Woking business<br><em>needs to compete online</em>',
     services: [
       {
-        icon: '🎨',
+        icon: 'design',
         title: 'Website Design & Build',
         body:
           'A fully custom site built for your Woking business — designed to look credible in a town where residents deal with major national brands daily.',
@@ -495,7 +483,7 @@ export const TOWNS = [
         ],
       },
       {
-        icon: '📍',
+        icon: 'location',
         title: 'Local SEO & Google Business',
         body:
           'Get found when someone in Woking searches for what you offer. Google Business Profile setup plus the local SEO foundations that generate enquiries.',
@@ -507,7 +495,7 @@ export const TOWNS = [
         ],
       },
       {
-        icon: '🌐',
+        icon: 'globe',
         title: 'Hosting & Ongoing Support',
         body:
           'Hosting, domains, security, updates and maintenance all handled by us — so you can focus on the business rather than the website.',
@@ -591,19 +579,16 @@ export const TOWNS = [
       'Richmond\'s visitor economy creates an opportunity most local businesses never properly exploit.',
     insightCards: [
       {
-        icon: '🌳',
         title: 'A constant stream of first-time customers',
         body:
           'Richmond Park, the Green and the riverside bring people into the area who have no prior relationship with any business here. For them, the Google local pack is the entire shortlist. If you are not in it, you do not exist — regardless of how good your reputation is among residents.',
       },
       {
-        icon: '💎',
         title: 'A high proportion of independents',
         body:
           'Richmond has an unusually strong independent retail scene, which gives the town its boutique character and makes it genuinely competitive. When every neighbour is distinctive, being findable at the right moment is what separates a busy week from a quiet one.',
       },
       {
-        icon: '🌙',
         title: 'A real night-time economy',
         body:
           'The riverside and town centre support a substantial evening leisure trade. Evening searches are urgent and mobile — people deciding where to eat or drink in the next thirty minutes. Accurate opening hours and a fast mobile site convert that traffic; anything else loses it.',
@@ -616,7 +601,7 @@ export const TOWNS = [
     servicesHeading: 'Everything your Richmond business<br><em>needs to compete online</em>',
     services: [
       {
-        icon: '🎨',
+        icon: 'design',
         title: 'Website Design & Build',
         body:
           'A fully custom site built for your Richmond business, designed to convert visitors who have never heard of you into customers who walk through the door.',
@@ -628,7 +613,7 @@ export const TOWNS = [
         ],
       },
       {
-        icon: '📍',
+        icon: 'location',
         title: 'Local SEO & Google Business',
         body:
           'Get into the local pack, where Richmond\'s visitor traffic actually makes its decisions. Full Google Business Profile setup and local SEO groundwork.',
@@ -640,7 +625,7 @@ export const TOWNS = [
         ],
       },
       {
-        icon: '🌐',
+        icon: 'globe',
         title: 'Hosting & Ongoing Support',
         body:
           'Hosting, domains, security, updates and maintenance handled entirely by us, so the technical side never distracts you from trading.',
@@ -724,19 +709,16 @@ export const TOWNS = [
       'Surbiton\'s independents have something worth protecting, and local search is a large part of how they protect it.',
     insightCards: [
       {
-        icon: '🚉',
         title: 'The commuter rhythm shapes demand',
         body:
           'Surbiton grew around its station and still lives by it. Local businesses see distinct morning, evening and weekend patterns, and the research that leads to a purchase usually happens on a phone during the commute. Sites that load slowly on mobile miss the entire window.',
       },
       {
-        icon: '🏪',
         title: 'Independents competing with each other',
         body:
           'Victoria Road sustains an unusually varied independent scene — art and crafts, homeware, books, gifts, delis and flower stalls. That variety is Surbiton\'s strength, but it means each business is competing against distinctive neighbours rather than interchangeable chains. Search visibility is often the tiebreaker.',
       },
       {
-        icon: '🏛️',
         title: 'Character worth putting on your website',
         body:
           'The Art Deco station is Grade II listed and the town centre sits within a conservation area. Surbiton businesses trade partly on that character — and most local websites throw it away in favour of generic stock imagery that could belong to any town in England.',
@@ -749,7 +731,7 @@ export const TOWNS = [
     servicesHeading: 'Everything your Surbiton business<br><em>needs to compete online</em>',
     services: [
       {
-        icon: '🎨',
+        icon: 'design',
         title: 'Website Design & Build',
         body:
           'A fully custom site built for your Surbiton business — one that looks like it belongs on Victoria Road rather than on a template gallery.',
@@ -761,7 +743,7 @@ export const TOWNS = [
         ],
       },
       {
-        icon: '📍',
+        icon: 'location',
         title: 'Local SEO & Google Business',
         body:
           'Get found when someone in Surbiton searches for what you offer. Google Business Profile setup plus the local SEO foundations that drive enquiries.',
@@ -773,7 +755,7 @@ export const TOWNS = [
         ],
       },
       {
-        icon: '🌐',
+        icon: 'globe',
         title: 'Hosting & Ongoing Support',
         body:
           'We handle hosting, domains, security, updates and maintenance completely, so you can concentrate on the shop rather than the site.',
@@ -857,19 +839,16 @@ export const TOWNS = [
       'Reigate businesses tend to have the hardest part solved already. The gap is usually elsewhere.',
     insightCards: [
       {
-        icon: '🏰',
         title: 'A town that trades on character',
         body:
           'Reigate\'s heritage is genuine — a castle site dating to around 1100 and an 1823 road tunnel that predates every other working road tunnel in the country. Local businesses benefit from that atmosphere, and the good ones reflect it rather than hiding behind stock photography that could be anywhere.',
       },
       {
-        icon: '📈',
         title: 'Word of mouth has a ceiling',
         body:
           'In a town this established, most successful businesses were built on referral. That works until the referrals run out, or a new competitor arrives who is better at being found. Local search is how you keep growing once your existing network is fully tapped.',
       },
       {
-        icon: '🛣️',
         title: 'A wide, connected catchment',
         body:
           'With the M25 at Junction 8 and fast rail links, Reigate businesses can realistically serve Redhill, Dorking, Leatherhead and beyond. Most never target those searches, which leaves an entire adjacent market to whoever bothers to claim it first.',
@@ -882,7 +861,7 @@ export const TOWNS = [
     servicesHeading: 'Everything your Reigate business<br><em>needs to compete online</em>',
     services: [
       {
-        icon: '🎨',
+        icon: 'design',
         title: 'Website Design & Build',
         body:
           'A fully custom site built for your Reigate business — one that reflects the quality you already deliver rather than undercutting it.',
@@ -894,7 +873,7 @@ export const TOWNS = [
         ],
       },
       {
-        icon: '📍',
+        icon: 'location',
         title: 'Local SEO & Google Business',
         body:
           'Get found across Reigate and the surrounding towns you already serve. Google Business Profile setup plus the local SEO groundwork that drives enquiries.',
@@ -906,7 +885,7 @@ export const TOWNS = [
         ],
       },
       {
-        icon: '🌐',
+        icon: 'globe',
         title: 'Hosting & Ongoing Support',
         body:
           'Hosting, domains, security, updates and maintenance handled by us, so the technical side never becomes something you have to think about.',
@@ -991,19 +970,17 @@ export const TOWNS = [
       'Byfleet is exactly the kind of place where a modest amount of the right work produces outsized results.',
     insightCards: [
       {
-        icon: '🏁',
         title: 'A village with a genuine name',
         body:
           'Brooklands opened in 1907 as the first purpose-built motor racing circuit in the world, and its Byfleet Banking made the village name known well beyond Surrey. Local businesses have real heritage to draw on — most default to generic copy that could describe anywhere instead.',
       },
       {
-        icon: '🔧',
+        icon: 'wrench',
         title: 'A trades-led local economy',
         body:
           'Byfleet and West Byfleet run largely on trades and local services. That work is won on urgent, high-intent mobile searches — someone with a leak, a broken boiler or a job that needs quoting this week. Click-to-call, fast loading and a complete Google profile matter more here than elegant design.',
       },
       {
-        icon: '🎯',
         title: 'A thin competitive field',
         body:
           'Small catchments have fewer businesses actively competing for search visibility. Ranking for "electrician Byfleet" is a fundamentally easier problem than ranking for the equivalent in Kingston — and the enquiries are just as real. First mover advantage here is substantial and durable.',
@@ -1016,7 +993,7 @@ export const TOWNS = [
     servicesHeading: 'Everything your Byfleet business<br><em>needs to get found locally</em>',
     services: [
       {
-        icon: '📍',
+        icon: 'location',
         title: 'Local SEO & Google Business',
         body:
           'The priority for most Byfleet businesses. We set up and optimise your Google Business Profile and build the local SEO foundations to rank across both villages.',
@@ -1028,7 +1005,7 @@ export const TOWNS = [
         ],
       },
       {
-        icon: '🎨',
+        icon: 'design',
         title: 'Website Design & Build',
         body:
           'A fully custom site built for your Byfleet business — designed around getting a phone call, not around winning design awards.',
@@ -1040,7 +1017,7 @@ export const TOWNS = [
         ],
       },
       {
-        icon: '🌐',
+        icon: 'globe',
         title: 'Hosting & Ongoing Support',
         body:
           'Hosting, domains, security, updates and maintenance handled by us, so you can be on site rather than fixing a website.',

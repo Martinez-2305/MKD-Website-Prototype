@@ -42,6 +42,18 @@ const LABELS = {
   chertsey: 'Chertsey', bagshot: 'Bagshot', hersham: 'Hersham',
 };
 
+/* Inline line-SVG icon set. Emoji read as DIY and cap what a site can charge;
+   these match the stroke style already used for the FAQ and social icons. */
+const svg = d =>
+  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+
+const ICONS = {
+  design: svg('<path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/>'),
+  location: svg('<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>'),
+  globe: svg('<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>'),
+  wrench: svg('<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>'),
+};
+
 const esc = s => String(s).replace(/&(?!(?:[a-zA-Z]+|#\d+);)/g, '&amp;');
 const stripTags = s => String(s).replace(/<[^>]*>/g, '');
 const jsonEsc = s => JSON.stringify(stripTags(s));
@@ -269,7 +281,7 @@ ${t.checklist.map(c => `          <div class="local-check">${esc(c)}</div>`).joi
     </div>
     <div class="why-grid">
 ${t.insightCards.map((c, i) => `      <div class="why-card fade-up${i ? ` fade-up-d${i}` : ''}">
-        <div class="why-icon">${c.icon}</div>
+        <div class="why-icon">${String(i + 1).padStart(2, '0')}</div>
         <h3>${esc(c.title)}</h3>
         <p>${esc(c.body)}</p>
       </div>`).join('\n')}
@@ -288,7 +300,7 @@ ${t.insightCards.map((c, i) => `      <div class="why-card fade-up${i ? ` fade-u
     <div class="srv-grid">
 ${t.services.map((s, i) => `      <div class="srv-card fade-up${i ? ` fade-up-d${i}` : ''}">
         <div class="srv-badge">Core Service</div>
-        <div class="srv-icon">${s.icon}</div>
+        <div class="srv-icon">${ICONS[s.icon] || ''}</div>
         <h3>${esc(s.title)}</h3>
         <p>${esc(s.body)}</p>
         <ul class="srv-feats">
