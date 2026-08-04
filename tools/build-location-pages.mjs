@@ -193,6 +193,7 @@ ${heroOverride}</head>
     <a href="about.html" class="tl-item">About Us</a>
     <a href="services.html" class="tl-item">Services</a>
     <a href="reviews.html" class="tl-item">Reviews</a>
+    <a href="pricing.html" class="tl-item">Pricing</a>
     <a href="index.html#contact" class="tl-item">Contact</a>
   </div>
   <a href="index.html#contact" class="nav-cta">Let's Talk</a>
@@ -208,6 +209,7 @@ ${heroOverride}</head>
     <a href="about.html" class="mob-item">About Us</a>
     <a href="services.html" class="mob-item">Services</a>
     <a href="reviews.html" class="mob-item">Reviews</a>
+    <a href="pricing.html" class="mob-item">Pricing</a>
     <a href="index.html#contact" class="mob-item">Contact</a>
     <a href="index.html#contact" class="mob-cta">Let's Talk</a>
   </div>
@@ -379,8 +381,8 @@ ${t.nearby.map(locLink).join('\n')}
         <li><a href="services.html">Website Design &amp; Build</a></li>
         <li><a href="services.html">SEO &amp; Google Rankings</a></li>
         <li><a href="services.html">Google Business Profile</a></li>
-        <li><a href="services.html">IT Troubleshooting</a></li>
         <li><a href="services.html">Hosting &amp; Domains</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
       </ul>
     </div>
     <div class="footer-col">
