@@ -228,7 +228,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 }
 
 .hero-inner {
-  flex:0 0 52%;
+  flex:1 1 auto;
   display:flex;
   align-items:center;
   padding:100px 48px 80px 80px;
@@ -237,45 +237,11 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 }
 
 .hero-text {
-  max-width:540px;
+  max-width:780px;
 }
 
 /* Right-side video panel */
-.hero-video-wrap {
-  flex:1;
-  position:relative;
-  overflow:hidden;
-}
-.hero-video-wrap::before {
-  content:'';
-  position:absolute;
-  top:0; left:0; bottom:0;
-  width:120px;
-  background:linear-gradient(to right, #0d0101 0%, transparent 100%);
-  z-index:2;
-  pointer-events:none;
-}
-.hero-video-wrap::after {
-  content:'';
-  position:absolute;
-  top:0; right:0; bottom:0;
-  width:60px;
-  background:linear-gradient(to left, #0d0101 0%, transparent 100%);
-  z-index:2;
-  pointer-events:none;
-}
 
-.hero-video {
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center center;
-  opacity:0.95;
-  -webkit-transform:translateZ(0);
-  transform:translateZ(0);
-}
 
 .hero-label {
   display:inline-flex;
@@ -1101,8 +1067,6 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   .svc-grid { grid-template-columns:1fr; }
   .hero { flex-direction:column; min-height:auto; }
   .hero-inner { flex:none; width:100%; padding:100px 48px 56px 48px; }
-  .hero-video-wrap { flex:none; width:100%; height:50vh; }
-  .hero-video-wrap::before, .hero-video-wrap::after { display:none; }
   .hero-deco { display:none; }
 }
 
@@ -1117,9 +1081,6 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   .overview .wrap { padding:0 24px; }
   .hero { flex-direction:column; min-height:auto; }
   .hero-inner { flex:none; width:100%; padding:96px 24px 48px; }
-  .hero-video-wrap { flex:none; width:100%; height:auto; padding-top:0; }
-  .hero-video-wrap::before, .hero-video-wrap::after { display:none; }
-  .hero-video { position:relative; top:auto; left:auto; right:auto; bottom:auto; width:100%; height:auto; object-fit:contain; object-position:center; opacity:1; -webkit-transform:none; transform:none; }
 
   .svc-grid { grid-template-columns:1fr; }
   .svc-card { flex-direction:column; }
@@ -1256,9 +1217,6 @@ body > footer {
       </div>
     </div>
   </div>
-  <div class="hero-video-wrap">
-    <video class="hero-video" src="Logo animation2.mp4" autoplay muted playsinline loop preload="auto"></video>
-  </div>
 </section>
 
 <!-- ===== OVERVIEW: SERVICE CARDS ===== -->
@@ -1296,7 +1254,7 @@ body > footer {
             <span class="svc-num" aria-hidden="true">02</span>
           </div>
           <h3 class="svc-card-title">Website Design for Established Companies</h3>
-          <p class="svc-card-desc">Elevate your company's online presence with a bespoke website that matches the scale and ambition of your brand. Designed for credibility, lead generation, and long-term growth in a competitive market.</p>
+          <p class="svc-card-desc">A website that matches the scale and ambition of your company, built from scratch rather than adapted from a template. Designed for credibility, lead generation, and long-term growth in a competitive market.</p>
           <a href="index.html#contact" class="svc-card-cta">Get Started →</a>
         </div>
         <div class="svc-card-visual svc-visual--web">
@@ -1386,7 +1344,7 @@ body > footer {
             <span class="svc-num" aria-hidden="true">07</span>
           </div>
           <h3 class="svc-card-title">Migrating Existing Domain &amp; Hosting Service</h3>
-          <p class="svc-card-desc">Moving your domain or switching hosting providers doesn't have to be stressful — I manage the entire migration for you. Zero downtime, no data loss, and a seamless transition to better infrastructure.</p>
+          <p class="svc-card-desc">Moving your domain or switching hosting providers doesn't have to be stressful — I manage the entire migration for you. Zero downtime, no data loss, and a clean move to better infrastructure.</p>
           <a href="index.html#contact" class="svc-card-cta">Get Started →</a>
         </div>
         <div class="svc-card-visual svc-visual--hosting">
@@ -1617,7 +1575,7 @@ body > footer {
           </button>
           <div class="faq-body">
             <div class="faq-body-inner">
-              <p class="faq-answer">Not at all. I build websites that are easy to manage, and I include a full handover and training session so you feel confident making basic updates yourself. If you'd rather leave the upkeep to me, I offer affordable ongoing support packages too.</p>
+              <p class="faq-answer">Not at all. I build websites that are easy to manage, and I include a full handover and training session so you feel confident making basic updates yourself. If you’d rather leave the upkeep to me, the Care Plan covers hosting, backups and small edits at £45 a month, and the full monthly service is £199. <a href="pricing.html">Both are on the pricing page.</a></p>
             </div>
           </div>
         </div>
@@ -1677,10 +1635,10 @@ body > footer {
       <img loading="lazy" decoding="async" width="320" height="167" src="img/logo-320.webp" alt="MartKam Digital">
       <p>Web design, SEO and digital services for local businesses across Surrey and South West London.</p>
       <div class="footer-social">
-        <a href="https://www.facebook.com/share/1HmyjG7r2K/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
+        <a href="https://www.facebook.com/share/1HmyjG7r2K/" target="_blank" rel="noopener" aria-label="Facebook">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
         </a>
-        <a href="#" aria-label="Instagram">
+        <a href="https://www.instagram.com/martkam_digital" target="_blank" rel="noopener" aria-label="Instagram">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
         </a>
         <a href="https://share.google/xvQ0x2yGNj0gT0dC1" target="_blank" rel="noopener" aria-label="Google Business Profile">
