@@ -26,7 +26,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const BASE = 'https://www.martkamdigital.com';
 
 /* Towns that have their own page. Everything else points at the homepage
-   coverage list, so we never emit a link to a file that does not exist. */
+   coverage list, so I never emit a link to a file that does not exist. */
 const HAS_PAGE = new Set(['epsom', 'sutton', 'cheam', ...TOWNS.map(t => t.slug)]);
 
 /* Display names for cross-link targets that may not have their own page yet. */
@@ -190,7 +190,7 @@ ${heroOverride}</head>
     <div class="tl-bg-pill" id="tlBg"></div>
     <div class="tl-lamp-wrap" id="tlLamp"><div class="tl-lamp-bar"><div class="tl-lamp-glow3"></div></div></div>
     <a href="/" class="tl-item">Home</a>
-    <a href="about.html" class="tl-item">About Us</a>
+    <a href="about.html" class="tl-item">About Me</a>
     <a href="services.html" class="tl-item">Services</a>
     <a href="reviews.html" class="tl-item">Reviews</a>
     <a href="pricing.html" class="tl-item">Pricing</a>
@@ -206,7 +206,7 @@ ${heroOverride}</head>
 <div class="mob-menu" id="mobMenu">
   <div class="mob-menu-inner">
     <a href="/" class="mob-item">Home</a>
-    <a href="about.html" class="mob-item">About Us</a>
+    <a href="about.html" class="mob-item">About Me</a>
     <a href="services.html" class="mob-item">Services</a>
     <a href="reviews.html" class="mob-item">Reviews</a>
     <a href="pricing.html" class="mob-item">Pricing</a>
@@ -233,7 +233,7 @@ ${heroOverride}</head>
     <p>${esc(t.heroCopy)}</p>
     <div class="hero-btns">
       <a href="index.html#contact" class="btn-primary">Get a Free Quote</a>
-      <a href="services.html" class="btn-outline">See What We Do</a>
+      <a href="services.html" class="btn-outline">See What I Do</a>
     </div>
   </div>
 </section>
@@ -320,8 +320,8 @@ ${s.feats.map(f => `          <li>${esc(f)}</li>`).join('\n')}
       <div class="faq-left fade-up">
         <span class="faq-eyebrow">FAQ</span>
         <h2 class="faq-title">${esc(t.faqHeading)}</h2>
-        <p class="faq-subtitle">Something else on your mind? We love a straight-talking conversation &mdash; no obligation.</p>
-        <a href="index.html#contact" class="faq-contact-cta">Ask us anything &rarr;</a>
+        <p class="faq-subtitle">Something else on your mind? I love a straight-talking conversation &mdash; no obligation.</p>
+        <a href="index.html#contact" class="faq-contact-cta">Ask me anything &rarr;</a>
       </div>
       <div class="faq-list fade-up fade-up-d2">
 ${t.faqs.map(f => `        <div class="faq-item">
@@ -348,10 +348,10 @@ ${t.faqs.map(f => `        <div class="faq-item">
 <!-- LOCATION LINKS -->
 <div class="location-links">
   <div class="location-links-inner">
-    <p>We also provide web design services across:</p>
+    <p>I also provide web design services across:</p>
     <div class="loc-tags">
 ${t.nearby.map(locLink).join('\n')}
-      <a href="index.html#areas" class="loc-tag">All Areas We Cover</a>
+      <a href="index.html#areas" class="loc-tag">All Areas I Cover</a>
     </div>
   </div>
 </div>
@@ -386,13 +386,13 @@ ${t.nearby.map(locLink).join('\n')}
       </ul>
     </div>
     <div class="footer-col">
-      <h3>Areas We Serve</h3>
+      <h3>Areas I Serve</h3>
       <ul>
         <li><a href="web-design-kingston.html">Web Design Kingston</a></li>
         <li><a href="web-design-wimbledon.html">Web Design Wimbledon</a></li>
         <li><a href="web-design-guildford.html">Web Design Guildford</a></li>
         <li><a href="web-design-epsom.html">Web Design Epsom</a></li>
-        <li><a href="index.html#areas">All areas we cover</a></li>
+        <li><a href="index.html#areas">All areas I cover</a></li>
       </ul>
     </div>
   </div>

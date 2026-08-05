@@ -34,13 +34,13 @@ export const TOWNS = [
 
     h1: 'Your Kingston shopfront is only half the battle.<br><em>The other half happens on Google.</em>',
     heroCopy:
-      'Kingston is one of South West London\'s biggest retail centres — which means local independents are competing for attention against national brands. We build websites that help Kingston businesses win the searches those chains can\'t buy.',
+      'Kingston is one of South West London\'s biggest retail centres — which means local independents are competing for attention against national brands. I build websites that help Kingston businesses win the searches those chains can\'t buy.',
 
     introHeading: 'Helping Kingston businesses<br><em>stand out in a crowded town centre</em>',
     intro: [
       'Kingston upon Thames is a genuine retail heavyweight. The Bentall Centre alone runs to around 365,000 sq ft across four floors, and Eden Walk has been drawing shoppers into the town centre since 1968. Add the Ancient Market Place, the riverside and Kingston University, and you have a town where footfall is never the problem.',
       '<strong>Visibility is.</strong> When a Kingston independent sits a few doors from a national chain, it is not competing on marketing budget — it is competing on whether it shows up when someone nearby searches. The chains have entire teams for that. Most local businesses have nobody.',
-      'That gap is the opportunity. Local search is one of the few channels where a well-built small business site genuinely outranks a national brand, because Google weights proximity and relevance heavily for local intent. We build Kingston websites specifically to take that ground.',
+      'That gap is the opportunity. Local search is one of the few channels where a well-built small business site genuinely outranks a national brand, because Google weights proximity and relevance heavily for local intent. I build Kingston websites specifically to take that ground.',
     ],
     checklist: [
       'Custom website built around your Kingston business and its customers',
@@ -50,7 +50,7 @@ export const TOWNS = [
       'Fast-loading pages that hold attention on a busy high street',
       'Clear calls-to-action that turn browsers into booked work',
       'Full training included — you stay in control of your own site',
-      'Ongoing support after launch — we are in your corner',
+      'Ongoing support after launch — I am in your corner',
     ],
 
     insightLabel: 'Local Insight · Kingston',
@@ -77,7 +77,7 @@ export const TOWNS = [
     insightClose:
       'The practical takeaway for a Kingston business: do not try to out-shout the chains. Get the local fundamentals right — a fast mobile site, a properly configured Google Business Profile, and pages that answer the specific thing someone is searching for — and you will consistently appear above competitors who have never bothered.',
 
-    servicesLabel: 'What We Do in Kingston',
+    servicesLabel: 'What I Do in Kingston',
     servicesHeading: 'Everything your Kingston business<br><em>needs to compete online</em>',
     services: [
       {
@@ -96,7 +96,7 @@ export const TOWNS = [
         icon: 'location',
         title: 'Local SEO & Google Business',
         body:
-          'Get found when someone in Kingston searches for what you offer. We set up your Google Business Profile and build the local SEO foundations that put you in the map pack.',
+          'Get found when someone in Kingston searches for what you offer. I set up your Google Business Profile and build the local SEO foundations that put you in the map pack.',
         feats: [
           'Google Business Profile setup & optimisation',
           'Local SEO targeting Kingston & the Royal Borough',
@@ -108,7 +108,7 @@ export const TOWNS = [
         icon: 'globe',
         title: 'Hosting & Ongoing Support',
         body:
-          'We handle hosting, domains, security, updates and maintenance so you can get on with running the business rather than babysitting a website.',
+          'I handle hosting, domains, security, updates and maintenance so you can get on with running the business rather than babysitting a website.',
         feats: [
           'Managed hosting & domain setup',
           'Free SSL & fast UK-based servers',
@@ -126,15 +126,15 @@ export const TOWNS = [
       },
       {
         q: 'How much does a website cost for a Kingston business?',
-        a: 'Every project is different, but we always provide a clear, fixed quote before any work begins — no hidden costs, no surprises. <a href="index.html#contact">Get in touch for a free, no-obligation quote.</a>',
+        a: 'Every project is different, but I always provide a clear, fixed quote before any work begins — no hidden costs, no surprises. <a href="index.html#contact">Get in touch for a free, no-obligation quote.</a>',
       },
       {
         q: 'How long does it take to build and launch?',
-        a: 'Most projects go from first conversation to live website within 2–4 weeks. We keep you involved throughout, so you always know where things stand — no disappearing acts.',
+        a: 'Most projects go from first conversation to live website within 2–4 weeks. I keep you involved throughout, so you always know where things stand — no disappearing acts.',
       },
       {
         q: 'Do you cover Surbiton, New Malden and the rest of the Royal Borough?',
-        a: 'Yes — we work across Kingston upon Thames and the surrounding areas including Surbiton, Tolworth, Chessington, Hampton Court and Richmond, as well as the wider Surrey and South West London area. We also work remotely with businesses anywhere in the UK.',
+        a: 'Yes — I work across Kingston upon Thames and the surrounding areas including Surbiton, Tolworth, Chessington, Hampton Court and Richmond, as well as the wider Surrey and South West London area. I also work remotely with businesses anywhere in the UK.',
       },
     ],
 
@@ -164,7 +164,7 @@ export const TOWNS = [
 
     h1: 'SW19 has two high streets.<br><em>Make sure you rank on the right one.</em>',
     heroCopy:
-      'Wimbledon is really two business districts with two different audiences. We build websites that understand the difference — and rank for the searches your actual customers are making.',
+      'Wimbledon is really two business districts with two different audiences. I build websites that understand the difference — and rank for the searches your actual customers are making.',
 
     introHeading: 'Helping Wimbledon businesses<br><em>get found all year round</em>',
     intro: [
@@ -180,7 +180,7 @@ export const TOWNS = [
       'Fast-loading pages that cope with seasonal traffic spikes',
       'Clear calls-to-action that turn visitors into enquiries',
       'Full training included — you stay in control',
-      'Ongoing support after launch — we are in your corner',
+      'Ongoing support after launch — I am in your corner',
     ],
 
     insightLabel: 'Local Insight · Wimbledon',
@@ -207,7 +207,7 @@ export const TOWNS = [
     insightClose:
       'The practical takeaway for a Wimbledon business: be specific about where you are. "Wimbledon Village" and "Wimbledon town centre" are not interchangeable to your customers, and they should not be interchangeable on your website. Then make sure your site and profile are ready before the summer, not during it.',
 
-    servicesLabel: 'What We Do in Wimbledon',
+    servicesLabel: 'What I Do in Wimbledon',
     servicesHeading: 'Everything your Wimbledon business<br><em>needs to compete online</em>',
     services: [
       {
@@ -226,7 +226,7 @@ export const TOWNS = [
         icon: 'location',
         title: 'Local SEO & Google Business',
         body:
-          'Get found when someone in SW19 searches for what you offer. We set up your Google Business Profile and target the specific area you actually trade in.',
+          'Get found when someone in SW19 searches for what you offer. I set up your Google Business Profile and target the specific area you actually trade in.',
         feats: [
           'Google Business Profile setup & optimisation',
           'Local SEO targeting Wimbledon Village & town centre',
@@ -238,7 +238,7 @@ export const TOWNS = [
         icon: 'globe',
         title: 'Hosting & Ongoing Support',
         body:
-          'Managed hosting built to stay fast when your traffic spikes — plus domains, security, updates and maintenance handled entirely by us.',
+          'Managed hosting built to stay fast when your traffic spikes — plus domains, security, updates and maintenance handled entirely by me.',
         feats: [
           'Managed hosting & domain setup',
           'Free SSL & fast UK-based servers',
@@ -252,7 +252,7 @@ export const TOWNS = [
     faqs: [
       {
         q: 'Should my site target Wimbledon Village or Wimbledon town centre?',
-        a: 'Whichever you actually trade in — and say so explicitly. They function as separate markets with different customers, and being specific helps Google match you to the right searches. If you serve both, we structure the site so it can rank for both without looking vague.',
+        a: 'Whichever you actually trade in — and say so explicitly. They function as separate markets with different customers, and being specific helps Google match you to the right searches. If you serve both, I structure the site so it can rank for both without looking vague.',
       },
       {
         q: 'Can you help me prepare for the summer traffic spike?',
@@ -260,11 +260,11 @@ export const TOWNS = [
       },
       {
         q: 'How much does a website cost for a Wimbledon business?',
-        a: 'Every project is different, but we always provide a clear, fixed quote before any work begins — no hidden costs, no surprises. <a href="index.html#contact">Get in touch for a free, no-obligation quote.</a>',
+        a: 'Every project is different, but I always provide a clear, fixed quote before any work begins — no hidden costs, no surprises. <a href="index.html#contact">Get in touch for a free, no-obligation quote.</a>',
       },
       {
         q: 'Do you also cover Raynes Park, Morden and the rest of Merton?',
-        a: 'Yes — we work across Wimbledon and the surrounding areas including Raynes Park, Morden, Merton, Tooting and Putney, as well as the wider Surrey and South West London area. We also work remotely with businesses anywhere in the UK.',
+        a: 'Yes — I work across Wimbledon and the surrounding areas including Raynes Park, Morden, Merton, Tooting and Putney, as well as the wider Surrey and South West London area. I also work remotely with businesses anywhere in the UK.',
       },
     ],
 
@@ -294,7 +294,7 @@ export const TOWNS = [
 
     h1: 'In a town this full of software people,<br><em>your website has nowhere to hide.</em>',
     heroCopy:
-      'Guildford has one of the highest concentrations of tech talent in the country. That raises the bar for what a local website should look like. We build sites for Guildford businesses that meet it.',
+      'Guildford has one of the highest concentrations of tech talent in the country. That raises the bar for what a local website should look like. I build sites for Guildford businesses that meet it.',
 
     introHeading: 'Helping Guildford businesses<br><em>meet a higher standard</em>',
     intro: [
@@ -310,7 +310,7 @@ export const TOWNS = [
       'Genuinely fast pages, not just pages that look fast',
       'Clear calls-to-action that turn visitors into enquiries',
       'Full training included — you stay in control',
-      'Ongoing support after launch — we are in your corner',
+      'Ongoing support after launch — I am in your corner',
     ],
 
     insightLabel: 'Local Insight · Guildford',
@@ -337,7 +337,7 @@ export const TOWNS = [
     insightClose:
       'The practical takeaway for a Guildford business: performance and credibility are not optional extras here. A site that loads instantly, works properly on a phone and clearly explains what you do will out-perform a prettier site that is slow — particularly in front of an audience this technically literate.',
 
-    servicesLabel: 'What We Do in Guildford',
+    servicesLabel: 'What I Do in Guildford',
     servicesHeading: 'Everything your Guildford business<br><em>needs to compete online</em>',
     services: [
       {
@@ -368,7 +368,7 @@ export const TOWNS = [
         icon: 'globe',
         title: 'Hosting & Ongoing Support',
         body:
-          'We handle hosting, domains, security, updates and maintenance completely, so the technical side never becomes your problem.',
+          'I handle hosting, domains, security, updates and maintenance completely, so the technical side never becomes your problem.',
         feats: [
           'Managed hosting & domain setup',
           'Free SSL & fast UK-based servers',
@@ -382,19 +382,19 @@ export const TOWNS = [
     faqs: [
       {
         q: 'Guildford is full of tech companies — why not just hire one of them?',
-        a: 'You can, and for a software product you probably should. But a games studio or a research-park software firm is not set up to build and rank a small business website, and generally will not price for one. We do exactly that work, for local businesses, at a scale that makes sense.',
+        a: 'You can, and for a software product you probably should. But a games studio or a research-park software firm is not set up to build and rank a small business website, and generally will not price for one. I do exactly that work, for local businesses, at a scale that makes sense.',
       },
       {
         q: 'Can you help my Guildford business rank on Google?',
-        a: 'Yes — local SEO is built into every website we create. We target the search terms Guildford customers actually use, set up your Google Business Profile, and build the on-page foundations that help you rank. SEO takes time, but the groundwork is laid from day one.',
+        a: 'Yes — local SEO is built into every website I create. I target the search terms Guildford customers actually use, set up your Google Business Profile, and build the on-page foundations that help you rank. SEO takes time, but the groundwork is laid from day one.',
       },
       {
         q: 'How much does a website cost for a Guildford business?',
-        a: 'Every project is different, but we always provide a clear, fixed quote before any work begins — no hidden costs, no surprises. <a href="index.html#contact">Get in touch for a free, no-obligation quote.</a>',
+        a: 'Every project is different, but I always provide a clear, fixed quote before any work begins — no hidden costs, no surprises. <a href="index.html#contact">Get in touch for a free, no-obligation quote.</a>',
       },
       {
         q: 'Do you cover Woking, Farnham and the rest of west Surrey?',
-        a: 'Yes — we work across Guildford and the surrounding areas including Woking, Byfleet, Farnham, Dorking and Leatherhead, as well as the wider Surrey and South West London area. We also work remotely with businesses anywhere in the UK.',
+        a: 'Yes — I work across Guildford and the surrounding areas including Woking, Byfleet, Farnham, Dorking and Leatherhead, as well as the wider Surrey and South West London area. I also work remotely with businesses anywhere in the UK.',
       },
     ],
 
@@ -424,7 +424,7 @@ export const TOWNS = [
 
     h1: 'Woking is judged by a higher standard.<br><em>Your website should meet it.</em>',
     heroCopy:
-      'Woking hosts some seriously well-known corporate names. Their presence raises what customers expect from every business in town. We build Woking websites that hold their own.',
+      'Woking hosts some seriously well-known corporate names. Their presence raises what customers expect from every business in town. I build Woking websites that hold their own.',
 
     introHeading: 'Helping Woking businesses<br><em>look the part</em>',
     intro: [
@@ -440,7 +440,7 @@ export const TOWNS = [
       'Fast-loading pages that work on patchy mobile signal',
       'Clear calls-to-action that turn visitors into enquiries',
       'Full training included — you stay in control',
-      'Ongoing support after launch — we are in your corner',
+      'Ongoing support after launch — I am in your corner',
     ],
 
     insightLabel: 'Local Insight · Woking',
@@ -467,7 +467,7 @@ export const TOWNS = [
     insightClose:
       'The practical takeaway for a Woking business: assume your customer is on a phone, in a hurry, and unconsciously comparing you to far larger organisations. A fast, clean, credible site answers all three problems at once — and new residents arriving with the town-centre development have no loyalties yet.',
 
-    servicesLabel: 'What We Do in Woking',
+    servicesLabel: 'What I Do in Woking',
     servicesHeading: 'Everything your Woking business<br><em>needs to compete online</em>',
     services: [
       {
@@ -498,7 +498,7 @@ export const TOWNS = [
         icon: 'globe',
         title: 'Hosting & Ongoing Support',
         body:
-          'Hosting, domains, security, updates and maintenance all handled by us — so you can focus on the business rather than the website.',
+          'Hosting, domains, security, updates and maintenance all handled by me — so you can focus on the business rather than the website.',
         feats: [
           'Managed hosting & domain setup',
           'Free SSL & fast UK-based servers',
@@ -516,15 +516,15 @@ export const TOWNS = [
       },
       {
         q: 'How much does a website cost for a Woking business?',
-        a: 'Every project is different, but we always provide a clear, fixed quote before any work begins — no hidden costs, no surprises. <a href="index.html#contact">Get in touch for a free, no-obligation quote.</a>',
+        a: 'Every project is different, but I always provide a clear, fixed quote before any work begins — no hidden costs, no surprises. <a href="index.html#contact">Get in touch for a free, no-obligation quote.</a>',
       },
       {
         q: 'How long does it take to build and launch?',
-        a: 'Most projects go from first conversation to live website within 2–4 weeks. We keep you involved throughout, so you always know where things stand — no disappearing acts.',
+        a: 'Most projects go from first conversation to live website within 2–4 weeks. I keep you involved throughout, so you always know where things stand — no disappearing acts.',
       },
       {
         q: 'Do you cover Byfleet, Weybridge and the rest of the borough?',
-        a: 'Yes — we work across Woking and the surrounding areas including Byfleet, West Byfleet, Weybridge, Chertsey, Bagshot and Guildford, as well as the wider Surrey and South West London area. We also work remotely with businesses anywhere in the UK.',
+        a: 'Yes — I work across Woking and the surrounding areas including Byfleet, West Byfleet, Weybridge, Chertsey, Bagshot and Guildford, as well as the wider Surrey and South West London area. I also work remotely with businesses anywhere in the UK.',
       },
     ],
 
@@ -554,7 +554,7 @@ export const TOWNS = [
 
     h1: 'Most of Richmond\'s visitors<br><em>have never heard of you. Yet.</em>',
     heroCopy:
-      'Richmond serves two audiences at once: residents who know the area and visitors discovering it. We build websites that capture both — and rank for the searches each one makes.',
+      'Richmond serves two audiences at once: residents who know the area and visitors discovering it. I build websites that capture both — and rank for the searches each one makes.',
 
     introHeading: 'Helping Richmond businesses<br><em>get found by both audiences</em>',
     intro: [
@@ -570,7 +570,7 @@ export const TOWNS = [
       'Fast-loading pages that convert first-time discoverers',
       'Clear calls-to-action that turn visitors into bookings',
       'Full training included — you stay in control',
-      'Ongoing support after launch — we are in your corner',
+      'Ongoing support after launch — I am in your corner',
     ],
 
     insightLabel: 'Local Insight · Richmond',
@@ -597,7 +597,7 @@ export const TOWNS = [
     insightClose:
       'The practical takeaway for a Richmond business: your Google Business Profile is doing more work than your website in many cases, because it is what visitors see first. Get both right — a complete, accurate profile feeding into a fast site that answers the obvious questions — and you capture an audience that word of mouth will never reach.',
 
-    servicesLabel: 'What We Do in Richmond',
+    servicesLabel: 'What I Do in Richmond',
     servicesHeading: 'Everything your Richmond business<br><em>needs to compete online</em>',
     services: [
       {
@@ -628,7 +628,7 @@ export const TOWNS = [
         icon: 'globe',
         title: 'Hosting & Ongoing Support',
         body:
-          'Hosting, domains, security, updates and maintenance handled entirely by us, so the technical side never distracts you from trading.',
+          'Hosting, domains, security, updates and maintenance handled entirely by me, so the technical side never distracts you from trading.',
         feats: [
           'Managed hosting & domain setup',
           'Free SSL & fast UK-based servers',
@@ -650,11 +650,11 @@ export const TOWNS = [
       },
       {
         q: 'How much does a website cost for a Richmond business?',
-        a: 'Every project is different, but we always provide a clear, fixed quote before any work begins — no hidden costs, no surprises. <a href="index.html#contact">Get in touch for a free, no-obligation quote.</a>',
+        a: 'Every project is different, but I always provide a clear, fixed quote before any work begins — no hidden costs, no surprises. <a href="index.html#contact">Get in touch for a free, no-obligation quote.</a>',
       },
       {
         q: 'Do you cover Kingston, Twickenham and the rest of the borough?',
-        a: 'Yes — we work across Richmond upon Thames and the surrounding areas including Kingston, Surbiton, Hampton Court, Putney and Wimbledon, as well as the wider Surrey and South West London area. We also work remotely with businesses anywhere in the UK.',
+        a: 'Yes — I work across Richmond upon Thames and the surrounding areas including Kingston, Surbiton, Hampton Court, Putney and Wimbledon, as well as the wider Surrey and South West London area. I also work remotely with businesses anywhere in the UK.',
       },
     ],
 
@@ -684,7 +684,7 @@ export const TOWNS = [
 
     h1: 'Victoria Road deserves better<br><em>than a template website.</em>',
     heroCopy:
-      'Surbiton runs on independents and commuters. We build websites that get local businesses in front of both — fast, mobile, and ranking for the searches that actually convert.',
+      'Surbiton runs on independents and commuters. I build websites that get local businesses in front of both — fast, mobile, and ranking for the searches that actually convert.',
 
     introHeading: 'Helping Surbiton businesses<br><em>win their own high street</em>',
     intro: [
@@ -700,7 +700,7 @@ export const TOWNS = [
       'Fast-loading pages that work in a short attention window',
       'Clear calls-to-action that turn visitors into enquiries',
       'Full training included — you stay in control',
-      'Ongoing support after launch — we are in your corner',
+      'Ongoing support after launch — I am in your corner',
     ],
 
     insightLabel: 'Local Insight · Surbiton',
@@ -727,7 +727,7 @@ export const TOWNS = [
     insightClose:
       'The practical takeaway for a Surbiton business: lean into being local rather than hiding it. Name your street, show the actual place, and make sure the site loads instantly on a phone. Generic sites are easy to ignore; a site that is visibly, specifically Surbiton is not.',
 
-    servicesLabel: 'What We Do in Surbiton',
+    servicesLabel: 'What I Do in Surbiton',
     servicesHeading: 'Everything your Surbiton business<br><em>needs to compete online</em>',
     services: [
       {
@@ -758,7 +758,7 @@ export const TOWNS = [
         icon: 'globe',
         title: 'Hosting & Ongoing Support',
         body:
-          'We handle hosting, domains, security, updates and maintenance completely, so you can concentrate on the shop rather than the site.',
+          'I handle hosting, domains, security, updates and maintenance completely, so you can concentrate on the shop rather than the site.',
         feats: [
           'Managed hosting & domain setup',
           'Free SSL & fast UK-based servers',
@@ -776,15 +776,15 @@ export const TOWNS = [
       },
       {
         q: 'How much does a website cost for a Surbiton business?',
-        a: 'Every project is different, but we always provide a clear, fixed quote before any work begins — no hidden costs, no surprises. <a href="index.html#contact">Get in touch for a free, no-obligation quote.</a>',
+        a: 'Every project is different, but I always provide a clear, fixed quote before any work begins — no hidden costs, no surprises. <a href="index.html#contact">Get in touch for a free, no-obligation quote.</a>',
       },
       {
         q: 'How long does it take to build and launch?',
-        a: 'Most projects go from first conversation to live website within 2–4 weeks. We keep you involved throughout, so you always know where things stand — no disappearing acts.',
+        a: 'Most projects go from first conversation to live website within 2–4 weeks. I keep you involved throughout, so you always know where things stand — no disappearing acts.',
       },
       {
         q: 'Do you cover Tolworth, Chessington and the surrounding areas?',
-        a: 'Yes — we work across Surbiton and the surrounding areas including Kingston, Tolworth, Chessington, Hampton Court and Wimbledon, as well as the wider Surrey and South West London area. We also work remotely with businesses anywhere in the UK.',
+        a: 'Yes — I work across Surbiton and the surrounding areas including Kingston, Tolworth, Chessington, Hampton Court and Wimbledon, as well as the wider Surrey and South West London area. I also work remotely with businesses anywhere in the UK.',
       },
     ],
 
@@ -814,7 +814,7 @@ export const TOWNS = [
 
     h1: 'Years of reputation in Reigate,<br><em>and still invisible on Google?</em>',
     heroCopy:
-      'Reigate trades on character and quality, but customers still find it through Google. We build websites that carry the town\'s standard and rank for the searches that bring in work.',
+      'Reigate trades on character and quality, but customers still find it through Google. I build websites that carry the town\'s standard and rank for the searches that bring in work.',
 
     introHeading: 'Helping Reigate businesses<br><em>turn local reputation into enquiries</em>',
     intro: [
@@ -830,7 +830,7 @@ export const TOWNS = [
       'Fast-loading pages that keep visitors on your site',
       'Clear calls-to-action that turn visitors into enquiries',
       'Full training included — you stay in control',
-      'Ongoing support after launch — we are in your corner',
+      'Ongoing support after launch — I am in your corner',
     ],
 
     insightLabel: 'Local Insight · Reigate',
@@ -857,7 +857,7 @@ export const TOWNS = [
     insightClose:
       'The practical takeaway for a Reigate business: your reputation is an asset your website is probably not reflecting. Get the reviews visible, the local pages built for the surrounding towns you already serve, and the Google Business Profile complete — and you convert goodwill you already have into enquiries you currently do not.',
 
-    servicesLabel: 'What We Do in Reigate',
+    servicesLabel: 'What I Do in Reigate',
     servicesHeading: 'Everything your Reigate business<br><em>needs to compete online</em>',
     services: [
       {
@@ -888,7 +888,7 @@ export const TOWNS = [
         icon: 'globe',
         title: 'Hosting & Ongoing Support',
         body:
-          'Hosting, domains, security, updates and maintenance handled by us, so the technical side never becomes something you have to think about.',
+          'Hosting, domains, security, updates and maintenance handled by me, so the technical side never becomes something you have to think about.',
         feats: [
           'Managed hosting & domain setup',
           'Free SSL & fast UK-based servers',
@@ -906,15 +906,15 @@ export const TOWNS = [
       },
       {
         q: 'Can you help me reach Redhill and Dorking as well as Reigate?',
-        a: 'Yes. If you genuinely serve those areas, we build the site so it can rank for them rather than only for Reigate. That is often the fastest available growth for an established Reigate business, because the neighbouring searches are usually less contested.',
+        a: 'Yes. If you genuinely serve those areas, I build the site so it can rank for them rather than only for Reigate. That is often the fastest available growth for an established Reigate business, because the neighbouring searches are usually less contested.',
       },
       {
         q: 'How much does a website cost for a Reigate business?',
-        a: 'Every project is different, but we always provide a clear, fixed quote before any work begins — no hidden costs, no surprises. <a href="index.html#contact">Get in touch for a free, no-obligation quote.</a>',
+        a: 'Every project is different, but I always provide a clear, fixed quote before any work begins — no hidden costs, no surprises. <a href="index.html#contact">Get in touch for a free, no-obligation quote.</a>',
       },
       {
         q: 'How long does it take to build and launch?',
-        a: 'Most projects go from first conversation to live website within 2–4 weeks. We keep you involved throughout, so you always know where things stand — no disappearing acts.',
+        a: 'Most projects go from first conversation to live website within 2–4 weeks. I keep you involved throughout, so you always know where things stand — no disappearing acts.',
       },
     ],
 
@@ -930,7 +930,7 @@ export const TOWNS = [
     heroTag: 'Byfleet & West Byfleet',
     nearby: ['woking', 'weybridge', 'guildford', 'chertsey', 'hersham'],
     sources: [
-      'https://www.brooklandsmuseum.com/discover/our-history/timeline/',
+      'https://www.brooklandsmuseum.com/discover/my-history/timeline/',
       'https://www.racingcircuits.info/europe/united-kingdom/brooklands.html',
     ],
 
@@ -945,13 +945,13 @@ export const TOWNS = [
 
     h1: 'Byfleet is small enough to own —<br><em>if you get there first.</em>',
     heroCopy:
-      'Byfleet and West Byfleet are small enough that local search is genuinely competitive to win — and most businesses here have not tried. We build sites that take that ground before someone else does.',
+      'Byfleet and West Byfleet are small enough that local search is genuinely competitive to win — and most businesses here have not tried. I build sites that take that ground before someone else does.',
 
     introHeading: 'Helping Byfleet businesses<br><em>get found before the competition does</em>',
     intro: [
       'Byfleet and West Byfleet are two distinct villages with their own centres, sitting between Woking and Weybridge. The Wey Navigation runs through, and the area is best known for Brooklands — the world\'s first purpose-built motor racing circuit, opened in 1907, whose famous Byfleet Banking carries the village\'s name.',
       '<strong>Commercially, this is a trades and services economy.</strong> Builders, electricians, plumbers, garages, groundworkers, cleaners, salons and small professional practices serving a settled residential population, with West Byfleet station putting London Waterloo within commuting reach.',
-      'That size is an advantage. In Kingston or Guildford, ranking locally means fighting through dozens of established competitors. In Byfleet, the field is thin — and we know from search data that people here are actively looking for SEO help. Being early is worth a great deal in a market this size.',
+      'That size is an advantage. In Kingston or Guildford, ranking locally means fighting through dozens of established competitors. In Byfleet, the field is thin — and I know from search data that people here are actively looking for SEO help. Being early is worth a great deal in a market this size.',
     ],
     checklist: [
       'Custom website built around your Byfleet business and goals',
@@ -961,7 +961,7 @@ export const TOWNS = [
       'Fast-loading pages that convert an urgent enquiry',
       'Clear calls-to-action — click-to-call, quote forms, WhatsApp',
       'Full training included — you stay in control',
-      'Ongoing support after launch — we are in your corner',
+      'Ongoing support after launch — I am in your corner',
     ],
 
     insightLabel: 'Local Insight · Byfleet',
@@ -989,14 +989,14 @@ export const TOWNS = [
     insightClose:
       'The practical takeaway for a Byfleet business: do not assume SEO is only for bigger towns. The economics are better here, not worse. A well-built site targeting Byfleet, West Byfleet and the neighbouring areas can realistically own the local results — and once established, that position is difficult for a latecomer to dislodge.',
 
-    servicesLabel: 'What We Do in Byfleet',
+    servicesLabel: 'What I Do in Byfleet',
     servicesHeading: 'Everything your Byfleet business<br><em>needs to get found locally</em>',
     services: [
       {
         icon: 'location',
         title: 'Local SEO & Google Business',
         body:
-          'The priority for most Byfleet businesses. We set up and optimise your Google Business Profile and build the local SEO foundations to rank across both villages.',
+          'The priority for most Byfleet businesses. I set up and optimise your Google Business Profile and build the local SEO foundations to rank across both villages.',
         feats: [
           'Google Business Profile setup & optimisation',
           'Local SEO targeting Byfleet & West Byfleet',
@@ -1020,7 +1020,7 @@ export const TOWNS = [
         icon: 'globe',
         title: 'Hosting & Ongoing Support',
         body:
-          'Hosting, domains, security, updates and maintenance handled by us, so you can be on site rather than fixing a website.',
+          'Hosting, domains, security, updates and maintenance handled by me, so you can be on site rather than fixing a website.',
         feats: [
           'Managed hosting & domain setup',
           'Free SSL & fast UK-based servers',
@@ -1038,7 +1038,7 @@ export const TOWNS = [
       },
       {
         q: 'Do you cover West Byfleet as well as Byfleet?',
-        a: 'Yes, and it matters that they are treated as two places. Byfleet and West Byfleet are distinct villages with separate centres, and people search for them separately. We build the site so it ranks for both rather than blurring them into one.',
+        a: 'Yes, and it matters that they are treated as two places. Byfleet and West Byfleet are distinct villages with separate centres, and people search for them separately. I build the site so it ranks for both rather than blurring them into one.',
       },
       {
         q: 'I am a tradesperson — what should my website actually do?',
@@ -1046,7 +1046,7 @@ export const TOWNS = [
       },
       {
         q: 'Do you cover Woking, Weybridge and the surrounding areas?',
-        a: 'Yes — we work across Byfleet, West Byfleet, Woking, Weybridge, Chertsey and Hersham, as well as the wider Surrey and South West London area. We also work remotely with businesses anywhere in the UK.',
+        a: 'Yes — I work across Byfleet, West Byfleet, Woking, Weybridge, Chertsey and Hersham, as well as the wider Surrey and South West London area. I also work remotely with businesses anywhere in the UK.',
       },
     ],
 
