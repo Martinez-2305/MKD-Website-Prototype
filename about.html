@@ -357,27 +357,6 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   background:#0d0101;
   overflow:hidden;
 }
-.story-sec-num {
-  position:absolute;
-  top:48px;
-  left:80px;
-  font-family:'Fraunces', serif;
-  font-size:0.72rem;
-  font-weight:600;
-  letter-spacing:3px;
-  color:#c98f93;
-  text-transform:uppercase;
-}
-.story-sec-num::before {
-  content:'02';
-  display:block;
-  font-size:5rem;
-  font-weight:900;
-  letter-spacing:-0.03em;
-  color:rgba(227,27,35,0.06);
-  line-height:1;
-  margin-bottom:4px;
-}
 .story-grid {
   display:grid;
   grid-template-columns:1fr 3px 1fr;
@@ -873,7 +852,6 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   .hero-content { padding:40px 24px 56px; position:relative; z-index:2; background:#0d0101; }
 
   .story { padding:80px 24px; }
-  .story-sec-num { left:24px; }
   .story-grid { grid-template-columns:1fr; gap:48px; }
   .story-divider { display:none; }
   .story-left { padding-right:0; }
@@ -900,7 +878,6 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 @media (min-width:769px) and (max-width:1024px) {
   .hero { padding:100px 48px 80px; }
   .story { padding:100px 48px; }
-  .story-sec-num { left:48px; }
   .values { padding:100px 48px; }
   .values-grid { grid-template-columns:repeat(2, 1fr); }
   .expertise { padding:100px 48px; }
@@ -1053,8 +1030,6 @@ body > footer {
 
 <!-- ===== OUR STORY ===== -->
 <section class="story" id="story">
-  <div class="story-sec-num" aria-hidden="true">My Story</div>
-
   <div class="story-grid">
     <div class="story-left fade-up">
       <div class="story-portrait-frame">
