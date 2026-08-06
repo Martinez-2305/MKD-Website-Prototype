@@ -8,7 +8,7 @@
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
 <!-- Primary SEO -->
-<title>Web Design for Cleaning Contractors | MartKam Digital</title>
+<title>Cleaning Company Web Design & SEO | MartKam Digital</title>
 <meta name="description" content="Websites for cleaning and maintenance contractors across Surrey and South West London — built so a property manager sees a contractor, not a domestic cleaner.">
 <meta name="author" content="MartKam Digital">
 <meta name="robots" content="index, follow">
@@ -33,7 +33,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.martkamdigital.com/">
 <meta property="og:site_name" content="MartKam Digital">
-<meta property="og:title" content="Web Design for Cleaning Contractors | MartKam Digital">
+<meta property="og:title" content="Cleaning Company Web Design & SEO | MartKam Digital">
 <meta property="og:description" content="Websites for cleaning and maintenance contractors across Surrey and South West London — built so a property manager sees a contractor, not a domestic cleaner.">
 <meta property="og:image" content="https://www.martkamdigital.com/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -42,7 +42,7 @@
 
 <!-- Twitter / X card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Web Design for Cleaning Contractors | MartKam Digital">
+<meta name="twitter:title" content="Cleaning Company Web Design & SEO | MartKam Digital">
 <meta name="twitter:description" content="Websites for cleaning and maintenance contractors across Surrey and South West London — built so a property manager sees a contractor, not a domestic cleaner.">
 <meta name="twitter:image" content="https://www.martkamdigital.com/img/og-image.jpg">
 
@@ -263,10 +263,34 @@ nav {
   position:relative; z-index:2;
   display:flex; flex-direction:column; justify-content:center;
   height:100%; min-height:calc(100vh - 68px);
-  padding:80px; max-width:920px;
+  padding:80px; max-width:1040px;
+}
+
+/* Hero entrance — runs once on load. CSS only, no JS, no layout shift:
+   the elements occupy their final space throughout, only opacity and a
+   small translate animate. */
+.hero-slide-content > h1,
+.hero-slide-content > p,
+.hero-slide-content > .hero-btns {
+  animation:heroRise .75s cubic-bezier(.22,1,.36,1) both;
+}
+.hero-slide-content > h1 { animation-delay:.08s; }
+.hero-slide-content > p { animation-delay:.20s; }
+.hero-slide-content > .hero-btns { animation-delay:.32s; }
+@keyframes heroRise {
+  from { opacity:0; transform:translateY(20px); }
+  to   { opacity:1; transform:none; }
+}
+/* Respect a reduced-motion preference: show everything immediately. */
+@media (prefers-reduced-motion:reduce) {
+  .hero-slide-content > h1,
+  .hero-slide-content > p,
+  .hero-slide-content > .hero-btns {
+    animation:none;
+  }
 }
 .hero-tag { display:inline-block; background:var(--red); color:#fff; font-size:0.72rem; font-weight:600; letter-spacing:1px; padding:5px 14px; border-radius:100px; margin-bottom:22px; }
-.hero-slide-content h1 { font-family:var(--serif); font-size:clamp(2.8rem, 5.5vw, 5.2rem); font-weight:300; color:#fff; line-height:1.1; letter-spacing:-0.5px; margin-bottom:22px; }
+.hero-slide-content h1 { font-family:var(--serif); font-size:clamp(2.4rem, 4.6vw, 4rem); font-weight:300; color:#fff; line-height:1.08; letter-spacing:-0.02em; margin-bottom:26px; }
 .hero-slide-content h1 em { font-style:italic; color:#fff; }
 .hero-slide-content p { font-size:1.05rem; color:rgba(255,255,255,0.95); max-width:540px; line-height:1.75; margin-bottom:36px; }
 .hero-btns { display:flex; gap:14px; align-items:center; flex-wrap:wrap; }
@@ -585,7 +609,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   .hero-slide-bg { background-size:cover; background-position:center; }
   .hero-slide-bg::after { background:linear-gradient(160deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.38) 100%); }
   .hero-slide-content { min-height:420px; padding:20px 20px 44px; justify-content:center; }
-  .hero-slide-content h1 { font-size:clamp(1.5rem, 5.5vw, 2.2rem); margin-bottom:8px; }
+  .hero-slide-content h1 { font-size:clamp(1.9rem, 7vw, 2.4rem); margin-bottom:8px; }
   .hero-slide-content p { font-size:0.85rem; margin-bottom:14px; line-height:1.55; }
   .hero-btns { flex-wrap:nowrap; gap:10px; }
   .btn-hero-primary, .btn-hero-outline { font-size:0.8rem; padding:11px 18px; }
@@ -790,12 +814,12 @@ body > footer {
         <div class="about-label-icon"><span></span><span></span></div>
         <span class="label" style="margin:0;">About MartKam Digital</span>
       </div>
-      <h2 class="section-title">Your local web design partner — <em>no agency fluff</em></h2>
+      <h2 class="section-title">Most of my work is <em>cleaning and maintenance contractors</em></h2>
     </div>
     <div class="about-grid">
       <div class="about-right fade-up fade-up-d2">
-        <p>I help local businesses across Surrey and South West London get online properly — with websites that look professional, load fast, and are built to bring in real enquiries from Google.</p>
-        <p>Too many small businesses have websites that were expensive, took ages to build, and still don't bring in any customers. I do things differently: clear pricing, fast turnaround, and results you can measure.</p>
+        <p>Contractors chasing commercial, office and communal work are the bulk of what I do. A domestic-looking site gets you filtered out before a building manager reads a word of it, so I build sites that read as commercial — and that turn up when those buyers search.</p>
+        <p><strong>That isn't all I take on.</strong> If you run another kind of small business in Surrey or South West London and want the same thing — a site that loads fast, says the right things and actually brings in enquiries — I'm glad to build it. If you'd rather do it yourself, ask me anyway; I'll tell you what I'd fix first and you're welcome to go and fix it.</p>
         <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:28px;">
           <a href="about.html" class="about-cta">Learn More →</a>
           <a href="#contact" class="about-cta-ghost">Book a free consultation →</a>

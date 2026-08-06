@@ -6,8 +6,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<title>Pricing | MartKam Digital</title>
-<meta name="description" content="Website and local SEO pricing published up front. Pay once at £1,999, or spread it from £499 plus £199 a month. No quotes-on-request.">
+<title>Pricing | Cleaning Company Web Design | MartKam Digital</title>
+<meta name="description" content="Website and SEO pricing published up front: £1,999 to own it, or £499 plus £199 a month. Built for cleaning contractors. No quotes-on-request.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.martkamdigital.com/pricing.html">
 <script type="application/ld+json">
@@ -36,8 +36,8 @@
       "@type": "WebPage",
       "@id": "https://www.martkamdigital.com/pricing.html#webpage",
       "url": "https://www.martkamdigital.com/pricing.html",
-      "name": "Pricing | MartKam Digital",
-      "description": "Website and local SEO pricing, published up front. Pay once at £1,999 or spread it from £499 plus £199 a month. No quotes-on-request.",
+      "name": "Pricing | Cleaning Company Web Design | MartKam Digital",
+      "description": "Website and SEO pricing published up front: £1,999 to own it, or £499 plus £199 a month. Built for cleaning contractors. No quotes-on-request.",
       "inLanguage": "en-GB",
       "isPartOf": {
         "@id": "https://www.martkamdigital.com/#website"
@@ -99,28 +99,28 @@
         {
           "@type": "Offer",
           "name": "Google Business Profile Sprint",
-          "price": "450",
+          "price": "299",
           "priceCurrency": "GBP",
           "description": "One week. A full Google Business Profile rebuild with 30 days of posts."
         },
         {
           "@type": "Offer",
           "name": "Extra service or area page",
+          "price": "150",
+          "priceCurrency": "GBP"
+        },
+        {
+          "@type": "Offer",
+          "name": "Logo design — from scratch",
           "price": "250",
           "priceCurrency": "GBP"
         },
         {
           "@type": "Offer",
-          "name": "Logo design",
-          "price": "350",
-          "priceCurrency": "GBP"
-        },
-        {
-          "@type": "Offer",
-          "name": "Contract Win Pack",
-          "price": "4500",
+          "name": "Logo design — refresh or redesign",
+          "price": "100",
           "priceCurrency": "GBP",
-          "description": "Website plus tender-ready case study documents, capability statement, accreditations page and LinkedIn rebuild."
+          "description": "Refresh or redesign of an existing logo."
         }
       ]
     },
@@ -207,12 +207,12 @@
 </script>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.martkamdigital.com/privacy-policy.html">
-<meta property="og:title" content="Privacy Policy | MartKam Digital">
-<meta property="og:description" content="How MartKam Digital collects, uses and protects your personal data under UK GDPR and the Data Protection Act 2018.">
+<meta property="og:title" content="Pricing | Cleaning Company Web Design | MartKam Digital">
+<meta property="og:description" content="Website and SEO pricing published up front: £1,999 to own it, or £499 plus £199 a month. Built for cleaning contractors. No quotes-on-request.">
 <meta property="og:image" content="https://www.martkamdigital.com/img/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Privacy Policy | MartKam Digital">
-<meta name="twitter:description" content="How MartKam Digital collects, uses and protects your personal data under UK GDPR and the Data Protection Act 2018.">
+<meta name="twitter:title" content="Pricing | Cleaning Company Web Design | MartKam Digital">
+<meta name="twitter:description" content="Website and SEO pricing published up front: £1,999 to own it, or £499 plus £199 a month. Built for cleaning contractors. No quotes-on-request.">
 <link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -309,7 +309,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .policy-label::before { content:''; display:block; width:24px; height:1.5px; background:var(--red); }
 .policy-hero h1 {
   font-family:var(--serif);
-  font-size:clamp(2.4rem, 5vw, 4rem);
+  font-size:clamp(2.2rem, 4vw, 3.25rem);
   font-weight:300;
   color:var(--ink);
   line-height:1.1;
@@ -495,8 +495,11 @@ body > footer {
 .pr-price span{font-family:var(--sans);font-size:0.95rem;color:var(--ink-light);font-weight:500;}
 .pr-card-sub{font-size:0.9rem;color:var(--ink-light);margin-bottom:22px;line-height:1.7;}
 .pr-list{list-style:none;display:flex;flex-direction:column;gap:11px;margin-top:6px;}
-.pr-list li{font-size:0.89rem;color:var(--ink-light);line-height:1.7;display:flex;gap:11px;align-items:flex-start;}
-.pr-list li::before{content:'';flex-shrink:0;width:16px;height:16px;margin-top:4px;border-radius:50%;background:rgba(227,27,35,0.12);border:1px solid rgba(227,27,35,0.3);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='9' viewBox='0 0 10 10'%3E%3Cpath d='M2 5l2.5 2.5L8 3' stroke='%23ff3b41' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;}
+/* Hanging checkmark via absolute positioning, not flex: a flex li turns every
+   <strong> into its own flex item, so bold labels broke away from the text
+   that followed them and wrapped as a separate ragged column. */
+.pr-list li{font-size:0.89rem;color:var(--ink-light);line-height:1.7;position:relative;padding-left:27px;}
+.pr-list li::before{content:'';position:absolute;left:0;top:5px;width:16px;height:16px;border-radius:50%;background:rgba(227,27,35,0.12);border:1px solid rgba(227,27,35,0.3);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='9' viewBox='0 0 10 10'%3E%3Cpath d='M2 5l2.5 2.5L8 3' stroke='%23ff3b41' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;}
 .pr-note{font-size:0.88rem;color:var(--ink-light);line-height:1.8;background:rgba(255,255,255,0.03);border-left:2px solid var(--red);padding:18px 22px;border-radius:0 10px 10px 0;margin-top:28px;}
 .pr-note strong{color:var(--ink);}
 .pr-table{width:100%;border-collapse:collapse;margin-top:26px;font-size:0.92rem;}
@@ -644,11 +647,11 @@ body > footer {
     <h2>Not ready for a new website?</h2>
     <div class="pr-card" style="margin-top:26px;">
       <div class="pr-card-name">Google Business Profile Sprint</div>
-      <div class="pr-price">&pound;450</div>
+      <div class="pr-price">&pound;299</div>
       <div class="pr-card-sub">One week. Not a website.</div>
       <p style="color:var(--ink-light);line-height:1.85;font-size:0.92rem;margin-bottom:12px;">For businesses whose site is fine but who are invisible on Google Maps. I rebuild your Google Business Profile properly &mdash; categories, services, description, photos, opening hours, review system, and 30 days of posts.</p>
       <p style="color:var(--ink-light);line-height:1.85;font-size:0.92rem;margin-bottom:12px;">You&rsquo;ll usually see movement in the map results within a month.</p>
-      <p style="color:var(--ink);line-height:1.85;font-size:0.92rem;">If you go on to commission a website within 90 days, the &pound;450 comes off the price.</p>
+      <p style="color:var(--ink);line-height:1.85;font-size:0.92rem;">If you go on to commission a website within 90 days, the &pound;299 comes off the price.</p>
     </div>
   </div>
 
@@ -656,11 +659,26 @@ body > footer {
     <p style="margin-bottom:18px;">Working in cleaning or maintenance? See <a href="web-design-for-cleaning-companies.html">what I build for contractors</a> and a <a href="case-study-cs-cleaning.html">real example with the numbers</a>.</p>
     <h2>Add-ons</h2>
     <table class="pr-table">
-      <tr><td>Extra service or area page</td><td>&pound;250 each</td></tr>
-      <tr><td>Logo design</td><td>&pound;350</td></tr>
-      <tr><td>Contract Win Pack &mdash; website, plus tender-ready case study documents, a capability statement, an accreditations page, and your LinkedIn profile rebuilt</td><td>From &pound;4,500</td></tr>
+      <tr><td>Extra service or area page</td><td>&pound;150 each</td></tr>
+      <tr><td>Logo design &mdash; from scratch</td><td>&pound;250</td></tr>
+      <tr><td>Logo design &mdash; refresh or redesign of an existing logo</td><td>&pound;100</td></tr>
     </table>
-    <p style="margin-top:20px;font-size:0.9rem;">The Contract Win Pack is for firms actively bidding for commercial contracts, where the website is only one of the things a buyer looks at before shortlisting you.</p>
+  </div>
+
+  <div class="pr-sec">
+    <h2>Going after bigger contracts</h2>
+    <p>A website gets you shortlisted. It is not the only thing a buyer looks at before they put you forward, and for larger commercial and communal work it is usually not even the first thing.</p>
+    <p>If that is where you are heading, I also work on the rest of the picture:</p>
+    <ul class="pr-list" style="margin-top:22px;max-width:700px;">
+      <li><strong style="color:var(--ink);">LinkedIn optimisation</strong> &mdash; because a facilities manager or procurement lead will look you up there before they call you, and an empty profile answers none of their questions.</li>
+      <li><strong style="color:var(--ink);">A consultation on tender-ready documents</strong> &mdash; what a buyer expects to receive, what usually gets an application set aside, and what you need in place before you bid.</li>
+      <li><strong style="color:var(--ink);">A high-value accreditation checklist</strong> &mdash; which accreditations actually open doors in your sector, which are worth the cost, and the order to go after them in.</li>
+      <li><strong style="color:var(--ink);">A capability statement</strong> &mdash; the short document a buyer asks for when they want to know, quickly, whether you can handle the contract.</li>
+    </ul>
+    <div class="pr-note">
+      <strong>No fixed price on this one, and I would rather say why than pretend otherwise.</strong> Every one of these depends on the size of contract you are chasing, what you already have, and which sector you are bidding into. Publishing a number would mean either overcharging most people or quoting for work I have not scoped. Tell me what you are bidding for and I will quote for your situation.
+    </div>
+    <a href="contact.html" class="testi-cta" style="margin-top:24px;">Tell me what you are bidding for &rarr;</a>
   </div>
 
   <div class="pr-sec">
