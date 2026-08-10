@@ -651,21 +651,27 @@ body > footer {
           <div class="fg"><label for="f-phone">Phone number</label><input type="tel" name="phone" id="f-phone" placeholder="Phone number"></div>
         </div>
         <div class="fg">
+          <label for="f-website">Your website (if you have one)</label>
+          <input type="text" inputmode="url" name="website" id="f-website" placeholder="yourbusiness.co.uk">
+        </div>
+        <div class="fg">
           <label for="f-area">Your area</label>
           <select name="area" id="f-area">
+            <option value="" disabled selected>Please choose…</option>
             <option>Surrey (Guildford, Woking, Reigate...)</option>
             <option>South West London (Wimbledon, Kingston, Richmond...)</option>
-            <option>Epsom & Ewell</option>
-            <option>Sutton & Cheam</option>
+            <option>Epsom &amp; Ewell</option>
+            <option>Sutton &amp; Cheam</option>
             <option>Other nearby area</option>
           </select>
         </div>
         <div class="fg">
           <label for="f-service">What do you need help with?</label>
-          <select name="service" id="f-service">
+          <select name="service" id="f-service" required>
+            <option value="" disabled selected>Please choose…</option>
             <option>Commercial or communal cleaning contract work</option>
-              <option>New Website Design &amp; Build</option>
-            <option>SEO & Google Rankings</option>
+            <option>New Website Design &amp; Build</option>
+            <option>SEO &amp; Google Rankings</option>
             <option>Google Business Profile Setup</option>
           </select>
         </div>
@@ -742,6 +748,7 @@ body > footer {
       <h2>What to include in your enquiry</h2>
       <p class="cprep-lead">You don't need a brief or a budget worked out. But the more context you can give me, the more useful my first reply will be — and the faster I can get you a realistic quote.</p>
       <div class="cprep-note">Not sure what you need yet? That's completely fine. "Just exploring" is a perfectly good starting point, and plenty of my conversations begin exactly there.</div>
+      <p class="cprep-lead" style="margin-top:22px;">Want to see how one of these starts and where it ends up? <a href="case-study-cs-cleaning.html" style="color:var(--red-text);font-weight:600;border-bottom:1px solid rgba(227,27,35,0.3);">Read the C&amp;S Cleaning Services case study</a> — no website at all, and what the first three months after launch produced.</p>
     </div>
     <ul class="cprep-list fade-up delay-1">
       <li><strong>What your business does</strong> — the trade or service, and the kind of customer you want more of.</li>

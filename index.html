@@ -988,7 +988,8 @@ body > footer {
         </div>
       </a>
     </div>
-    <div style="text-align:right;margin-top:32px;">
+    <div style="display:flex;flex-wrap:wrap;gap:14px 32px;justify-content:space-between;align-items:baseline;margin-top:32px;">
+      <a href="case-study-cs-cleaning.html" style="font-size:0.88rem;font-weight:600;color:var(--red-text);border-bottom:1.5px solid var(--border);padding-bottom:2px;">See what happened for C&amp;S Cleaning Services in the first three months →</a>
       <a href="reviews.html" style="font-size:0.88rem;font-weight:600;color:var(--ink-light);border-bottom:1.5px solid var(--border);padding-bottom:2px;">View all reviews →</a>
     </div>
     <div style="margin-top:48px;padding-top:40px;border-top:1px solid var(--border);" class="fade-up">
@@ -1272,8 +1273,13 @@ body > footer {
             <div class="fg"><label for="f-phone">Phone number</label><input type="tel" name="phone" id="f-phone" placeholder="Phone number"></div>
           </div>
           <div class="fg">
+            <label for="f-website">Your website (if you have one)</label>
+            <input type="text" inputmode="url" name="website" id="f-website" placeholder="yourbusiness.co.uk">
+          </div>
+          <div class="fg">
             <label for="f-area">Your area</label>
             <select name="area" id="f-area">
+              <option value="" disabled selected>Please choose…</option>
               <option>Surrey (Guildford, Woking, Reigate...)</option>
               <option>South West London (Wimbledon, Kingston, Richmond...)</option>
               <option>Other nearby area</option>
@@ -1281,10 +1287,11 @@ body > footer {
           </div>
           <div class="fg">
             <label for="f-service">What do you need help with?</label>
-            <select name="service" id="f-service">
+            <select name="service" id="f-service" required>
+              <option value="" disabled selected>Please choose…</option>
               <option>Commercial or communal cleaning contract work</option>
               <option>New Website Design &amp; Build</option>
-              <option>SEO & Google Rankings</option>
+              <option>SEO &amp; Google Rankings</option>
               <option>Google Business Profile Setup</option>
             </select>
           </div>

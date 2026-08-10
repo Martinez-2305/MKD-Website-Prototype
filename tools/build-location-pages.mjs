@@ -194,9 +194,9 @@ ${heroOverride}</head>
     <a href="services.html" class="tl-item">Services</a>
     <a href="reviews.html" class="tl-item">Reviews</a>
     <a href="pricing.html" class="tl-item">Pricing</a>
-    <a href="index.html#contact" class="tl-item">Contact</a>
+    <a href="contact.html" class="tl-item">Contact</a>
   </div>
-  <a href="index.html#contact" class="nav-cta">Let's Talk</a>
+  <a href="contact.html" class="nav-cta">Let's Talk</a>
   <button class="ham-btn" id="hamBtn" aria-label="Open menu">
     <span></span><span></span><span></span>
   </button>
@@ -210,8 +210,8 @@ ${heroOverride}</head>
     <a href="services.html" class="mob-item">Services</a>
     <a href="reviews.html" class="mob-item">Reviews</a>
     <a href="pricing.html" class="mob-item">Pricing</a>
-    <a href="index.html#contact" class="mob-item">Contact</a>
-    <a href="index.html#contact" class="mob-cta">Let's Talk</a>
+    <a href="contact.html" class="mob-item">Contact</a>
+    <a href="contact.html" class="mob-cta">Let's Talk</a>
   </div>
 </div>
 
@@ -232,7 +232,7 @@ ${heroOverride}</head>
     <h1>${esc(t.h1)}</h1>
     <p>${esc(t.heroCopy)}</p>
     <div class="hero-btns">
-      <a href="index.html#contact" class="btn-primary">Get a Free Quote</a>
+      <a href="contact.html" class="btn-primary">Get a Free Quote</a>
       <a href="services.html" class="btn-outline">See What I Do</a>
     </div>
   </div>
@@ -319,7 +319,7 @@ ${s.feats.map(f => `          <li>${esc(f)}</li>`).join('\n')}
         <span class="faq-eyebrow">FAQ</span>
         <h2 class="faq-title">${esc(t.faqHeading)}</h2>
         <p class="faq-subtitle">Something else on your mind? I love a straight-talking conversation &mdash; no obligation.</p>
-        <a href="index.html#contact" class="faq-contact-cta">Ask me anything &rarr;</a>
+        <a href="contact.html" class="faq-contact-cta">Ask me anything &rarr;</a>
       </div>
       <div class="faq-list fade-up fade-up-d2">
 ${t.faqs.map(f => `        <div class="faq-item">
@@ -340,7 +340,7 @@ ${t.faqs.map(f => `        <div class="faq-item">
 <section class="cta-banner">
   <h2>${esc(t.ctaHeading)}</h2>
   <p>Free consultation &middot; No obligation &middot; Based in Surrey</p>
-  <a href="index.html#contact" class="btn-cta">Get Your Free Quote Today</a>
+  <a href="contact.html" class="btn-cta">Get Your Free Quote Today</a>
 </section>
 
 <!-- LOCATION LINKS -->
