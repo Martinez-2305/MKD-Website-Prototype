@@ -126,7 +126,7 @@ export const TOWNS = [
       },
       {
         q: 'How much does a website cost for a Kingston business?',
-        a: 'Every project is different, but I always provide a clear, fixed quote before any work begins — no hidden costs, no surprises. <a href="index.html#contact">Get in touch for a free, no-obligation quote.</a>',
+        a: 'Two routes, both published. <strong>£1,999</strong> to own the site outright, or <strong>£499 to start plus £199 a month</strong> if you would rather spread it. No VAT and no hidden costs. <a href="pricing.html">The full pricing is here.</a>',
       },
       {
         q: 'How long does it take to build and launch?',
@@ -260,7 +260,7 @@ export const TOWNS = [
       },
       {
         q: 'How much does a website cost for a Wimbledon business?',
-        a: 'Every project is different, but I always provide a clear, fixed quote before any work begins — no hidden costs, no surprises. <a href="index.html#contact">Get in touch for a free, no-obligation quote.</a>',
+        a: 'Two routes, both published. <strong>£1,999</strong> to own the site outright, or <strong>£499 to start plus £199 a month</strong> if you would rather spread it. No VAT and no hidden costs. <a href="pricing.html">The full pricing is here.</a>',
       },
       {
         q: 'Do you also cover Raynes Park, Morden and the rest of Merton?',
@@ -390,7 +390,7 @@ export const TOWNS = [
       },
       {
         q: 'How much does a website cost for a Guildford business?',
-        a: 'Every project is different, but I always provide a clear, fixed quote before any work begins — no hidden costs, no surprises. <a href="index.html#contact">Get in touch for a free, no-obligation quote.</a>',
+        a: 'Two routes, both published. <strong>£1,999</strong> to own the site outright, or <strong>£499 to start plus £199 a month</strong> if you would rather spread it. No VAT and no hidden costs. <a href="pricing.html">The full pricing is here.</a>',
       },
       {
         q: 'Do you cover Woking, Farnham and the rest of west Surrey?',
@@ -516,7 +516,7 @@ export const TOWNS = [
       },
       {
         q: 'How much does a website cost for a Woking business?',
-        a: 'Every project is different, but I always provide a clear, fixed quote before any work begins — no hidden costs, no surprises. <a href="index.html#contact">Get in touch for a free, no-obligation quote.</a>',
+        a: 'Two routes, both published. <strong>£1,999</strong> to own the site outright, or <strong>£499 to start plus £199 a month</strong> if you would rather spread it. No VAT and no hidden costs. <a href="pricing.html">The full pricing is here.</a>',
       },
       {
         q: 'How long does it take to build and launch?',
@@ -650,7 +650,7 @@ export const TOWNS = [
       },
       {
         q: 'How much does a website cost for a Richmond business?',
-        a: 'Every project is different, but I always provide a clear, fixed quote before any work begins — no hidden costs, no surprises. <a href="index.html#contact">Get in touch for a free, no-obligation quote.</a>',
+        a: 'Two routes, both published. <strong>£1,999</strong> to own the site outright, or <strong>£499 to start plus £199 a month</strong> if you would rather spread it. No VAT and no hidden costs. <a href="pricing.html">The full pricing is here.</a>',
       },
       {
         q: 'Do you cover Kingston, Twickenham and the rest of the borough?',
@@ -776,7 +776,7 @@ export const TOWNS = [
       },
       {
         q: 'How much does a website cost for a Surbiton business?',
-        a: 'Every project is different, but I always provide a clear, fixed quote before any work begins — no hidden costs, no surprises. <a href="index.html#contact">Get in touch for a free, no-obligation quote.</a>',
+        a: 'Two routes, both published. <strong>£1,999</strong> to own the site outright, or <strong>£499 to start plus £199 a month</strong> if you would rather spread it. No VAT and no hidden costs. <a href="pricing.html">The full pricing is here.</a>',
       },
       {
         q: 'How long does it take to build and launch?',
@@ -910,7 +910,7 @@ export const TOWNS = [
       },
       {
         q: 'How much does a website cost for a Reigate business?',
-        a: 'Every project is different, but I always provide a clear, fixed quote before any work begins — no hidden costs, no surprises. <a href="index.html#contact">Get in touch for a free, no-obligation quote.</a>',
+        a: 'Two routes, both published. <strong>£1,999</strong> to own the site outright, or <strong>£499 to start plus £199 a month</strong> if you would rather spread it. No VAT and no hidden costs. <a href="pricing.html">The full pricing is here.</a>',
       },
       {
         q: 'How long does it take to build and launch?',
