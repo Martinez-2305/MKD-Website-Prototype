@@ -214,10 +214,19 @@ footer{background:#080101;color:rgba(255,255,255,0.5);padding:64px 48px 40px;}
   .faq .wrap{padding-left:24px;padding-right:24px;}
   footer{padding:48px 24px 32px;}
   .location-links-inner{padding:0 24px;}
+  /* the banner has no .wrap inside it, so it needs its own gutter or the
+     heading sits flush against both screen edges */
+  .cta-banner{padding:72px 24px;}
 }
 @media(max-width:600px){
   .trust-inner{justify-content:flex-start;}
   .page-hero{min-height:60vh;}
+}
+@media(max-width:360px){
+  /* 36px of side padding is what pushes these labels onto a second line at
+     320px — trim the padding rather than shrink the type */
+  .btn-cta{padding:16px 20px;}
+  .btn-primary,.btn-outline{padding-left:20px;padding-right:20px;}
 }
 
 /* ===== Accessibility: contrast-safe text colours (WCAG AA) ===== */
