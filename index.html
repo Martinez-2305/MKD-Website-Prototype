@@ -8,8 +8,8 @@
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
 <!-- Primary SEO -->
-<title>Web Design &amp; SEO for Commercial Cleaners | MartKam Digital</title>
-<meta name="description" content="Websites and SEO for commercial cleaning companies across Surrey and South West London — built so a property manager sees a contractor, not a domestic cleaner.">
+<title>Web Design &amp; SEO in Epsom, Surrey | MartKam Digital</title>
+<meta name="description" content="Web design and local SEO for businesses in Epsom, Surrey and South West London. Fast, mobile-first sites built to rank. Packages from £595, prices published.">
 <meta name="author" content="MartKam Digital">
 <meta name="robots" content="index, follow">
 <meta name="geo.region" content="GB-SRY">
@@ -33,8 +33,8 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.martkamdigital.com/">
 <meta property="og:site_name" content="MartKam Digital">
-<meta property="og:title" content="Web Design &amp; SEO for Commercial Cleaners | MartKam Digital">
-<meta property="og:description" content="Websites and SEO for commercial cleaning companies across Surrey and South West London — built so a property manager sees a contractor, not a domestic cleaner.">
+<meta property="og:title" content="Web Design &amp; SEO in Epsom, Surrey | MartKam Digital">
+<meta property="og:description" content="Web design and local SEO for businesses in Epsom, Surrey and South West London. Fast, mobile-first sites built to rank. Packages from £595, prices published.">
 <meta property="og:image" content="https://www.martkamdigital.com/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -42,8 +42,8 @@
 
 <!-- Twitter / X card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Web Design &amp; SEO for Commercial Cleaners | MartKam Digital">
-<meta name="twitter:description" content="Websites and SEO for commercial cleaning companies across Surrey and South West London — built so a property manager sees a contractor, not a domestic cleaner.">
+<meta name="twitter:title" content="Web Design &amp; SEO in Epsom, Surrey | MartKam Digital">
+<meta name="twitter:description" content="Web design and local SEO for businesses in Epsom, Surrey and South West London. Fast, mobile-first sites built to rank. Packages from £595, prices published.">
 <meta name="twitter:image" content="https://www.martkamdigital.com/img/og-image.jpg">
 
 <!-- Local business structured data -->
@@ -338,6 +338,17 @@ nav {
 .loc-area-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 20px; border:1.5px solid var(--border); border-radius:6px; font-size:0.88rem; font-weight:600; color:var(--ink); text-decoration:none; transition:border-color .2s, color .2s, background .2s; }
 .loc-area-btn:hover { border-color:var(--primary,var(--red)); color:var(--red-text); background:rgba(227,27,35,0.05); }
 
+
+/* WHO I WORK WITH */
+.aud-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.aud-card { display:block; background:rgba(255,255,255,0.035); border:1px solid var(--border); border-radius:18px; padding:32px 28px; transition:border-color .2s, background .2s, transform .2s; }
+.aud-card:hover { border-color:rgba(227,27,35,0.42); background:rgba(227,27,35,0.05); transform:translateY(-3px); }
+.aud-icon { width:50px; height:50px; border-radius:13px; background:rgba(227,27,35,0.1); border:1px solid rgba(227,27,35,0.26); display:flex; align-items:center; justify-content:center; color:var(--red-text); margin-bottom:20px; }
+.aud-card h3 { font-family:var(--serif); font-size:1.32rem; font-weight:400; color:#fff; margin-bottom:10px; }
+.aud-card p { font-size:0.9rem; color:var(--ink-light); line-height:1.75; margin-bottom:18px; }
+.aud-cta { font-size:0.83rem; font-weight:600; color:var(--red-text); }
+@media(max-width:980px){ .aud-grid { grid-template-columns:1fr; } }
+
 /* SERVICES */
 .services-bg { background:var(--mist); }
 .services-header { text-align:center; margin-bottom:64px; }
@@ -345,19 +356,6 @@ nav {
 .srv-item { background:var(--white); padding:48px 40px; position:relative; overflow:hidden; transition:background .3s; cursor:pointer; display:flex; flex-direction:column; gap:16px; }
 /* The specialism spans the full row above the three core cards, so a prospect
    arriving from outreach meets it before anything generic. */
-.srv-item--niche { grid-column:1 / -1; background:linear-gradient(135deg,#7a1018 0%,#5a0c10 100%); }
-.srv-item--niche:hover { background:linear-gradient(135deg,#8a1219 0%,#6a0e13 100%); }
-.srv-item--niche h3 { color:#fff; font-size:1.75rem; }
-.srv-item--niche p { color:rgba(255,255,255,0.85); max-width:70ch; }
-.srv-item--niche .srv-badge { background:rgba(255,255,255,0.16); color:#fff; border-color:rgba(255,255,255,0.28); }
-.srv-item--niche .srv-icon { color:#fff; }
-.srv-item--niche .srv-feats { display:grid; grid-template-columns:repeat(2,1fr); gap:7px 40px; }
-.srv-item--niche .srv-feats li { color:rgba(255,255,255,0.82); }
-.srv-item--niche .srv-feats li::before { background:#fff; }
-.srv-item--niche .srv-item-footer { border-top-color:rgba(255,255,255,0.18); }
-.srv-item--niche .srv-tag { color:#fff; }
-.srv-item--niche .srv-arrow { color:rgba(255,255,255,0.75); }
-@media(max-width:700px){ .srv-item--niche .srv-feats { grid-template-columns:1fr; } }
 .srv-item::after { content:''; position:absolute; bottom:0; left:0; right:0; height:3px; background:var(--red); transform:scaleX(0); transform-origin:left; transition:transform .3s ease; }
 .srv-item:hover { background:#200606; }
 .srv-item:hover::after { transform:scaleX(1); }
@@ -799,11 +797,11 @@ body > footer {
            sizes="100vw" width="1536" height="1024" alt="" fetchpriority="high" decoding="async">
     </div>
     <div class="hero-slide-content">
-      <h1>Websites that get cleaning<br><em>contractors taken seriously</em></h1>
-      <p>I build sites for cleaning and maintenance contractors bidding for commercial and communal work — so a property manager sees a contractor, not a domestic cleaner, and finds you when they search. I work with other local trades too.</p>
+      <h1>Websites that bring<br><em>real customers to your door</em></h1>
+      <p>Web design and SEO for businesses in Epsom, across Surrey and South West London. Fast, mobile-first sites built to rank on Google and turn visitors into enquiries — with the prices published before you ask.</p>
       <div class="hero-btns">
-        <a href="web-design-for-cleaning-companies.html" class="btn-hero-primary">For commercial cleaners</a>
-        <a href="#contact" class="btn-hero-outline">Get a free video audit</a>
+        <a href="services.html" class="btn-hero-primary">See what I do</a>
+        <a href="#contact" class="btn-hero-outline">Book a free 20-minute call</a>
       </div>
     </div>
     <div class="hero-founder">
@@ -854,15 +852,15 @@ body > footer {
         <div class="about-label-icon"><span></span><span></span></div>
         <span class="label" style="margin:0;">About MartKam Digital</span>
       </div>
-      <h2 class="section-title">Most of my work is <em>cleaning and maintenance contractors</em></h2>
+      <h2 class="section-title">One person, and the work is <em>done properly</em></h2>
     </div>
     <div class="about-grid">
       <div class="about-right fade-up fade-up-d2">
-        <p>Contractors chasing commercial, office and communal work are the bulk of what I do. A domestic-looking site gets you filtered out before a building manager reads a word of it, so I build sites that read as commercial — and that turn up when those buyers search.</p>
-        <p><strong>That isn't all I take on.</strong> If you run another kind of small business in Surrey or South West London and want the same thing — a site that loads fast, says the right things and actually brings in enquiries — I'm glad to build it. If you'd rather do it yourself, ask me anyway; I'll tell you what I'd fix first and you're welcome to go and fix it.</p>
+        <p>I build websites and run local SEO for small businesses across Epsom, Surrey and South West London. Trades, shops, salons, clinics, contractors, takeaways — if you need to be found by people nearby and look credible when they arrive, that is the job.</p>
+        <p><strong>You deal with the person who builds the site.</strong> No account manager, no handover to someone junior, no ticket queue. The prices are on the site, the scope goes in writing, and if I am not the right person for what you need I will say so on the first call.</p>
         <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:28px;">
           <a href="about.html" class="about-cta">Learn More →</a>
-          <a href="#contact" class="about-cta-ghost">Get a free video audit →</a>
+          <a href="#contact" class="about-cta-ghost">Book a free 20-minute call →</a>
         </div>
         <div class="founder-sig fade-up fade-up-d3">
           <img loading="lazy" decoding="async" width="640" height="460" src="img/faceofmkd-640.webp" alt="Martin Kaminski" class="founder-sig-img">
@@ -881,32 +879,17 @@ body > footer {
   <div class="wrap">
     <div class="services-header fade-up">
       <span class="label">What I Do</span>
-      <h2 class="section-title">Built for contractors chasing<br><em>commercial and communal work</em></h2>
+      <h2 class="section-title">Everything you need<br><em>to get found and get enquiries</em></h2>
       <a href="services.html" class="btn-outline-light" style="margin-top:24px;">View All Services →</a>
     </div>
 
-    <!-- Core services. The contractor card leads deliberately: a prospect
-         arriving from outreach must not meet a general web designer here. -->
-    <div class="srv-primary">
-      <a href="web-design-for-cleaning-companies.html" class="srv-item srv-item--niche fade-up">
-        <div class="srv-badge">Specialism</div>
-        <div class="srv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-5h6v5"/><path d="M9 11h.01M15 11h.01"/></svg></div>
-        <h3>Cleaning &amp; Maintenance Contractors</h3>
-        <p>The bulk of what I do. Sites for contractors bidding for commercial, office and communal work — built so a property manager sees a contractor, not a domestic cleaner, and finds you when they search.</p>
-        <ul class="srv-feats">
-          <li>Reads as commercial, not domestic</li>
-          <li>Room for insurance and accreditations</li>
-          <li>Pages for each service and area you cover</li>
-          <li>Evidence of work in occupied buildings</li>
-          <li>Google Business Profile set up for local commercial searches</li>
-        </ul>
-        <div class="srv-item-footer">
-          <span class="srv-tag">See what I build for contractors</span>
-          <span class="srv-arrow">↗</span>
-        </div>
-      </a>
+    
 
-      <div class="srv-item fade-up">
+      <div class="srv-primary">
+
+    
+
+        <div class="srv-item fade-up">
         <div class="srv-badge">Core Service</div>
         <div class="srv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
         <h3>Website Design & Build</h3>
@@ -961,6 +944,38 @@ body > footer {
     </div>
   </div>
 </section>
+
+<!-- WHO I WORK WITH -->
+<section class="section" id="audiences">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:52px;" class="fade-up">
+      <span class="label">Who I work with</span>
+      <h2 class="section-title">Every business is different.<br><em>So is every website.</em></h2>
+      <p style="color:var(--ink-light);line-height:1.85;max-width:640px;margin:16px auto 0;">I work with local businesses of every kind. These three come up often enough to have a page of their own &mdash; because what wins the work is different in each.</p>
+    </div>
+    <div class="aud-grid">
+      <a href="web-design-for-cleaning-companies.html" class="aud-card fade-up">
+        <div class="aud-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="26" height="26"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-5h6v5"/></svg></div>
+        <h3>Cleaning contractors</h3>
+        <p>Commercial, office and communal contracts. Built so a property manager sees a contractor, not a domestic cleaner.</p>
+        <span class="aud-cta">Cleaning companies &rarr;</span>
+      </a>
+      <a href="web-design-for-trades.html" class="aud-card fade-up fade-up-d2">
+        <div class="aud-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="26" height="26"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>Trades &amp; construction</h3>
+        <p>Builders, electricians, plumbers, roofers, landscapers. Quote-ready sites that turn up when someone nearby searches.</p>
+        <span class="aud-cta">Trades &amp; construction &rarr;</span>
+      </a>
+      <a href="web-design-for-ecommerce.html" class="aud-card fade-up fade-up-d3">
+        <div class="aud-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="26" height="26"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
+        <h3>Ordering &amp; e-commerce</h3>
+        <p>Takeaways, salons, clinics and shops. Take orders, bookings and payments on the site instead of over the phone.</p>
+        <span class="aud-cta">Ordering &amp; e-commerce &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 
 <!-- TESTIMONIALS -->
 <section class="section" id="testimonials">
@@ -1042,7 +1057,7 @@ body > footer {
   <div class="wrap">
     <div class="why-header fade-up">
       <span class="label">Why Choose Me</span>
-      <h2 class="section-title">Why contractors choose <em>MartKam Digital</em></h2>
+      <h2 class="section-title">Why local businesses choose <em>MartKam Digital</em></h2>
       <p style="color:rgba(255,255,255,0.5);margin-top:16px;font-size:1rem;line-height:1.8;">You deal with the person who builds the site. No account manager, no handover to someone junior, no ticket queue — the person who writes your pages is the person who answers the phone.</p>
     </div>
     <div class="why-cards">
@@ -1076,7 +1091,7 @@ body > footer {
           <div class="why-card-arrow">↗</div>
         </div>
         <h3>Prices On The Website</h3>
-        <p>£1,999 to own it outright, or £499 plus £199 a month. No VAT, no hidden costs. <a href="pricing.html" style="color:var(--red-text);">See the full pricing →</a></p>
+        <p>£595, £1,295 or £1,995, depending on what the site has to do. Prices exclude VAT where applicable. <a href="pricing.html" style="color:var(--red-text);">See the full pricing →</a></p>
       </div>
       <div class="why-card fade-up fade-up-d2">
         <div class="why-card-top">
@@ -1113,7 +1128,7 @@ body > footer {
       <div class="pcard">
         <div class="pcard-num">1</div>
         <div class="pcard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
-        <h3>Free Video Audit</h3>
+        <h3>Free 20-Minute Call</h3>
         <p>A relaxed chat about your business, your goals, and what you need. No pressure, no jargon — just an honest conversation about what will help.</p>
         <span class="pcard-step">Step 1</span>
       </div>
@@ -1142,7 +1157,7 @@ body > footer {
       <div class="pcard">
         <div class="pcard-num">1</div>
         <div class="pcard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
-        <h3>Free Video Audit</h3>
+        <h3>Free 20-Minute Call</h3>
         <p>A relaxed chat about your business, your goals, and what you need. No pressure, no jargon — just an honest conversation about what will help.</p>
         <span class="pcard-step">Step 1</span>
       </div>
@@ -1177,7 +1192,7 @@ body > footer {
       </div>
       <div class="process-banner-btns">
         <a href="services.html" class="pbtn-ghost">View Services</a>
-        <a href="#contact" class="pbtn-solid">Get a free video audit</a>
+        <a href="#contact" class="pbtn-solid">Book a free 20-minute call</a>
       </div>
     </div>
   </div>
@@ -1286,7 +1301,7 @@ body > footer {
         </div>
       </div>
       <div class="cform fade-up fade-up-d2">
-        <h3>Get a free video audit</h3>
+        <h3>Book a free 20-minute call</h3>
         <form action="https://formspree.io/f/meepbpqw" method="POST">
           <input type="hidden" name="_replyto" value="contact@martkamdigital.com">
           <div class="form-row">
@@ -1314,7 +1329,6 @@ body > footer {
             <label for="f-service">What do you need help with?</label>
             <select name="service" id="f-service" required>
               <option value="" disabled selected>Please choose…</option>
-              <option>Commercial or communal cleaning contract work</option>
               <option>New Website Design &amp; Build</option>
               <option>SEO &amp; Google Rankings</option>
               <option>Google Business Profile Setup</option>
@@ -1324,7 +1338,7 @@ body > footer {
             <label for="f-message">Tell me about your business</label>
             <textarea name="message" id="f-message" placeholder="Tell me a bit about your business and what you're looking for"></textarea>
           </div>
-          <button type="submit" class="fsub">Send my website for a free audit</button>
+          <button type="submit" class="fsub">Book my free 20-minute call</button>
           <div class="fnote">No obligation · I’ll reply within a few hours · Details never shared</div>
         </form>
       </div>
@@ -1351,7 +1365,7 @@ body > footer {
           </button>
           <div class="faq-body">
             <div class="faq-body-inner">
-              <p class="faq-answer">Two routes, both published. <strong>£1,999</strong> to own the site outright, or <strong>£499 to start plus £199 a month</strong> if you would rather spread it. No VAT, no hidden costs, and no call needed to find out. <a href="pricing.html">The full pricing is here</a>, including what is in the build, what is in the monthly service, and the early-exit formula.</p>
+              <p class="faq-answer">Three packages, all published. <strong>£595</strong> for a Starter site, <strong>£1,295</strong> for a Growth site, and <strong>£1,995</strong> if the site needs to take bookings or payments. Copywriting and the SEO groundwork are in all three. <a href="pricing.html">The full pricing is here</a>, including what is in each package, the Care Plan and the SEO Retainer.</p>
             </div>
           </div>
         </div>
@@ -1387,7 +1401,7 @@ body > footer {
           </button>
           <div class="faq-body">
             <div class="faq-body-inner">
-              <p class="faq-answer">Absolutely — every website I build is designed mobile-first. Most enquiries a contractor gets start on a phone, so I make sure your site looks and works perfectly on every screen size, from smartphones to large desktop monitors.</p>
+              <p class="faq-answer">Absolutely — every website I build is designed mobile-first. Most enquiries a local business gets start on a phone, so I make sure your site looks and works perfectly on every screen size, from smartphones to large desktop monitors.</p>
             </div>
           </div>
         </div>
@@ -1411,7 +1425,7 @@ body > footer {
           </button>
           <div class="faq-body">
             <div class="faq-body-inner">
-              <p class="faq-answer">Not at all. I build websites that are easy to manage, and I include a full handover and training session so you feel confident making basic updates yourself. If you'd rather leave the upkeep to me, the Care Plan covers hosting, backups and small edits at £45 a month, and the full monthly service is £199. <a href="pricing.html">Both are on the pricing page.</a></p>
+              <p class="faq-answer">Not at all. I build websites that are easy to manage, and I include a full handover and training session so you feel confident making basic updates yourself. If you'd rather leave the upkeep to me, the Care Plan covers hosting, backups and small edits at £20 a month, and the SEO Retainer that keeps the site ranking is £199. <a href="pricing.html">Both are on the pricing page.</a></p>
             </div>
           </div>
         </div>
@@ -1448,7 +1462,7 @@ body > footer {
 <!-- CTA BANNER -->
 <div class="cta-banner">
   <h2>Ready to get started?<br><em>Let's build something great together.</em></h2>
-  <p>Free video audit · No call needed · Surrey &amp; South West London</p>
+  <p>Free 20-minute call · Fixed prices published · Surrey &amp; South West London</p>
   <a href="tel:+447456848388" class="btn-cta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call +44 7456848388</a>
   <div class="cta-founder">
     <img loading="lazy" decoding="async" width="640" height="460" src="img/faceofmkd-640.webp" alt="Martin Kaminski" class="cta-founder-img">
@@ -1482,6 +1496,9 @@ body > footer {
         <li><a href="services.html">Website Design & Build</a></li>
         <li><a href="services.html">SEO & Google Rankings</a></li>
         <li><a href="services.html">Google Business Profile</a></li>
+        <li><a href="web-design-for-cleaning-companies.html">Cleaning Contractors</a></li>
+        <li><a href="web-design-for-trades.html">Trades &amp; Construction</a></li>
+        <li><a href="web-design-for-ecommerce.html">Ordering &amp; E-commerce</a></li>
       </ul>
     </div>
     <div class="footer-col">
