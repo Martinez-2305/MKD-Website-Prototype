@@ -126,7 +126,7 @@ export const TOWNS = [
       },
       {
         q: 'How much does a website cost for a Kingston business?',
-        a: 'Three packages, all published. <strong>£595</strong> for a Starter site, <strong>£1,295</strong> for a Growth site, <strong>£1,995</strong> if you need bookings or payments taking on it. Prices exclude VAT where applicable. <a href="pricing.html">The full pricing is here.</a>',
+        a: 'Three packages, all published. <strong>£595</strong> for a Starter site, <strong>£1,295</strong> for a Growth site, <strong>£1,995</strong> if you need bookings or payments taking on it. I am not VAT registered, so the price you see is the price you pay. <a href="pricing.html">The full pricing is here.</a>',
       },
       {
         q: 'How long does it take to build and launch?',
@@ -260,7 +260,7 @@ export const TOWNS = [
       },
       {
         q: 'How much does a website cost for a Wimbledon business?',
-        a: 'Three packages, all published. <strong>£595</strong> for a Starter site, <strong>£1,295</strong> for a Growth site, <strong>£1,995</strong> if you need bookings or payments taking on it. Prices exclude VAT where applicable. <a href="pricing.html">The full pricing is here.</a>',
+        a: 'Three packages, all published. <strong>£595</strong> for a Starter site, <strong>£1,295</strong> for a Growth site, <strong>£1,995</strong> if you need bookings or payments taking on it. I am not VAT registered, so the price you see is the price you pay. <a href="pricing.html">The full pricing is here.</a>',
       },
       {
         q: 'Do you also cover Raynes Park, Morden and the rest of Merton?',
@@ -390,7 +390,7 @@ export const TOWNS = [
       },
       {
         q: 'How much does a website cost for a Guildford business?',
-        a: 'Three packages, all published. <strong>£595</strong> for a Starter site, <strong>£1,295</strong> for a Growth site, <strong>£1,995</strong> if you need bookings or payments taking on it. Prices exclude VAT where applicable. <a href="pricing.html">The full pricing is here.</a>',
+        a: 'Three packages, all published. <strong>£595</strong> for a Starter site, <strong>£1,295</strong> for a Growth site, <strong>£1,995</strong> if you need bookings or payments taking on it. I am not VAT registered, so the price you see is the price you pay. <a href="pricing.html">The full pricing is here.</a>',
       },
       {
         q: 'Do you cover Woking, Farnham and the rest of west Surrey?',
@@ -516,7 +516,7 @@ export const TOWNS = [
       },
       {
         q: 'How much does a website cost for a Woking business?',
-        a: 'Three packages, all published. <strong>£595</strong> for a Starter site, <strong>£1,295</strong> for a Growth site, <strong>£1,995</strong> if you need bookings or payments taking on it. Prices exclude VAT where applicable. <a href="pricing.html">The full pricing is here.</a>',
+        a: 'Three packages, all published. <strong>£595</strong> for a Starter site, <strong>£1,295</strong> for a Growth site, <strong>£1,995</strong> if you need bookings or payments taking on it. I am not VAT registered, so the price you see is the price you pay. <a href="pricing.html">The full pricing is here.</a>',
       },
       {
         q: 'How long does it take to build and launch?',
@@ -650,7 +650,7 @@ export const TOWNS = [
       },
       {
         q: 'How much does a website cost for a Richmond business?',
-        a: 'Three packages, all published. <strong>£595</strong> for a Starter site, <strong>£1,295</strong> for a Growth site, <strong>£1,995</strong> if you need bookings or payments taking on it. Prices exclude VAT where applicable. <a href="pricing.html">The full pricing is here.</a>',
+        a: 'Three packages, all published. <strong>£595</strong> for a Starter site, <strong>£1,295</strong> for a Growth site, <strong>£1,995</strong> if you need bookings or payments taking on it. I am not VAT registered, so the price you see is the price you pay. <a href="pricing.html">The full pricing is here.</a>',
       },
       {
         q: 'Do you cover Kingston, Twickenham and the rest of the borough?',
@@ -776,7 +776,7 @@ export const TOWNS = [
       },
       {
         q: 'How much does a website cost for a Surbiton business?',
-        a: 'Three packages, all published. <strong>£595</strong> for a Starter site, <strong>£1,295</strong> for a Growth site, <strong>£1,995</strong> if you need bookings or payments taking on it. Prices exclude VAT where applicable. <a href="pricing.html">The full pricing is here.</a>',
+        a: 'Three packages, all published. <strong>£595</strong> for a Starter site, <strong>£1,295</strong> for a Growth site, <strong>£1,995</strong> if you need bookings or payments taking on it. I am not VAT registered, so the price you see is the price you pay. <a href="pricing.html">The full pricing is here.</a>',
       },
       {
         q: 'How long does it take to build and launch?',
@@ -910,7 +910,7 @@ export const TOWNS = [
       },
       {
         q: 'How much does a website cost for a Reigate business?',
-        a: 'Three packages, all published. <strong>£595</strong> for a Starter site, <strong>£1,295</strong> for a Growth site, <strong>£1,995</strong> if you need bookings or payments taking on it. Prices exclude VAT where applicable. <a href="pricing.html">The full pricing is here.</a>',
+        a: 'Three packages, all published. <strong>£595</strong> for a Starter site, <strong>£1,295</strong> for a Growth site, <strong>£1,995</strong> if you need bookings or payments taking on it. I am not VAT registered, so the price you see is the price you pay. <a href="pricing.html">The full pricing is here.</a>',
       },
       {
         q: 'How long does it take to build and launch?',
