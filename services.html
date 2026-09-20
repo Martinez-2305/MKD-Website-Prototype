@@ -164,6 +164,20 @@ a { text-decoration:none; color:inherit; }
 ul { list-style:none; }
 img { display:block; }
 
+
+/* Hero artwork. Sits behind the text; the gradient is heaviest on the left,
+   where the copy is, and lightest on the right so the subject stays visible. */
+.hero-bg { position:absolute; inset:0; z-index:0; overflow:hidden; }
+.hero-bg img { width:100%; height:100%; object-fit:cover; object-position:70% 50%; display:block; }
+.hero-bg::after {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(90deg, rgba(13,1,1,0.92) 0%, rgba(13,1,1,0.80) 38%, rgba(13,1,1,0.45) 68%, rgba(13,1,1,0.30) 100%);
+}
+@media(max-width:820px){
+  .hero-bg img { object-position:64% 50%; }
+  .hero-bg::after { background:linear-gradient(180deg, rgba(13,1,1,0.88) 0%, rgba(13,1,1,0.78) 55%, rgba(13,1,1,0.62) 100%); }
+}
+
 /* ===== NAV ===== */
 nav { position:fixed; top:0; left:0; right:0; z-index:200; background:rgba(13,1,1,0.95); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); padding:0 48px 0 16px; height:68px; display:flex; align-items:center; justify-content:space-between; overflow:hidden; }
 .nav-logo img { height:56px; }
@@ -221,8 +235,9 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .hero {
   display:flex;
   align-items:stretch;
-  min-height:100vh;
-  min-height:100dvh;
+  min-height:clamp(450px, 56vh, 600px);
+  position:relative;
+  z-index:0;
   overflow:hidden;
   background:#0d0101;
 }
@@ -231,7 +246,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   flex:1 1 auto;
   display:flex;
   align-items:center;
-  padding:100px 48px 80px 80px;
+  padding:92px 48px 56px 80px;
   position:relative;
   z-index:2;
 }
@@ -1004,7 +1019,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   font-weight:600;
   letter-spacing:2.5px;
   text-transform:uppercase;
-  color:rgba(255,255,255,0.55);
+  color:rgba(255,255,255,0.7);
   margin-bottom:18px;
 }
 
@@ -1054,12 +1069,12 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   font-weight:500;
   padding:9px 18px;
   border-radius:100px;
-  border:1px solid rgba(255,255,255,0.22);
+  border:1px solid rgba(255,255,255,0.42);
   transition:border-color .2s, color .2s;
   white-space:nowrap;
   text-align:center;
 }
-.cta-btn-ghost:hover { border-color:rgba(255,255,255,0.55); color:#fff; }
+.cta-btn-ghost:hover { border-color:rgba(255,255,255,0.7); color:#fff; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width:1060px) {
@@ -1115,7 +1130,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .faq-eyebrow { display:inline-flex; align-items:center; gap:10px; font-size:0.72rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--red-text); margin-bottom:20px; }
 .faq-eyebrow::before { content:''; display:inline-block; width:20px; height:2px; background:var(--red); flex-shrink:0; }
 .faq-title { font-family:var(--serif); font-size:clamp(2rem,3.5vw,3.2rem); font-weight:400; line-height:1.15; letter-spacing:-0.3px; color:#fff; margin-bottom:18px; }
-.faq-title em { font-style:italic; color:rgba(255,255,255,0.35); }
+.faq-title em { font-style:italic; color:rgba(255,255,255,0.68); }
 .faq-subtitle { font-size:0.88rem; line-height:1.8; color:var(--ink-light); margin-bottom:32px; }
 .faq-contact-cta { display:inline-flex; align-items:center; gap:8px; font-size:0.82rem; font-weight:600; color:var(--ink); background:rgba(227,27,35,0.1); border:1px solid rgba(227,27,35,0.22); padding:11px 22px; border-radius:100px; transition:background .2s, border-color .2s, color .2s; }
 .faq-contact-cta:hover { background:var(--red); border-color:var(--red-text); color:#fff; }
@@ -1208,6 +1223,14 @@ body > footer {
 
 <!-- ===== HERO ===== -->
 <section class="hero" id="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <picture>
+      <source type="image/avif" srcset="img/hero-services-768.avif 768w, img/hero-services-1200.avif 1200w, img/hero-services-1536.avif 1536w" sizes="100vw">
+      <source type="image/webp" srcset="img/hero-services-768.webp 768w, img/hero-services-1200.webp 1200w, img/hero-services-1536.webp 1536w" sizes="100vw">
+      <img src="img/hero-services-1536.webp" width="1536" height="864" alt="" fetchpriority="high" decoding="async">
+    </picture>
+  </div>
+
   <div class="hero-inner">
     <div class="hero-text">
       <div class="hero-label">My Services</div>
@@ -1215,7 +1238,7 @@ body > footer {
       <p class="hero-sub">Websites, local SEO, Google Business Profile and hosting for small businesses across Epsom, Surrey and South West London. Delivered personally, from Surrey.</p>
       <div class="hero-ctas">
         <a href="contact.html" class="btn-primary">Book a free 20-minute call →</a>
-        <a href="reviews.html" class="btn-outline">View My Work</a>
+        <a href="index.html#work" class="btn-outline">View my work</a>
       </div>
     </div>
   </div>
