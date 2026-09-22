@@ -164,7 +164,12 @@ ${JSON.stringify(graph, null, 2)}
 <meta property="og:url" content="${url}">
 <meta property="og:title" content="Web Design ${esc(t.town)} | MartKam Digital">
 <meta property="og:description" content="${esc(t.ogDescription)}">
-<meta property="og:image" content="${BASE}/img/og-image.jpg">
+<meta property="og:image" content="${BASE}/img/og-image-2026.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A laptop and phone showing a website built by MartKam Digital">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${BASE}/img/og-image-2026.jpg">
 
 <script type="application/ld+json">
 ${JSON.stringify(service, null, 2)}
