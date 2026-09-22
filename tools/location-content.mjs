@@ -84,9 +84,9 @@ export const TOWNS = [
         icon: 'design',
         title: 'Website Design & Build',
         body:
-          'A fully custom site built for your Kingston business — not a template with your logo dropped in. Designed to look credible next to the national brands you share a high street with.',
+          'A custom-designed site built for your Kingston business from the Growth package up, rather than a layout with your logo dropped in. Designed to look credible next to the national brands you share a high street with.',
         feats: [
-          '100% custom design — no templates',
+          'Custom design from the Growth package up',
           'Mobile-first, built for town-centre browsing',
           'Booking and enquiry forms that actually convert',
           'Full training included at handover',
@@ -214,9 +214,9 @@ export const TOWNS = [
         icon: 'design',
         title: 'Website Design & Build',
         body:
-          'A fully custom site built for your Wimbledon business, designed to match the standard your customers already expect from the area — whether you are in the Village or the town centre.',
+          'A custom-designed site built for your Wimbledon business, designed to match the standard your customers already expect from the area — whether you are in the Village or the town centre.',
         feats: [
-          '100% custom design — no templates',
+          'Custom design from the Growth package up',
           'Mobile-first, fast-loading pages',
           'Booking and enquiry forms that convert',
           'Full training included at handover',
@@ -344,9 +344,9 @@ export const TOWNS = [
         icon: 'design',
         title: 'Website Design & Build',
         body:
-          'A fully custom site built for your Guildford business — properly engineered, not assembled from a template. Built to stand up to an audience that knows the difference.',
+          'A custom-designed site for your Guildford business, properly engineered rather than assembled from a template. Built to stand up to an audience that knows the difference.',
         feats: [
-          '100% custom design — no templates',
+          'Custom design from the Growth package up',
           'Mobile-first, genuinely fast pages',
           'Contact forms & booking integrations',
           'Full training included at handover',
@@ -474,9 +474,9 @@ export const TOWNS = [
         icon: 'design',
         title: 'Website Design & Build',
         body:
-          'A fully custom site built for your Woking business — designed to look credible in a town where residents deal with major national brands daily.',
+          'A custom-designed site built for your Woking business — designed to look credible in a town where residents deal with major national brands daily.',
         feats: [
-          '100% custom design — no templates',
+          'Custom design from the Growth package up',
           'Mobile-first, built for commuter browsing',
           'Contact forms & booking integrations',
           'Full training included at handover',
@@ -604,9 +604,9 @@ export const TOWNS = [
         icon: 'design',
         title: 'Website Design & Build',
         body:
-          'A fully custom site built for your Richmond business, designed to convert visitors who have never heard of you into customers who walk through the door.',
+          'A custom-designed site built for your Richmond business, designed to convert visitors who have never heard of you into customers who walk through the door.',
         feats: [
-          '100% custom design — no templates',
+          'Custom design from the Growth package up',
           'Mobile-first, built for on-the-spot decisions',
           'Booking and enquiry forms that convert',
           'Full training included at handover',
@@ -734,9 +734,9 @@ export const TOWNS = [
         icon: 'design',
         title: 'Website Design & Build',
         body:
-          'A fully custom site built for your Surbiton business — one that looks like it belongs on Victoria Road rather than on a template gallery.',
+          'A custom-designed site built for your Surbiton business — one that looks like it belongs on Victoria Road rather than on a template gallery.',
         feats: [
-          '100% custom design — no templates',
+          'Custom design from the Growth package up',
           'Mobile-first, built for commuter browsing',
           'Contact forms & booking integrations',
           'Full training included at handover',
@@ -864,9 +864,9 @@ export const TOWNS = [
         icon: 'design',
         title: 'Website Design & Build',
         body:
-          'A fully custom site built for your Reigate business — one that reflects the quality you already deliver rather than undercutting it.',
+          'A custom-designed site built for your Reigate business — one that reflects the quality you already deliver rather than undercutting it.',
         feats: [
-          '100% custom design — no templates',
+          'Custom design from the Growth package up',
           'Mobile-first, fast-loading pages',
           'Contact forms & booking integrations',
           'Full training included at handover',
@@ -1008,9 +1008,9 @@ export const TOWNS = [
         icon: 'design',
         title: 'Website Design & Build',
         body:
-          'A fully custom site built for your Byfleet business — designed around getting a phone call, not around winning design awards.',
+          'A custom-designed site built for your Byfleet business — designed around getting a phone call, not around winning design awards.',
         feats: [
-          '100% custom design — no templates',
+          'Custom design from the Growth package up',
           'Click-to-call and quote request forms',
           'Mobile-first, fast on any connection',
           'Full training included at handover',
