@@ -144,8 +144,9 @@
 <meta name="twitter:description" content="Web design and SEO for commercial cleaning companies bidding for office and communal contracts, so a property manager sees a contractor, not a cleaner.">
 <meta name="twitter:image" content="https://www.martkamdigital.com/img/og-image-2026.jpg">
 
-<link rel="preload" as="image" href="img/hero-slide-1536.webp" media="(min-width:821px)" fetchpriority="high">
-<link rel="preload" as="image" href="img/hero-slide-768.webp" media="(max-width:820px)" fetchpriority="high">
+<link rel="preload" as="image" type="image/avif" href="img/hero-cleaning-1672.avif" media="(min-width:1201px)" fetchpriority="high">
+<link rel="preload" as="image" type="image/avif" href="img/hero-cleaning-1200.avif" media="(min-width:821px) and (max-width:1200px)" fetchpriority="high">
+<link rel="preload" as="image" type="image/avif" href="img/hero-cleaning-768.avif" media="(max-width:820px)" fetchpriority="high">
 <link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -161,6 +162,15 @@
 </style>
 
 <link rel="stylesheet" href="css/location.css">
+<style>
+/* This page's own hero image. The subject sits on the right, so the crop is
+   anchored there and the dark shading keeps the text on the left readable. */
+.page-hero-bg { background-image:url('img/hero-cleaning-1672.webp'); background-image:image-set(url('img/hero-cleaning-1672.avif') type('image/avif'), url('img/hero-cleaning-1672.webp') type('image/webp')); background-position:right center; }
+/* zoomed a little so the laptop clears the heading on wide screens */
+@media (min-width:981px){ .page-hero-bg { background-size:112% auto; background-repeat:no-repeat; background-color:var(--white); background-position:right 40%; } }
+@media (max-width:1200px){ .page-hero-bg { background-image:url('img/hero-cleaning-1200.webp'); background-image:image-set(url('img/hero-cleaning-1200.avif') type('image/avif'), url('img/hero-cleaning-1200.webp') type('image/webp')); } }
+@media (max-width:820px){ .page-hero-bg { background-image:url('img/hero-cleaning-768.webp'); background-image:image-set(url('img/hero-cleaning-768.avif') type('image/avif'), url('img/hero-cleaning-768.webp') type('image/webp')); background-position:72% center; } }
+</style>
 </head>
 <body>
 <!-- NAV -->
@@ -447,7 +457,7 @@
       <h3>Services</h3>
       <ul>
         <li><a href="services.html">Website Design &amp; Build</a></li>
-        <li><a href="services.html">SEO &amp; Google Rankings</a></li>
+        <li><a href="seo-services.html">Local SEO Services</a></li>
         <li><a href="services.html">Google Business Profile</a></li>
         <li><a href="services.html">Hosting &amp; Domains</a></li>
         <li><a href="web-design-for-cleaning-companies.html">Cleaning Contractors</a></li>

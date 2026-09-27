@@ -15,7 +15,7 @@
  * written once, below, from pricing.html. If pricing.html changes, change it
  * here and rebuild; never per town.
  *
- * Sutton and Cheam are hand-written pages and are not built here yet.
+ * Also builds portfolio.html and seo-services.html from the same shared parts.
  */
 
 import fs from 'node:fs';
@@ -61,6 +61,7 @@ const SERVICE_LINKS = {
   ecommerce: { href: 'web-design-for-ecommerce.html', label: 'Bookings, ordering and payments', note: 'For sites that take bookings, orders or payments' },
   services: { href: 'services.html', label: 'All services', note: 'Web design, local SEO and Google Business Profile' },
   pricing: { href: 'pricing.html', label: 'Packages and prices', note: 'Everything in each package, the Care Plan and the SEO Retainer' },
+  seo: { href: 'seo-services.html', label: 'Local SEO services', note: 'Keyword research, monthly pages and plain-English reporting' },
   casestudy: { href: 'case-study-cs-cleaning.html', label: 'C&amp;S Cleaning Services case study', note: 'The first three months after launch, with the numbers' },
 };
 
@@ -194,7 +195,7 @@ const tierSeo = `      <div class="lp-inc-card">
         </div>
         <div class="lp-tier">
           <h4>SEO Retainer <span>&middot; £199 a month, ongoing</span></h4>
-          <p>After launch: a monthly review of your search data, one new page or a rewrite of an existing one, a technical pass, Google Business Profile posts and review management, and a plain-English report. Everyday changes to your site are included too, with no hourly billing. Available with Growth and Bookings &amp; Ordering.</p>
+          <p>After launch: a monthly review of your search data, one new page or a rewrite of an existing one, a technical pass, Google Business Profile posts and review management, and a plain-English report. Everyday changes to your site are included too, with no hourly billing. Available with Growth and Bookings &amp; Ordering, or on a site I did not build after a free audit. <a href="seo-services.html">More about my SEO services</a>.</p>
         </div>
         <div class="lp-tier">
           <h4>What I promise, and what I do not</h4>
@@ -264,6 +265,7 @@ const footerBlock = () => `<footer>
         <li><a href="web-design-for-trades.html">Trades &amp; construction</a></li>
         <li><a href="web-design-for-cleaning-companies.html">Cleaning companies</a></li>
         <li><a href="web-design-for-ecommerce.html">Bookings &amp; ordering</a></li>
+        <li><a href="seo-services.html">Local SEO services</a></li>
         <li><a href="portfolio.html">Client portfolio</a></li>
         <li><a href="case-study-cs-cleaning.html">C&amp;S Cleaning case study</a></li>
       </ul>
@@ -536,7 +538,13 @@ ${t.whoFor.map(w => `            <li>${w}</li>`).join('\n')}
           <h3>Meeting and working together</h3>
           <p>${t.meeting}</p>
         </div>
-      </div>
+${t.structure ? `        <div class="lp-note">
+          <h3>${t.structure.title}</h3>
+          <ul>
+${t.structure.items.map(i => `            <li>${i}</li>`).join('\n')}
+          </ul>
+        </div>
+` : ''}      </div>
     </div>
   </div>
 </section>
@@ -545,7 +553,7 @@ ${t.whoFor.map(w => `            <li>${w}</li>`).join('\n')}
 <section class="section lp-inc" id="included">
   <div class="wrap">
     <span class="label">What is included</span>
-    <h2 class="section-title">${t.focus === 'seo' ? 'Local SEO, <em>and the website behind it</em>' : 'Web design, <em>with the SEO groundwork built in</em>'}</h2>
+    <h2 class="section-title">${t.includedHeading || (t.focus === 'seo' ? 'Local SEO, <em>and the website behind it</em>' : 'Website design, <em>with the SEO groundwork built in</em>')}</h2>
     <div class="lp-inc-grid">
 ${incCards.join('\n')}
     </div>
@@ -599,7 +607,7 @@ ${incCards.join('\n')}
         </ul>
       </div>
     </div>
-    <p class="lp-small"><strong>After launch:</strong> the Care Plan is £20 a month or £200 a year for hosting, SSL, daily backups, updates and 30 minutes of edits a month. The SEO Retainer is £199 a month and includes everyday changes to your site, with a 6-month minimum on Growth and 12 months on Bookings &amp; Ordering. I am not VAT registered. <a href="pricing.html">See everything in each package</a>.</p>
+    <p class="lp-small"><strong>After launch:</strong> the Care Plan is £20 a month or £200 a year for hosting, SSL, daily backups, updates and 30 minutes of edits a month. The SEO Retainer is £199 a month and includes everyday changes to your site, with a 6-month minimum, then 30 days&rsquo; notice. I am not VAT registered. <a href="pricing.html">See everything in each package</a>.</p>
   </div>
 </section>
 
@@ -824,7 +832,348 @@ ${footerBlock()}
 `;
 }
 
+/* Local SEO services (seo-services.html). Everything here must match
+   pricing.html: the SEO Retainer (£199/month), the SEO setup in every build,
+   standalone Google Business Profile (£149 one-off), and SEO for sites I did
+   not build (free audit first). */
+const SEO_FAQS = [
+  {
+    q: 'Do you guarantee rankings?',
+    a: 'No, and nobody honest can. Rankings depend on your competitors, your area, your reviews and changes Google makes without warning. What I promise is the monthly work: if a month passes without it, that month is free.',
+  },
+  {
+    q: 'How long before I see results?',
+    a: 'It depends on your competition and how much there is to build. As one real example, C&amp;S Cleaning Services, a new site with no history, had over 5,000 search impressions, around 50 clicks, enquiries and one paid job in its first three months.',
+  },
+  {
+    q: 'Can you do SEO on a website you did not build?',
+    a: 'Yes, after a free audit. I look at the site and tell you plainly whether it can be worked with. If it can, the SEO Retainer is the same £199 a month, as long as I can make changes to the site. If it is holding you back, I will recommend a rebuild instead.',
+  },
+  {
+    q: 'What is the difference between the SEO setup and the SEO Retainer?',
+    a: 'The setup is included in every website I build: titles, descriptions, headings, schema, a sitemap, Search Console in your name and your Google Business Profile. The retainer is the ongoing monthly work after launch: research, new and improved pages, technical checks and a report.',
+  },
+  {
+    q: 'Can I buy Google Business Profile optimisation on its own?',
+    a: 'Yes. A standalone Google Business Profile setup or clean-up is £149, one-off. It is also included with every website package.',
+  },
+  {
+    q: 'How long is the contract?',
+    a: 'The minimum is 6 months for any SEO work, including on a site I did not build. After that it rolls monthly with 30 days&rsquo; notice. On Bookings &amp; Ordering the first month is free.',
+  },
+  {
+    q: 'Are changes to my site included?',
+    a: 'Yes. On the SEO Retainer, everyday changes such as text, prices, opening hours, photos and small page tweaks are included, with no hourly billing. New pages beyond the monthly one are £195 each.',
+  },
+];
+
+function seoPage() {
+  const url = `${BASE}/seo-services.html`;
+  const graph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${url}#breadcrumb`,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE}/` },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: `${BASE}/services.html` },
+          { '@type': 'ListItem', position: 3, name: 'Local SEO services', item: url },
+        ],
+      },
+      {
+        '@type': 'Service',
+        '@id': `${url}#service`,
+        name: 'Local SEO services for small businesses',
+        serviceType: 'Search engine optimisation',
+        description: 'Keyword research, new and improved pages every month, technical checks, Google Business Profile management and plain-English reporting for small businesses.',
+        url,
+        provider: { '@id': `${BASE}/#organization` },
+        areaServed: [{ '@type': 'Place', name: 'Surrey' }, { '@type': 'Place', name: 'South West London' }, { '@type': 'Country', name: 'United Kingdom' }],
+        offers: [
+          { '@type': 'Offer', name: 'SEO Retainer', price: '199', priceCurrency: 'GBP', description: 'Monthly' },
+          { '@type': 'Offer', name: 'Google Business Profile setup and optimisation', price: '149', priceCurrency: 'GBP', description: 'One-off' },
+          { '@type': 'Offer', name: 'SEO audit for an existing website', price: '0', priceCurrency: 'GBP' },
+        ],
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${url}#faq`,
+        mainEntity: SEO_FAQS.map(f => ({ '@type': 'Question', name: plain(f.q), acceptedAnswer: { '@type': 'Answer', text: plain(f.a) } })),
+      },
+    ],
+  };
+
+  const monthly = [
+    ['Search data reviewed', 'Google Search Console and Bing Webmaster Tools: which searches bring clicks, which pages sit just off page one, and where competitors are taking traffic.'],
+    ['A new or improved page', 'One new page aimed at the best opportunity that review turns up, or an existing page rewritten, whichever will move faster.'],
+    ['Search campaigns', 'Pages planned in runs around one goal at a time, such as a service you want more of or an area you want to be known in.'],
+    ['Technical pass', 'Page speed, indexing, broken links and structured data checked and fixed.'],
+    ['Google Business Profile', 'Posts and review management, so the profile stays active and matches the site.'],
+    ['A report you can read', 'Clicks, enquiries and what changes next month, in plain English. Everyday site changes are included too.'],
+  ];
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+<title>Local SEO Services in Surrey for Small Businesses | MartKam Digital</title>
+<meta name="description" content="Local SEO services for small businesses: keyword research, new and improved pages every month, Google Business Profile optimisation and plain-English reports. From £199 a month.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="${url}">
+<script type="application/ld+json">
+${JSON.stringify(graph, null, 2)}
+</script>
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="${url}">
+<meta property="og:title" content="Local SEO services for small businesses | MartKam Digital">
+<meta property="og:description" content="Keyword research, monthly pages and plain-English reports, from £199 a month. No ranking promises; the work is guaranteed.">
+<meta property="og:image" content="${BASE}/img/og-image-2026.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A laptop and phone showing a website built by MartKam Digital">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${BASE}/img/og-image-2026.jpg">
+
+<link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-latin.woff2') format('woff2');}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-italic-latin.woff2') format('woff2');}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:300 600;font-display:swap;src:url('fonts/dmsans-latin.woff2') format('woff2');}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+</style>
+
+<link rel="stylesheet" href="css/location.css">
+</head>
+<body class="lp">
+
+${navBlock()}
+<main id="main">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-intro">
+      <p class="lp-crumbs"><a href="/">Home</a><span aria-hidden="true">&rsaquo;</span><a href="services.html">Services</a><span aria-hidden="true">&rsaquo;</span>Local SEO services</p>
+      <h1>Local SEO services for small businesses</h1>
+      <p class="lp-benefit">More of the people searching for what you do, finding your business rather than someone else&rsquo;s.</p>
+      <p class="hero-lede">I research what your customers type into Google, then build and improve the pages that answer those searches, month after month. You see exactly what was done and what it changed. Based in Epsom, working with businesses across Surrey, South West London and the rest of the UK.</p>
+      <a href="#enquire" class="btn-hero-primary hero-jump">Enquire about SEO</a>
+      <div class="hero-trust">
+        <div class="hero-by">
+          <img decoding="async" width="224" height="224" src="img/faceofmkd-face-224.webp" alt="Martin Kaminski, founder of MartKam Digital" class="hero-by-photo">
+          <span class="hero-by-text">
+            <span class="hero-by-name">Martin Kaminski</span>
+            <span class="hero-by-role">Based in Epsom, running SEO for small businesses</span>
+          </span>
+        </div>
+        <p class="hero-proof">C&amp;S Cleaning Services, a communal cleaning contractor based in Sutton, had over 5,000 search impressions and won a paid job through their new website within three months of launch. <a href="case-study-cs-cleaning.html">Read the case study</a></p>
+        <div class="hero-links">
+          <a href="#prices">SEO prices</a>
+          <a href="#monthly">What happens each month</a>
+        </div>
+      </div>
+    </div>
+
+${enquiryCard('seo_hero', 'New SEO enquiry from the SEO services page', 'SEO services page')}
+  </div>
+</section>
+
+<!-- WHO IT SUITS -->
+<section class="section" id="who">
+  <div class="wrap">
+    <span class="label">Who it suits</span>
+    <h2 class="section-title">SEO for businesses <em>people find by searching</em></h2>
+    <div class="lp-intro-grid">
+      <div class="lp-prose">
+        <p>Most of the businesses I work with sell a service in a particular area: trades, cleaning companies, clinics, salons and professional practices. Their customers do not know the business name yet. They search for the job and the place, and pick from what they find.</p>
+        <p>Local SEO is how you become one of those results. It is not a trick or a setting. It is research into what people search for, pages that answer those searches properly, a Google Business Profile that is complete and active, and the technical work that stops good pages being missed.</p>
+        <p><strong>I do not promise a ranking position</strong>, because nobody outside Google controls that. I promise the work, and you can check the numbers yourself in your own Search Console.</p>
+      </div>
+      <div class="lp-aside">
+        <div class="lp-note">
+          <h3>A good fit if</h3>
+          <ul>
+            <li>People search for the service you offer, in the places you cover</li>
+            <li>You have a website that looks fine but brings in few enquiries</li>
+            <li>You want to be found for your services, not just your name</li>
+            <li>You can give it a few months to build</li>
+          </ul>
+        </div>
+        <div class="lp-note">
+          <h3>Not the right fit if</h3>
+          <ul>
+            <li>You need a flood of enquiries next week</li>
+            <li>You want a guaranteed position on page one</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EACH MONTH -->
+<section class="section lp-inc" id="monthly">
+  <div class="wrap">
+    <span class="label">Every month</span>
+    <h2 class="section-title">What happens <em>each month</em></h2>
+    <p class="section-intro">On the SEO Retainer, this is the work every month, without fail. If a month passes without it, that month is free.</p>
+    <div class="lp-cols3">
+${monthly.map(([h, p]) => `      <div class="lp-box"><h3>${h}</h3><p>${p}</p></div>`).join('\n')}
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="work" id="results">
+  <div class="wrap">
+    <div class="work-head">
+      <span class="label">Results</span>
+      <h2>Real numbers, <em>from a real client.</em></h2>
+      <p>C&amp;S Cleaning Services, based in Sutton, had no website and no Google presence. These are the first three months after launch, as they happened.</p>
+    </div>
+    <div class="work-grid">
+${projectCard('cs')}
+      <article class="work-card"><div class="work-body">
+        <h3 class="work-client">The first three months</h3>
+        <div class="work-sector">From Google Search Console</div>
+        <p class="work-outcome"><strong>Over 5,000</strong> search impressions</p>
+        <p class="work-outcome"><strong>Around 50</strong> clicks to the site</p>
+        <p class="work-outcome"><strong>Enquiries</strong> coming in, and <strong>one paid job</strong> won through the site</p>
+        <div class="work-links"><a href="case-study-cs-cleaning.html">Read the full case study &rarr;</a></div>
+      </div></article>
+      <article class="work-card"><div class="work-body">
+        <h3 class="work-client">What the numbers mean</h3>
+        <div class="work-sector">Read plainly</div>
+        <p class="work-brief">These are early figures for a business that started from zero, in a specific local niche. The point is not that they are large. It is that they went from nothing to something measurable, and that each new page adds more searches the business can be found for.</p>
+        <div class="work-links"><a href="portfolio.html">See all client work &rarr;</a></div>
+      </div></article>
+    </div>
+  </div>
+</section>
+
+<!-- PRICES AND ELIGIBILITY -->
+<section class="section" id="prices">
+  <div class="wrap">
+    <span class="label">Prices</span>
+    <h2 class="section-title">SEO prices <em>and who can have them</em></h2>
+    <p class="section-intro">I am not VAT registered, so the price you see is the price you pay.</p>
+    <div class="lp-plans">
+      <div class="lp-plan">
+        <h3>SEO setup</h3>
+        <p class="lp-price">Included</p>
+        <p>In every website I build, on every package.</p>
+        <ul>
+          <li>Titles, descriptions, headings and schema</li>
+          <li>Sitemap submitted, Search Console in your name</li>
+          <li>Google Business Profile set up or cleaned up</li>
+          <li>Keyword research and location pages on Growth</li>
+        </ul>
+      </div>
+      <div class="lp-plan is-pick">
+        <p class="lp-plan-flag">The ongoing work</p>
+        <h3>SEO Retainer</h3>
+        <p class="lp-price">£199<span style="font-size:1rem;"> a month</span></p>
+        <p>With a Growth or Bookings &amp; Ordering site I built, or on your existing site after a free audit.</p>
+        <ul>
+          <li>Everything in &ldquo;each month&rdquo; above</li>
+          <li>Everyday site changes included, no hourly billing</li>
+          <li>6 months minimum for any SEO work</li>
+          <li>Then rolling monthly, 30 days&rsquo; notice</li>
+        </ul>
+      </div>
+      <div class="lp-plan">
+        <h3>Google Business Profile</h3>
+        <p class="lp-price">£149<span style="font-size:1rem;"> one-off</span></p>
+        <p>On its own, without a website package.</p>
+        <ul>
+          <li>Profile set up or cleaned up</li>
+          <li>Categories, services and service areas chosen for how people search</li>
+          <li>Opening hours, photos and details made consistent</li>
+        </ul>
+      </div>
+    </div>
+    <p class="lp-small"><strong>Existing website I did not build?</strong> The audit is free. I will tell you plainly whether the site can be worked with; if it can, the retainer is the same £199 a month, with the same 6-month minimum. <strong>On a Starter site</strong>, the site is built on a template, so it needs rebuilding from scratch first: that is the move up to Growth, the £404 difference. <a href="pricing.html#seo-retainer">Full SEO Retainer terms</a>.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="faq-layout">
+      <div class="faq-left">
+        <span class="faq-eyebrow">FAQ</span>
+        <h2 class="faq-title">Questions about<br><em>SEO with me</em></h2>
+        <p class="faq-subtitle">Something else on your mind? Ask in the enquiry form and I&rsquo;ll reply personally.</p>
+        <a href="#enquire" class="faq-contact-cta">Ask me a question &rarr;</a>
+      </div>
+      <div class="faq-list">
+${SEO_FAQS.map((f, i) => `        <div class="faq-item">
+          <button class="faq-btn" aria-expanded="false" aria-controls="faq-${i}">
+            <span class="faq-question">${f.q}</span>
+            <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+          </button>
+          <div class="faq-body" id="faq-${i}"><div class="faq-body-inner">
+            <p class="faq-answer">${f.a}</p>
+          </div></div>
+        </div>`).join('\n')}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section class="lp-related">
+  <div class="wrap">
+    <div class="lp-related-grid">
+      <div>
+        <h2>Related services</h2>
+        <ul>
+          <li><a href="services.html">All services</a><span>Website design, SEO, Google Business Profile and hosting</span></li>
+          <li><a href="pricing.html">Website design packages and prices</a><span>Starter, Growth and Bookings &amp; Ordering</span></li>
+          <li><a href="web-design-for-trades.html">Websites for trades and construction</a><span>Builders, electricians, plumbers and other trades</span></li>
+        </ul>
+      </div>
+      <div>
+        <h2>SEO by area</h2>
+        <ul>
+          <li><a href="web-design-byfleet.html">Local SEO in Byfleet &amp; West Byfleet</a><span>Local SEO first, plus web design</span></li>
+          <li><a href="web-design-epsom.html">Web design in Epsom</a><span>Where I am based</span></li>
+          <li><a href="index.html#areas">Every area I cover</a><span>The full list, across Surrey and South West London</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <h2>Tell me about<br><em>your business and your area.</em></h2>
+  <p>Free audit for existing sites &middot; Prices published &middot; One person doing the work</p>
+  <a href="#enquire" class="btn-cta">Go to the enquiry form</a>
+</section>
+
+</main>
+
+${footerBlock()}
+</body>
+</html>
+`;
+}
+
 let written = 0;
+{
+  const file = path.join(ROOT, 'seo-services.html');
+  fs.writeFileSync(file, seoPage(), 'utf8');
+  console.log(`  seo-services.html  ${(fs.statSync(file).size / 1024).toFixed(1)}KB`);
+}
 {
   const file = path.join(ROOT, 'portfolio.html');
   fs.writeFileSync(file, portfolioPage(), 'utf8');

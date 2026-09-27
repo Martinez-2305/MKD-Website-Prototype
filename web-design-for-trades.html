@@ -104,7 +104,7 @@
           "name": "Do you cover my trade?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Builders, electricians, plumbers, roofers, landscapers, decorators and the rest. The work is the same shape whatever the trade: a page for each job you do, a page for each town you cover, and proof that you are the real thing. If you are not sure, the 20-minute call will settle it in a couple of minutes."
+            "text": "Builders, electricians, plumbers, roofers, landscapers, decorators and the rest. The work is the same shape whatever the trade: a page for each job you do, pages for the towns where you want more work, and proof that you are the real thing. If you are not sure, the 20-minute call will settle it in a couple of minutes."
           }
         },
         {
@@ -120,7 +120,7 @@
           "name": "Can I get a page for each town I work in?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, and it is usually the single biggest win. Location and service landing pages come with the Growth package, written around the words people actually type. Extra pages beyond the ten included are £195 each."
+            "text": "Yes, where it makes sense. A town page earns its place when people there search for your work and you have something useful to say about it, such as jobs you have done there. I choose them with you from keyword research rather than adding one for every town on the map. Location and service pages come with the Growth package, and extra pages beyond the ten included are £195 each."
           }
         },
         {
@@ -150,8 +150,9 @@
 <meta name="twitter:description" content="Websites and local SEO for builders, electricians, plumbers, roofers and landscapers across Surrey and South West London. Packages from £595, prices published.">
 <meta name="twitter:image" content="https://www.martkamdigital.com/img/og-image-2026.jpg">
 
-<link rel="preload" as="image" href="img/hero-slide-1536.webp" media="(min-width:821px)" fetchpriority="high">
-<link rel="preload" as="image" href="img/hero-slide-768.webp" media="(max-width:820px)" fetchpriority="high">
+<link rel="preload" as="image" type="image/avif" href="img/hero-trades-1672.avif" media="(min-width:1201px)" fetchpriority="high">
+<link rel="preload" as="image" type="image/avif" href="img/hero-trades-1200.avif" media="(min-width:821px) and (max-width:1200px)" fetchpriority="high">
+<link rel="preload" as="image" type="image/avif" href="img/hero-trades-768.avif" media="(max-width:820px)" fetchpriority="high">
 <link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -164,9 +165,18 @@
 .contact-hero-label::before, .policy-label::before, .lr-label::before { display:none !important; content:none !important; }
 .srv-feats li::before { width:6px !important; height:6px !important; border-radius:50%; flex-shrink:0; }
 .cprep-list li::before { width:6px !important; height:6px !important; border-radius:50%; top:10px !important; left:4px !important; }
+
+.page-hero-content p.hero-benefit { font-family:var(--serif); font-style:italic; font-size:clamp(1.25rem, 2vw, 1.6rem); line-height:1.35; color:var(--ink); margin-bottom:14px; }
 </style>
 
 <link rel="stylesheet" href="css/location.css">
+<style>
+/* This page's own hero image. The subject sits on the right, so the crop is
+   anchored there and the dark shading keeps the text on the left readable. */
+.page-hero-bg { background-image:url('img/hero-trades-1672.webp'); background-image:image-set(url('img/hero-trades-1672.avif') type('image/avif'), url('img/hero-trades-1672.webp') type('image/webp')); background-position:right center; }
+@media (max-width:1200px){ .page-hero-bg { background-image:url('img/hero-trades-1200.webp'); background-image:image-set(url('img/hero-trades-1200.avif') type('image/avif'), url('img/hero-trades-1200.webp') type('image/webp')); } }
+@media (max-width:820px){ .page-hero-bg { background-image:url('img/hero-trades-768.webp'); background-image:image-set(url('img/hero-trades-768.avif') type('image/avif'), url('img/hero-trades-768.webp') type('image/webp')); background-position:72% center; } }
+</style>
 </head>
 <body>
 <!-- NAV -->
@@ -216,8 +226,9 @@
       <span>&rsaquo;</span>
       Trades &amp; Construction
     </div>
-    <span class="hero-tag">Web design &amp; SEO for trades and construction</span>
-    <h1>The job goes to whoever<br><em>they can find and trust.</em></h1>
+    <span class="hero-tag">Trades &amp; construction</span>
+    <h1>Website design for trades<br><em>and construction businesses</em></h1>
+    <p class="hero-benefit">The job goes to whoever they can find and trust.</p>
     <p>Builders, electricians, plumbers, roofers, landscapers. I build websites that turn up when someone nearby searches for the job you do, and that give them a reason to ring you rather than the next name down.</p>
     <div class="hero-btns">
       <a href="contact.html" class="btn-primary">Book a free 20-minute call</a>
@@ -242,7 +253,7 @@
       <div class="fade-up fade-up-d2">
         <div class="local-checklist">
           <div class="local-check">A page for each trade you actually offer</div>
-          <div class="local-check">A page for each town you cover</div>
+          <div class="local-check">Town pages where you have real work and real demand</div>
           <div class="local-check">Room for your accreditations and insurance</div>
           <div class="local-check">Photographs of your own work, not stock</div>
           <div class="local-check">Google Business Profile set up properly</div>
@@ -289,7 +300,7 @@
     <div class="srv-grid">
       <div class="srv-card fade-up">
         <h3>Pages that match real searches</h3>
-        <p>A page for each trade and each town, written around the words people actually type. On the Growth package these are the pages that do the ranking, and the keyword research happens before a word is written.</p>
+        <p>Pages for your main jobs and the towns that matter most to you, chosen from keyword research and written around the words people actually type. On the Growth package these are the pages that do the ranking, and the keyword research happens before a word is written.</p>
       </div>
       <div class="srv-card fade-up fade-up-d2">
         <h3>Built for a phone on a job</h3>
@@ -346,7 +357,7 @@
             <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
           </button>
           <div class="faq-body"><div class="faq-body-inner">
-            <p class="faq-answer">Builders, electricians, plumbers, roofers, landscapers, decorators and the rest. The work is the same shape whatever the trade: a page for each job you do, a page for each town you cover, and proof that you are the real thing. If you are not sure, the <a href="contact.html">20-minute call</a> will settle it in a couple of minutes.</p>
+            <p class="faq-answer">Builders, electricians, plumbers, roofers, landscapers, decorators and the rest. The work is the same shape whatever the trade: a page for each job you do, pages for the towns where you want more work, and proof that you are the real thing. If you are not sure, the <a href="contact.html">20-minute call</a> will settle it in a couple of minutes.</p>
           </div></div>
         </div>
         <div class="faq-item">
@@ -364,7 +375,7 @@
             <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
           </button>
           <div class="faq-body"><div class="faq-body-inner">
-            <p class="faq-answer">Yes, and it is usually the single biggest win. Location and service landing pages come with the <a href="pricing.html">Growth package</a>, written around the words people actually type. Extra pages beyond the ten included are £195 each.</p>
+            <p class="faq-answer">Yes, where it makes sense. A town page earns its place when people there search for your work and you have something useful to say about it, such as jobs you have done there. I choose them with you from keyword research rather than adding one for every town on the map. Location and service pages come with the <a href="pricing.html">Growth package</a>, and extra pages beyond the ten included are £195 each.</p>
           </div></div>
         </div>
         <div class="faq-item">
@@ -373,7 +384,7 @@
             <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
           </button>
           <div class="faq-body"><div class="faq-body-inner">
-            <p class="faq-answer">Often, yes. Send it over on the call and I will tell you honestly whether it is worth rebuilding or whether the money is better spent on the <a href="services.html">SEO and Google Business Profile work</a> around it.</p>
+            <p class="faq-answer">Often, yes. Send it over on the call and I will tell you honestly whether it is worth rebuilding or whether the money is better spent on the <a href="seo-services.html">SEO and Google Business Profile work</a> around it.</p>
           </div></div>
         </div>
       </div>
@@ -410,7 +421,7 @@
       <h3>Services</h3>
       <ul>
         <li><a href="services.html">Website Design &amp; Build</a></li>
-        <li><a href="services.html">SEO &amp; Google Rankings</a></li>
+        <li><a href="seo-services.html">Local SEO Services</a></li>
         <li><a href="services.html">Google Business Profile</a></li>
         <li><a href="services.html">Hosting &amp; Domains</a></li>
         <li><a href="web-design-for-cleaning-companies.html">Cleaning Contractors</a></li>

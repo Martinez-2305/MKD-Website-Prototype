@@ -44,8 +44,19 @@ export const TOWNS = [
     role: 'Based in Epsom, building websites for Woking businesses',
 
     projects: ['cs', 'stpauls', 'modernus'],
+    includedHeading: 'Website design <em>for Woking businesses</em>',
+    structure: {
+      title: 'Example: a site for a Woking plumber',
+      items: [
+        'Home page: what you do, the areas you cover and a call button',
+        'A page for each main job, such as boiler repairs or bathroom fitting',
+        'Area pages only where there is real demand, such as Woking, Horsell or Knaphill',
+        'Photos of finished work and named reviews',
+        'Contact page with click-to-call and a short quote form',
+      ],
+    },
 
-    introLabel: 'Web design in Woking',
+    introLabel: 'Website design in Woking',
     introHeading: 'What I build for <em>Woking businesses</em>',
     intro: [
       'Most of the businesses I work with sell a service: trades, cleaning, decorating, clinics and small professional firms. Their website has three jobs. Tell a visitor straight away what you do and where you work. Show enough proof to earn their trust. Make contacting you easy on a phone.',
@@ -103,6 +114,16 @@ export const TOWNS = [
     role: 'Based in Epsom, working with Byfleet and West Byfleet businesses',
 
     projects: ['cs', 'modernus', 'stpauls'],
+    structure: {
+      title: 'Example: SEO for an electrician in the Byfleets',
+      items: [
+        'Keyword research: which jobs people search for, and which places they name',
+        'Separate pages for Byfleet and West Byfleet, plus Pyrford if you work there',
+        'Service pages for the jobs worth winning, such as rewires or EV chargers',
+        'Google Business Profile categories and service areas to match',
+        'A monthly report on which pages are gaining searches and clicks',
+      ],
+    },
 
     introLabel: 'Local SEO in Byfleet & West Byfleet',
     introHeading: 'What local SEO <em>actually involves</em>',
@@ -131,7 +152,7 @@ export const TOWNS = [
       },
       {
         q: 'Can you do SEO on a website someone else built?',
-        a: 'The SEO Retainer runs on sites I have built on the Growth or Bookings &amp; Ordering package, because the monthly work means changing and adding pages. If your current site is holding you back, the first step is a rebuild, and I will tell you on the first call whether that is worth doing.',
+        a: 'Yes, after a free audit. I look at the site and tell you plainly whether it can be worked with. If it can, the SEO Retainer is the same £199 a month, as long as I can make changes to the site. If it is holding you back, I will say so and recommend a rebuild instead. <a href="seo-services.html">More on SEO for existing sites</a>.',
       },
       {
         q: 'Do you cover West Byfleet as well as Byfleet?',
@@ -140,7 +161,7 @@ export const TOWNS = [
     ],
 
     relatedAreas: ['woking', 'guildford', 'kingston', 'epsom'],
-    relatedServices: ['trades', 'casestudy', 'services', 'pricing'],
+    relatedServices: ['seo', 'trades', 'casestudy', 'pricing'],
   },
 
   /* ---------------------------------------------------------------- 3 */
@@ -168,8 +189,19 @@ export const TOWNS = [
     role: 'Based in Epsom, building websites for Kingston businesses',
 
     projects: ['modernus', 'cs', 'stpauls'],
+    includedHeading: 'Website design in <em>Kingston upon Thames</em>',
+    structure: {
+      title: 'Example: a site for a Kingston clinic',
+      items: [
+        'Home page: the treatments, who they suit and how to book',
+        'A page for each treatment, written for the questions patients ask',
+        'Online booking with availability rules, on the Bookings &amp; Ordering package',
+        'About the practitioners, with qualifications',
+        'Location details for Kingston and Surbiton, matched to the Google Business Profile',
+      ],
+    },
 
-    introLabel: 'Web design in Kingston',
+    introLabel: 'Website design in Kingston',
     introHeading: 'Sites for shops, trades <em>and service businesses</em>',
     intro: [
       'Kingston businesses are not all shopfronts. Plenty of people searching here want a plumber in Surbiton, a cleaner in New Malden or a decorator in Tolworth, and the businesses that serve them run from a van or a small office rather than a high street unit.',
@@ -225,11 +257,21 @@ export const TOWNS = [
     role: 'Based in Epsom, building websites for Wimbledon businesses',
 
     projects: ['modernus', 'stpauls', 'cs'],
+    structure: {
+      title: 'Example: a site for a Wimbledon Village salon',
+      items: [
+        'Home page: the treatments, prices and opening hours at a glance',
+        'A page for each main treatment, with photos of the salon',
+        'Online booking so appointments do not depend on answering the phone',
+        'Directions to the Village, matched to the Google Business Profile',
+        'Named reviews from real clients',
+      ],
+    },
 
-    introLabel: 'Web design in Wimbledon',
+    introLabel: 'Website design in Wimbledon',
     introHeading: 'Say where you are, <em>and who you serve</em>',
     intro: [
-      'Wimbledon Village and the town centre around the station are different places with different customers, and people often search for them by name. A site that names the area you actually work in, and the neighbourhoods you cover such as Raynes Park, Morden or Merton Park, gives Google and your customers a clearer picture than one that just says "London".',
+      'I offer website design for businesses in Wimbledon and Merton, from independents in the Village to trades covering the whole borough. Wimbledon Village and the town centre around the station are different places with different customers, and people often search for them by name. A site that names the area you actually work in, and the neighbourhoods you cover such as Raynes Park, Morden or Merton Park, gives Google and your customers a clearer picture than one that just says "London".',
       'For a service business, the site needs a page for each main service and a simple way to call or send an enquiry. For a shop, café or salon, it needs accurate hours, location and a Google Business Profile that matches the site.',
     ],
     whoFor: [
@@ -276,12 +318,22 @@ export const TOWNS = [
     role: 'Based in Epsom, building websites for Guildford businesses',
 
     projects: ['cs', 'stpauls', 'modernus'],
+    structure: {
+      title: 'Example: a site for a Guildford accountancy practice',
+      items: [
+        'Home page: who you work with and what you do for them',
+        'A page for each service, such as tax returns, bookkeeping or payroll',
+        'How pricing works, even if the prices are quoted',
+        'Team page with qualifications and a photo of each person',
+        'Contact page with a short enquiry form and office location',
+      ],
+    },
 
-    introLabel: 'Web design in Guildford',
+    introLabel: 'Website design in Guildford',
     introHeading: 'Built for how your <em>customers decide</em>',
     intro: [
       'Many Guildford businesses sell to people who compare two or three firms before they pick up the phone, whether that is a homeowner choosing a trade or another business choosing a supplier. The site has to answer their questions before they ask: what you do, where you work, what it costs or how pricing works, and what past customers said.',
-      'If you cover more than the town itself, such as Godalming, Cranleigh or the villages along the A3, the Growth package adds pages for those areas, planned from keyword research rather than guesswork.',
+      'The website design itself follows from that: clear service pages, your prices or how pricing works, proof from past clients, and a quick way to get in touch. If you cover more than the town itself, such as Godalming, Cranleigh or the villages along the A3, the Growth package adds pages for those areas, planned from keyword research rather than guesswork. The local SEO groundwork is included either way.',
     ],
     whoFor: [
       'Trades and home services',
@@ -524,5 +576,123 @@ export const TOWNS = [
 
     relatedAreas: ['sutton', 'cheam', 'kingston', 'reigate'],
     relatedServices: ['cleaning', 'trades', 'casestudy', 'pricing'],
+  },
+
+  /* ------------------------------------------------------------ Sutton
+     Moved from a hand-written page. URL and title kept as they were live. */
+  {
+    slug: 'sutton',
+    town: 'Sutton',
+    fullName: 'Sutton',
+    region: 'South London',
+    geoRegion: 'GB-SRY',
+    focus: 'design',
+
+    title: 'Web Design & SEO Sutton | MartKam Digital',
+    description:
+      'Website design and local SEO for businesses in Sutton, South London, including a Sutton-based client. Copy written for you and prices published up front.',
+    ogDescription:
+      'Website design and local SEO for Sutton businesses, with a Sutton client and real results to show.',
+    schemaDescription:
+      'Website design and local SEO for businesses in Sutton and the London Borough of Sutton.',
+
+    crumb: 'Web design in Sutton',
+    h1: 'Web design for Sutton businesses',
+    benefit: 'A clear, fast website and local SEO for businesses across Sutton and the borough.',
+    heroCopy:
+      'I build websites and handle local SEO for businesses in Sutton, Cheam, Carshalton, Wallington and Belmont. The copy is written for you, the SEO groundwork is included, and the prices are published.',
+    role: 'Based in Epsom, building websites for Sutton businesses',
+
+    projects: ['cs', 'modernus', 'stpauls'],
+    includedHeading: 'Website design <em>for Sutton businesses</em>',
+
+    introLabel: 'Website design in Sutton',
+    introHeading: 'A Sutton client, <em>and what the work involved</em>',
+    intro: [
+      'C&amp;S Cleaning Services is based in Sutton and cleans the communal areas of blocks of flats across Surrey and South West London. They had no website and no Google presence. I built their logo, their website and their Google Business Profile, aimed at the building managers and landlords who award that work.',
+      'In the first three months after launch the site had over 5,000 search impressions, around 50 clicks, enquiries coming in, and one paid job won through it. <a href="case-study-cs-cleaning.html">The case study has the details</a>.',
+      'For most Sutton businesses the website design follows the same pattern: a clear home page, a page for each main service, pages for the parts of the borough you actually cover, and a quick way to call or send an enquiry. Location and service pages come with the <a href="pricing.html">Growth package</a>.',
+    ],
+    whoFor: [
+      'Trades and home services across the borough',
+      'Cleaning and property-services firms',
+      'Shops, cafés and salons in and around the town centre',
+      'Clinics and studios taking bookings',
+    ],
+    meeting:
+      'I am based in Epsom, a short trip from Sutton, so meeting in person is easy if you would like to. Most projects still run over phone and video.',
+
+    faqs: [
+      {
+        q: 'Have you worked with a Sutton business before?',
+        a: 'Yes. C&amp;S Cleaning Services is based in Sutton. Their website is linked on this page, and the case study shows the first three months of results.',
+      },
+      {
+        q: 'Do you cover Cheam, Carshalton and the rest of the borough?',
+        a: 'Yes. I work across the London Borough of Sutton, including Cheam, Carshalton, Wallington and Belmont, and nearby Epsom, Morden and Worcester Park.',
+      },
+    ],
+
+    relatedAreas: ['cheam', 'epsom', 'wimbledon', 'kingston'],
+    relatedServices: ['cleaning', 'casestudy', 'seo', 'pricing'],
+  },
+
+  /* ------------------------------------------------------------- Cheam
+     Moved from a hand-written page. URL and title kept as they were live. */
+  {
+    slug: 'cheam',
+    town: 'Cheam',
+    fullName: 'Cheam',
+    region: 'Surrey',
+    geoRegion: 'GB-SRY',
+    focus: 'design',
+
+    title: 'Web Design & SEO Cheam | MartKam Digital',
+    description:
+      'Website design and local SEO for businesses in Cheam, including a Cheam-registered client. Copy written for you and prices published up front.',
+    ogDescription:
+      'Website design and local SEO for Cheam businesses, from someone who has built for a Cheam firm.',
+    schemaDescription:
+      'Website design and local SEO for businesses in Cheam and the surrounding area.',
+
+    crumb: 'Web design in Cheam',
+    h1: 'Web design for Cheam businesses',
+    benefit: 'A website that turns a word-of-mouth reputation into enquiries from people searching nearby.',
+    heroCopy:
+      'I build websites and handle local SEO for businesses in Cheam Village, North Cheam and the surrounding area. The copy is written for you, the SEO groundwork is included, and the prices are published.',
+    role: 'Based in Epsom, building websites for Cheam businesses',
+
+    projects: ['modernus', 'cs', 'stpauls'],
+    includedHeading: 'Website design <em>for Cheam businesses</em>',
+
+    introLabel: 'Website design in Cheam',
+    introHeading: 'A Cheam client, <em>and what the work involved</em>',
+    intro: [
+      'Modernus Decoration Projects is registered in Cheam and decorates homes across Central and South West London. The business had run on word of mouth for years, with no online presence at all. I built a website that matched the standard of their finished work.',
+      'In their director&rsquo;s words: &ldquo;Within weeks we were getting enquiries from customers we&rsquo;d never have reached before.&rdquo; The live site is linked on this page.',
+      'For most Cheam businesses the website design follows the same pattern: a clear home page, a page for each main service, the areas you actually cover, and a quick way to call or send an enquiry. Location and service pages come with the <a href="pricing.html">Growth package</a>.',
+    ],
+    whoFor: [
+      'Decorators, builders and home-improvement trades',
+      'Independent shops, cafés and salons in Cheam Village',
+      'Clinics and studios taking bookings',
+      'Professional practices found mostly by referral',
+    ],
+    meeting:
+      'I am based in Epsom, a short trip from Cheam, so meeting in person is easy if you would like to. Most projects still run over phone and video.',
+
+    faqs: [
+      {
+        q: 'Have you worked with a Cheam business before?',
+        a: 'Yes. Modernus Decoration Projects is registered in Cheam. Their website is linked on this page, along with what their director said about the work.',
+      },
+      {
+        q: 'Do you cover North Cheam, Sutton and nearby areas?',
+        a: 'Yes. I work across Cheam, North Cheam and the rest of the London Borough of Sutton, and nearby Ewell, Epsom and Worcester Park.',
+      },
+    ],
+
+    relatedAreas: ['sutton', 'epsom', 'kingston', 'wimbledon'],
+    relatedServices: ['trades', 'casestudy', 'seo', 'pricing'],
   },
 ];
