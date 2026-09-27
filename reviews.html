@@ -255,7 +255,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   position:relative;
   z-index:5;
   width:100%;
-  max-width:660px;
+  max-width:680px;
   margin:0;
 }
 
@@ -281,7 +281,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 
 .hero-heading {
   font-family:var(--serif);
-  font-size:clamp(2.8rem, 5.5vw, 5rem);
+  font-size:clamp(2.6rem, 4.6vw, 4.1rem);
   font-weight:300;
   line-height:1.06;
   color:var(--ink);
@@ -315,7 +315,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   font-size:1rem;
   line-height:1.8;
   color:var(--ink-light);
-  max-width:460px;
+  max-width:620px;
   margin-bottom:40px;
 }
 
@@ -697,6 +697,23 @@ body > footer {
 .why-card-icon svg{width:22px;height:22px;color:var(--red-text);}
 .cdetail-icon svg,.tcard-decor svg{width:18px;height:18px;color:var(--red-text);}
 .srv-icon,.pcard-icon{line-height:0;}
+
+/* No dash-like lines anywhere: labels show as plain text, and list markers are dots. */
+.hero-label::before, .section-label::before, .section-label::after, .faq-eyebrow::before,
+.contact-hero-label::before, .policy-label::before, .lr-label::before { display:none !important; content:none !important; }
+.srv-feats li::before { width:6px !important; height:6px !important; border-radius:50%; flex-shrink:0; }
+.cprep-list li::before { width:6px !important; height:6px !important; border-radius:50%; top:10px !important; left:4px !important; }
+
+/* Readable line lengths on laptops and monitors (phones unchanged). */
+h1, h2, h3, .section-title, .faq-title, blockquote { text-wrap:balance; }
+.hero-heading { text-wrap:nowrap; }
+@media (max-width:600px){ .hero-heading { text-wrap:wrap; } }
+@media (min-width:901px){
+  .faq-layout { grid-template-columns:minmax(320px, 1fr) 1.55fr; gap:64px; }
+  .faq-title { font-size:clamp(2rem, 2.6vw, 2.6rem); }
+}
+@media (min-width:901px){ .testi-grid, .trust-grid { grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); } }
+p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragraph's last line */
 </style>
 </head>
 <body>
@@ -711,7 +728,7 @@ body > footer {
     <a href="about.html" class="tl-item" data-section="about">About Me</a>
     <a href="services.html" class="tl-item" data-section="services">Services</a>
     <a href="reviews.html" class="tl-item active" data-section="reviews">Reviews</a>
-    <a href="index.html#process" class="tl-item">My Process</a>
+    <a href="portfolio.html" class="tl-item">Client Portfolio</a>
     <a href="pricing.html" class="tl-item">Pricing</a>
     <a href="contact.html" class="tl-item">Contact</a>
   </div>
@@ -724,7 +741,7 @@ body > footer {
     <a href="about.html" class="mob-item">About Me</a>
     <a href="services.html" class="mob-item">Services</a>
     <a href="reviews.html" class="mob-item active">Reviews</a>
-    <a href="index.html#process" class="mob-item">My Process</a>
+    <a href="portfolio.html" class="mob-item">Client Portfolio</a>
     <a href="pricing.html" class="mob-item">Pricing</a>
     <a href="contact.html" class="mob-item">Contact</a>
     <a href="contact.html" class="mob-cta">Let's Talk</a>
@@ -750,7 +767,7 @@ body > footer {
   <div class="hero-inner">
     <div class="hero-label">Client Stories</div>
     <h1 class="hero-heading">
-      What my Customers<br><em>say about me.</em>
+      What my customers<br><em>say about me.</em>
     </h1>
     <div class="hero-rating">
       <span class="hero-stars">★★★★★</span>
@@ -938,7 +955,7 @@ body > footer {
           </button>
           <div class="faq-body">
             <div class="faq-body-inner">
-              <p class="faq-answer">Three packages, all published. <strong>£595</strong> for a Starter site, <strong>£1,295</strong> for a Growth site, and <strong>£1,995</strong> if the site needs to take bookings or payments. Copywriting and the SEO groundwork are in all three. <a href="pricing.html">The full pricing is here</a>, including what is in each package, the Care Plan and the SEO Retainer.</p>
+              <p class="faq-answer">Three packages, all published. <strong>£595</strong> for a Starter site, <strong>£999</strong> for a Growth site, and <strong>£1,995</strong> if the site needs to take bookings or payments. Copywriting and the SEO groundwork are in all three. <a href="pricing.html">The full pricing is here</a>, including what is in each package, the Care Plan and the SEO Retainer.</p>
             </div>
           </div>
         </div>
@@ -998,7 +1015,7 @@ body > footer {
           </button>
           <div class="faq-body">
             <div class="faq-body-inner">
-              <p class="faq-answer">Not at all. Updates go through me, so you never need to learn any software: send me what you want changed and I reply within one working day. The Care Plan covers hosting, backups and up to 30 minutes of edits a month at £20 a month, and the SEO Retainer that keeps the site ranking is £199. <a href="pricing.html">Both are on the pricing page.</a></p>
+              <p class="faq-answer">Not at all. Updates go through me, so you never need to learn any software: send me what you want changed and I reply within one working day. The Care Plan covers hosting, backups and up to 30 minutes of edits a month at £20 a month, and the SEO Retainer, which keeps the site ranking and includes everyday changes with no hourly billing, is £199. <a href="pricing.html">Both are on the pricing page.</a></p>
             </div>
           </div>
         </div>

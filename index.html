@@ -31,6 +31,8 @@
 
 
 
+
+
 <!-- FAQ structured data: generated from the homepage FAQ, keep in step -->
 <script type="application/ld+json">
 {
@@ -43,7 +45,7 @@
       "name": "How much does a website cost, including ongoing fees?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "£595, £1,295 or £1,995 to build. After launch, the Care Plan covers hosting, security, backups, one business email inbox and small edits for £20 a month or £200 a year. It is free for the first 12 months on Growth and Bookings & Ordering, and required for at least 6 months on Starter. Your domain is billed at cost, usually £12 to £15 a year. Ongoing SEO is optional, at £199 a month. No VAT. See the full pricing."
+        "text": "£595, £999 or £1,995 to build. After launch, the Care Plan covers hosting, security, backups, one business email inbox and small edits for £20 a month or £200 a year. It is free for the first 12 months on Growth and Bookings & Ordering, and required for at least 6 months on Starter. Your domain is billed at cost, usually £12 to £15 a year. Ongoing SEO is optional, at £199 a month. No VAT. See the full pricing."
       }
     },
     {
@@ -67,7 +69,7 @@
       "name": "Do I need to write the content or provide photos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No writing needed. Copywriting is included in every package: we have one 30-minute call, you talk about the business, and I write the pages. Your own photos work best. If you do not have any, I can use quality stock photos at no extra cost, and on Growth and Bookings & Ordering I can take care of professional photography for you. After the content call, send me any photos and logins I need."
+        "text": "No writing needed. Copywriting is included in every package: we have one 30-minute call, you talk about the business, and I write the pages. Professional photos of your business are included on Growth and Bookings & Ordering. On Starter, send me your own or I can use quality stock photos at no extra cost. After the content call, send me any photos and logins I need."
       }
     },
     {
@@ -91,7 +93,7 @@
       "name": "Can I update the website, and what support is available?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Updates go through me, so you never need to learn any software. Send me what you want changed and I will reply within one working day. The Care Plan covers up to 30 minutes of edits a month, such as prices, opening hours or new photos. Anything beyond that is £45 an hour. You also get a walkthrough call at handover. What the Care Plan includes."
+        "text": "Updates go through me, so you never need to learn any software. Send me what you want changed and I will reply within one working day. The Care Plan covers up to 30 minutes of edits a month. On the SEO Retainer, everyday changes are included with no hourly billing; otherwise anything beyond 30 minutes is £45 an hour. You also get a walkthrough call at handover. What the Care Plan includes."
       }
     },
     {
@@ -520,7 +522,7 @@ nav {
 /* SERVICES */
 .services-bg { background:var(--mist); }
 .services-header { text-align:center; margin-bottom:64px; }
-.srv-primary { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--border); margin-bottom:2px; }
+.srv-primary { display:grid; grid-template-columns:repeat(2,1fr); gap:2px; background:var(--border); margin-bottom:2px; }
 .srv-item { background:var(--white); padding:48px 40px; position:relative; overflow:hidden; transition:background .3s; cursor:pointer; display:flex; flex-direction:column; gap:16px; }
 /* The specialism spans the full row above the three core cards, so a prospect
    arriving from outreach meets it before anything generic. */
@@ -857,6 +859,25 @@ body > footer {
 .why-card-icon svg{width:22px;height:22px;color:var(--red-text);}
 .cdetail-icon svg,.tcard-decor svg{width:18px;height:18px;color:var(--red-text);}
 .srv-icon,.pcard-icon{line-height:0;}
+
+/* No dash-like lines anywhere: labels show as plain text, and list markers are dots. */
+.hero-label::before, .section-label::before, .section-label::after, .faq-eyebrow::before,
+.contact-hero-label::before, .policy-label::before, .lr-label::before { display:none !important; content:none !important; }
+.srv-feats li::before { width:6px !important; height:6px !important; border-radius:50%; flex-shrink:0; }
+.cprep-list li::before { width:6px !important; height:6px !important; border-radius:50%; top:10px !important; left:4px !important; }
+
+/* Readable line lengths on laptops and monitors (phones unchanged). */
+h1, h2, h3, .section-title, .faq-title, blockquote { text-wrap:balance; }
+@media (min-width:901px){
+  .faq-layout { grid-template-columns:minmax(320px, 1fr) 1.55fr; gap:64px; }
+  .faq-title { font-size:clamp(2rem, 2.6vw, 2.6rem); }
+}
+@media (min-width:981px){ .aud-grid { grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); } }
+p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragraph's last line */
+
+/* multi-line bullets: dot sits beside the first line */
+.srv-feats li { align-items:flex-start; }
+.srv-feats li::before { margin-top:0.6em; }
 </style>
 </head>
 <body>
@@ -871,7 +892,7 @@ body > footer {
     <a href="about.html" class="tl-item" data-section="about">About Me</a>
     <a href="services.html" class="tl-item" data-section="services">Services</a>
     <a href="reviews.html" class="tl-item" data-section="reviews">Reviews</a>
-    <a href="#process" class="tl-item" data-section="process">My Process</a>
+    <a href="portfolio.html" class="tl-item" data-section="portfolio">Client Portfolio</a>
     <a href="pricing.html" class="tl-item" data-section="pricing">Pricing</a>
     <a href="contact.html" class="tl-item" data-section="contact">Contact</a>
   </div>
@@ -888,7 +909,7 @@ body > footer {
     <a href="about.html" class="mob-item">About Me</a>
     <a href="services.html" class="mob-item">Services</a>
     <a href="reviews.html" class="mob-item">Reviews</a>
-    <a href="#process" class="mob-item">My Process</a>
+    <a href="portfolio.html" class="mob-item">Client Portfolio</a>
     <a href="pricing.html" class="mob-item">Pricing</a>
     <a href="contact.html" class="mob-item">Contact</a>
     <a href="contact.html" class="mob-cta">Let's Talk</a>
@@ -1034,7 +1055,7 @@ body > footer {
       </a>
 
     </div>
-    <p class="work-note fade-up"><a href="reviews.html">Read what these clients said &rarr;</a> &nbsp;&middot;&nbsp; Want the same for your business? <a href="contact.html">Book a free 20-minute call</a>.</p>
+    <p class="work-note fade-up"><a href="portfolio.html">See the full client portfolio &rarr;</a> &nbsp;&middot;&nbsp; <a href="reviews.html">Read what these clients said &rarr;</a> &nbsp;&middot;&nbsp; Want the same for your business? <a href="contact.html">Book a free 20-minute call</a>.</p>
   </div>
 </section>
 
@@ -1080,11 +1101,11 @@ body > footer {
           <div class="about-label-icon"><span></span><span></span></div>
           <span class="label" style="margin:0;">About Martin</span>
         </div>
-        <h2 class="section-title">Local web designer in Epsom, <em>for businesses across Surrey</em></h2>
-        <p>I&rsquo;m Martin Kaminski. I design websites and run local SEO for small businesses in Epsom, across Surrey and South West London. Trades, shops, salons, clinics, contractors and takeaways: if you need to be found by people nearby and look credible when they arrive, that is the job.</p>
+        <h2 class="section-title">Web designer in Epsom, <em>for businesses UK-wide</em></h2>
+        <p>I&rsquo;m Martin Kaminski. I&rsquo;m based in Epsom, and I design websites and run local SEO for small businesses anywhere in the UK. Trades, shops, salons, clinics, contractors and takeaways: if you need to be found by people in your area and look credible when they arrive, that is the job.</p>
         <p><strong>You deal with the person who builds the site.</strong> No account manager, no handover to someone junior, no ticket queue. The prices are on the site, the scope goes in writing, and if I am not the right person for what you need I will say so on the first call.</p>
         <ul class="about-facts">
-          <li>Based in Epsom, and happy to meet in person across Surrey and South West London</li>
+          <li>Working with businesses UK-wide: in person nearby, by phone and video everywhere else</li>
           <li>Hand-coded websites, with the copy written for you</li>
           <li>Prices published up front, from &pound;595</li>
         </ul>
@@ -1113,7 +1134,7 @@ body > footer {
     
 
         <div class="srv-item fade-up">
-        <div class="srv-badge">Core Service</div>
+        <div class="srv-badge">Flagship service</div>
         <div class="srv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
         <h3>Website Design & Build</h3>
         <p>Custom-designed from the Growth package up, built around your business, your brand and your goals. The £595 Starter site uses a proven template styled to your brand. Every tier is hand-coded and mobile-first, with no page-builder bloat.</p>
@@ -1131,24 +1152,41 @@ body > footer {
       </div>
 
       <div class="srv-item fade-up fade-up-d2">
-        <div class="srv-badge">Core Service</div>
-        <div class="srv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <h3>SEO & Google Business Profile</h3>
-        <p>Get your business found by local customers actively searching for what you offer. I set up and optimise your Google Business Profile, and build the on-page SEO foundations that help you rank in Surrey and South West London.</p>
+        <div class="srv-badge">Flagship service</div>
+        <div class="srv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><polyline points="7 13 10 10 12 12 15 8"/></svg></div>
+        <h3>SEO &amp; Search Growth</h3>
+        <p>The work that keeps bringing in enquiries after launch. I research exactly what your customers type into Google, then plan and build the pages that answer those searches, one focused campaign at a time.</p>
         <ul class="srv-feats">
-          <li>Google Business Profile setup & optimisation</li>
-          <li>Local SEO to rank in your area</li>
-          <li>Keyword research & on-page optimisation</li>
-          <li>Google Maps visibility & review strategy</li>
-          <li>Monthly report on the SEO Retainer</li>
+          <li>Deep keyword research across your services, areas and the questions customers ask</li>
+          <li>Search campaigns: planned runs of service and location pages, one goal at a time</li>
+          <li>A new or improved page every month, and extra pages when you want to move faster</li>
+          <li>Monthly technical checks: speed, indexing, broken links and structured data</li>
+          <li>Everyday changes to your site included, with no hourly billing</li>
+          <li>From &pound;199 a month on the SEO Retainer</li>
         </ul>
         <div class="srv-item-footer">
-          <span class="srv-tag">SEO & Google</span>
+          <span class="srv-tag">SEO</span>
+          <span class="srv-arrow">↗</span>
+        </div>
+      </div>
+      <div class="srv-item fade-up fade-up-d2">
+        <div class="srv-badge">Supporting service</div>
+        <div class="srv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3>Google Business Profile</h3>
+        <p>Often the first thing people see when they search for a local business. I set up or tidy your profile with the right categories, services, areas and opening hours, and make sure it matches your website.</p>
+        <ul class="srv-feats">
+          <li>Set up or cleaned up with every website package</li>
+          <li>Categories, services and service areas chosen for how people search</li>
+          <li>Review capture set up on the Growth package</li>
+          <li>Posts and review management on the SEO Retainer</li>
+        </ul>
+        <div class="srv-item-footer">
+          <span class="srv-tag">Google Business Profile</span>
           <span class="srv-arrow">↗</span>
         </div>
       </div>
       <div class="srv-item fade-up fade-up-d3">
-        <div class="srv-badge">Core Service</div>
+        <div class="srv-badge">Supporting service</div>
         <div class="srv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
         <h3>Hosting & Domain Packages</h3>
         <p>Hosting, security, backups and a business email inbox are all handled for you on the Care Plan, so there is nothing technical for you to manage. Your domain is registered in your name from day one.</p>
@@ -1453,7 +1491,7 @@ body > footer {
           </button>
           <div class="faq-body" id="faq-a0">
             <div class="faq-body-inner">
-              <p class="faq-answer"><strong>£595, £1,295 or £1,995</strong> to build. After launch, the Care Plan covers hosting, security, backups, one business email inbox and small edits for £20 a month or £200 a year. It is free for the first 12 months on Growth and Bookings &amp; Ordering, and required for at least 6 months on Starter. Your domain is billed at cost, usually £12 to £15 a year. Ongoing SEO is optional, at £199 a month. No VAT. <a href="pricing.html">See the full pricing</a>.</p>
+              <p class="faq-answer"><strong>£595, £999 or £1,995</strong> to build. After launch, the Care Plan covers hosting, security, backups, one business email inbox and small edits for £20 a month or £200 a year. It is free for the first 12 months on Growth and Bookings &amp; Ordering, and required for at least 6 months on Starter. Your domain is billed at cost, usually £12 to £15 a year. Ongoing SEO is optional, at £199 a month. No VAT. <a href="pricing.html">See the full pricing</a>.</p>
             </div>
           </div>
         </div>
@@ -1486,7 +1524,7 @@ body > footer {
           </button>
           <div class="faq-body" id="faq-a3">
             <div class="faq-body-inner">
-              <p class="faq-answer">No writing needed. Copywriting is included in every package: we have one 30-minute call, you talk about the business, and I write the pages. Your own photos work best. If you do not have any, I can use quality stock photos at no extra cost, and on Growth and Bookings &amp; Ordering I can take care of professional photography for you. After the content call, send me any photos and logins I need.</p>
+              <p class="faq-answer">No writing needed. Copywriting is included in every package: we have one 30-minute call, you talk about the business, and I write the pages. Professional photos of your business are included on Growth and Bookings &amp; Ordering. On Starter, send me your own or I can use quality stock photos at no extra cost. After the content call, send me any photos and logins I need.</p>
             </div>
           </div>
         </div>
@@ -1519,7 +1557,7 @@ body > footer {
           </button>
           <div class="faq-body" id="faq-a6">
             <div class="faq-body-inner">
-              <p class="faq-answer">Updates go through me, so you never need to learn any software. Send me what you want changed and I will reply within one working day. The Care Plan covers up to 30 minutes of edits a month, such as prices, opening hours or new photos. Anything beyond that is £45 an hour. You also get a walkthrough call at handover. <a href="pricing.html">What the Care Plan includes</a>.</p>
+              <p class="faq-answer">Updates go through me, so you never need to learn any software. Send me what you want changed and I will reply within one working day. The Care Plan covers up to 30 minutes of edits a month. On the SEO Retainer, everyday changes are included with no hourly billing; otherwise anything beyond 30 minutes is £45 an hour. You also get a walkthrough call at handover. <a href="pricing.html">What the Care Plan includes</a>.</p>
             </div>
           </div>
         </div>

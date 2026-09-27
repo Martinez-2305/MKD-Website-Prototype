@@ -61,7 +61,7 @@
           "name": "How much does a website cost for a Sutton business?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Three packages, all published. £595 for a Starter site, £1,295 for a Growth site, £1,995 if you need bookings or payments taking on it. I’m not VAT registered, so the price you see is the price you pay. The full pricing is on the pricing page."
+            "text": "Three packages, all published. £595 for a Starter site, £999 for a Growth site, £1,995 if you need bookings or payments taking on it. I’m not VAT registered, so the price you see is the price you pay. The full pricing is on the pricing page."
           }
         },
         {
@@ -139,6 +139,12 @@
 @font-face{font-family:'Fraunces';font-style:normal;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-latin.woff2') format('woff2');}
 @font-face{font-family:'Fraunces';font-style:italic;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-italic-latin.woff2') format('woff2');}
 @font-face{font-family:'DM Sans';font-style:normal;font-weight:300 600;font-display:swap;src:url('fonts/dmsans-latin.woff2') format('woff2');}
+
+/* No dash-like lines anywhere: labels show as plain text, and list markers are dots. */
+.hero-label::before, .section-label::before, .section-label::after, .faq-eyebrow::before,
+.contact-hero-label::before, .policy-label::before, .lr-label::before { display:none !important; content:none !important; }
+.srv-feats li::before { width:6px !important; height:6px !important; border-radius:50%; flex-shrink:0; }
+.cprep-list li::before { width:6px !important; height:6px !important; border-radius:50%; top:10px !important; left:4px !important; }
 </style>
 
 <link rel="stylesheet" href="css/location.css">
@@ -155,6 +161,7 @@
     <a href="about.html" class="tl-item">About Me</a>
     <a href="services.html" class="tl-item">Services</a>
     <a href="reviews.html" class="tl-item">Reviews</a>
+    <a href="portfolio.html" class="tl-item">Client Portfolio</a>
     <a href="pricing.html" class="tl-item">Pricing</a>
     <a href="contact.html" class="tl-item">Contact</a>
   </div>
@@ -171,6 +178,7 @@
     <a href="about.html" class="mob-item">About Me</a>
     <a href="services.html" class="mob-item">Services</a>
     <a href="reviews.html" class="mob-item">Reviews</a>
+    <a href="portfolio.html" class="mob-item">Client Portfolio</a>
     <a href="pricing.html" class="mob-item">Pricing</a>
     <a href="contact.html" class="mob-item">Contact</a>
     <a href="contact.html" class="mob-cta">Let's Talk</a>
@@ -276,7 +284,7 @@
 <!-- SERVICES -->
 <section class="section" style="background:var(--mist);">
   <div class="wrap">
-    <div style="text-align:center;max-width:600px;margin:0 auto;" class="fade-up">
+    <div style="text-align:center;max-width:880px;margin:0 auto;" class="fade-up">
       <span class="label">What I Do in Sutton</span>
       <h2 class="section-title">Everything your Sutton business<br><em>needs to compete online</em></h2>
     </div>
@@ -338,7 +346,7 @@
             <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
           </button>
           <div class="faq-body"><div class="faq-body-inner">
-            <p class="faq-answer">Three packages, all published. <strong>£595</strong> for a Starter site, <strong>£1,295</strong> for a Growth site, <strong>£1,995</strong> if you need bookings or payments taking on it. I&rsquo;m not VAT registered, so the price you see is the price you pay. <a href="pricing.html">The full pricing is here.</a></p>
+            <p class="faq-answer">Three packages, all published. <strong>£595</strong> for a Starter site, <strong>£999</strong> for a Growth site, <strong>£1,995</strong> if you need bookings or payments taking on it. I&rsquo;m not VAT registered, so the price you see is the price you pay. <a href="pricing.html">The full pricing is here.</a></p>
           </div></div>
         </div>
         <div class="faq-item">

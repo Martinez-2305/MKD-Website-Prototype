@@ -76,7 +76,7 @@ const PROJECTS = {
     alt: 'Home page of the C&amp;S Cleaning Services website',
     brief: 'A communal-area cleaning contractor with no website and no Google presence, whose buyers are building managers and landlords. The brief was to be findable to those buyers, and credible once they arrived.',
     outcome: 'First three months after launch: <strong>over 5,000 search impressions</strong>, <strong>around 50 clicks</strong>, enquiries coming in, and <strong>one paid job</strong> won through the site.',
-    links: [{ href: 'case-study-cs-cleaning.html', label: 'Read the full case study' }],
+    links: [{ href: 'https://www.cs-cleaningservices.co.uk/', label: 'Visit the live site', ext: true }, { href: 'case-study-cs-cleaning.html', label: 'Read the case study' }],
   },
   stpauls: {
     name: 'St Paul&rsquo;s Cleaning Services',
@@ -106,7 +106,7 @@ const PROJECTS = {
 const SHARED_FAQS = [
   {
     q: 'How much does a website cost?',
-    a: 'Three packages, all published. <strong>£595</strong> for Starter, a proven template styled to your brand. <strong>£1,295</strong> for Growth, a custom design with location and service pages. <strong>£1,995</strong> for Bookings &amp; Ordering, which adds bookings or payments. Ongoing SEO is separate, at £199 a month. I am not VAT registered, so the price you see is the price you pay. <a href="pricing.html">See the full pricing</a>.',
+    a: 'Three packages, all published. <strong>£595</strong> for Starter, a proven template styled to your brand. <strong>£999</strong> for Growth, a custom design with location and service pages. <strong>£1,995</strong> for Bookings &amp; Ordering, which adds bookings or payments. Ongoing SEO is separate, at £199 a month. I am not VAT registered, so the price you see is the price you pay. <a href="pricing.html">See the full pricing</a>.',
   },
   {
     q: 'I already have a website. Can you redesign it?',
@@ -118,7 +118,7 @@ const SHARED_FAQS = [
   },
   {
     q: 'What do I need to prepare?',
-    a: 'Very little. I write the copy from one 30-minute call: you talk about the business, I write the pages. Send your photos and any logins I need around that call. If you do not have photos, I can use quality stock at no extra cost, and on Growth and Bookings &amp; Ordering I can take care of professional photography for you.',
+    a: 'Very little. I write the copy from one 30-minute call: you talk about the business, I write the pages. Send your photos and any logins I need around that call. Professional photos of your business are included on Growth and Bookings &amp; Ordering. On Starter, send your own or I can use quality stock at no extra cost.',
   },
   {
     q: 'How long does it take?',
@@ -126,7 +126,7 @@ const SHARED_FAQS = [
   },
   {
     q: 'What support do I get after launch?',
-    a: 'Updates go through me, so you never need to learn any software, and I reply within one working day. You get a walkthrough call at handover and Search Console in your name. The Care Plan covers up to 30 minutes of edits a month, such as prices, opening hours or new photos. Changes outside that are £45 an hour. If you want the site to keep growing in search, the SEO Retainer adds a new or improved page every month.',
+    a: 'Updates go through me, so you never need to learn any software, and I reply within one working day. You get a walkthrough call at handover and Search Console in your name. The Care Plan covers up to 30 minutes of edits a month, such as prices, opening hours or new photos. On the SEO Retainer, everyday changes are included with no hourly billing, and it adds a new or improved page every month. Without it, changes beyond 30 minutes are £45 an hour.',
   },
 ];
 
@@ -176,7 +176,7 @@ const tierDesign = `      <div class="lp-inc-card">
           <p>A proven template styled to your brand: the layout is pre-set, and the colours, type, images and words are yours. Up to 5 pages, live in 2 to 3 weeks.</p>
         </div>
         <div class="lp-tier">
-          <h4>Growth <span>&middot; £1,295 &middot; custom design</span></h4>
+          <h4>Growth <span>&middot; £999 &middot; custom design</span></h4>
           <p>Designed around your business rather than templated. Up to 10 pages, including location and service pages aimed at the searches your customers make. Live in 3 to 4 weeks.</p>
         </div>
         <div class="lp-tier">
@@ -194,13 +194,181 @@ const tierSeo = `      <div class="lp-inc-card">
         </div>
         <div class="lp-tier">
           <h4>SEO Retainer <span>&middot; £199 a month, ongoing</span></h4>
-          <p>After launch: a monthly review of your search data, one new page or a rewrite of an existing one, a technical pass, Google Business Profile posts and review management, and a plain-English report. Available with Growth and Bookings &amp; Ordering.</p>
+          <p>After launch: a monthly review of your search data, one new page or a rewrite of an existing one, a technical pass, Google Business Profile posts and review management, and a plain-English report. Everyday changes to your site are included too, with no hourly billing. Available with Growth and Bookings &amp; Ordering.</p>
         </div>
         <div class="lp-tier">
           <h4>What I promise, and what I do not</h4>
           <p>I do not promise rankings, or a position by a date. I promise the monthly work, and if a month passes without it, that month is free.</p>
         </div>
       </div>`;
+
+
+/* Shared page chrome: used by every location page and the portfolio page. */
+const navBlock = (active = '') => `<!-- NAV -->
+<nav>
+  <div class="nav-logo"><a href="/"><img decoding="async" width="320" height="167" src="img/logo-320.webp" alt="MartKam Digital home"></a></div>
+  <div class="tubelight-nav" id="tlNav">
+    <div class="tl-bg-pill" id="tlBg"></div>
+    <div class="tl-lamp-wrap" id="tlLamp"><div class="tl-lamp-bar"><div class="tl-lamp-glow3"></div></div></div>
+    <a href="/" class="tl-item">Home</a>
+    <a href="about.html" class="tl-item">About Me</a>
+    <a href="services.html" class="tl-item">Services</a>
+    <a href="reviews.html" class="tl-item">Reviews</a>
+    <a href="portfolio.html" class="tl-item${active === 'portfolio' ? ' active' : ''}"${active === 'portfolio' ? ' aria-current="page"' : ''}>Client Portfolio</a>
+    <a href="pricing.html" class="tl-item">Pricing</a>
+    <a href="contact.html" class="tl-item">Contact</a>
+  </div>
+  <a href="#enquire" class="nav-cta">Let's Talk</a>
+  <button class="ham-btn" id="hamBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobMenu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <div class="mob-menu-inner">
+    <a href="/" class="mob-item">Home</a>
+    <a href="about.html" class="mob-item">About Me</a>
+    <a href="services.html" class="mob-item">Services</a>
+    <a href="reviews.html" class="mob-item">Reviews</a>
+    <a href="portfolio.html" class="mob-item">Client Portfolio</a>
+    <a href="pricing.html" class="mob-item">Pricing</a>
+    <a href="contact.html" class="mob-item">Contact</a>
+    <a href="#enquire" class="mob-cta">Let's Talk</a>
+  </div>
+</div>
+`;
+
+const footerBlock = () => `<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img loading="lazy" decoding="async" width="320" height="167" src="img/logo-320.webp" alt="MartKam Digital">
+      <p>Web design and local SEO for businesses across Surrey and South West London.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/share/1HmyjG7r2K/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/martkam_digital" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://share.google/xvQ0x2yGNj0gT0dC1" target="_blank" rel="noopener" aria-label="Google Business Profile">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h3>Services</h3>
+      <ul>
+        <li><a href="services.html">All services</a></li>
+        <li><a href="pricing.html">Packages &amp; prices</a></li>
+        <li><a href="web-design-for-trades.html">Trades &amp; construction</a></li>
+        <li><a href="web-design-for-cleaning-companies.html">Cleaning companies</a></li>
+        <li><a href="web-design-for-ecommerce.html">Bookings &amp; ordering</a></li>
+        <li><a href="portfolio.html">Client portfolio</a></li>
+        <li><a href="case-study-cs-cleaning.html">C&amp;S Cleaning case study</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Areas I cover</h3>
+      <ul>
+${Object.keys(AREA_PAGES).map(s => `        <li><a href="web-design-${s}.html">${AREA_PAGES[s].replace(/&(?!amp;)/g, '&amp;')}</a></li>`).join('\n')}
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; <span class="yr">2026</span> MartKam Digital. Web design &amp; local SEO &middot; Surrey &amp; South West London.</span>
+    <div class="footer-bottom-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="privacy-policy.html#cookies">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+<script>document.querySelectorAll(".yr").forEach(function(e){e.textContent=new Date().getFullYear();});</script>
+
+<script>
+const tlNav = document.getElementById('tlNav');
+const tlBg  = document.getElementById('tlBg');
+const tlLamp = document.getElementById('tlLamp');
+const tlItems = document.querySelectorAll('.tl-item');
+function movePill(el) {
+  const nr = tlNav.getBoundingClientRect(), er = el.getBoundingClientRect();
+  tlBg.style.cssText = \`left:\${er.left-nr.left}px;top:\${er.top-nr.top}px;width:\${er.width}px;height:\${er.height}px;\`;
+  tlLamp.style.cssText = \`left:\${er.left-nr.left+er.width/2}px;top:\${er.top-nr.top}px;\`;
+}
+const tlActive = tlNav.querySelector('.tl-item.active');
+if (tlActive) requestAnimationFrame(() => movePill(tlActive));
+tlItems.forEach(item => {
+  item.addEventListener('mouseenter', () => movePill(item));
+  item.addEventListener('mouseleave', () => { if (tlActive) movePill(tlActive); });
+});
+const hamBtn = document.getElementById('hamBtn');
+const mobMenu = document.getElementById('mobMenu');
+function setMenu(open) {
+  hamBtn.classList.toggle('open', open);
+  mobMenu.classList.toggle('open', open);
+  hamBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+hamBtn.addEventListener('click', () => setMenu(!mobMenu.classList.contains('open')));
+document.querySelectorAll('.mob-item, .mob-cta').forEach(item => item.addEventListener('click', () => setMenu(false)));
+document.querySelectorAll('.faq-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item'), body = item.querySelector('.faq-body');
+    const isOpen = btn.classList.contains('open');
+    document.querySelectorAll('.faq-btn.open').forEach(b => {
+      b.classList.remove('open'); b.setAttribute('aria-expanded','false');
+      b.closest('.faq-item').querySelector('.faq-body').classList.remove('open');
+    });
+    if (!isOpen) { btn.classList.add('open'); btn.setAttribute('aria-expanded','true'); body.classList.add('open'); }
+  });
+});
+</script>
+<script src="js/enquiry-form.js" defer></script>`;
+
+/* The short enquiry form: identical everywhere; form_source says where it was sent from. */
+const enquiryCard = (formId, subject, source) => `    <div class="hf-card" id="enquire">
+      <h2 id="hf-title">Tell me about your project</h2>
+      <p class="hf-desc" id="hf-desc">Need a new website or help getting found on Google? Send me a few details and I&rsquo;ll reply personally with the next steps.</p>
+      <form id="heroForm" class="js-enquiry" data-form-id="${formId}" action="https://formspree.io/f/meepbpqw" method="POST" aria-labelledby="hf-title" aria-describedby="hf-desc">
+        <input type="hidden" name="_subject" value="${subject}">
+        <input type="hidden" name="form_source" value="${source}">
+        <div class="hf-hp" aria-hidden="true">
+          <label for="hf-gotcha">Leave this field empty</label>
+          <input type="text" name="_gotcha" id="hf-gotcha" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="hf-alert" id="hf-alert" role="alert" hidden></div>
+        <div class="hf-field">
+          <label for="hf-name">Your name</label>
+          <input type="text" name="name" id="hf-name" autocomplete="name" autocapitalize="words" required aria-describedby="hf-name-error">
+          <p class="hf-error" id="hf-name-error" hidden></p>
+        </div>
+        <div class="hf-field">
+          <label for="hf-email">Email address</label>
+          <input type="email" name="email" id="hf-email" autocomplete="email" spellcheck="false" required aria-describedby="hf-email-error">
+          <p class="hf-error" id="hf-email-error" hidden></p>
+        </div>
+        <div class="hf-field">
+          <label for="hf-service">What do you need help with?</label>
+          <select name="service" id="hf-service" required aria-describedby="hf-service-error">
+            <option value="" disabled selected>Please choose&hellip;</option>
+            <option>New website</option>
+            <option>Website redesign</option>
+            <option>SEO / Google visibility</option>
+            <option>Not sure yet</option>
+          </select>
+          <p class="hf-error" id="hf-service-error" hidden></p>
+        </div>
+        <div class="hf-field">
+          <label for="hf-message">Tell me a little about your project <span class="hf-opt">(optional)</span></label>
+          <textarea name="message" id="hf-message" rows="2" maxlength="2000"></textarea>
+        </div>
+        <button type="submit" class="hf-submit">Send my enquiry</button>
+        <p class="hf-reassure">No obligation. Your message comes directly to Martin.</p>
+        <p class="hf-privacy">How I use your details: <a href="privacy-policy.html">Privacy Policy</a></p>
+      </form>
+      <p class="hf-success" id="hf-success" tabindex="-1" hidden>Thanks, your enquiry has been sent. I&rsquo;ll reply personally to the email address you provided.</p>
+    </div>`;
 
 function page(t) {
   const url = `${BASE}/web-design-${t.slug}.html`;
@@ -249,7 +417,7 @@ function page(t) {
         provider: { '@id': `${BASE}/#organization` },
         offers: [
           { '@type': 'Offer', name: 'Starter Site', price: '595', priceCurrency: 'GBP' },
-          { '@type': 'Offer', name: 'Growth Site', price: '1295', priceCurrency: 'GBP' },
+          { '@type': 'Offer', name: 'Growth Site', price: '999', priceCurrency: 'GBP' },
           { '@type': 'Offer', name: 'Bookings & Ordering Site', price: '1995', priceCurrency: 'GBP' },
         ],
       },
@@ -302,38 +470,7 @@ ${JSON.stringify(graph, null, 2)}
 </head>
 <body class="lp">
 
-<!-- NAV -->
-<nav>
-  <div class="nav-logo"><a href="/"><img decoding="async" width="320" height="167" src="img/logo-320.webp" alt="MartKam Digital home"></a></div>
-  <div class="tubelight-nav" id="tlNav">
-    <div class="tl-bg-pill" id="tlBg"></div>
-    <div class="tl-lamp-wrap" id="tlLamp"><div class="tl-lamp-bar"><div class="tl-lamp-glow3"></div></div></div>
-    <a href="/" class="tl-item">Home</a>
-    <a href="about.html" class="tl-item">About Me</a>
-    <a href="services.html" class="tl-item">Services</a>
-    <a href="reviews.html" class="tl-item">Reviews</a>
-    <a href="pricing.html" class="tl-item">Pricing</a>
-    <a href="contact.html" class="tl-item">Contact</a>
-  </div>
-  <a href="#enquire" class="nav-cta">Let's Talk</a>
-  <button class="ham-btn" id="hamBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobMenu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<!-- MOBILE MENU -->
-<div class="mob-menu" id="mobMenu">
-  <div class="mob-menu-inner">
-    <a href="/" class="mob-item">Home</a>
-    <a href="about.html" class="mob-item">About Me</a>
-    <a href="services.html" class="mob-item">Services</a>
-    <a href="reviews.html" class="mob-item">Reviews</a>
-    <a href="pricing.html" class="mob-item">Pricing</a>
-    <a href="contact.html" class="mob-item">Contact</a>
-    <a href="#enquire" class="mob-cta">Let's Talk</a>
-  </div>
-</div>
-
+${navBlock()}
 <main id="main">
 
 <!-- HERO: copy left, enquiry form right; stacked on phones -->
@@ -361,48 +498,7 @@ ${JSON.stringify(graph, null, 2)}
       </div>
     </div>
 
-    <div class="hf-card" id="enquire">
-      <h2 id="hf-title">Tell me about your project</h2>
-      <p class="hf-desc" id="hf-desc">Need a new website or help getting found on Google? Send me a few details and I&rsquo;ll reply personally with the next steps.</p>
-      <form id="heroForm" class="js-enquiry" data-form-id="location_hero" action="https://formspree.io/f/meepbpqw" method="POST" aria-labelledby="hf-title" aria-describedby="hf-desc">
-        <input type="hidden" name="_subject" value="New enquiry from the ${plain(place)} page">
-        <input type="hidden" name="form_source" value="Location page: ${plain(place)}">
-        <div class="hf-hp" aria-hidden="true">
-          <label for="hf-gotcha">Leave this field empty</label>
-          <input type="text" name="_gotcha" id="hf-gotcha" tabindex="-1" autocomplete="off">
-        </div>
-        <div class="hf-alert" id="hf-alert" role="alert" hidden></div>
-        <div class="hf-field">
-          <label for="hf-name">Your name</label>
-          <input type="text" name="name" id="hf-name" autocomplete="name" autocapitalize="words" required aria-describedby="hf-name-error">
-          <p class="hf-error" id="hf-name-error" hidden></p>
-        </div>
-        <div class="hf-field">
-          <label for="hf-email">Email address</label>
-          <input type="email" name="email" id="hf-email" autocomplete="email" spellcheck="false" required aria-describedby="hf-email-error">
-          <p class="hf-error" id="hf-email-error" hidden></p>
-        </div>
-        <div class="hf-field">
-          <label for="hf-service">What do you need help with?</label>
-          <select name="service" id="hf-service" required aria-describedby="hf-service-error">
-            <option value="" disabled selected>Please choose&hellip;</option>
-            <option>New website</option>
-            <option>Website redesign</option>
-            <option>SEO / Google visibility</option>
-            <option>Not sure yet</option>
-          </select>
-          <p class="hf-error" id="hf-service-error" hidden></p>
-        </div>
-        <div class="hf-field">
-          <label for="hf-message">Tell me a little about your project <span class="hf-opt">(optional)</span></label>
-          <textarea name="message" id="hf-message" rows="2" maxlength="2000"></textarea>
-        </div>
-        <button type="submit" class="hf-submit">Send my enquiry</button>
-        <p class="hf-reassure">No obligation. Your message comes directly to Martin.</p>
-        <p class="hf-privacy">How I use your details: <a href="privacy-policy.html">Privacy Policy</a></p>
-      </form>
-      <p class="hf-success" id="hf-success" tabindex="-1" hidden>Thanks, your enquiry has been sent. I&rsquo;ll reply personally to the email address you provided.</p>
-    </div>
+${enquiryCard('location_hero', `New enquiry from the ${plain(place)} page`, `Location page: ${plain(place)}`)}
   </div>
 </section>
 
@@ -478,13 +574,13 @@ ${incCards.join('\n')}
       <div class="lp-plan is-pick">
         <p class="lp-plan-flag">Most businesses want this one</p>
         <h3>Growth Site</h3>
-        <p class="lp-price">£1,295</p>
+        <p class="lp-price">£999</p>
         <p>For established businesses who want the phone to ring.</p>
         <ul>
           <li>Custom design</li>
           <li>Up to 10 pages, including location and service pages</li>
           <li>Full SEO setup and keyword research</li>
-          <li>Professional photography if you need it</li>
+          <li>Professional photos of your business included</li>
           <li>Care Plan free for 12 months</li>
           <li>Live in 3 to 4 weeks</li>
         </ul>
@@ -496,14 +592,14 @@ ${incCards.join('\n')}
         <ul>
           <li>Custom design, plus booking or ordering system</li>
           <li>Stripe payments</li>
-          <li>Professional photography if you need it</li>
+          <li>Professional photos of your business included</li>
           <li>Advanced SEO setup, first month of the SEO Retainer free</li>
           <li>Care Plan free for 12 months</li>
           <li>Live in 4 to 6 weeks</li>
         </ul>
       </div>
     </div>
-    <p class="lp-small"><strong>After launch:</strong> the Care Plan is £20 a month or £200 a year for hosting, SSL, daily backups, updates and 30 minutes of edits a month. The SEO Retainer is £199 a month, with a 6-month minimum on Growth and 12 months on Bookings &amp; Ordering. I am not VAT registered. <a href="pricing.html">See everything in each package</a>.</p>
+    <p class="lp-small"><strong>After launch:</strong> the Care Plan is £20 a month or £200 a year for hosting, SSL, daily backups, updates and 30 minutes of edits a month. The SEO Retainer is £199 a month and includes everyday changes to your site, with a 6-month minimum on Growth and 12 months on Bookings &amp; Ordering. I am not VAT registered. <a href="pricing.html">See everything in each package</a>.</p>
   </div>
 </section>
 
@@ -596,94 +692,144 @@ ${areaLinks.map(s => `          <li><a href="web-design-${s}.html">${AREA_PAGES[
 
 </main>
 
-<footer>
-  <div class="footer-top">
-    <div class="footer-brand">
-      <img loading="lazy" decoding="async" width="320" height="167" src="img/logo-320.webp" alt="MartKam Digital">
-      <p>Web design and local SEO for businesses across Surrey and South West London.</p>
-      <div class="footer-social">
-        <a href="https://www.facebook.com/share/1HmyjG7r2K/" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-        </a>
-        <a href="https://www.instagram.com/martkam_digital" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        </a>
-        <a href="https://share.google/xvQ0x2yGNj0gT0dC1" target="_blank" rel="noopener" aria-label="Google Business Profile">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-        </a>
-      </div>
-    </div>
-    <div class="footer-col">
-      <h3>Services</h3>
-      <ul>
-        <li><a href="services.html">All services</a></li>
-        <li><a href="pricing.html">Packages &amp; prices</a></li>
-        <li><a href="web-design-for-trades.html">Trades &amp; construction</a></li>
-        <li><a href="web-design-for-cleaning-companies.html">Cleaning companies</a></li>
-        <li><a href="web-design-for-ecommerce.html">Bookings &amp; ordering</a></li>
-        <li><a href="case-study-cs-cleaning.html">C&amp;S Cleaning case study</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h3>Areas I cover</h3>
-      <ul>
-${Object.keys(AREA_PAGES).map(s => `        <li><a href="web-design-${s}.html">${AREA_PAGES[s].replace(/&(?!amp;)/g, '&amp;')}</a></li>`).join('\n')}
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>&copy; <span class="yr">2026</span> MartKam Digital. Web design &amp; local SEO &middot; Surrey &amp; South West London.</span>
-    <div class="footer-bottom-links">
-      <a href="privacy-policy.html">Privacy Policy</a>
-      <a href="terms.html">Terms &amp; Conditions</a>
-      <a href="privacy-policy.html#cookies">Cookie Policy</a>
-    </div>
-  </div>
-</footer>
-<script>document.querySelectorAll(".yr").forEach(function(e){e.textContent=new Date().getFullYear();});</script>
+${footerBlock()}
+</body>
+</html>
+`;
+}
 
-<script>
-const tlNav = document.getElementById('tlNav');
-const tlBg  = document.getElementById('tlBg');
-const tlLamp = document.getElementById('tlLamp');
-const tlItems = document.querySelectorAll('.tl-item');
-function movePill(el) {
-  const nr = tlNav.getBoundingClientRect(), er = el.getBoundingClientRect();
-  tlBg.style.cssText = \`left:\${er.left-nr.left}px;top:\${er.top-nr.top}px;width:\${er.width}px;height:\${er.height}px;\`;
-  tlLamp.style.cssText = \`left:\${er.left-nr.left+er.width/2}px;top:\${er.top-nr.top}px;\`;
-}
-tlItems.forEach(item => {
-  item.addEventListener('mouseenter', () => movePill(item));
-});
-const hamBtn = document.getElementById('hamBtn');
-const mobMenu = document.getElementById('mobMenu');
-function setMenu(open) {
-  hamBtn.classList.toggle('open', open);
-  mobMenu.classList.toggle('open', open);
-  hamBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  document.body.style.overflow = open ? 'hidden' : '';
-}
-hamBtn.addEventListener('click', () => setMenu(!mobMenu.classList.contains('open')));
-document.querySelectorAll('.mob-item, .mob-cta').forEach(item => item.addEventListener('click', () => setMenu(false)));
-document.querySelectorAll('.faq-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const item = btn.closest('.faq-item'), body = item.querySelector('.faq-body');
-    const isOpen = btn.classList.contains('open');
-    document.querySelectorAll('.faq-btn.open').forEach(b => {
-      b.classList.remove('open'); b.setAttribute('aria-expanded','false');
-      b.closest('.faq-item').querySelector('.faq-body').classList.remove('open');
-    });
-    if (!isOpen) { btn.classList.add('open'); btn.setAttribute('aria-expanded','true'); body.classList.add('open'); }
-  });
-});
+/* Client portfolio (portfolio.html): every project in PROJECTS, in order.
+   To add a project: add an entry to PROJECTS above, put its screenshots in
+   img/ as <img>-800 and <img>-1200 in .avif and .webp, and rebuild. */
+function portfolioPage() {
+  const url = `${BASE}/portfolio.html`;
+  const keys = Object.keys(PROJECTS);
+  const graph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${url}#breadcrumb`,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE}/` },
+          { '@type': 'ListItem', position: 2, name: 'Client portfolio', item: url },
+        ],
+      },
+      {
+        '@type': 'CollectionPage',
+        '@id': `${url}#webpage`,
+        url,
+        name: 'Web Design Portfolio | Client Websites | MartKam Digital',
+        description: 'Websites I have designed and built for local businesses in Surrey and South West London.',
+        inLanguage: 'en-GB',
+        isPartOf: { '@id': `${BASE}/#website` },
+        breadcrumb: { '@id': `${url}#breadcrumb` },
+        mainEntity: {
+          '@type': 'ItemList',
+          itemListElement: keys.map((k, i) => ({
+            '@type': 'ListItem',
+            position: i + 1,
+            name: plain(PROJECTS[k].name),
+            url: (PROJECTS[k].links.find(l => l.ext) || PROJECTS[k].links[0]).href,
+          })),
+        },
+      },
+    ],
+  };
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+<title>Web Design Portfolio | Client Websites | MartKam Digital</title>
+<meta name="description" content="Websites I have designed and built for local businesses in Surrey and South West London. See each live site, the brief, and what happened after launch.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="${url}">
+<script type="application/ld+json">
+${JSON.stringify(graph, null, 2)}
 </script>
-<script src="js/enquiry-form.js" defer></script>
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="${url}">
+<meta property="og:title" content="Client portfolio | MartKam Digital">
+<meta property="og:description" content="Real websites for real local businesses, each with a link to the live site.">
+<meta property="og:image" content="${BASE}/img/og-image-2026.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A laptop and phone showing a website built by MartKam Digital">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${BASE}/img/og-image-2026.jpg">
+
+<link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-latin.woff2') format('woff2');}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-italic-latin.woff2') format('woff2');}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:300 600;font-display:swap;src:url('fonts/dmsans-latin.woff2') format('woff2');}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+</style>
+
+<link rel="stylesheet" href="css/location.css">
+</head>
+<body class="lp">
+
+${navBlock('portfolio')}
+<main id="main">
+
+<!-- INTRO -->
+<section class="pf-hero">
+  <div class="wrap">
+    <p class="lp-crumbs"><a href="/">Home</a><span aria-hidden="true">&rsaquo;</span>Client portfolio</p>
+    <span class="label">Client portfolio</span>
+    <h1>Websites I&rsquo;ve built <em>for local businesses</em></h1>
+    <p class="pf-lede">Every project here is a real business, and every screenshot is the live site as it stands today. Each card says where the client is based, what the brief was, and links to the website itself.</p>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="work pf-work" id="work">
+  <div class="wrap">
+    <div class="work-grid">
+${keys.map(projectCard).join('\n')}
+    </div>
+    <p class="pf-more">Want the numbers behind a project? <a href="case-study-cs-cleaning.html">Read the C&amp;S Cleaning Services case study</a>, or see <a href="reviews.html">what these clients said</a>.</p>
+  </div>
+</section>
+
+<!-- ENQUIRY -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="pf-enquire">
+      <div class="lp-prose">
+        <span class="label">Your project</span>
+        <h2 class="section-title">Want a website <em>like these?</em></h2>
+        <p>Tell me a little about your business and what you need. I&rsquo;ll reply personally, usually the same day, with the next steps and which package fits.</p>
+        <p>Prices are published up front: <strong>£595</strong>, <strong>£999</strong> or <strong>£1,995</strong>, with the copy written for you and the SEO groundwork included. <a href="pricing.html">See what each package includes</a>.</p>
+      </div>
+${enquiryCard('portfolio', 'New enquiry from the portfolio page', 'Portfolio page')}
+    </div>
+  </div>
+</section>
+
+</main>
+
+${footerBlock()}
 </body>
 </html>
 `;
 }
 
 let written = 0;
+{
+  const file = path.join(ROOT, 'portfolio.html');
+  fs.writeFileSync(file, portfolioPage(), 'utf8');
+  console.log(`  portfolio.html  ${(fs.statSync(file).size / 1024).toFixed(1)}KB`);
+}
 for (const t of TOWNS) {
   const file = path.join(ROOT, `web-design-${t.slug}.html`);
   fs.writeFileSync(file, page(t), 'utf8');

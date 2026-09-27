@@ -96,7 +96,7 @@
           "name": "How much does a website for a tradesperson cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The prices are published in full: £595 for a Starter site, £1,295 for a Growth site, £1,995 if you take deposits or paid consultations online. Most trades want Growth. It is the one with the trade and town pages. I am not VAT registered, so the price you see is the price you pay."
+            "text": "The prices are published in full: £595 for a Starter site, £999 for a Growth site, £1,995 if you take deposits or paid consultations online. Most trades want Growth. It is the one with the trade and town pages. I am not VAT registered, so the price you see is the price you pay."
           }
         },
         {
@@ -158,6 +158,12 @@
 @font-face{font-family:'Fraunces';font-style:normal;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-latin.woff2') format('woff2');}
 @font-face{font-family:'Fraunces';font-style:italic;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-italic-latin.woff2') format('woff2');}
 @font-face{font-family:'DM Sans';font-style:normal;font-weight:300 600;font-display:swap;src:url('fonts/dmsans-latin.woff2') format('woff2');}
+
+/* No dash-like lines anywhere: labels show as plain text, and list markers are dots. */
+.hero-label::before, .section-label::before, .section-label::after, .faq-eyebrow::before,
+.contact-hero-label::before, .policy-label::before, .lr-label::before { display:none !important; content:none !important; }
+.srv-feats li::before { width:6px !important; height:6px !important; border-radius:50%; flex-shrink:0; }
+.cprep-list li::before { width:6px !important; height:6px !important; border-radius:50%; top:10px !important; left:4px !important; }
 </style>
 
 <link rel="stylesheet" href="css/location.css">
@@ -173,6 +179,7 @@
     <a href="about.html" class="tl-item">About Me</a>
     <a href="services.html" class="tl-item">Services</a>
     <a href="reviews.html" class="tl-item">Reviews</a>
+    <a href="portfolio.html" class="tl-item">Client Portfolio</a>
     <a href="pricing.html" class="tl-item">Pricing</a>
     <a href="contact.html" class="tl-item">Contact</a>
   </div>
@@ -189,6 +196,7 @@
     <a href="about.html" class="mob-item">About Me</a>
     <a href="services.html" class="mob-item">Services</a>
     <a href="reviews.html" class="mob-item">Reviews</a>
+    <a href="portfolio.html" class="mob-item">Client Portfolio</a>
     <a href="pricing.html" class="mob-item">Pricing</a>
     <a href="contact.html" class="mob-item">Contact</a>
     <a href="contact.html" class="mob-cta">Let's Talk</a>
@@ -249,24 +257,21 @@
 <!-- WHAT CUSTOMERS CHECK -->
 <section class="section" id="checks" style="background:var(--mist);">
   <div class="wrap">
-    <div class="fade-up" style="max-width:720px;">
+    <div class="fade-up" style="max-width:880px;">
       <span class="label">Before they ring you</span>
       <h2 class="section-title">What someone checks<br><em>in the thirty seconds before calling</em></h2>
       <p class="section-intro">They are not reading your site. They are scanning it for three things, and if they cannot find them quickly they go back to the search results.</p>
     </div>
     <div class="why-grid">
       <div class="why-card fade-up">
-        <div class="why-icon">01</div>
         <h3>Do you cover me?</h3>
         <p>The single most common reason a visitor leaves. If your towns are not stated plainly, and there is not a page for the one they live in, they assume the answer is no and move on.</p>
       </div>
       <div class="why-card fade-up fade-up-d2">
-        <div class="why-icon">02</div>
         <h3>Do you do this exact job?</h3>
         <p>&ldquo;Building services&rdquo; tells them nothing. A page that names the job they have (the extension, the consumer unit, the flat roof) tells them they are in the right place, and it is the page that ranks for it.</p>
       </div>
       <div class="why-card fade-up fade-up-d3">
-        <div class="why-icon">03</div>
         <h3>Are you the real thing?</h3>
         <p>Photographs of your own finished work, your accreditations, your insurance, and reviews with names on them. Stock photos of somebody else&rsquo;s kitchen do the opposite of what they are there for.</p>
       </div>
@@ -308,7 +313,7 @@
       </div>
     </div>
     <div class="local-note" style="margin-top:44px;">
-      Most trades want the <strong>Growth site at &pound;1,295</strong>. It is the one with the town and trade landing pages. If you are just starting out and need somewhere credible to send people, the <strong>Starter site is &pound;595</strong>. If you take paid consultations or deposits online, that is the <strong>Bookings &amp; Ordering site at &pound;1,995</strong>. <a href="pricing.html">All three are on the pricing page</a>, in full, with the terms.
+      Most trades want the <strong>Growth site at &pound;999</strong>. It is the one with the town and trade landing pages. If you are just starting out and need somewhere credible to send people, the <strong>Starter site is &pound;595</strong>. If you take paid consultations or deposits online, that is the <strong>Bookings &amp; Ordering site at &pound;1,995</strong>. <a href="pricing.html">All three are on the pricing page</a>, in full, with the terms.
     </div>
       <p class="local-note" style="margin-top:26px;">Not quite your line of work? I also build for <a href="web-design-for-cleaning-companies.html">cleaning contractors</a> and <a href="web-design-for-ecommerce.html">ordering and e-commerce</a>, or see <a href="services.html">everything I do</a> and <a href="pricing.html">what it costs</a>.</p>
 
@@ -332,7 +337,7 @@
             <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
           </button>
           <div class="faq-body"><div class="faq-body-inner">
-            <p class="faq-answer">The prices are <a href="pricing.html">published in full</a>: £595 for a Starter site, £1,295 for a Growth site, £1,995 if you take deposits or paid consultations online. Most trades want Growth. It is the one with the trade and town pages. I am not VAT registered, so the price you see is the price you pay.</p>
+            <p class="faq-answer">The prices are <a href="pricing.html">published in full</a>: £595 for a Starter site, £999 for a Growth site, £1,995 if you take deposits or paid consultations online. Most trades want Growth. It is the one with the trade and town pages. I am not VAT registered, so the price you see is the price you pay.</p>
           </div></div>
         </div>
         <div class="faq-item">

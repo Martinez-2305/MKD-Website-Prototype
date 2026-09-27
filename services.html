@@ -88,10 +88,22 @@
     },
     {
       "@type": "Service",
+      "@id": "https://www.martkamdigital.com/services.html#google-business-profile",
+      "name": "Google Business Profile Setup & Optimisation",
+      "serviceType": "Google Business Profile management",
+      "description": "Google Business Profile set up or cleaned up with the right categories, services, service areas and opening hours, kept consistent with the website.",
+      "provider": { "@id": "https://www.martkamdigital.com/#organization" },
+      "areaServed": [
+        { "@type": "Place", "name": "Surrey" },
+        { "@type": "Place", "name": "South West London" }
+      ]
+    },
+    {
+      "@type": "Service",
       "@id": "https://www.martkamdigital.com/services.html#seo",
-      "name": "SEO & Google Business Profile",
-      "serviceType": "Local SEO",
-      "description": "Local SEO and Google Business Profile setup and optimisation so your business is found by nearby customers searching on Google and Google Maps.",
+      "name": "SEO & Search Growth",
+      "serviceType": "Search engine optimisation",
+      "description": "Ongoing SEO: deep keyword research, planned campaigns of service and location pages, monthly technical checks and a plain-English report, so more of the people searching for what you do find your business.",
       "provider": { "@id": "https://www.martkamdigital.com/#organization" },
       "areaServed": [
         { "@type": "Place", "name": "Surrey" },
@@ -1188,6 +1200,29 @@ body > footer {
 .why-card-icon svg{width:22px;height:22px;color:var(--red-text);}
 .cdetail-icon svg,.tcard-decor svg{width:18px;height:18px;color:var(--red-text);}
 .srv-icon,.pcard-icon{line-height:0;}
+
+/* No dash-like lines anywhere: labels show as plain text, and list markers are dots. */
+.hero-label::before, .section-label::before, .section-label::after, .faq-eyebrow::before,
+.contact-hero-label::before, .policy-label::before, .lr-label::before { display:none !important; content:none !important; }
+.srv-feats li::before { width:6px !important; height:6px !important; border-radius:50%; flex-shrink:0; }
+.cprep-list li::before { width:6px !important; height:6px !important; border-radius:50%; top:10px !important; left:4px !important; }
+
+/* Readable line lengths on laptops and monitors (phones unchanged). */
+h1, h2, h3, .section-title, .faq-title, blockquote { text-wrap:balance; }
+@media (min-width:901px){
+  .faq-layout { grid-template-columns:minmax(320px, 1fr) 1.55fr; gap:64px; }
+  .faq-title { font-size:clamp(2rem, 2.6vw, 2.6rem); }
+}
+.process-node-text { max-width:210px; }
+p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragraph's last line */
+
+/* SEO is a flagship service: its overview card spans the full grid. */
+.svc-card--feature { grid-column:1 / -1; }
+.svc-feature-list { list-style:none; display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px 28px; margin:4px 0 22px; padding:0; }
+.svc-feature-list li { position:relative; padding-left:18px; font-size:0.9rem; line-height:1.6; color:var(--ink-light); }
+.svc-feature-list li::before { content:''; position:absolute; left:0; top:0.62em; width:6px; height:6px; border-radius:50%; background:var(--red); }
+@media (max-width:760px){ .svc-feature-list { grid-template-columns:1fr; } }
+@media (min-width:901px){ .core-grid { grid-template-columns:repeat(2, 1fr); } }
 </style>
 </head>
 <body>
@@ -1202,7 +1237,7 @@ body > footer {
     <a href="about.html" class="tl-item" data-section="about">About Me</a>
     <a href="services.html" class="tl-item active" data-section="services">Services</a>
     <a href="reviews.html" class="tl-item">Reviews</a>
-    <a href="index.html#process" class="tl-item">My Process</a>
+    <a href="portfolio.html" class="tl-item">Client Portfolio</a>
     <a href="pricing.html" class="tl-item">Pricing</a>
     <a href="contact.html" class="tl-item">Contact</a>
   </div>
@@ -1215,7 +1250,7 @@ body > footer {
     <a href="about.html" class="mob-item">About Me</a>
     <a href="services.html" class="mob-item active">Services</a>
     <a href="reviews.html" class="mob-item">Reviews</a>
-    <a href="index.html#process" class="mob-item">My Process</a>
+    <a href="portfolio.html" class="mob-item">Client Portfolio</a>
     <a href="pricing.html" class="mob-item">Pricing</a>
     <a href="contact.html" class="mob-item">Contact</a>
     <a href="contact.html" class="mob-cta">Let's Talk</a>
@@ -1255,13 +1290,10 @@ body > footer {
       <h2 class="section-title">What I build for <em>local businesses.</em></h2>
     </div>
     <div class="svc-grid">
-
-      <!-- 01 -->
       <div class="svc-card fade-up">
         <div class="svc-card-body">
           <div class="svc-card-meta">
             <span class="svc-tag">Web Design</span>
-            <span class="svc-num" aria-hidden="true">01</span>
           </div>
           <h3 class="svc-card-title">Website Design for Small Business</h3>
           <p class="svc-card-desc">A professionally built website that puts your small business on the map, crafted to reflect your brand and turn visitors into real enquiries. I handle everything from design to launch, so you can focus on running your business.</p>
@@ -1273,13 +1305,10 @@ body > footer {
           </div>
         </div>
       </div>
-
-      <!-- 02 -->
       <div class="svc-card fade-up delay-1">
         <div class="svc-card-body">
           <div class="svc-card-meta">
             <span class="svc-tag">Web Design</span>
-            <span class="svc-num" aria-hidden="true">02</span>
           </div>
           <h3 class="svc-card-title">Website Design for Established Companies</h3>
           <p class="svc-card-desc">A website that matches the scale and ambition of your company, built from scratch rather than adapted from a template. Designed for credibility, lead generation, and long-term growth in a competitive market.</p>
@@ -1291,13 +1320,34 @@ body > footer {
           </div>
         </div>
       </div>
+      <div class="svc-card svc-card--feature fade-up" id="seo">
+        <div class="svc-card-body">
+          <div class="svc-card-meta">
+            <span class="svc-tag">SEO &middot; Flagship service</span>
+          </div>
+          <h3 class="svc-card-title">SEO &amp; Search Growth</h3>
+          <p class="svc-card-desc">The work that keeps bringing in enquiries long after launch. I research exactly what your customers type into Google, then plan and build the pages that answer those searches, one focused campaign at a time. You see what was done every month and what it changed.</p>
+          <ul class="svc-feature-list">
+            <li>Deep keyword research across your services, areas and the questions customers ask</li>
+            <li>Search campaigns: planned runs of service and location pages, one goal at a time</li>
+            <li>A new or improved page every month, and extra pages when you want to move faster</li>
+            <li>Monthly technical checks: speed, indexing, broken links and structured data</li>
+            <li>A plain-English report every month showing clicks, enquiries and what comes next</li>
+          <li>Everyday changes to your site included, with no hourly billing</li>
+          </ul>
+          <a href="pricing.html#seo-retainer" class="svc-card-cta">See the SEO Retainer, from &pound;199 a month →</a>
+        </div>
+        <div class="svc-card-visual svc-visual--seo">
+          <div class="svc-visual-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+        </div>
+      </div>
 
-      <!-- 03 -->
       <div class="svc-card fade-up delay-1">
         <div class="svc-card-body">
           <div class="svc-card-meta">
             <span class="svc-tag">Web Design</span>
-            <span class="svc-num" aria-hidden="true">03</span>
           </div>
           <h3 class="svc-card-title">Complete Website Re-Design</h3>
           <p class="svc-card-desc">Breathe new life into an outdated website with a full redesign that reflects where your business is today. I keep what works, replace what doesn't, and deliver a site that looks and performs like new.</p>
@@ -1309,13 +1359,10 @@ body > footer {
           </div>
         </div>
       </div>
-
-      <!-- 04 -->
       <div class="svc-card fade-up">
         <div class="svc-card-body">
           <div class="svc-card-meta">
             <span class="svc-tag">Hosting</span>
-            <span class="svc-num" aria-hidden="true">04</span>
           </div>
           <h3 class="svc-card-title">Migrating Existing Domain &amp; Hosting Service</h3>
           <p class="svc-card-desc">Moving your domain or switching hosting providers doesn't have to be stressful. I manage the entire migration for you. Zero downtime, no data loss, and a clean move to better infrastructure.</p>
@@ -1327,31 +1374,25 @@ body > footer {
           </div>
         </div>
       </div>
-
-      <!-- 05 -->
       <div class="svc-card fade-up delay-1">
         <div class="svc-card-body">
           <div class="svc-card-meta">
-            <span class="svc-tag">Local SEO</span>
-            <span class="svc-num" aria-hidden="true">05</span>
+            <span class="svc-tag">Google Business Profile</span>
           </div>
-          <h3 class="svc-card-title">SEO &amp; Google Business Profile</h3>
-          <p class="svc-card-desc">Get found by local customers actively searching for your services with targeted on-page SEO and a fully optimised Google Business Profile. I build the foundations that help you rank consistently in Surrey and South West London.</p>
+          <h3 class="svc-card-title">Google Business Profile Setup &amp; Optimisation</h3>
+          <p class="svc-card-desc">Often the first thing people see when they search for a local business. I set up or tidy your profile with the right categories, services, areas and opening hours, and make sure it matches your website. Included with every website package.</p>
           <a href="contact.html" class="svc-card-cta">Get Started →</a>
         </div>
         <div class="svc-card-visual svc-visual--seo">
           <div class="svc-visual-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
         </div>
       </div>
-
-      <!-- 06 -->
       <div class="svc-card fade-up">
         <div class="svc-card-body">
           <div class="svc-card-meta">
             <span class="svc-tag">Hosting</span>
-            <span class="svc-num" aria-hidden="true">06</span>
           </div>
           <h3 class="svc-card-title">Hosting &amp; Domain Packages</h3>
           <p class="svc-card-desc">Reliable managed hosting and domain registration bundled into one straightforward package, no jargon, no surprises. I keep your site live, fast, and backed up so you never have to worry about downtime.</p>
@@ -1377,13 +1418,10 @@ body > footer {
     </div>
 
     <div class="svc-grid">
-
-      <!-- 01 -->
       <div class="svc-card fade-up">
         <div class="svc-card-body">
           <div class="svc-card-meta">
             <span class="svc-tag">Web Design</span>
-            <span class="svc-num" aria-hidden="true">01</span>
           </div>
           <h3 class="svc-card-title">Landing Page Design</h3>
           <p class="svc-card-desc">A single, high-converting page built around one clear goal, whether that's capturing leads, promoting an offer, or driving sign-ups. Fast to launch, optimised for conversions, and designed to perform from day one.</p>
@@ -1395,13 +1433,10 @@ body > footer {
           </div>
         </div>
       </div>
-
-      <!-- 02 -->
       <div class="svc-card fade-up delay-1">
         <div class="svc-card-body">
           <div class="svc-card-meta">
             <span class="svc-tag">E-commerce</span>
-            <span class="svc-num" aria-hidden="true">02</span>
           </div>
           <h3 class="svc-card-title">E-commerce Website Design for Online Sellers</h3>
           <p class="svc-card-desc">A fully functional online store designed to showcase your products and make buying effortless for your customers. From product pages to checkout, every element is built to drive sales and build trust.</p>
@@ -1429,8 +1464,7 @@ body > footer {
 
       <!-- 01: Web Design -->
       <div class="core-card fade-up">
-        <span class="core-card-ghost" aria-hidden="true">01</span>
-        <div class="core-badge">Core Service</div>
+        <div class="core-badge">Flagship Service</div>
         <span class="core-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></span>
         <h3>Website Design & Build</h3>
         <p>Custom-designed from the Growth package up, built around your business, your brand and your goals. The £595 Starter site uses a proven template styled to your brand. Every tier is hand-coded and mobile-first, with no page-builder bloat.</p>
@@ -1445,28 +1479,44 @@ body > footer {
         <a href="contact.html" class="core-cta">Book a free 20-minute call →</a>
       </div>
 
-      <!-- 02: SEO -->
+      <!-- SEO -->
       <div class="core-card fade-up delay-1">
-        <span class="core-card-ghost" aria-hidden="true">02</span>
-        <div class="core-badge">Core Service</div>
-        <span class="core-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-        <h3>SEO & Google Business Profile</h3>
-        <p>Get your business found by local customers actively searching for what you offer. I set up and optimise your Google Business Profile, and build the on-page SEO foundations that help you rank in Surrey and South West London.</p>
+        <div class="core-badge">Flagship Service</div>
+        <span class="core-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><polyline points="7 13 10 10 12 12 15 8"/></svg></span>
+        <h3>SEO &amp; Search Growth</h3>
+        <p>A website can rank; ongoing SEO is what makes it rank. I find the searches your customers actually make, then build the pages that win them: new service and location pages, rewrites of pages that are close to page one, and the technical fixes in between.</p>
         <div class="core-divider"></div>
         <ul class="core-feats">
-          <li>Google Business Profile setup & optimisation</li>
-          <li>Local SEO to rank in your area</li>
-          <li>Keyword research & on-page optimisation</li>
-          <li>Google Maps visibility & review strategy</li>
-          <li>Monthly performance reporting</li>
+          <li>Deep keyword research across your services, areas and the questions customers ask</li>
+          <li>Search campaigns: planned runs of service and location pages, one goal at a time</li>
+          <li>A new or improved page every month, and extra pages when you want to move faster</li>
+          <li>Monthly technical checks: speed, indexing, broken links and structured data</li>
+          <li>A plain-English report every month showing clicks, enquiries and what comes next</li>
+          <li>Everyday changes to your site included, with no hourly billing</li>
+          <li>No ranking promises. If a month's work is missed, that month is free</li>
+        </ul>
+        <a href="pricing.html#seo-retainer" class="core-cta">See the SEO Retainer →</a>
+      </div>
+
+      <!-- Google Business Profile -->
+      <div class="core-card fade-up">
+        <div class="core-badge">Supporting Service</div>
+        <span class="core-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <h3>Google Business Profile</h3>
+        <p>Often the first thing people see when they search for a local business, before they ever reach your website. I set it up properly and keep it consistent with your site, so Google and your customers see the same business.</p>
+        <div class="core-divider"></div>
+        <ul class="core-feats">
+          <li>Set up or cleaned up with every website package</li>
+          <li>Categories, services and service areas chosen for how people search</li>
+          <li>Review capture set up on the Growth package</li>
+          <li>Posts and review management on the SEO Retainer</li>
         </ul>
         <a href="contact.html" class="core-cta">Book a free 20-minute call →</a>
       </div>
 
-      <!-- 03: Hosting -->
-      <div class="core-card fade-up delay-2">
-        <span class="core-card-ghost" aria-hidden="true">03</span>
-        <div class="core-badge">Core Service</div>
+      <!-- Hosting -->
+      <div class="core-card fade-up delay-1">
+        <div class="core-badge">Supporting Service</div>
         <span class="core-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
         <h3>Hosting & Domain Packages</h3>
         <p>Hosting, security, backups and a business email inbox are all handled for you on the Care Plan, so there is nothing technical for you to manage. Your domain is registered in your name from day one.</p>
@@ -1537,7 +1587,7 @@ body > footer {
           </button>
           <div class="faq-body">
             <div class="faq-body-inner">
-              <p class="faq-answer">Three packages, all published. <strong>£595</strong> for a Starter site, <strong>£1,295</strong> for a Growth site, and <strong>£1,995</strong> if the site needs to take bookings or payments. Copywriting and the SEO groundwork are in all three. <a href="pricing.html">The full pricing is here</a>, including what is in each package, the Care Plan and the SEO Retainer.</p>
+              <p class="faq-answer">Three packages, all published. <strong>£595</strong> for a Starter site, <strong>£999</strong> for a Growth site, and <strong>£1,995</strong> if the site needs to take bookings or payments. Copywriting and the SEO groundwork are in all three. <a href="pricing.html">The full pricing is here</a>, including what is in each package, the Care Plan and the SEO Retainer.</p>
             </div>
           </div>
         </div>
@@ -1597,7 +1647,7 @@ body > footer {
           </button>
           <div class="faq-body">
             <div class="faq-body-inner">
-              <p class="faq-answer">Not at all. Updates go through me, so you never need to learn any software: send me what you want changed and I reply within one working day. The Care Plan covers hosting, backups and up to 30 minutes of edits a month at £20 a month, and the SEO Retainer that keeps the site ranking is £199. <a href="pricing.html">Both are on the pricing page.</a></p>
+              <p class="faq-answer">Not at all. Updates go through me, so you never need to learn any software: send me what you want changed and I reply within one working day. The Care Plan covers hosting, backups and up to 30 minutes of edits a month at £20 a month, and the SEO Retainer, which keeps the site ranking and includes everyday changes with no hourly billing, is £199. <a href="pricing.html">Both are on the pricing page.</a></p>
             </div>
           </div>
         </div>

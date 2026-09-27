@@ -158,6 +158,12 @@
 @font-face{font-family:'Fraunces';font-style:normal;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-latin.woff2') format('woff2');}
 @font-face{font-family:'Fraunces';font-style:italic;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-italic-latin.woff2') format('woff2');}
 @font-face{font-family:'DM Sans';font-style:normal;font-weight:300 600;font-display:swap;src:url('fonts/dmsans-latin.woff2') format('woff2');}
+
+/* No dash-like lines anywhere: labels show as plain text, and list markers are dots. */
+.hero-label::before, .section-label::before, .section-label::after, .faq-eyebrow::before,
+.contact-hero-label::before, .policy-label::before, .lr-label::before { display:none !important; content:none !important; }
+.srv-feats li::before { width:6px !important; height:6px !important; border-radius:50%; flex-shrink:0; }
+.cprep-list li::before { width:6px !important; height:6px !important; border-radius:50%; top:10px !important; left:4px !important; }
 </style>
 
 <link rel="stylesheet" href="css/location.css">
@@ -173,6 +179,7 @@
     <a href="about.html" class="tl-item">About Me</a>
     <a href="services.html" class="tl-item">Services</a>
     <a href="reviews.html" class="tl-item">Reviews</a>
+    <a href="portfolio.html" class="tl-item">Client Portfolio</a>
     <a href="pricing.html" class="tl-item">Pricing</a>
     <a href="contact.html" class="tl-item">Contact</a>
   </div>
@@ -189,6 +196,7 @@
     <a href="about.html" class="mob-item">About Me</a>
     <a href="services.html" class="mob-item">Services</a>
     <a href="reviews.html" class="mob-item">Reviews</a>
+    <a href="portfolio.html" class="mob-item">Client Portfolio</a>
     <a href="pricing.html" class="mob-item">Pricing</a>
     <a href="contact.html" class="mob-item">Contact</a>
     <a href="contact.html" class="mob-cta">Let's Talk</a>
@@ -249,24 +257,21 @@
 <!-- TWO ROUTES -->
 <section class="section" id="checks" style="background:var(--mist);">
   <div class="wrap">
-    <div class="fade-up" style="max-width:720px;">
+    <div class="fade-up" style="max-width:880px;">
       <span class="label">Two different builds</span>
       <h2 class="section-title">Taking orders is not<br><em>the same as running a shop</em></h2>
       <p class="section-intro">These get lumped together as &ldquo;e-commerce&rdquo; and they are not the same job. Which one you need decides what it costs.</p>
     </div>
     <div class="why-grid">
       <div class="why-card fade-up">
-        <div class="why-icon">01</div>
         <h3>Bookings &amp; Ordering: &pound;1,995</h3>
         <p>For takeaways, restaurants, salons, clinics and trades taking paid consultations. Your menu or service list, Stripe payments, a booking system with availability rules and automated confirmations. Live in 4&ndash;6 weeks.</p>
       </div>
       <div class="why-card fade-up fade-up-d2">
-        <div class="why-icon">02</div>
         <h3>A product shop: from &pound;3,500</h3>
         <p>Stock levels, size and colour variants, shipping bands, returns. That is a different build with a lot more moving parts, so it is quoted individually rather than sold off a price list.</p>
       </div>
       <div class="why-card fade-up fade-up-d3">
-        <div class="why-icon">03</div>
         <h3>Not sure which?</h3>
         <p>If you are selling a fixed set of things people collect or book, it is the first one. If you are shipping physical stock in different sizes and colours, it is the second. Twenty minutes on the phone will settle it.</p>
       </div>

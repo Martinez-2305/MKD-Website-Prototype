@@ -7,7 +7,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <title>About MartKam Digital | Web Design in Epsom, Surrey</title>
-<meta name="description" content="One person, not an agency. I build websites and run local SEO for small businesses across Epsom, Surrey and South West London. Prices published up front.">
+<meta name="description" content="One person, not an agency. Based in Epsom, I build websites and run local SEO for small businesses across the UK. Prices published up front.">
 <meta name="geo.region" content="GB-SRY">
 <meta name="geo.placename" content="Surrey, South West London">
 <link rel="canonical" href="https://www.martkamdigital.com/about.html">
@@ -38,7 +38,7 @@
       "@id": "https://www.martkamdigital.com/about.html#webpage",
       "url": "https://www.martkamdigital.com/about.html",
       "name": "About MartKam Digital | Web Design in Epsom, Surrey",
-      "description": "One person, not an agency. I build websites and run local SEO for small businesses across Epsom, Surrey and South West London. Prices published up front.",
+      "description": "One person, not an agency. Based in Epsom, I build websites and run local SEO for small businesses across the UK. Prices published up front.",
       "inLanguage": "en-GB",
       "isPartOf": {
         "@id": "https://www.martkamdigital.com/#website"
@@ -57,7 +57,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.martkamdigital.com/about.html">
 <meta property="og:title" content="About MartKam Digital | Web Design in Epsom, Surrey">
-<meta property="og:description" content="One person, not an agency. I build websites and run local SEO for small businesses across Epsom, Surrey and South West London. Prices published up front.">
+<meta property="og:description" content="One person, not an agency. Based in Epsom, I build websites and run local SEO for small businesses across the UK. Prices published up front.">
 <meta property="og:image" content="https://www.martkamdigital.com/img/og-image-2026.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -65,7 +65,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://www.martkamdigital.com/about.html">
 <meta name="twitter:title" content="About MartKam Digital | Web Design in Epsom, Surrey">
-<meta name="twitter:description" content="One person, not an agency. I build websites and run local SEO for small businesses across Epsom, Surrey and South West London. Prices published up front.">
+<meta name="twitter:description" content="One person, not an agency. Based in Epsom, I build websites and run local SEO for small businesses across the UK. Prices published up front.">
 <meta name="twitter:image" content="https://www.martkamdigital.com/img/og-image-2026.jpg">
 <link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -967,6 +967,21 @@ body > footer {
 .why-card-icon svg{width:22px;height:22px;color:var(--red-text);}
 .cdetail-icon svg,.tcard-decor svg{width:18px;height:18px;color:var(--red-text);}
 .srv-icon,.pcard-icon{line-height:0;}
+
+/* No dash-like lines anywhere: labels show as plain text, and list markers are dots. */
+.hero-label::before, .section-label::before, .section-label::after, .faq-eyebrow::before,
+.contact-hero-label::before, .policy-label::before, .lr-label::before { display:none !important; content:none !important; }
+.srv-feats li::before { width:6px !important; height:6px !important; border-radius:50%; flex-shrink:0; }
+.cprep-list li::before { width:6px !important; height:6px !important; border-radius:50%; top:10px !important; left:4px !important; }
+
+/* Readable line lengths on laptops and monitors (phones unchanged). */
+h1, h2, h3, .section-title, .faq-title, blockquote { text-wrap:balance; }
+@media (min-width:901px){
+  .faq-layout { grid-template-columns:minmax(320px, 1fr) 1.55fr; gap:64px; }
+  .faq-title { font-size:clamp(2rem, 2.6vw, 2.6rem); }
+}
+.story-pull { font-size:clamp(1.5rem, 2.3vw, 2.1rem); }
+p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragraph's last line */
 </style>
 </head>
 <body>
@@ -995,7 +1010,7 @@ body > footer {
     <a href="about.html" class="tl-item active" data-section="about">About Me</a>
     <a href="services.html" class="tl-item">Services</a>
     <a href="reviews.html" class="tl-item">Reviews</a>
-    <a href="index.html#process" class="tl-item">My Process</a>
+    <a href="portfolio.html" class="tl-item">Client Portfolio</a>
     <a href="pricing.html" class="tl-item">Pricing</a>
     <a href="contact.html" class="tl-item">Contact</a>
   </div>
@@ -1008,7 +1023,7 @@ body > footer {
     <a href="about.html" class="mob-item active">About Me</a>
     <a href="services.html" class="mob-item">Services</a>
     <a href="reviews.html" class="mob-item">Reviews</a>
-    <a href="index.html#process" class="mob-item">My Process</a>
+    <a href="portfolio.html" class="mob-item">Client Portfolio</a>
     <a href="pricing.html" class="mob-item">Pricing</a>
     <a href="contact.html" class="mob-item">Contact</a>
     <a href="contact.html" class="mob-cta">Let's Talk</a>
@@ -1037,7 +1052,7 @@ body > footer {
       <em>Real digital results.</em>
     </h1>
     <p class="hero-sub fade-up delay-2">
-      I&rsquo;m a one-person studio in Surrey. I build websites and run local SEO for small businesses across Epsom, Surrey and South West London: trades, shops, salons, clinics, contractors and anyone else who needs to be found by people nearby.
+      I&rsquo;m a one-person studio based in Epsom, Surrey. I build websites and run local SEO for small businesses anywhere in the UK: trades, shops, salons, clinics, contractors and anyone else who needs to be found by customers in their area.
     </p>
     <div class="hero-ctas fade-up delay-3">
       <a href="contact.html" class="btn-primary">
@@ -1241,7 +1256,7 @@ body > footer {
           </button>
           <div class="faq-body">
             <div class="faq-body-inner">
-              <p class="faq-answer">Every price is published: £595 for a Starter site, £1,295 for a Growth site and £1,995 if the site needs to take bookings or payments. Copywriting and the SEO groundwork are in all three. I&rsquo;m not VAT registered, so the price you see is the price you pay. <a href="pricing.html">See the full pricing</a>.</p>
+              <p class="faq-answer">Every price is published: £595 for a Starter site, £999 for a Growth site and £1,995 if the site needs to take bookings or payments. Copywriting and the SEO groundwork are in all three. I&rsquo;m not VAT registered, so the price you see is the price you pay. <a href="pricing.html">See the full pricing</a>.</p>
             </div>
           </div>
         </div>

@@ -71,7 +71,7 @@
       "name": "How does pricing work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Every price is on the website: £595 for a Starter site, £1,295 for a Growth site and £1,995 if the site needs to take bookings or payments. I’m not VAT registered, so the price you see is the price you pay."
+        "text": "Every price is on the website: £595 for a Starter site, £999 for a Growth site and £1,995 if the site needs to take bookings or payments. I’m not VAT registered, so the price you see is the price you pay."
       }
     },
     {
@@ -560,6 +560,21 @@ body > footer {
 .why-card-icon svg{width:22px;height:22px;color:var(--red-text);}
 .cdetail-icon svg,.tcard-decor svg{width:18px;height:18px;color:var(--red-text);}
 .srv-icon,.pcard-icon{line-height:0;}
+
+/* No dash-like lines anywhere: labels show as plain text, and list markers are dots. */
+.hero-label::before, .section-label::before, .section-label::after, .faq-eyebrow::before,
+.contact-hero-label::before, .policy-label::before, .lr-label::before { display:none !important; content:none !important; }
+.srv-feats li::before { width:6px !important; height:6px !important; border-radius:50%; flex-shrink:0; }
+.cprep-list li::before { width:6px !important; height:6px !important; border-radius:50%; top:10px !important; left:4px !important; }
+
+/* Readable line lengths on laptops and monitors (phones unchanged). */
+h1, h2, h3, .section-title, .faq-title, blockquote { text-wrap:balance; }
+@media (min-width:901px){
+  .faq-layout { grid-template-columns:minmax(320px, 1fr) 1.55fr; gap:64px; }
+  .faq-title { font-size:clamp(2rem, 2.6vw, 2.6rem); }
+}
+@media (min-width:901px) and (max-width:1279px){ .cstep-grid { grid-template-columns:repeat(2,1fr); } }
+p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragraph's last line */
 </style>
 </head>
 <body>
@@ -585,7 +600,7 @@ body > footer {
     <a href="about.html" class="tl-item" data-section="about">About Me</a>
     <a href="services.html" class="tl-item">Services</a>
     <a href="reviews.html" class="tl-item">Reviews</a>
-    <a href="index.html#process" class="tl-item">My Process</a>
+    <a href="portfolio.html" class="tl-item">Client Portfolio</a>
     <a href="pricing.html" class="tl-item">Pricing</a>
     <a href="contact.html" class="tl-item active">Contact</a>
   </div>
@@ -598,7 +613,7 @@ body > footer {
     <a href="about.html" class="mob-item">About Me</a>
     <a href="services.html" class="mob-item">Services</a>
     <a href="reviews.html" class="mob-item">Reviews</a>
-    <a href="index.html#process" class="mob-item">My Process</a>
+    <a href="portfolio.html" class="mob-item">Client Portfolio</a>
     <a href="pricing.html" class="mob-item">Pricing</a>
     <a href="contact.html" class="mob-item active">Contact</a>
     <a href="contact.html" class="mob-cta">Let's Talk</a>
@@ -810,7 +825,7 @@ body > footer {
     </div>
     <div class="cfaq-item fade-up">
       <h3>How does pricing work?</h3>
-      <p>Every price is on the website: £595 for a Starter site, £1,295 for a Growth site and £1,995 if the site needs to take bookings or payments. I&rsquo;m not VAT registered, so the price you see is the price you pay.</p>
+      <p>Every price is on the website: £595 for a Starter site, £999 for a Growth site and £1,995 if the site needs to take bookings or payments. I&rsquo;m not VAT registered, so the price you see is the price you pay.</p>
     </div>
     <div class="cfaq-item fade-up">
       <h3>What happens after my website goes live?</h3>
