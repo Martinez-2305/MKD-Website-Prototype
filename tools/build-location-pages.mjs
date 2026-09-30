@@ -107,7 +107,7 @@ const PROJECTS = {
 const SHARED_FAQS = [
   {
     q: 'How much does a website cost?',
-    a: 'Three packages, all published. <strong>£595</strong> for Starter, a proven template styled to your brand. <strong>£999</strong> for Growth, a custom design with location and service pages. <strong>£1,995</strong> for Bookings &amp; Ordering, which adds bookings or payments. Ongoing SEO is separate, at £199 a month. I am not VAT registered, so the price you see is the price you pay. <a href="pricing.html">See the full pricing</a>.',
+    a: 'Three packages, all published. <strong>£499</strong> for Starter, a proven template styled to your brand. <strong>£999</strong> for Growth, a custom design with location and service pages. <strong>£1,995</strong> for Bookings &amp; Ordering, which adds bookings or payments. Ongoing SEO is optional and separate, at £199 a month. I am not VAT registered, so the price you see is the price you pay. <a href="pricing.html">See the full pricing</a>.',
   },
   {
     q: 'I already have a website. Can you redesign it?',
@@ -115,11 +115,11 @@ const SHARED_FAQS = [
   },
   {
     q: 'Who hosts the site, and what does it cost after launch?',
-    a: 'I do, on the Care Plan: £20 a month or £200 a year for hosting, SSL, daily backups, one business email inbox, software and security updates, and up to 30 minutes of content edits a month. It is free for the first 12 months with Growth and Bookings &amp; Ordering, and required for the first 6 months with Starter. Your domain is registered in your name and billed at cost, usually £12 to £15 a year.',
+    a: 'I do, on the Care Plan: £20 a month or £200 a year for hosting, SSL, daily backups, one business email inbox, software and security updates, and up to 30 minutes of content edits a month. It is free for the first 12 months with Growth and Bookings &amp; Ordering, and required for the first year with Starter. After the first year you can renew or move elsewhere. Your domain is registered in your name and billed at cost, usually £12 to £15 a year.',
   },
   {
     q: 'What do I need to prepare?',
-    a: 'Very little. I write the copy from one 30-minute call: you talk about the business, I write the pages. Send your photos and any logins I need around that call. Professional photos of your business are included on Growth and Bookings &amp; Ordering. On Starter, send your own or I can use quality stock at no extra cost.',
+    a: 'Very little. I write the copy from one 30-minute call: you talk about the business, I write the pages. Send your photos and any logins I need around that call. Professional photos are included on Growth and Bookings &amp; Ordering: one session at your business within 15 miles of Epsom, up to 20 edited photos. On Starter, send your own or I can use quality stock at no extra cost.',
   },
   {
     q: 'How long does it take?',
@@ -127,7 +127,7 @@ const SHARED_FAQS = [
   },
   {
     q: 'What support do I get after launch?',
-    a: 'Updates go through me, so you never need to learn any software, and I reply within one working day. You get a walkthrough call at handover and Search Console in your name. The Care Plan covers up to 30 minutes of edits a month, such as prices, opening hours or new photos. On the SEO Retainer, everyday changes are included with no hourly billing, and it adds a new or improved page every month. Without it, changes beyond 30 minutes are £45 an hour.',
+    a: 'Updates go through me, so you never need to learn any software, and I reply within one working day. You get a walkthrough call at handover and Search Console in your name. The Care Plan covers up to 30 minutes of edits a month, such as prices, opening hours or new photos. The optional SEO Retainer adds up to 1 hour of changes a month, plus a new or improved page. Beyond that, changes are £45 an hour.',
   },
 ];
 
@@ -173,7 +173,7 @@ const tierDesign = `      <div class="lp-inc-card">
         <h3>Web design</h3>
         <p>Every package includes the design, build, launch, the words on the page and the SEO groundwork. What changes is how much is designed from scratch and what the site has to do.</p>
         <div class="lp-tier">
-          <h4>Starter <span>&middot; £595 &middot; template</span></h4>
+          <h4>Starter <span>&middot; £499 &middot; template</span></h4>
           <p>A proven template styled to your brand: the layout is pre-set, and the colours, type, images and words are yours. Up to 5 pages, live in 2 to 3 weeks.</p>
         </div>
         <div class="lp-tier">
@@ -195,7 +195,7 @@ const tierSeo = `      <div class="lp-inc-card">
         </div>
         <div class="lp-tier">
           <h4>SEO Retainer <span>&middot; £199 a month, ongoing</span></h4>
-          <p>After launch: a monthly review of your search data, one new page or a rewrite of an existing one, a technical pass, Google Business Profile posts and review management, and a plain-English report. Everyday changes to your site are included too, with no hourly billing. Available with Growth and Bookings &amp; Ordering, or on a site I did not build after a free audit. <a href="seo-services.html">More about my SEO services</a>.</p>
+          <p>After launch: a monthly review of your search data, one new page or a rewrite of an existing one, a technical pass, Google Business Profile posts and review management, and a plain-English report. Up to 1 hour of site changes a month is included too. It is optional: start it at launch, later, or not at all. Available with Growth and Bookings &amp; Ordering, or on a site I did not build after a free audit. <a href="seo-services.html">More about my SEO services</a>.</p>
         </div>
         <div class="lp-tier">
           <h4>What I promise, and what I do not</h4>
@@ -418,7 +418,7 @@ function page(t) {
         areaServed: { '@type': 'Place', name: `${t.fullName}, ${t.region}` },
         provider: { '@id': `${BASE}/#organization` },
         offers: [
-          { '@type': 'Offer', name: 'Starter Site', price: '595', priceCurrency: 'GBP' },
+          { '@type': 'Offer', name: 'Starter Site', price: '499', priceCurrency: 'GBP' },
           { '@type': 'Offer', name: 'Growth Site', price: '999', priceCurrency: 'GBP' },
           { '@type': 'Offer', name: 'Bookings & Ordering Site', price: '1995', priceCurrency: 'GBP' },
         ],
@@ -569,13 +569,13 @@ ${incCards.join('\n')}
     <div class="lp-plans">
       <div class="lp-plan">
         <h3>Starter Site</h3>
-        <p class="lp-price">£595</p>
+        <p class="lp-price">£499</p>
         <p>For new businesses that need somewhere credible to send people.</p>
         <ul>
           <li>Template, styled to your brand</li>
           <li>Up to 5 pages, copy written for you</li>
           <li>Basic SEO setup</li>
-          <li>Care Plan required for 6 months</li>
+          <li>Care Plan required for the first year</li>
           <li>Live in 2 to 3 weeks</li>
         </ul>
       </div>
@@ -588,7 +588,7 @@ ${incCards.join('\n')}
           <li>Custom design</li>
           <li>Up to 10 pages, including location and service pages</li>
           <li>Full SEO setup and keyword research</li>
-          <li>Professional photos of your business included</li>
+          <li>One photo session, up to 20 edited photos</li>
           <li>Care Plan free for 12 months</li>
           <li>Live in 3 to 4 weeks</li>
         </ul>
@@ -600,14 +600,14 @@ ${incCards.join('\n')}
         <ul>
           <li>Custom design, plus booking or ordering system</li>
           <li>Stripe payments</li>
-          <li>Professional photos of your business included</li>
-          <li>Advanced SEO setup, first month of the SEO Retainer free</li>
+          <li>One photo session, up to 20 edited photos</li>
+          <li>Advanced SEO setup and a free post-launch review</li>
           <li>Care Plan free for 12 months</li>
           <li>Live in 4 to 6 weeks</li>
         </ul>
       </div>
     </div>
-    <p class="lp-small"><strong>After launch:</strong> the Care Plan is £20 a month or £200 a year for hosting, SSL, daily backups, updates and 30 minutes of edits a month. The SEO Retainer is £199 a month and includes everyday changes to your site, with a 6-month minimum, then 30 days&rsquo; notice. I am not VAT registered. <a href="pricing.html">See everything in each package</a>.</p>
+    <p class="lp-small"><strong>After launch:</strong> the Care Plan is £20 a month or £200 a year for hosting, SSL, daily backups, updates and 30 minutes of edits a month. Ongoing SEO is optional: the SEO Retainer is £199 a month, with a 3-month first term, then 30 days&rsquo; notice. I am not VAT registered. <a href="pricing.html">See everything in each package</a>.</p>
   </div>
 </section>
 
@@ -817,7 +817,7 @@ ${keys.map(projectCard).join('\n')}
         <span class="label">Your project</span>
         <h2 class="section-title">Want a website <em>like these?</em></h2>
         <p>Tell me a little about your business and what you need. I&rsquo;ll reply personally, usually the same day, with the next steps and which package fits.</p>
-        <p>Prices are published up front: <strong>£595</strong>, <strong>£999</strong> or <strong>£1,995</strong>, with the copy written for you and the SEO groundwork included. <a href="pricing.html">See what each package includes</a>.</p>
+        <p>Prices are published up front: <strong>£499</strong>, <strong>£999</strong> or <strong>£1,995</strong>, with the copy written for you and the SEO groundwork included. <a href="pricing.html">See what each package includes</a>.</p>
       </div>
 ${enquiryCard('portfolio', 'New enquiry from the portfolio page', 'Portfolio page')}
     </div>
@@ -859,11 +859,11 @@ const SEO_FAQS = [
   },
   {
     q: 'How long is the contract?',
-    a: 'The minimum is 6 months for any SEO work, including on a site I did not build. After that it rolls monthly with 30 days&rsquo; notice. On Bookings &amp; Ordering the first month is free.',
+    a: 'The first term is 3 months for any SEO work, including on a site I did not build. That is a point to review the work and the numbers together, not a deadline for results. After that it rolls monthly with 30 days&rsquo; notice.',
   },
   {
     q: 'Are changes to my site included?',
-    a: 'Yes. On the SEO Retainer, everyday changes such as text, prices, opening hours, photos and small page tweaks are included, with no hourly billing. New pages beyond the monthly one are £195 each.',
+    a: 'Yes, up to 1 hour a month of changes such as text, prices, opening hours, photos and small page tweaks. Beyond that it is £45 an hour, and new pages beyond the monthly one are £195 each.',
   },
 ];
 
@@ -910,7 +910,7 @@ function seoPage() {
     ['Search campaigns', 'Pages planned in runs around one goal at a time, such as a service you want more of or an area you want to be known in.'],
     ['Technical pass', 'Page speed, indexing, broken links and structured data checked and fixed.'],
     ['Google Business Profile', 'Posts and review management, so the profile stays active and matches the site.'],
-    ['A report you can read', 'Clicks, enquiries and what changes next month, in plain English. Everyday site changes are included too.'],
+    ['A report you can read', 'Clicks, enquiries and what changes next month, in plain English. Up to 1 hour of site changes a month is included too.'],
   ];
 
   return `<!DOCTYPE html>
@@ -1084,8 +1084,8 @@ ${projectCard('cs')}
         <p>With a Growth or Bookings &amp; Ordering site I built, or on your existing site after a free audit.</p>
         <ul>
           <li>Everything in &ldquo;each month&rdquo; above</li>
-          <li>Everyday site changes included, no hourly billing</li>
-          <li>6 months minimum for any SEO work</li>
+          <li>Up to 1 hour of site changes a month</li>
+          <li>3-month first term, as a review point</li>
           <li>Then rolling monthly, 30 days&rsquo; notice</li>
         </ul>
       </div>
@@ -1100,7 +1100,7 @@ ${projectCard('cs')}
         </ul>
       </div>
     </div>
-    <p class="lp-small"><strong>Existing website I did not build?</strong> The audit is free. I will tell you plainly whether the site can be worked with; if it can, the retainer is the same £199 a month, with the same 6-month minimum. <strong>On a Starter site</strong>, the site is built on a template, so it needs rebuilding from scratch first: that is the move up to Growth, the £404 difference. <a href="pricing.html#seo-retainer">Full SEO Retainer terms</a>.</p>
+    <p class="lp-small"><strong>Existing website I did not build?</strong> The audit is free. I will tell you plainly whether the site can be worked with; if it can, the retainer is the same £199 a month, with the same 3-month first term. <strong>On a Starter site</strong>, the site is built on a template, so it needs rebuilding from scratch first: that is the move up to Growth, the £500 difference. <a href="pricing.html#seo-retainer">Full SEO Retainer terms</a>.</p>
   </div>
 </section>
 

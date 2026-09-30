@@ -30,7 +30,7 @@ export const TOWNS = [
 
     title: 'Web Design Woking | Websites with Local SEO | MartKam Digital',
     description:
-      'Web design for Woking businesses, with local SEO groundwork in every build. Copy written for you, published prices from £595, and one person doing the work.',
+      'Web design for Woking businesses, with local SEO groundwork in every build. Copy written for you, published prices from £499, and one person doing the work.',
     ogDescription:
       'Websites for Woking businesses, with the copy and local SEO groundwork included. Prices published up front.',
     schemaDescription:
@@ -175,7 +175,7 @@ export const TOWNS = [
 
     title: 'Web Design Kingston upon Thames | Local SEO | MartKam Digital',
     description:
-      'Web design for Kingston upon Thames businesses: shops, trades, clinics and service firms. Copy and local SEO groundwork included, prices published from £595.',
+      'Web design for Kingston upon Thames businesses: shops, trades, clinics and service firms. Copy and local SEO groundwork included, prices published from £499.',
     ogDescription:
       'Websites for shops, trades and service businesses in Kingston upon Thames, with local SEO groundwork included.',
     schemaDescription:
@@ -243,7 +243,7 @@ export const TOWNS = [
 
     title: 'Web Design Wimbledon | Local SEO | MartKam Digital',
     description:
-      'Web design for businesses in Wimbledon and across Merton, with copy and local SEO groundwork included. Published prices from £595.',
+      'Web design for businesses in Wimbledon and across Merton, with copy and local SEO groundwork included. Published prices from £499.',
     ogDescription:
       'Websites for Wimbledon and Merton businesses, with copy and local SEO groundwork included.',
     schemaDescription:
@@ -304,7 +304,7 @@ export const TOWNS = [
 
     title: 'Web Design Guildford | Local SEO | MartKam Digital',
     description:
-      'Web design for Guildford businesses, with copy and local SEO groundwork included. Published prices from £595, and one person doing the work.',
+      'Web design for Guildford businesses, with copy and local SEO groundwork included. Published prices from £499, and one person doing the work.',
     ogDescription:
       'Websites for Guildford businesses, with copy and local SEO groundwork included.',
     schemaDescription:
@@ -365,7 +365,7 @@ export const TOWNS = [
 
     title: 'Web Design Richmond upon Thames | Local SEO | MartKam Digital',
     description:
-      'Web design for businesses in Richmond, Twickenham and across the borough, with copy and local SEO groundwork included. Published prices from £595.',
+      'Web design for businesses in Richmond, Twickenham and across the borough, with copy and local SEO groundwork included. Published prices from £499.',
     ogDescription:
       'Websites for Richmond upon Thames businesses, with copy and local SEO groundwork included.',
     schemaDescription:
@@ -420,7 +420,7 @@ export const TOWNS = [
 
     title: 'Web Design Surbiton | Local SEO | MartKam Digital',
     description:
-      'Web design for Surbiton businesses, with copy and local SEO groundwork included. Published prices from £595.',
+      'Web design for Surbiton businesses, with copy and local SEO groundwork included. Published prices from £499.',
     ogDescription:
       'Websites for Surbiton businesses, with copy and local SEO groundwork included.',
     schemaDescription:
@@ -471,7 +471,7 @@ export const TOWNS = [
 
     title: 'Web Design Reigate | Local SEO | MartKam Digital',
     description:
-      'Web design for businesses in Reigate, Redhill and across the borough, with copy and local SEO groundwork included. Published prices from £595.',
+      'Web design for businesses in Reigate, Redhill and across the borough, with copy and local SEO groundwork included. Published prices from £499.',
     ogDescription:
       'Websites for Reigate and Redhill businesses, with copy and local SEO groundwork included.',
     schemaDescription:
