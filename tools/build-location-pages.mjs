@@ -75,7 +75,7 @@ const PROJECTS = {
     where: 'Based in Sutton, working across Surrey and South West London',
     img: 'work-cs',
     alt: 'Home page of the C&amp;S Cleaning Services website',
-    brief: 'A communal-area cleaning contractor with no website and no Google presence, whose buyers are building managers and landlords. The brief was to be findable to those buyers, and credible once they arrived.',
+    brief: 'A communal block cleaning contractor for managing agents, landlords and freeholders, starting from no website and no Google presence. The site now shows the blocks they clean across Epsom, Sutton, Wimbledon and Kingston, what each visit covers, and their accreditations and insurance, so a property manager can check them before calling.',
     outcome: 'First three months after launch: <strong>over 5,000 search impressions</strong>, <strong>around 50 clicks</strong>, enquiries coming in, and <strong>one paid job</strong> won through the site.',
     links: [{ href: 'https://www.cs-cleaningservices.co.uk/', label: 'Visit the live site', ext: true }, { href: 'case-study-cs-cleaning.html', label: 'Read the case study' }],
   },
