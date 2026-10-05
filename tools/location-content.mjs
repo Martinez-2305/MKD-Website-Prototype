@@ -551,7 +551,7 @@ export const TOWNS = [
     introHeading: 'Local work, <em>from someone local</em>',
     intro: [
       'Epsom has a broad mix of businesses: trades and home services, cleaning companies, hospitality, healthcare and professional practices, from the town centre out to Ewell, Stoneleigh and the streets around the Downs.',
-      'One of the sites on this page is for an Epsom business. St Paul&rsquo;s Cleaning Services serve Epsom and the surrounding towns. I built their website and set up their Google Business Profile, and their director&rsquo;s own words are on the card above.',
+      'One of the sites on this page is for an Epsom business. St Paul&rsquo;s Cleaning Services serve Epsom and the surrounding towns. I built their website and set up their Google Business Profile. Over two months the site&rsquo;s enquiry form brought in 10 enquiries, and at least two have already become booked jobs. Their director&rsquo;s own words are on the card above.',
       'For most Epsom businesses the site needs a page for each main service, clear coverage of the areas you serve, such as Ewell, Stoneleigh, Tadworth or Ashtead, and a quick way to call or send an enquiry. Location and service pages come with the <a href="pricing.html">Growth package</a>.',
     ],
     whoFor: [

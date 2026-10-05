@@ -9,6 +9,7 @@
 
 <!-- Primary SEO -->
 <title>Web Design &amp; SEO in Epsom, Surrey | MartKam Digital</title>
+<script>if (location.hash.length > 1) document.documentElement.classList.add('cv-all');</script>
 <meta name="description" content="Web design and local SEO for businesses in Epsom, Surrey and South West London. Fast, mobile-first sites built to rank. Packages from £499, prices published.">
 <meta name="author" content="MartKam Digital">
 <meta name="robots" content="index, follow">
@@ -399,6 +400,9 @@ nav {
 
 /* HERO ENQUIRY FORM: cream card, dark text */
 .hf-card { background:var(--ivory); color:var(--ivory-ink); border-radius:18px; padding:26px 28px 22px; scroll-margin-top:84px; }
+/* Nav "Contact" lands here; the extra margin covers the fade-up lift so the
+   card's top edge clears the fixed nav. */
+#contact.hf-card { scroll-margin-top:112px; }
 .hf-card h2 { font-family:var(--serif); font-size:1.45rem; font-weight:400; line-height:1.2; color:var(--ivory-ink); margin-bottom:6px; }
 .hf-desc { font-size:0.86rem; color:var(--ivory-muted); line-height:1.55; margin-bottom:14px; }
 .hf-field { margin-bottom:10px; }
@@ -854,6 +858,10 @@ body > footer {
   content-visibility:auto;
   contain-intrinsic-size:auto 900px;
 }
+/* Off-screen sections have a 900px placeholder height, so a jump to #contact
+   would land short (badly so on phones). cv-all is set on arrival with a
+   #hash and on jump-link clicks, so every section renders first. */
+html.cv-all main > section, html.cv-all body > footer { content-visibility:visible !important; }
 /* star ratings */
 
 /* Icon system: inline SVG replaces emoji iconography */
@@ -922,9 +930,9 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
     <a href="reviews.html" class="tl-item" data-section="reviews">Reviews</a>
     <a href="portfolio.html" class="tl-item" data-section="portfolio">Client Portfolio</a>
     <a href="pricing.html" class="tl-item" data-section="pricing">Pricing</a>
-    <a href="contact.html" class="tl-item" data-section="contact">Contact</a>
+    <a href="#contact" class="tl-item" data-section="contact">Contact</a>
   </div>
-  <a href="contact.html" class="nav-cta">Let's Talk</a>
+  <a href="#contact" class="nav-cta">Let's Talk</a>
   <button class="ham-btn" id="hamBtn" aria-label="Open menu">
     <span></span><span></span><span></span>
   </button>
@@ -939,8 +947,8 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
     <a href="reviews.html" class="mob-item">Reviews</a>
     <a href="portfolio.html" class="mob-item">Client Portfolio</a>
     <a href="pricing.html" class="mob-item">Pricing</a>
-    <a href="contact.html" class="mob-item">Contact</a>
-    <a href="contact.html" class="mob-cta">Let's Talk</a>
+    <a href="#contact" class="mob-item">Contact</a>
+    <a href="#contact" class="mob-cta">Let's Talk</a>
   </div>
 </div>
 
@@ -1057,6 +1065,7 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
           <div class="work-client">St Paul&rsquo;s Cleaning Services</div>
           <div class="work-sector">Domestic cleaning &middot; Epsom</div>
           <p class="work-brief">A domestic cleaning business serving Epsom and the surrounding towns. The brief was a site that looked the part against bigger competitors and turned up when someone nearby searched for cleaning.</p>
+          <div class="work-outcome">Over two months: <strong>10 enquiries</strong> through the website&rsquo;s form, and <strong>at least two have already become booked jobs</strong>.</div>
           <blockquote class="work-quote">&ldquo;MartKam Digital completely transformed our online presence. Our website looks professional and we&rsquo;re now showing up on Google when local customers search for cleaning services.&rdquo;</blockquote>
           <div class="work-attrib">Andreza &middot; Director</div>
           <div class="work-links"><span>Visit the live site &rarr;</span></div>
@@ -1083,7 +1092,7 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
       </a>
 
     </div>
-    <p class="work-note fade-up"><a href="portfolio.html">See the full client portfolio &rarr;</a> &nbsp;&middot;&nbsp; <a href="reviews.html">Read what these clients said &rarr;</a> &nbsp;&middot;&nbsp; Want the same for your business? <a href="contact.html">Book a free 20-minute call</a>.</p>
+    <p class="work-note fade-up"><a href="portfolio.html">See the full client portfolio &rarr;</a> &nbsp;&middot;&nbsp; <a href="reviews.html">Read what these clients said &rarr;</a> &nbsp;&middot;&nbsp; Want the same for your business? <a href="#contact">Book a free 20-minute call</a>.</p>
   </div>
 </section>
 
@@ -1480,7 +1489,7 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 </section>
 
 <!-- CONTACT -->
-<section class="section contact-bg" id="contact">
+<section class="section contact-bg" id="get-in-touch">
   <div class="wrap">
     <div class="contact-inner">
       <div class="contact-left fade-up">
@@ -1510,7 +1519,7 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
       </div>
       <!-- A clone of the hero form: same fields, same Formspree endpoint, same
            script (js/enquiry-form.js). form_source tells the two apart. -->
-      <div class="hf-card fade-up fade-up-d2" id="enquire-contact">
+      <div class="hf-card fade-up fade-up-d2" id="contact">
         <h2 id="cf-title">Tell me about your project</h2>
         <p class="hf-desc" id="cf-desc">Need a new website or help getting found on Google? Send me a few details and I&rsquo;ll reply personally with the next steps.</p>
         <form class="js-enquiry" data-form-id="homepage_contact" action="https://formspree.io/f/meepbpqw" method="POST" aria-labelledby="cf-title" aria-describedby="cf-desc">
@@ -1734,6 +1743,13 @@ const observer = new IntersectionObserver((entries) => {
 // elements already in view are revealed without reading layout synchronously.
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
+// JUMP LINKS (#contact, #prices, ...): render every section before the
+// browser scrolls, so it aims at real heights (see the cv-all rule).
+document.addEventListener('click', e => {
+  const a = e.target.closest('a[href^="#"]');
+  if (a && a.getAttribute('href').length > 1) document.documentElement.classList.add('cv-all');
+}, true);
+
 // HAMBURGER MENU
 (function() {
   const btn  = document.getElementById('hamBtn');
@@ -1795,14 +1811,16 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
   });
 
   // Scroll-spy: highlight nav item based on visible section
-  const sections = ['about','services','testimonials','why','process','contact'];
-  const sectionEls = sections.map(id => document.getElementById(id)).filter(Boolean);
+  // [section id on this page, data-section of the nav item it lights up]
+  const spy = [['work','portfolio'],['about','about'],['services','services'],['prices','pricing'],['get-in-touch','contact']]
+    .map(([id, item]) => ({ el: document.getElementById(id), item }))
+    .filter(s => s.el);
 
   function onScroll() {
     let active = null;
     const mid = window.scrollY + window.innerHeight * 0.4;
-    for (let i = sectionEls.length - 1; i >= 0; i--) {
-      if (sectionEls[i].offsetTop <= mid) { active = sections[i]; break; }
+    for (let i = spy.length - 1; i >= 0; i--) {
+      if (spy[i].el.offsetTop <= mid) { active = spy[i].item; break; }
     }
     const target = nav.querySelector('[data-section="' + (active || 'home') + '"]');
     if (target && !target.classList.contains('active')) setActive(target);

@@ -86,6 +86,7 @@ const PROJECTS = {
     img: 'work-stpauls',
     alt: 'Home page of the St Paul&rsquo;s Cleaning Services website',
     brief: 'A domestic cleaning business serving Epsom and the surrounding towns. The brief was a site that looked the part against bigger competitors and turned up when someone nearby searched for cleaning.',
+    outcome: 'Over two months: <strong>10 enquiries</strong> through the website&rsquo;s form, and <strong>at least two have already become booked jobs</strong>.',
     quote: '&ldquo;MartKam Digital completely transformed our online presence. Our website looks professional and we&rsquo;re now showing up on Google when local customers search for cleaning services.&rdquo;',
     attrib: 'Andreza &middot; Director',
     links: [{ href: 'https://www.stpaulscleaningservices.co.uk/', label: 'Visit the live site', ext: true }],
@@ -217,7 +218,7 @@ const navBlock = (active = '') => `<!-- NAV -->
     <a href="reviews.html" class="tl-item">Reviews</a>
     <a href="portfolio.html" class="tl-item${active === 'portfolio' ? ' active' : ''}"${active === 'portfolio' ? ' aria-current="page"' : ''}>Client Portfolio</a>
     <a href="pricing.html" class="tl-item">Pricing</a>
-    <a href="contact.html" class="tl-item">Contact</a>
+    <a href="index.html#contact" class="tl-item">Contact</a>
   </div>
   <a href="#enquire" class="nav-cta">Let's Talk</a>
   <button class="ham-btn" id="hamBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobMenu">
@@ -234,7 +235,7 @@ const navBlock = (active = '') => `<!-- NAV -->
     <a href="reviews.html" class="mob-item">Reviews</a>
     <a href="portfolio.html" class="mob-item">Client Portfolio</a>
     <a href="pricing.html" class="mob-item">Pricing</a>
-    <a href="contact.html" class="mob-item">Contact</a>
+    <a href="index.html#contact" class="mob-item">Contact</a>
     <a href="#enquire" class="mob-cta">Let's Talk</a>
   </div>
 </div>
