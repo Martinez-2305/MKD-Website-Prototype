@@ -282,8 +282,8 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; background:rgba(13,1,
 .nav-cta { background:var(--ink); color:var(--white); font-size:0.82rem; font-weight:600; padding:10px 22px; border-radius:100px; transition:background .2s; }
 .nav-cta:hover { background:var(--red); color:#fff; }
 .tubelight-nav { display:flex; align-items:center; gap:2px; position:relative; background:rgba(255,255,255,0.06); border:1px solid var(--border); backdrop-filter:blur(8px); padding:4px; border-radius:100px; overflow:visible; }
-.tl-bg-pill { position:absolute; background:rgba(227,27,35,0.18); border-radius:100px; transition:left .35s cubic-bezier(.34,1.56,.64,1), top .35s cubic-bezier(.34,1.56,.64,1), width .35s cubic-bezier(.34,1.56,.64,1), height .35s; z-index:0; pointer-events:none; }
-.tl-lamp-wrap { position:absolute; pointer-events:none; z-index:10; transition:left .35s cubic-bezier(.34,1.56,.64,1); width:0; height:0; }
+.tl-bg-pill { position:absolute; background:rgba(227,27,35,0.18); border-radius:100px; transition:left .35s cubic-bezier(.22,1,.36,1), top .35s cubic-bezier(.22,1,.36,1), width .35s cubic-bezier(.22,1,.36,1), height .35s; z-index:0; pointer-events:none; }
+.tl-lamp-wrap { position:absolute; pointer-events:none; z-index:10; transition:left .35s cubic-bezier(.22,1,.36,1); width:0; height:0; }
 .tl-lamp-bar { position:absolute; bottom:100%; left:50%; transform:translateX(-50%); width:32px; height:4px; background:var(--red); border-radius:4px 4px 0 0; margin-bottom:2px; }
 .tl-lamp-bar::before { content:''; position:absolute; width:48px; height:24px; background:rgba(227,27,35,0.25); border-radius:50%; filter:blur(10px); top:-8px; left:-8px; }
 .tl-lamp-bar::after { content:''; position:absolute; width:32px; height:20px; background:rgba(227,27,35,0.2); border-radius:50%; filter:blur(8px); top:-4px; left:0; }
@@ -535,7 +535,7 @@ body > footer {
    that followed them and wrapped as a separate ragged column. */
 .pr-list li{font-size:0.89rem;color:var(--ink-light);line-height:1.7;position:relative;padding-left:27px;}
 .pr-list li::before{content:'';position:absolute;left:0;top:5px;width:16px;height:16px;border-radius:50%;background:rgba(227,27,35,0.12);border:1px solid rgba(227,27,35,0.3);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='9' viewBox='0 0 10 10'%3E%3Cpath d='M2 5l2.5 2.5L8 3' stroke='%23ff3b41' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;}
-.pr-note{font-size:0.88rem;color:var(--ink-light);line-height:1.8;background:rgba(255,255,255,0.03);border-left:2px solid var(--red);padding:18px 22px;border-radius:0 10px 10px 0;margin-top:28px;}
+.pr-note{font-size:0.88rem;color:var(--ink-light);line-height:1.8;background:rgba(255,255,255,0.03);border:1px solid rgba(245,234,234,0.1);padding:18px 22px;border-radius:10px;margin-top:28px;}
 .pr-note strong{color:var(--ink);}
 .pr-table{width:100%;border-collapse:collapse;margin-top:26px;font-size:0.92rem;}
 .pr-table td{padding:16px 0;border-bottom:1px solid var(--border);color:var(--ink-light);line-height:1.7;vertical-align:top;}
@@ -566,7 +566,7 @@ body > footer {
 .pr-hero .label{display:inline-block;margin-bottom:18px;}
 .pr-grid--three{grid-template-columns:repeat(3,1fr);gap:20px;align-items:start;}
 .pr-card{position:relative;}
-.pr-card-badge{position:absolute;top:-11px;left:36px;background:var(--red);color:#fff;font-size:0.67rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 13px;border-radius:100px;white-space:nowrap;}
+.pr-card-badge{position:absolute;top:-11px;left:36px;background:var(--red);color:#fff;font-size:0.75rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 13px;border-radius:100px;white-space:nowrap;}
 .pr-card-plus{font-size:0.8rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-light);margin:2px 0 12px;}
 .pr-sub{font-family:var(--sans);font-size:0.8rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--red-text);margin:34px 0 16px;}
 .pr-steps{list-style:none;counter-reset:step;display:flex;flex-direction:column;gap:14px;margin-top:28px;}
@@ -651,8 +651,10 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 .pr-basic a { color:var(--red-text); font-weight:600; }
 @media (max-width:900px){ .pr-basics { grid-template-columns:1fr; } }
 </style>
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- NAV -->
 <nav>
@@ -688,7 +690,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 
 <div class="pr-hero">
   <div class="pr-inner">
-    <span class="label">Website Packages</span>
     <h1>Website design packages<br><em>and prices</em></h1>
     <div class="pr-lede">
       <p>Three packages, each a complete website: design, build, launch, the words on the page and the <a href="seo-services.html">SEO groundwork</a>. Pay a 50% deposit to book, and the balance when the site goes live. Ongoing SEO is a separate, optional service you can add at launch, later, or not at all.</p>
@@ -816,7 +817,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 
   <div class="pr-sec">
     <div class="pr-guarantee">
-      <div class="pr-guarantee-tag">The launch guarantee</div>
       <h2>Live on time, or you don&rsquo;t pay to wait.</h2>
       <p>Your site will be live within 30 days of the clock starting (45 on Bookings &amp; Ordering), with your forms tested and delivering, the technical checks done, and your sitemap submitted to Google Search Console and Bing Webmaster Tools. Miss that and you don&rsquo;t pay the balance until it is.</p>
       <p>The clock starts once I have all three: your deposit, your content call done, and your photos and any logins I need. Not before. It pauses while I&rsquo;m waiting on you, and restarts the day you come back to me.</p>
@@ -1043,5 +1043,6 @@ document.querySelectorAll('.mob-item, .mob-cta').forEach(item => {
   item.addEventListener('click', () => { hamBtn.classList.remove('open'); mobMenu.classList.remove('open'); });
 });
 </script>
+<script src="js/menu-a11y.js" defer></script>
 </body>
 </html>

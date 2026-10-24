@@ -199,8 +199,8 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; background:rgba(13,1,
 .nav-cta { background:var(--ink); color:var(--white); font-size:0.82rem; font-weight:600; padding:10px 22px; border-radius:100px; transition:background .2s; }
 .nav-cta:hover { background:var(--red); color:#fff; }
 .tubelight-nav { display:flex; align-items:center; gap:2px; position:relative; background:rgba(255,255,255,0.06); border:1px solid var(--border); backdrop-filter:blur(8px); padding:4px; border-radius:100px; box-shadow:0 4px 16px rgba(0,0,0,0.06); overflow:visible; }
-.tl-bg-pill { position:absolute; background:rgba(227,27,35,0.18); border-radius:100px; transition:left .35s cubic-bezier(.34,1.56,.64,1), top .35s cubic-bezier(.34,1.56,.64,1), width .35s cubic-bezier(.34,1.56,.64,1), height .35s; z-index:0; pointer-events:none; }
-.tl-lamp-wrap { position:absolute; pointer-events:none; z-index:10; transition:left .35s cubic-bezier(.34,1.56,.64,1); width:0; height:0; }
+.tl-bg-pill { position:absolute; background:rgba(227,27,35,0.18); border-radius:100px; transition:left .35s cubic-bezier(.22,1,.36,1), top .35s cubic-bezier(.22,1,.36,1), width .35s cubic-bezier(.22,1,.36,1), height .35s; z-index:0; pointer-events:none; }
+.tl-lamp-wrap { position:absolute; pointer-events:none; z-index:10; transition:left .35s cubic-bezier(.22,1,.36,1); width:0; height:0; }
 .tl-lamp-bar { position:absolute; bottom:100%; left:50%; transform:translateX(-50%); width:32px; height:4px; background:var(--red); border-radius:4px 4px 0 0; margin-bottom:2px; }
 .tl-lamp-bar::before { content:''; position:absolute; width:48px; height:24px; background:rgba(227,27,35,0.25); border-radius:50%; filter:blur(10px); top:-8px; left:-8px; }
 .tl-lamp-bar::after { content:''; position:absolute; width:32px; height:20px; background:rgba(227,27,35,0.2); border-radius:50%; filter:blur(8px); top:-4px; left:0; }
@@ -261,7 +261,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   flex:1 1 auto;
   display:flex;
   align-items:center;
-  padding:92px 48px 56px 80px;
+  padding:120px 48px 56px 80px;
   position:relative;
   z-index:2;
 }
@@ -493,21 +493,21 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .svc-card::before {
   content:'';
   position:absolute;
-  left:0; top:0; bottom:0;
-  width:3px;
+  left:0; right:0; bottom:0;
+  height:2px;
   background:var(--red);
-  transform:scaleY(0);
-  transform-origin:bottom;
-  transition:transform .4s cubic-bezier(.34,1.56,.64,1);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .4s cubic-bezier(.22,1,.36,1);
   z-index:3;
-  border-radius:0 2px 2px 0;
+  border-radius:0;
 }
 .svc-card:hover {
   border-color:rgba(227,27,35,0.35);
   box-shadow:0 16px 48px rgba(227,27,35,0.1), 0 0 0 1px rgba(227,27,35,0.12);
   transform:translateY(-4px);
 }
-.svc-card:hover::before { transform:scaleY(1); }
+.svc-card:hover::before { transform:scaleX(1); }
 
 /* Text body */
 .svc-card-body {
@@ -524,7 +524,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   margin-bottom:14px;
 }
 .svc-tag {
-  font-size:0.63rem;
+  font-size:0.72rem;
   font-weight:700;
   letter-spacing:1.5px;
   text-transform:uppercase;
@@ -657,7 +657,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   display:flex;
   align-items:center;
   justify-content:center;
-  transition:background .3s, border-color .3s, transform .35s cubic-bezier(.34,1.56,.64,1);
+  transition:background .3s, border-color .3s, transform .35s cubic-bezier(.22,1,.36,1);
 }
 .svc-card:hover .svc-visual-icon {
   background:rgba(227,27,35,0.14);
@@ -721,7 +721,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   display:inline-flex;
   align-items:center;
   gap:7px;
-  font-size:0.68rem;
+  font-size:0.75rem;
   font-weight:600;
   letter-spacing:1.5px;
   text-transform:uppercase;
@@ -1156,7 +1156,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .faq-btn:hover { color:#fff; }
 .faq-btn.open { color:var(--red-text); }
 .faq-question { font-family:var(--serif); font-size:1.05rem; font-weight:400; line-height:1.35; letter-spacing:-0.1px; }
-.faq-icon { flex-shrink:0; width:28px; height:28px; border-radius:50%; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; transition:background .25s, border-color .25s, transform .4s cubic-bezier(.34,1.56,.64,1); }
+.faq-icon { flex-shrink:0; width:28px; height:28px; border-radius:50%; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; transition:background .25s, border-color .25s, transform .4s cubic-bezier(.22,1,.36,1); }
 .faq-btn.open .faq-icon { background:var(--red); border-color:var(--red-text); transform:rotate(45deg); }
 .faq-icon svg { width:12px; height:12px; color:var(--ink-light); transition:color .25s; }
 .faq-btn.open .faq-icon svg { color:#fff; }
@@ -1224,8 +1224,10 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 @media (max-width:760px){ .svc-feature-list { grid-template-columns:1fr; } }
 @media (min-width:901px){ .core-grid { grid-template-columns:repeat(2, 1fr); } }
 </style>
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- NAV -->
 <nav>
@@ -1271,7 +1273,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 
   <div class="hero-inner">
     <div class="hero-text">
-      <div class="hero-label">My Services</div>
       <h1 class="hero-heading">Website design and SEO services<br><em>for your business.</em></h1>
       <p class="hero-sub">Everything your business needs to get found and get enquiries: websites, local SEO, Google Business Profile and hosting, delivered personally from Epsom.</p>
       <div class="hero-ctas">
@@ -1286,7 +1287,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 <section class="overview" id="overview">
   <div class="wrap">
     <div class="overview-head fade-up">
-      <span class="section-label">Full Offering</span>
       <h2 class="section-title">What I build for <em>local businesses.</em></h2>
     </div>
     <div class="svc-grid">
@@ -1407,12 +1407,11 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 
     </div>
 
-    <p class="fade-up" style="margin-top:40px;color:var(--ink-light);line-height:1.8;max-width:680px;">
+    <p class="fade-up" style="margin-top:40px;color:var(--ink-light);line-height:1.8;max-width:36em;">
       Some businesses want this aimed at a particular kind of buyer. There are pages for <a href="web-design-for-cleaning-companies.html" style="color:var(--red-text);font-weight:600;">cleaning contractors</a>, <a href="web-design-for-trades.html" style="color:var(--red-text);font-weight:600;">trades and construction</a> and <a href="web-design-for-ecommerce.html" style="color:var(--red-text);font-weight:600;">ordering and e-commerce</a>, or see <a href="case-study-cs-cleaning.html" style="color:var(--red-text);font-weight:600;border-bottom:1.5px solid var(--border);padding-bottom:2px;">a finished project with the numbers →</a>.
     </p>
 
     <div class="overview-head fade-up" style="margin-top:96px;">
-      <span class="section-label">Also Available</span>
       <h2 class="section-title">Also available<br><em>alongside the build.</em></h2>
       <p style="color:var(--ink-light);line-height:1.8;max-width:620px;margin-top:14px;">Everything above comes as part of a package. These are the extras that get added on when a business needs them.</p>
     </div>
@@ -1457,7 +1456,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 <section class="section core" id="core">
   <div class="wrap">
     <div class="core-head fade-up">
-      <span class="section-label">Core Services</span>
       <h2 class="section-title">What actually wins you<br><em>the next contract.</em></h2>
     </div>
     <div class="core-grid">
@@ -1540,7 +1538,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 <section class="section process-teaser" id="process">
   <div class="wrap">
     <div class="process-teaser-head fade-up">
-      <span class="section-label">How It Works</span>
       <h2 class="section-title">Simple from start <em>to finish.</em></h2>
     </div>
     <div class="process-flow fade-up delay-1">
@@ -1574,7 +1571,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
   <div class="wrap">
     <div class="faq-layout">
       <div class="faq-left fade-up">
-        <span class="faq-eyebrow">FAQ</span>
         <h2 class="faq-title">Questions I<br><em>get asked a lot</em></h2>
         <p class="faq-subtitle">Can't find what you're looking for? Drop me a message. I’ll get back to you the same day.</p>
         <a href="index.html#contact" class="faq-contact-cta">Ask me anything →</a>
@@ -1688,7 +1684,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
   <div class="cta-banner-orb2" aria-hidden="true"></div>
   <div class="cta-banner-inner">
     <div>
-      <div class="cta-eyebrow">Ready to get started?</div>
       <h2>Let's build something<br><em>that works for your business.</em></h2>
       <p>A 20-minute call, no charge and no obligation. The prices are already on the site, so it is a conversation about the work rather than a pitch.</p>
     </div>
@@ -1810,5 +1805,6 @@ document.querySelectorAll('.faq-btn').forEach(btn => {
   });
 });
 </script>
+<script src="js/menu-a11y.js" defer></script>
 </body>
 </html>

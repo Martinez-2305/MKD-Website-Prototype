@@ -1,0 +1,50 @@
+/* Site-wide accessibility and comfort rules, loaded last on every page. */
+
+/* Skip link: hidden until a keyboard user tabs to it */
+.skip-link {
+  position: absolute; left: 16px; top: -100px; z-index: 1000;
+  background: #fff; color: #1a1010; font: 600 0.9rem/1 'DM Sans', sans-serif;
+  padding: 12px 18px; border-radius: 8px; text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+.skip-link:focus { top: 12px; outline: 2px solid #c4141b; outline-offset: 2px; }
+main:focus { outline: none; }
+
+/* Text selection in the brand red */
+::selection { background: rgba(227, 27, 35, 0.85); color: #fff; }
+
+/* Menu button: a full 44px tap area */
+.ham-btn { min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+
+/* A closed mobile menu cannot be reached with the keyboard */
+.mob-menu:not(.open) { visibility: hidden; }
+.mob-menu.open { visibility: visible; }
+
+/* Comfortable reading width for long paragraphs: about 75 characters */
+.pf-lede, .lp-small, .section-intro, .local-note, .expertise-p,
+.policy-section p, .policy-highlight p, .pr-sec > p, .pr-guarantee p, .pr-note,
+.svc-card--feature .svc-card-desc {
+  max-width: 36em;
+}
+
+/* Notes inside a pricing card: a divider, not a box inside the box */
+.pr-card .pr-note {
+  background: none; border: 0; border-top: 1px solid rgba(245, 234, 234, 0.12);
+  border-radius: 0; padding: 16px 0 0;
+}
+
+/* Reduced motion: keep every state change, drop the movement */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .fade-up, .fade-up.visible { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .ticker-track, .process-inner { animation: none !important; }
+  /* The process strip becomes a still, wrapping row of its four steps */
+  .process-inner {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;
+    width: auto; max-width: 1240px; margin: 0 auto; padding: 8px 24px;
+  }
+  .process-inner .pcard { width: auto; margin: 0; }
+  .pcard-dup { display: none !important; }
+  .tl-bg-pill, .tl-lamp-wrap { transition: none !important; }
+  .value-card:hover, .svc-card:hover, .why-card:hover, .btn-cta:hover, .btn-primary:hover { transform: none !important; }
+}

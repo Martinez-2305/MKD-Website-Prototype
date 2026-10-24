@@ -128,8 +128,8 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; background:rgba(13,1,
 .nav-cta { background:var(--ink); color:var(--white); font-size:0.82rem; font-weight:600; padding:10px 22px; border-radius:100px; transition:background .2s; }
 .nav-cta:hover { background:var(--red); color:#fff; }
 .tubelight-nav { display:flex; align-items:center; gap:2px; position:relative; background:rgba(255,255,255,0.06); border:1px solid var(--border); backdrop-filter:blur(8px); padding:4px; border-radius:100px; box-shadow:0 4px 16px rgba(0,0,0,0.06); overflow:visible; }
-.tl-bg-pill { position:absolute; background:rgba(227,27,35,0.18); border-radius:100px; transition:left .35s cubic-bezier(.34,1.56,.64,1), top .35s cubic-bezier(.34,1.56,.64,1), width .35s cubic-bezier(.34,1.56,.64,1), height .35s; z-index:0; pointer-events:none; }
-.tl-lamp-wrap { position:absolute; pointer-events:none; z-index:10; transition:left .35s cubic-bezier(.34,1.56,.64,1); width:0; height:0; }
+.tl-bg-pill { position:absolute; background:rgba(227,27,35,0.18); border-radius:100px; transition:left .35s cubic-bezier(.22,1,.36,1), top .35s cubic-bezier(.22,1,.36,1), width .35s cubic-bezier(.22,1,.36,1), height .35s; z-index:0; pointer-events:none; }
+.tl-lamp-wrap { position:absolute; pointer-events:none; z-index:10; transition:left .35s cubic-bezier(.22,1,.36,1); width:0; height:0; }
 .tl-lamp-bar { position:absolute; bottom:100%; left:50%; transform:translateX(-50%); width:32px; height:4px; background:var(--red); border-radius:4px 4px 0 0; margin-bottom:2px; }
 .tl-lamp-bar::before { content:''; position:absolute; width:48px; height:24px; background:rgba(227,27,35,0.25); border-radius:50%; filter:blur(10px); top:-8px; left:-8px; }
 .tl-lamp-bar::after { content:''; position:absolute; width:32px; height:20px; background:rgba(227,27,35,0.2); border-radius:50%; filter:blur(8px); top:-4px; left:0; }
@@ -190,7 +190,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   z-index:0;
   display:flex;
   align-items:center;
-  padding:104px 80px 56px;
+  padding:132px 80px 56px;
   overflow:hidden;
   background:#0d0101;
 }
@@ -510,8 +510,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .value-card {
   background:rgba(245,234,234,0.03);
   border:1px solid var(--border);
-  border-left:3px solid var(--red);
-  border-radius:4px;
+  border-radius:12px;
   padding:36px 32px;
   transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease, background .3s ease;
   position:relative;
@@ -675,7 +674,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   font-weight:600;
   letter-spacing:2px;
   text-transform:uppercase;
-  color:rgba(245,234,234,0.3);
+  color:rgba(245,234,234,0.62);
   margin-bottom:8px;
 }
 .compare-title {
@@ -923,7 +922,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .faq-btn:hover { color:#fff; }
 .faq-btn.open { color:var(--red-text); }
 .faq-question { font-family:var(--serif); font-size:1.05rem; font-weight:400; line-height:1.35; letter-spacing:-0.1px; }
-.faq-icon { flex-shrink:0; width:28px; height:28px; border-radius:50%; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; transition:background .25s, border-color .25s, transform .4s cubic-bezier(.34,1.56,.64,1); }
+.faq-icon { flex-shrink:0; width:28px; height:28px; border-radius:50%; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; transition:background .25s, border-color .25s, transform .4s cubic-bezier(.22,1,.36,1); }
 .faq-btn.open .faq-icon { background:var(--red); border-color:var(--red-text); transform:rotate(45deg); }
 .faq-icon svg { width:12px; height:12px; color:var(--ink-light); transition:color .25s; }
 .faq-btn.open .faq-icon svg { color:#fff; }
@@ -983,8 +982,10 @@ h1, h2, h3, .section-title, .faq-title, blockquote { text-wrap:balance; }
 .story-pull { font-size:clamp(1.5rem, 2.3vw, 2.1rem); }
 p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragraph's last line */
 </style>
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- SVG Noise Filter -->
 <svg class="noise-filter" aria-hidden="true">
@@ -1046,7 +1047,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
   <div class="hero-cross" aria-hidden="true"></div>
 
   <div class="hero-content">
-    <div class="hero-label fade-up">About MartKam Digital</div>
     <h1 class="hero-h1 fade-up delay-1">
       Local knowledge.<br>
       <em>Real digital results.</em>
@@ -1109,7 +1109,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 <!-- ===== WHAT WE STAND FOR ===== -->
 <section class="values" id="values">
   <div class="section-header fade-up">
-    <div class="section-label">My Values</div>
     <h2 class="section-h2">What I <em>stand for</em></h2>
     <p class="section-sub">Six principles that guide every project, every conversation, and every decision I make on your behalf.</p>
   </div>
@@ -1175,7 +1174,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 <section class="expertise" id="expertise">
   <div class="expertise-grid">
     <div class="expertise-left">
-      <div class="section-label fade-up">My Expertise</div>
       <h2 class="expertise-h2 fade-up delay-1">
         Skills sharpened on<br>
         <em>real local results.</em>
@@ -1193,7 +1191,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
   <div class="why-circle-deco" aria-hidden="true"></div>
 
   <div class="section-header fade-up">
-    <div class="section-label">Why It Matters</div>
     <h2 class="section-h2">The local <em>difference</em></h2>
     <p class="section-sub">Here's what changes when you work with an agency that actually cares about your postcode.</p>
   </div>
@@ -1242,7 +1239,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
   <div class="wrap">
     <div class="faq-layout">
       <div class="faq-left fade-up">
-        <span class="faq-eyebrow">FAQ</span>
         <h2 class="faq-title">Questions I<br><em>get asked a lot</em></h2>
         <p class="faq-subtitle">Can't find what you're looking for? Drop me a message. I’ll get back to you the same day.</p>
         <a href="index.html#contact" class="faq-contact-cta">Ask me anything →</a>
@@ -1353,7 +1349,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 <!-- ===== CTA BANNER ===== -->
 <section class="cta-banner" id="cta">
   <div class="cta-inner">
-    <div class="cta-label fade-up">Ready to Begin?</div>
     <h2 class="fade-up delay-1">Let's build something <em>worth talking about.</em></h2>
     <p class="fade-up delay-2">No hard sell, no commitment required. Just an honest conversation about where you are, where you want to be, and how I can help you get there.</p>
     <a href="index.html#contact" class="btn-white fade-up delay-3">
@@ -1481,5 +1476,6 @@ document.querySelectorAll('.faq-btn').forEach(btn => {
   });
 });
 </script>
+<script src="js/menu-a11y.js" defer></script>
 </body>
 </html>

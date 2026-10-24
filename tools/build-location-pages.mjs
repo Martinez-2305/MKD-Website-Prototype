@@ -102,6 +102,24 @@ const PROJECTS = {
     attrib: 'Kamil &middot; Director',
     links: [{ href: 'https://modernusdecorationprojects.co.uk/', label: 'Visit the live site', ext: true }],
   },
+  renata: {
+    name: 'Deep Cleaning by Renata',
+    sector: 'End of tenancy &amp; deep cleaning',
+    where: 'Serving Wimbledon, Putney, Richmond and Barnes',
+    img: 'work-renata',
+    alt: 'Home page of the Deep Cleaning by Renata website',
+    brief: 'An owner-led cleaning business with nearly 15 years&rsquo; experience, built on recommendations from happy clients. The site puts Renata front and centre, sets out what each type of clean includes, and works in both English and Polish, with quotes requested by form or WhatsApp.',
+    links: [{ href: 'https://deepcleaningbyrenata.co.uk/', label: 'Visit the live site', ext: true }],
+  },
+  talkingtv: {
+    name: 'Talking TV',
+    sector: 'Film &amp; television reviews',
+    where: 'An online review site, read anywhere',
+    img: 'work-talkingtv',
+    alt: 'Home page of the Talking TV website',
+    brief: 'A review site for new films and TV series. The brief was a bold, cinema-style design that makes reviews easy to publish and easy to browse, with films and TV series kept separate and a newsletter so readers hear when a new review goes up.',
+    links: [{ href: 'https://talkingtv.co.uk/', label: 'Visit the live site', ext: true }],
+  },
 };
 
 /* Shared FAQs, answered from pricing.html. Town FAQs come first. */
@@ -147,19 +165,23 @@ const decode = s => String(s)
   .replace(/&rdquo;/g, '”').replace(/&middot;/g, '·');
 const plain = s => decode(stripTags(s));
 
-const projectCard = (key, i) => {
+/* level: the card title's heading level. 3 under a section heading; 2 on the
+   portfolio page, where the cards sit directly under the h1. */
+const projectCard = (key, level = 3) => {
   const p = PROJECTS[key];
   return `      <article class="work-card">
         <div class="work-shot">
           <div class="work-bar"><span></span><span></span><span></span><em></em></div>
           <picture>
+            <source media="(max-width:700px)" type="image/avif" srcset="img/${p.img}-m-780.avif" width="780" height="586">
+            <source media="(max-width:700px)" type="image/webp" srcset="img/${p.img}-m-780.webp" width="780" height="586">
             <source type="image/avif" srcset="img/${p.img}-800.avif 800w, img/${p.img}-1200.avif 1200w" sizes="(max-width:700px) 92vw, (max-width:1060px) 46vw, 30vw">
             <source type="image/webp" srcset="img/${p.img}-800.webp 800w, img/${p.img}-1200.webp 1200w" sizes="(max-width:700px) 92vw, (max-width:1060px) 46vw, 30vw">
             <img loading="lazy" decoding="async" width="1200" height="532" src="img/${p.img}-1200.webp" alt="${p.alt}">
           </picture>
         </div>
         <div class="work-body">
-          <h3 class="work-client">${p.name}</h3>
+          <h${level} class="work-client">${p.name}</h${level}>
           <div class="work-sector">${p.sector}</div>
           <p class="work-where">${p.where}</p>
           <p class="work-brief">${p.brief}</p>
@@ -206,7 +228,9 @@ const tierSeo = `      <div class="lp-inc-card">
 
 
 /* Shared page chrome: used by every location page and the portfolio page. */
-const navBlock = (active = '') => `<!-- NAV -->
+const navBlock = (active = '') => `<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- NAV -->
 <nav>
   <div class="nav-logo"><a href="/"><img decoding="async" width="320" height="167" src="img/logo-320.webp" alt="MartKam Digital home"></a></div>
   <div class="tubelight-nav" id="tlNav">
@@ -327,6 +351,7 @@ document.querySelectorAll('.faq-btn').forEach(btn => {
   });
 });
 </script>
+<script src="js/menu-a11y.js" defer></script>
 <script src="js/enquiry-form.js" defer></script>`;
 
 /* The short enquiry form: identical everywhere; form_source says where it was sent from. */
@@ -470,6 +495,7 @@ ${JSON.stringify(graph, null, 2)}
 </style>
 
 <link rel="stylesheet" href="css/location.css">
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body class="lp">
 
@@ -509,12 +535,11 @@ ${enquiryCard('location_hero', `New enquiry from the ${plain(place)} page`, `Loc
 <section class="work" id="work">
   <div class="wrap">
     <div class="work-head">
-      <span class="label">Recent work</span>
       <h2>Real sites, <em>for real businesses.</em></h2>
       <p>Three of the businesses I build and run websites for. Each card says where the client is actually based, so you can see exactly what the evidence covers.</p>
     </div>
     <div class="work-grid">
-${t.projects.map(projectCard).join('\n')}
+${t.projects.map(k => projectCard(k)).join('\n')}
     </div>
   </div>
 </section>
@@ -522,7 +547,6 @@ ${t.projects.map(projectCard).join('\n')}
 <!-- LOCAL INTRODUCTION -->
 <section class="section" id="local">
   <div class="wrap">
-    <span class="label">${t.introLabel}</span>
     <h2 class="section-title">${t.introHeading}</h2>
     <div class="lp-intro-grid">
       <div class="lp-prose">
@@ -553,7 +577,6 @@ ${t.structure.items.map(i => `            <li>${i}</li>`).join('\n')}
 <!-- WHAT IS INCLUDED -->
 <section class="section lp-inc" id="included">
   <div class="wrap">
-    <span class="label">What is included</span>
     <h2 class="section-title">${t.includedHeading || (t.focus === 'seo' ? 'Local SEO, <em>and the website behind it</em>' : 'Website design, <em>with the SEO groundwork built in</em>')}</h2>
     <div class="lp-inc-grid">
 ${incCards.join('\n')}
@@ -564,7 +587,6 @@ ${incCards.join('\n')}
 <!-- PRICES -->
 <section class="section" id="prices">
   <div class="wrap">
-    <span class="label">Prices</span>
     <h2 class="section-title">Three packages, <em>prices published</em></h2>
     <p class="section-intro">The same prices for every town I work in. Copywriting and the SEO groundwork are included in all three.</p>
     <div class="lp-plans">
@@ -615,7 +637,6 @@ ${incCards.join('\n')}
 <!-- HOW RESULTS ARE MEASURED -->
 <section class="section lp-inc" id="results">
   <div class="wrap">
-    <span class="label">Measuring results</span>
     <h2 class="section-title">How you will know <em>it is working</em></h2>
     <p class="section-intro">You should be able to see whether the site is doing its job without taking my word for it.</p>
     <div class="lp-cols3">
@@ -638,7 +659,6 @@ ${incCards.join('\n')}
 <!-- PROCESS -->
 <section class="section" id="process">
   <div class="wrap">
-    <span class="label">How it works</span>
     <h2 class="section-title">From first call <em>to launch</em></h2>
     <ol class="lp-steps">
 ${PROCESS.map(([h, p]) => `      <li><h3>${h}</h3><p>${p}</p></li>`).join('\n')}
@@ -651,7 +671,6 @@ ${PROCESS.map(([h, p]) => `      <li><h3>${h}</h3><p>${p}</p></li>`).join('\n')}
   <div class="wrap">
     <div class="faq-layout">
       <div class="faq-left">
-        <span class="faq-eyebrow">FAQ</span>
         <h2 class="faq-title">Questions about<br><em>working with me</em></h2>
         <p class="faq-subtitle">Something else on your mind? Ask in the enquiry form and I&rsquo;ll reply personally.</p>
         <a href="#enquire" class="faq-contact-cta">Ask me a question &rarr;</a>
@@ -709,7 +728,8 @@ ${footerBlock()}
 
 /* Client portfolio (portfolio.html): every project in PROJECTS, in order.
    To add a project: add an entry to PROJECTS above, put its screenshots in
-   img/ as <img>-800 and <img>-1200 in .avif and .webp, and rebuild. */
+   img/ as <img>-800 and <img>-1200 (desktop, 1200x532) plus <img>-m-780
+   (phone, 780x586) in .avif and .webp, and rebuild. */
 function portfolioPage() {
   const url = `${BASE}/portfolio.html`;
   const keys = Object.keys(PROJECTS);
@@ -784,6 +804,7 @@ ${JSON.stringify(graph, null, 2)}
 </style>
 
 <link rel="stylesheet" href="css/location.css">
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body class="lp">
 
@@ -794,9 +815,8 @@ ${navBlock('portfolio')}
 <section class="pf-hero">
   <div class="wrap">
     <p class="lp-crumbs"><a href="/">Home</a><span aria-hidden="true">&rsaquo;</span>Client portfolio</p>
-    <span class="label">Client portfolio</span>
     <h1>Websites I&rsquo;ve built <em>for local businesses</em></h1>
-    <p class="pf-lede">Every project here is a real business, and every screenshot is the live site as it stands today. Each card says where the client is based, what the brief was, and links to the website itself.</p>
+    <p class="pf-lede">Every project here is a real business, and every screenshot is the live site as it stands today. Each card says where the client works, what the brief was, and links to the website itself.</p>
   </div>
 </section>
 
@@ -804,7 +824,7 @@ ${navBlock('portfolio')}
 <section class="work pf-work" id="work">
   <div class="wrap">
     <div class="work-grid">
-${keys.map(projectCard).join('\n')}
+${keys.map(k => projectCard(k, 2)).join('\n')}
     </div>
     <p class="pf-more">Want the numbers behind a project? <a href="case-study-cs-cleaning.html">Read the C&amp;S Cleaning Services case study</a>, or see <a href="reviews.html">what these clients said</a>.</p>
   </div>
@@ -815,7 +835,6 @@ ${keys.map(projectCard).join('\n')}
   <div class="wrap">
     <div class="pf-enquire">
       <div class="lp-prose">
-        <span class="label">Your project</span>
         <h2 class="section-title">Want a website <em>like these?</em></h2>
         <p>Tell me a little about your business and what you need. I&rsquo;ll reply personally, usually the same day, with the next steps and which package fits.</p>
         <p>Prices are published up front: <strong>£499</strong>, <strong>£999</strong> or <strong>£1,995</strong>, with the copy written for you and the SEO groundwork included. <a href="pricing.html">See what each package includes</a>.</p>
@@ -952,6 +971,7 @@ ${JSON.stringify(graph, null, 2)}
 </style>
 
 <link rel="stylesheet" href="css/location.css">
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body class="lp">
 
@@ -990,7 +1010,6 @@ ${enquiryCard('seo_hero', 'New SEO enquiry from the SEO services page', 'SEO ser
 <!-- WHO IT SUITS -->
 <section class="section" id="who">
   <div class="wrap">
-    <span class="label">Who it suits</span>
     <h2 class="section-title">SEO for businesses <em>people find by searching</em></h2>
     <div class="lp-intro-grid">
       <div class="lp-prose">
@@ -1023,7 +1042,6 @@ ${enquiryCard('seo_hero', 'New SEO enquiry from the SEO services page', 'SEO ser
 <!-- EACH MONTH -->
 <section class="section lp-inc" id="monthly">
   <div class="wrap">
-    <span class="label">Every month</span>
     <h2 class="section-title">What happens <em>each month</em></h2>
     <p class="section-intro">On the SEO Retainer, this is the work every month, without fail. If a month passes without it, that month is free.</p>
     <div class="lp-cols3">
@@ -1036,7 +1054,6 @@ ${monthly.map(([h, p]) => `      <div class="lp-box"><h3>${h}</h3><p>${p}</p></d
 <section class="work" id="results">
   <div class="wrap">
     <div class="work-head">
-      <span class="label">Results</span>
       <h2>Real numbers, <em>from a real client.</em></h2>
       <p>C&amp;S Cleaning Services, based in Sutton, had no website and no Google presence. These are the first three months after launch, as they happened.</p>
     </div>
@@ -1063,7 +1080,6 @@ ${projectCard('cs')}
 <!-- PRICES AND ELIGIBILITY -->
 <section class="section" id="prices">
   <div class="wrap">
-    <span class="label">Prices</span>
     <h2 class="section-title">SEO prices <em>and who can have them</em></h2>
     <p class="section-intro">I am not VAT registered, so the price you see is the price you pay.</p>
     <div class="lp-plans">
@@ -1110,7 +1126,6 @@ ${projectCard('cs')}
   <div class="wrap">
     <div class="faq-layout">
       <div class="faq-left">
-        <span class="faq-eyebrow">FAQ</span>
         <h2 class="faq-title">Questions about<br><em>SEO with me</em></h2>
         <p class="faq-subtitle">Something else on your mind? Ask in the enquiry form and I&rsquo;ll reply personally.</p>
         <a href="#enquire" class="faq-contact-cta">Ask me a question &rarr;</a>

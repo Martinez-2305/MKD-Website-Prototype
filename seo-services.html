@@ -173,8 +173,11 @@
 </style>
 
 <link rel="stylesheet" href="css/location.css">
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body class="lp">
+
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- NAV -->
 <nav>
@@ -285,7 +288,6 @@
 <!-- WHO IT SUITS -->
 <section class="section" id="who">
   <div class="wrap">
-    <span class="label">Who it suits</span>
     <h2 class="section-title">SEO for businesses <em>people find by searching</em></h2>
     <div class="lp-intro-grid">
       <div class="lp-prose">
@@ -318,7 +320,6 @@
 <!-- EACH MONTH -->
 <section class="section lp-inc" id="monthly">
   <div class="wrap">
-    <span class="label">Every month</span>
     <h2 class="section-title">What happens <em>each month</em></h2>
     <p class="section-intro">On the SEO Retainer, this is the work every month, without fail. If a month passes without it, that month is free.</p>
     <div class="lp-cols3">
@@ -336,7 +337,6 @@
 <section class="work" id="results">
   <div class="wrap">
     <div class="work-head">
-      <span class="label">Results</span>
       <h2>Real numbers, <em>from a real client.</em></h2>
       <p>C&amp;S Cleaning Services, based in Sutton, had no website and no Google presence. These are the first three months after launch, as they happened.</p>
     </div>
@@ -345,6 +345,8 @@
         <div class="work-shot">
           <div class="work-bar"><span></span><span></span><span></span><em></em></div>
           <picture>
+            <source media="(max-width:700px)" type="image/avif" srcset="img/work-cs-m-780.avif" width="780" height="586">
+            <source media="(max-width:700px)" type="image/webp" srcset="img/work-cs-m-780.webp" width="780" height="586">
             <source type="image/avif" srcset="img/work-cs-800.avif 800w, img/work-cs-1200.avif 1200w" sizes="(max-width:700px) 92vw, (max-width:1060px) 46vw, 30vw">
             <source type="image/webp" srcset="img/work-cs-800.webp 800w, img/work-cs-1200.webp 1200w" sizes="(max-width:700px) 92vw, (max-width:1060px) 46vw, 30vw">
             <img loading="lazy" decoding="async" width="1200" height="532" src="img/work-cs-1200.webp" alt="Home page of the C&amp;S Cleaning Services website">
@@ -383,7 +385,6 @@
 <!-- PRICES AND ELIGIBILITY -->
 <section class="section" id="prices">
   <div class="wrap">
-    <span class="label">Prices</span>
     <h2 class="section-title">SEO prices <em>and who can have them</em></h2>
     <p class="section-intro">I am not VAT registered, so the price you see is the price you pay.</p>
     <div class="lp-plans">
@@ -430,7 +431,6 @@
   <div class="wrap">
     <div class="faq-layout">
       <div class="faq-left">
-        <span class="faq-eyebrow">FAQ</span>
         <h2 class="faq-title">Questions about<br><em>SEO with me</em></h2>
         <p class="faq-subtitle">Something else on your mind? Ask in the enquiry form and I&rsquo;ll reply personally.</p>
         <a href="#enquire" class="faq-contact-cta">Ask me a question &rarr;</a>
@@ -633,6 +633,7 @@ document.querySelectorAll('.faq-btn').forEach(btn => {
   });
 });
 </script>
+<script src="js/menu-a11y.js" defer></script>
 <script src="js/enquiry-form.js" defer></script>
 </body>
 </html>

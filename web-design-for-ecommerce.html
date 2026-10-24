@@ -175,8 +175,10 @@
 @media (max-width:1200px){ .page-hero-bg { background-image:url('img/hero-ordering-1200.webp'); background-image:image-set(url('img/hero-ordering-1200.avif') type('image/avif'), url('img/hero-ordering-1200.webp') type('image/webp')); } }
 @media (max-width:820px){ .page-hero-bg { background-image:url('img/hero-ordering-768.webp'); background-image:image-set(url('img/hero-ordering-768.avif') type('image/avif'), url('img/hero-ordering-768.webp') type('image/webp')); background-position:72% center; } }
 </style>
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <!-- NAV -->
 <nav>
   <div class="nav-logo"><img  decoding="async" width="320" height="167" src="img/logo-320.webp" alt="MartKam Digital"></div>
@@ -224,7 +226,6 @@
       <span>&rsaquo;</span>
       Ordering &amp; E-commerce
     </div>
-    <span class="hero-tag">Ordering, bookings and online payments</span>
     <h1>Take the order<br><em>while the phone is engaged.</em></h1>
     <p>Takeaways, restaurants, salons, clinics and shops. I build websites that take orders, bookings and card payments on their own, so the sale does not depend on somebody being free to answer.</p>
     <div class="hero-btns">
@@ -238,7 +239,6 @@
 <section class="section" id="problem">
   <div class="wrap">
     <div class="fade-up">
-      <span class="label">The problem</span>
       <h2 class="section-title">Every order taken by phone<br><em>is an order you had to be free for</em></h2>
     </div>
     <div class="local-intro-grid">
@@ -266,7 +266,6 @@
 <section class="section" id="checks" style="background:var(--mist);">
   <div class="wrap">
     <div class="fade-up" style="max-width:880px;">
-      <span class="label">Two different builds</span>
       <h2 class="section-title">Taking orders is not<br><em>the same as running a shop</em></h2>
       <p class="section-intro">These get lumped together as &ldquo;e-commerce&rdquo; and they are not the same job. Which one you need decides what it costs.</p>
     </div>
@@ -291,7 +290,6 @@
 <section class="section" id="included">
   <div class="wrap">
     <div style="text-align:center;max-width:620px;margin:0 auto;" class="fade-up">
-      <span class="label">What&rsquo;s included</span>
       <h2 class="section-title">The build, and<br><em>the work that follows it</em></h2>
     </div>
     <div class="srv-grid">
@@ -333,7 +331,6 @@
   <div class="wrap">
     <div class="faq-layout">
       <div class="faq-left fade-up">
-        <span class="faq-eyebrow">FAQ</span>
         <h2 class="faq-title">Common questions<br><em>about ordering and payments</em></h2>
         <p class="faq-subtitle">Something else on your mind? Twenty minutes on the phone, no charge and no obligation.</p>
         <a href="index.html#contact" class="faq-contact-cta">Ask me anything &rarr;</a>
@@ -489,5 +486,6 @@ document.querySelectorAll('.faq-btn').forEach(btn => {
   });
 });
 </script>
+<script src="js/menu-a11y.js" defer></script>
 </body>
 </html>

@@ -270,12 +270,12 @@ nav {
 .tl-bg-pill {
   position:absolute; background:rgba(227,27,35,0.18); border-radius:100px;
   width:0; height:0;
-  transition:left .35s cubic-bezier(.34,1.56,.64,1), top .35s cubic-bezier(.34,1.56,.64,1), width .35s cubic-bezier(.34,1.56,.64,1), height .35s;
+  transition:left .35s cubic-bezier(.22,1,.36,1), top .35s cubic-bezier(.22,1,.36,1), width .35s cubic-bezier(.22,1,.36,1), height .35s;
   z-index:0; pointer-events:none;
 }
 .tl-lamp-wrap {
   position:absolute; pointer-events:none; z-index:10;
-  transition:left .35s cubic-bezier(.34,1.56,.64,1);
+  transition:left .35s cubic-bezier(.22,1,.36,1);
   width:0; height:0;
 }
 .tl-lamp-bar {
@@ -427,7 +427,7 @@ nav {
 .hf-submit:focus-visible { outline:3px solid var(--ivory-ink); outline-offset:2px; }
 .hf-submit[disabled] { opacity:0.75; cursor:progress; }
 .hf-reassure { text-align:center; font-size:0.8rem; color:var(--ivory-muted); margin-top:10px; line-height:1.5; }
-.hf-privacy { text-align:center; font-size:0.74rem; color:var(--ivory-muted); margin-top:4px; }
+.hf-privacy { text-align:center; font-size:0.8125rem; color:var(--ivory-muted); margin-top:4px; }
 .hf-privacy a, .hf-card .hf-privacy a:visited { color:var(--ivory-ink); text-decoration:underline; text-underline-offset:2px; }
 .hf-card a:focus-visible { outline:2px solid var(--ivory-red); outline-offset:2px; }
 .hf-success { font-size:0.95rem; line-height:1.6; color:var(--ivory-ink); background:#fff; border:1.5px solid #8c7b7b; border-left:4px solid var(--red); border-radius:10px; padding:16px 18px; margin-top:12px; }
@@ -512,8 +512,8 @@ nav {
 .work-client { font-family:var(--serif); font-size:1.18rem; color:var(--ivory-ink); margin-bottom:4px; }
 .work-sector { font-size:0.75rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--ivory-red); margin-bottom:14px; }
 .work-brief { font-size:0.9rem; line-height:1.75; color:var(--ivory-muted); margin-bottom:16px; }
-.work-outcome { font-size:0.88rem; line-height:1.7; color:var(--ivory-ink); background:rgba(227,27,35,0.06); border-left:2px solid var(--ivory-red); padding:13px 16px; border-radius:0 8px 8px 0; margin-bottom:18px; }
-.work-outcome strong { font-weight:600; }
+.work-outcome { font-size:0.88rem; line-height:1.7; color:var(--ivory-ink); border-top:1px solid rgba(26,16,16,0.12); padding-top:14px; margin-bottom:18px; }
+.work-outcome strong { color:var(--ivory-red); font-weight:700; }
 .work-quote { font-family:var(--serif); font-style:italic; font-size:0.92rem; line-height:1.7; color:var(--ivory-ink); margin-bottom:8px; }
 .work-attrib { font-size:0.78rem; color:var(--ivory-muted); margin-bottom:18px; }
 .work-links { margin-top:auto; display:flex; flex-wrap:wrap; gap:8px 18px; align-items:center; }
@@ -535,7 +535,7 @@ nav {
 .srv-item::after { content:''; position:absolute; bottom:0; left:0; right:0; height:3px; background:var(--red); transform:scaleX(0); transform-origin:left; transition:transform .3s ease; }
 .srv-item:hover { background:#200606; }
 .srv-item:hover::after { transform:scaleX(1); }
-.srv-badge { display:inline-block; background:rgba(227,27,35,0.08); color:var(--red-text); font-size:0.68rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:4px 12px; border-radius:100px; border:1px solid rgba(227,27,35,0.15); width:fit-content; }
+.srv-badge { display:inline-block; background:rgba(227,27,35,0.08); color:var(--red-text); font-size:0.75rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:4px 12px; border-radius:100px; border:1px solid rgba(227,27,35,0.15); width:fit-content; }
 .srv-badge.alt { background:rgba(17,17,17,0.05); color:var(--ink-light); border-color:var(--border); }
 .srv-icon { font-size:2.2rem; }
 .srv-item h3 { font-family:var(--serif); font-size:1.5rem; font-weight:400; color:var(--ink); }
@@ -685,7 +685,7 @@ nav {
 .cta-banner h2 { font-family:var(--serif); font-size:clamp(2.2rem,4.5vw,4rem); font-weight:300; color:#fff; line-height:1.15; letter-spacing:-0.3px; margin-bottom:16px; position:relative; }
 .cta-banner h2 em { font-style:italic; color:rgba(255,255,255,0.65); }
 .cta-banner p { color:rgba(255,255,255,0.7); font-size:1rem; margin-bottom:36px; position:relative; }
-.btn-cta { background:#fff; color:var(--red-text); font-size:0.92rem; font-weight:700; padding:16px 36px; border-radius:100px; display:inline-block; transition:transform .2s, box-shadow .2s; position:relative; }
+.btn-cta { background:#fff; color:var(--red-mid); font-size:0.92rem; font-weight:700; padding:16px 36px; border-radius:100px; display:inline-block; transition:transform .2s, box-shadow .2s; position:relative; }
 .btn-cta:hover { transform:translateY(-2px); box-shadow:0 12px 36px rgba(0,0,0,0.2); }
 
 /* FOOTER */
@@ -809,7 +809,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .faq-btn:hover { color:#fff; }
 .faq-btn.open { color:var(--red-text); }
 .faq-question { font-family:var(--serif); font-size:1.05rem; font-weight:400; line-height:1.35; letter-spacing:-0.1px; }
-.faq-icon { flex-shrink:0; width:28px; height:28px; border-radius:50%; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; transition:background .25s, border-color .25s, transform .4s cubic-bezier(.34,1.56,.64,1); }
+.faq-icon { flex-shrink:0; width:28px; height:28px; border-radius:50%; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; transition:background .25s, border-color .25s, transform .4s cubic-bezier(.22,1,.36,1); }
 .faq-btn.open .faq-icon { background:var(--red); border-color:var(--red-text); transform:rotate(45deg); }
 .faq-icon svg { width:12px; height:12px; color:var(--ink-light); transition:color .25s; }
 .faq-btn.open .faq-icon svg { color:#fff; }
@@ -915,8 +915,10 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 .hp-prices-note a { color:var(--red-text); font-weight:600; }
 @media (max-width:980px){ .hp-prices-grid { grid-template-columns:1fr; max-width:560px; margin:0 auto; gap:26px; } }
 </style>
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- NAV -->
 <nav>
@@ -1028,7 +1030,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 <section class="work" id="work">
   <div class="wrap">
     <div class="work-head fade-up">
-      <span class="label">Recent work</span>
       <h2>Real sites, <em>for real businesses.</em></h2>
       <p>Three of the businesses I build and run websites for. Every screenshot below is the live site as it stands today.</p>
     </div>
@@ -1038,6 +1039,8 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
         <div class="work-shot">
           <div class="work-bar"><span></span><span></span><span></span><em></em></div>
           <picture>
+            <source media="(max-width:700px)" type="image/avif" srcset="img/work-cs-m-780.avif" width="780" height="586">
+            <source media="(max-width:700px)" type="image/webp" srcset="img/work-cs-m-780.webp" width="780" height="586">
             <source type="image/avif" srcset="img/work-cs-800.avif 800w, img/work-cs-1200.avif 1200w" sizes="(max-width:980px) 92vw, 30vw">
             <source type="image/webp" srcset="img/work-cs-800.webp 800w, img/work-cs-1200.webp 1200w" sizes="(max-width:980px) 92vw, 30vw">
             <img loading="lazy" decoding="async" width="1200" height="532" src="img/work-cs-1200.webp" alt="Home page of the C&amp;S Cleaning Services website">
@@ -1056,6 +1059,8 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
         <div class="work-shot">
           <div class="work-bar"><span></span><span></span><span></span><em></em></div>
           <picture>
+            <source media="(max-width:700px)" type="image/avif" srcset="img/work-stpauls-m-780.avif" width="780" height="586">
+            <source media="(max-width:700px)" type="image/webp" srcset="img/work-stpauls-m-780.webp" width="780" height="586">
             <source type="image/avif" srcset="img/work-stpauls-800.avif 800w, img/work-stpauls-1200.avif 1200w" sizes="(max-width:980px) 92vw, 30vw">
             <source type="image/webp" srcset="img/work-stpauls-800.webp 800w, img/work-stpauls-1200.webp 1200w" sizes="(max-width:980px) 92vw, 30vw">
             <img loading="lazy" decoding="async" width="1200" height="532" src="img/work-stpauls-1200.webp" alt="Home page of the St Paul&rsquo;s Cleaning Services website">
@@ -1076,6 +1081,8 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
         <div class="work-shot">
           <div class="work-bar"><span></span><span></span><span></span><em></em></div>
           <picture>
+            <source media="(max-width:700px)" type="image/avif" srcset="img/work-modernus-m-780.avif" width="780" height="586">
+            <source media="(max-width:700px)" type="image/webp" srcset="img/work-modernus-m-780.webp" width="780" height="586">
             <source type="image/avif" srcset="img/work-modernus-800.avif 800w, img/work-modernus-1200.avif 1200w" sizes="(max-width:980px) 92vw, 30vw">
             <source type="image/webp" srcset="img/work-modernus-800.webp 800w, img/work-modernus-1200.webp 1200w" sizes="(max-width:980px) 92vw, 30vw">
             <img loading="lazy" decoding="async" width="1200" height="532" src="img/work-modernus-1200.webp" alt="Home page of the Modernus Decoration Projects website">
@@ -1134,10 +1141,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
         </picture>
       </div>
       <div class="about-right fade-up fade-up-d2">
-        <div class="about-label-wrap">
-          <div class="about-label-icon"><span></span><span></span></div>
-          <span class="label" style="margin:0;">About Martin</span>
-        </div>
         <h2 class="section-title">Web designer in Epsom, <em>for businesses UK-wide</em></h2>
         <p>I&rsquo;m Martin Kaminski. I&rsquo;m based in Epsom, and I design websites and run local SEO for small businesses anywhere in the UK. Trades, shops, salons, clinics, contractors and takeaways: if you need to be found by people in your area and look credible when they arrive, that is the job.</p>
         <p><strong>You deal with the person who builds the site.</strong> No account manager, no handover to someone junior, no ticket queue. The prices are on the site, the scope goes in writing, and if I am not the right person for what you need I will say so on the first call.</p>
@@ -1159,7 +1162,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 <section class="section services-bg" id="services">
   <div class="wrap">
     <div class="services-header fade-up">
-      <span class="label">What I Do</span>
       <h2 class="section-title">Everything you need<br><em>to get found and get enquiries</em></h2>
       <a href="services.html" class="btn-outline-light" style="margin-top:24px;">View All Services →</a>
     </div>
@@ -1248,7 +1250,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 <section class="section" id="audiences">
   <div class="wrap">
     <div style="text-align:center;margin-bottom:52px;" class="fade-up">
-      <span class="label">Who I work with</span>
       <h2 class="section-title">Every business is different.<br><em>So is every website.</em></h2>
       <p style="color:var(--ink-light);line-height:1.85;max-width:640px;margin:16px auto 0;">I work with local businesses of every kind. These three come up often enough to have a page of their own, because what wins the work is different in each.</p>
     </div>
@@ -1280,7 +1281,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 <section class="section process-section" id="process">
   <div class="wrap">
     <div style="text-align:center;max-width:540px;margin:0 auto;" class="fade-up">
-      <span class="label">How It Works</span>
       <h2 class="section-title">From idea to live website, <em>simply</em></h2>
       <p class="section-intro" style="margin:0 auto;">No lengthy briefs, confusing processes, or disappearing project managers. Just four clear steps to a website you're proud of.</p>
     </div>
@@ -1317,28 +1317,28 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
         <span class="pcard-step">Step 4</span>
       </div>
       <!-- Set 2: duplicate for seamless loop -->
-      <div class="pcard">
+      <div class="pcard pcard-dup" aria-hidden="true">
         <div class="pcard-num">1</div>
         <div class="pcard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
         <h3>Free 20-Minute Call</h3>
         <p>A relaxed chat about your business, your goals, and what you need. No pressure, no jargon. Just an honest conversation about what will help.</p>
         <span class="pcard-step">Step 1</span>
       </div>
-      <div class="pcard">
+      <div class="pcard pcard-dup" aria-hidden="true">
         <div class="pcard-num">2</div>
         <div class="pcard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
         <h3>Design &amp; Scope</h3>
         <p>I put together your design concept and confirm the scope in writing. The price is already on the site, so there is nothing to negotiate. You just see exactly how your site will look before you commit.</p>
         <span class="pcard-step">Step 2</span>
       </div>
-      <div class="pcard">
+      <div class="pcard pcard-dup" aria-hidden="true">
         <div class="pcard-num">3</div>
         <div class="pcard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg></div>
         <h3>Build & Refine</h3>
         <p>I build your site and keep you involved throughout, with chances to review and request tweaks. I’m not done until you're happy.</p>
         <span class="pcard-step">Step 3</span>
       </div>
-      <div class="pcard">
+      <div class="pcard pcard-dup" aria-hidden="true">
         <div class="pcard-num">4</div>
         <div class="pcard-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
         <h3>Launch & Grow</h3>
@@ -1365,7 +1365,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 <section class="section areas-section" id="areas">
   <div class="wrap">
     <div class="areas-header fade-up">
-      <span class="label">Coverage</span>
       <h2 class="section-title">Areas I <em>cover</em></h2>
       <p class="section-intro">Based in Surrey, I work with small businesses across Surrey and South West London, in person or remotely.</p>
     </div>
@@ -1438,7 +1437,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 <section class="section hp-prices" id="prices">
   <div class="wrap">
     <div class="hp-prices-head fade-up">
-      <span class="label">Prices</span>
       <h2 class="section-title">Website design packages <em>and prices</em></h2>
       <p>Each package is a complete website, with the copy written for you and the SEO groundwork included. Pay half to book and the rest when it goes live.</p>
     </div>
@@ -1493,7 +1491,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
   <div class="wrap">
     <div class="contact-inner">
       <div class="contact-left fade-up">
-        <span class="label">Get in Touch</span>
         <h2 class="section-title">Ready to grow<br><em>your business online?</em></h2>
         <p>Whether you need a brand new website, want to show up on Google, or just want an honest chat about your options. I’m here. No sales pressure, just straight-talking advice.</p>
         <div class="cdetails">
@@ -1570,7 +1567,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
   <div class="wrap">
     <div class="faq-layout">
       <div class="faq-left fade-up">
-        <span class="faq-eyebrow">FAQ</span>
         <h2 class="faq-title">Questions I<br><em>get asked a lot</em></h2>
         <p class="faq-subtitle">Can't find what you're looking for? Send me a message and I&rsquo;ll get back to you the same day.</p>
         <p class="faq-subtitle">I work with businesses across Surrey and South West London, in person or remotely, and with clients elsewhere in the UK. <a href="#areas">See the areas I cover</a>.</p>
@@ -1859,5 +1855,6 @@ document.querySelectorAll('.faq-btn').forEach(btn => {
 });
 </script>
 <script src="js/enquiry-form.js" defer></script>
+<script src="js/menu-a11y.js" defer></script>
 </body>
 </html>

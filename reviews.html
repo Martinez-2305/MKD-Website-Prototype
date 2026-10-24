@@ -118,8 +118,8 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; background:rgba(13,1,
 .nav-cta { background:var(--ink); color:var(--white); font-size:0.82rem; font-weight:600; padding:10px 22px; border-radius:100px; transition:background .2s; }
 .nav-cta:hover { background:var(--red); color:#fff; }
 .tubelight-nav { display:flex; align-items:center; gap:2px; position:relative; background:rgba(255,255,255,0.06); border:1px solid var(--border); backdrop-filter:blur(8px); padding:4px; border-radius:100px; box-shadow:0 4px 16px rgba(0,0,0,0.06); overflow:visible; }
-.tl-bg-pill { position:absolute; background:rgba(227,27,35,0.18); border-radius:100px; transition:left .35s cubic-bezier(.34,1.56,.64,1), top .35s cubic-bezier(.34,1.56,.64,1), width .35s cubic-bezier(.34,1.56,.64,1), height .35s; z-index:0; pointer-events:none; }
-.tl-lamp-wrap { position:absolute; pointer-events:none; z-index:10; transition:left .35s cubic-bezier(.34,1.56,.64,1); width:0; height:0; }
+.tl-bg-pill { position:absolute; background:rgba(227,27,35,0.18); border-radius:100px; transition:left .35s cubic-bezier(.22,1,.36,1), top .35s cubic-bezier(.22,1,.36,1), width .35s cubic-bezier(.22,1,.36,1), height .35s; z-index:0; pointer-events:none; }
+.tl-lamp-wrap { position:absolute; pointer-events:none; z-index:10; transition:left .35s cubic-bezier(.22,1,.36,1); width:0; height:0; }
 .tl-lamp-bar { position:absolute; bottom:100%; left:50%; transform:translateX(-50%); width:32px; height:4px; background:var(--red); border-radius:4px 4px 0 0; margin-bottom:2px; }
 .tl-lamp-bar::before { content:''; position:absolute; width:48px; height:24px; background:rgba(227,27,35,0.25); border-radius:50%; filter:blur(10px); top:-8px; left:-8px; }
 .tl-lamp-bar::after { content:''; position:absolute; width:32px; height:20px; background:rgba(227,27,35,0.2); border-radius:50%; filter:blur(8px); top:-4px; left:0; }
@@ -205,7 +205,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   z-index:0;
   display:flex;
   align-items:center;
-  padding:96px 80px 48px;
+  padding:124px 80px 48px;
   overflow:hidden;
   background:#0d0101;
 }
@@ -650,7 +650,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .faq-btn:hover { color:#fff; }
 .faq-btn.open { color:var(--red-text); }
 .faq-question { font-family:var(--serif); font-size:1.05rem; font-weight:400; line-height:1.35; letter-spacing:-0.1px; }
-.faq-icon { flex-shrink:0; width:28px; height:28px; border-radius:50%; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; transition:background .25s, border-color .25s, transform .4s cubic-bezier(.34,1.56,.64,1); }
+.faq-icon { flex-shrink:0; width:28px; height:28px; border-radius:50%; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; transition:background .25s, border-color .25s, transform .4s cubic-bezier(.22,1,.36,1); }
 .faq-btn.open .faq-icon { background:var(--red); border-color:var(--red-text); transform:rotate(45deg); }
 .faq-icon svg { width:12px; height:12px; color:var(--ink-light); transition:color .25s; }
 .faq-btn.open .faq-icon svg { color:#fff; }
@@ -715,8 +715,10 @@ h1, h2, h3, .section-title, .faq-title, blockquote { text-wrap:balance; }
 @media (min-width:901px){ .testi-grid, .trust-grid { grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); } }
 p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragraph's last line */
 </style>
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- ===== NAV ===== -->
 <nav>
@@ -765,7 +767,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
     ★★★★★<br>★★★★★<br>★★★★★
   </div>
   <div class="hero-inner">
-    <div class="hero-label">Client Stories</div>
     <h1 class="hero-heading">
       What my customers<br><em>say about me.</em>
     </h1>
@@ -807,7 +808,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 <section class="section testimonials" id="testimonials">
   <div class="wrap">
     <div class="testimonials-head fade-up">
-      <span class="section-label">Client Stories</span>
       <h2 class="section-title">Real businesses.<br><em>Real results.</em></h2>
       <p class="testi-source">Every review below is from a business I have worked with, and every one of them is <a href="https://share.google/xvQ0x2yGNj0gT0dC1" target="_blank" rel="noopener">on my Google profile</a>, where you can read them in full.</p>
     </div>
@@ -872,7 +872,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 <section class="section trust" id="trust">
   <div class="wrap">
     <div class="trust-head fade-up">
-      <span class="section-label">My Commitment</span>
       <h2 class="section-title">Why you can trust <em>these reviews.</em></h2>
     </div>
     <div class="trust-grid">
@@ -921,7 +920,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 <!-- ===== LEAVE A REVIEW ===== -->
 <section class="section leave-review" id="leave-review">
   <div class="wrap">
-    <div class="lr-label fade-up">Share Your Experience</div>
     <h2 class="fade-up delay-1">Worked with me?<br><em>I’d love to hear from you.</em></h2>
     <p class="fade-up delay-2">Leaving a Google review takes just 60 seconds, and it helps other local businesses in Surrey find me when they need a web designer they can trust.</p>
     <a href="https://share.google/xvQ0x2yGNj0gT0dC1" target="_blank" rel="noopener" class="btn-review fade-up delay-3">
@@ -941,7 +939,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
   <div class="wrap">
     <div class="faq-layout">
       <div class="faq-left fade-up">
-        <span class="faq-eyebrow">FAQ</span>
         <h2 class="faq-title">Questions I<br><em>get asked a lot</em></h2>
         <p class="faq-subtitle">Can't find what you're looking for? Drop me a message. I’ll get back to you the same day.</p>
         <a href="index.html#contact" class="faq-contact-cta">Ask me anything →</a>
@@ -1055,7 +1052,6 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
   <div class="cta-orb2" aria-hidden="true"></div>
   <div class="cta-inner">
     <div>
-      <div class="cta-eyebrow">Ready to get started?</div>
       <h2>Ready to become my next<br><em>success story?</em></h2>
       <p>Twenty minutes on the phone, no charge. What the business does, who you want calling you, and what is working now. No pitch in it.</p>
     </div>
@@ -1177,5 +1173,6 @@ document.querySelectorAll('.faq-btn').forEach(btn => {
   });
 });
 </script>
+<script src="js/menu-a11y.js" defer></script>
 </body>
 </html>
