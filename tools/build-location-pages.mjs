@@ -109,6 +109,10 @@ const PROJECTS = {
     img: 'work-renata',
     alt: 'Home page of the Deep Cleaning by Renata website',
     brief: 'An owner-led cleaning business with nearly 15 years&rsquo; experience, built on recommendations from happy clients. The site puts Renata front and centre, sets out what each type of clean includes, and works in both English and Polish, with quotes requested by form or WhatsApp.',
+    /* From Renata's Google review, written during the build. The opening
+       sentences about the project being in progress are left out. */
+    quote: '&ldquo;His professionalism, deep expertise, and ability to translate technical aspects into business language are truly impressive. If you are looking for someone who doesn&rsquo;t just build websites but actually plans your success online, this is the right place.&rdquo;',
+    attrib: 'Renata &middot; Owner',
     links: [{ href: 'https://deepcleaningbyrenata.co.uk/', label: 'Visit the live site', ext: true }],
   },
   talkingtv: {
@@ -117,7 +121,7 @@ const PROJECTS = {
     where: 'An online review site, read anywhere',
     img: 'work-talkingtv',
     alt: 'Home page of the Talking TV website',
-    brief: 'A review site for new films and TV series. The brief was a bold, cinema-style design that makes reviews easy to publish and easy to browse, with films and TV series kept separate and a newsletter so readers hear when a new review goes up.',
+    brief: 'Luiza&rsquo;s review site for new films and TV series. The brief was a bold, cinema-style design that makes reviews easy to publish and easy to browse, with films and TV series kept separate and a newsletter so readers hear when a new review goes up.',
     links: [{ href: 'https://talkingtv.co.uk/', label: 'Visit the live site', ext: true }],
   },
 };
