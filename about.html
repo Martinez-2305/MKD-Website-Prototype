@@ -67,10 +67,12 @@
 <meta name="twitter:title" content="About MartKam Digital | Web Design in Epsom, Surrey">
 <meta name="twitter:description" content="One person, not an agency. Based in Epsom, I build websites and run local SEO for small businesses across the UK. Prices published up front.">
 <meta name="twitter:image" content="https://www.martkamdigital.com/img/og-image-2026.jpg">
-<link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-stretch:62% 125%;font-display:swap;src:url('fonts/archivo-latin.woff2') format('woff2');}
-@font-face{font-family:'Archivo';font-style:italic;font-weight:100 900;font-stretch:62% 125%;font-display:swap;src:url('fonts/archivo-italic-latin.woff2') format('woff2');}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-latin.woff2') format('woff2');}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-italic-latin.woff2') format('woff2');}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:300 600;font-display:swap;src:url('fonts/dmsans-latin.woff2') format('woff2');}
 </style>
 
 <style>
@@ -102,8 +104,8 @@ img { display:block; }
   --mist:#180404;
   --white:#0d0101;
   --border:#3a0808;
-  --serif:'Archivo', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
-  --sans:'Archivo', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --serif:'Fraunces', Georgia, serif;
+  --sans:'DM Sans', system-ui, sans-serif;
 }
 
 
@@ -267,7 +269,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   display:inline-flex;
   align-items:center;
   gap:10px;
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'DM Sans', sans-serif;
   font-size:0.72rem;
   font-weight:600;
   letter-spacing:3px;
@@ -283,16 +285,18 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   background:var(--red);
 }
 .hero-h1 {
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'Fraunces', serif;
   font-size:clamp(2.4rem, 4.4vw, 3.5rem);
+  font-weight:300;
   line-height:1.08;
+  letter-spacing:-0.02em;
   color:var(--ink);
-  margin-bottom:24px;font-weight:800;font-stretch:118%;letter-spacing:-0.015em;
+  margin-bottom:24px;
 }
 .hero-h1 em {
-  font-style:normal;
-  
-  color:var(--red-text);
+  font-style:italic;
+  font-weight:300;
+  color:var(--ink);
   display:block;
 }
 .hero-sub {
@@ -311,7 +315,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .btn-primary {
   background:var(--red);
   color:#fff;
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'DM Sans', sans-serif;
   font-size:0.88rem;
   font-weight:600;
   padding:14px 32px;
@@ -329,7 +333,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .btn-ghost {
   border:1.5px solid rgba(245,234,234,0.3);
   color:var(--ink);
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'DM Sans', sans-serif;
   font-size:0.88rem;
   font-weight:600;
   padding:14px 32px;
@@ -349,7 +353,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   position:absolute;
   bottom:-40px;
   right:-20px;
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'Fraunces', serif;
   font-size:clamp(180px, 30vw, 380px);
   font-weight:900;
   line-height:1;
@@ -357,7 +361,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   pointer-events:none;
   user-select:none;
   animation:floatNum 8s ease-in-out infinite;
-  z-index:1;font-stretch:125%;
+  z-index:1;
 }
 @keyframes floatNum {
   0%, 100% { transform:translateY(0px); }
@@ -390,12 +394,13 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   opacity:0.5;
 }
 .story-pull {
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'Fraunces', serif;
   font-size:clamp(1.6rem, 3.2vw, 2.6rem);
   font-style:italic;
+  font-weight:300;
   line-height:1.3;
   color:var(--ink);
-  position:relative;font-weight:400;font-stretch:100%;letter-spacing:0;
+  position:relative;
 }
 .story-pull::before {
   content:'"';
@@ -458,7 +463,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   display:inline-flex;
   align-items:center;
   gap:10px;
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'DM Sans', sans-serif;
   font-size:0.72rem;
   font-weight:600;
   letter-spacing:3px;
@@ -476,16 +481,18 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   opacity:0.6;
 }
 .section-h2 {
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'Fraunces', serif;
   font-size:clamp(2rem, 4vw, 3.4rem);
+  font-weight:700;
   line-height:1.1;
+  letter-spacing:-0.02em;
   color:var(--ink);
-  margin-bottom:20px;font-weight:800;font-stretch:118%;letter-spacing:-0.015em;
+  margin-bottom:20px;
 }
 .section-h2 em {
-  font-style:normal;
-  
-  color:var(--red-text);
+  font-style:italic;
+  font-weight:300;
+  color:var(--ink-light);
 }
 .section-sub {
   font-size:0.95rem;
@@ -537,10 +544,12 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 }
 .value-icon svg { width:20px; height:20px; }
 .value-title {
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'Fraunces', serif;
   font-size:1.15rem;
+  font-weight:700;
   color:var(--ink);
-  margin-bottom:10px;font-weight:700;font-stretch:104%;letter-spacing:-0.005em;
+  margin-bottom:10px;
+  letter-spacing:-0.01em;
 }
 .value-desc {
   font-size:0.88rem;
@@ -567,15 +576,17 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .expertise-left .section-label { justify-content:flex-start; }
 .expertise-left .section-label::before { display:none; }
 .expertise-h2 {
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'Fraunces', serif;
   font-size:clamp(2rem, 3.5vw, 3rem);
+  font-weight:700;
   line-height:1.1;
+  letter-spacing:-0.02em;
   color:var(--ink);
-  margin-bottom:24px;font-weight:800;font-stretch:118%;letter-spacing:-0.015em;
+  margin-bottom:24px;
 }
 .expertise-h2 em {
-  font-style:normal;
-  
+  font-style:italic;
+  font-weight:300;
   color:var(--red-text);
 }
 .expertise-p {
@@ -658,7 +669,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   width:100%;
 }
 .compare-problem {
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'DM Sans', sans-serif;
   font-size:0.72rem;
   font-weight:600;
   letter-spacing:2px;
@@ -667,11 +678,12 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   margin-bottom:8px;
 }
 .compare-title {
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'Fraunces', serif;
   font-size:1.1rem;
+  font-weight:700;
   color:var(--ink);
   margin-bottom:8px;
-  line-height:1.3;font-weight:700;font-stretch:104%;letter-spacing:-0.005em;
+  line-height:1.3;
 }
 .compare-divider {
   width:40px;
@@ -681,7 +693,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   opacity:0.5;
 }
 .compare-solution-label {
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'DM Sans', sans-serif;
   font-size:0.72rem;
   font-weight:600;
   letter-spacing:2px;
@@ -690,7 +702,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   margin-bottom:8px;
 }
 .compare-solution {
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'DM Sans', sans-serif;
   font-size:0.9rem;
   line-height:1.7;
   color:var(--ink-light);
@@ -732,7 +744,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   display:inline-flex;
   align-items:center;
   gap:10px;
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'DM Sans', sans-serif;
   font-size:0.72rem;
   font-weight:600;
   letter-spacing:3px;
@@ -741,15 +753,17 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   margin-bottom:28px;
 }
 .cta-banner h2 {
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'Fraunces', serif;
   font-size:clamp(2.4rem, 5vw, 4rem);
+  font-weight:700;
   line-height:1.1;
+  letter-spacing:-0.02em;
   color:#fff;
-  margin-bottom:20px;font-weight:800;font-stretch:118%;letter-spacing:-0.015em;
+  margin-bottom:20px;
 }
 .cta-banner h2 em {
-  font-style:normal;
-  
+  font-style:italic;
+  font-weight:300;
   color:rgba(245,234,234,0.75);
 }
 .cta-banner p {
@@ -768,7 +782,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   gap:10px;
   background:#fff;
   color:#6b0f14;
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'DM Sans', sans-serif;
   font-size:0.92rem;
   font-weight:700;
   padding:16px 40px;
@@ -896,8 +910,8 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .faq-left { position:sticky; top:100px; }
 .faq-eyebrow { display:inline-flex; align-items:center; gap:10px; font-size:0.72rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--red-text); margin-bottom:20px; }
 .faq-eyebrow::before { content:''; display:inline-block; width:20px; height:2px; background:var(--red); flex-shrink:0; }
-.faq-title { font-family:var(--serif); font-size:clamp(2rem,3.5vw,3.2rem); line-height:1.15; color:#fff; margin-bottom:18px; font-weight:800; font-stretch:118%; letter-spacing:-0.015em; }
-.faq-title em { font-style:normal; color:var(--red-text); }
+.faq-title { font-family:var(--serif); font-size:clamp(2rem,3.5vw,3.2rem); font-weight:400; line-height:1.15; letter-spacing:-0.3px; color:#fff; margin-bottom:18px; }
+.faq-title em { font-style:italic; color:rgba(255,255,255,0.68); }
 .faq-subtitle { font-size:0.88rem; line-height:1.8; color:var(--ink-light); margin-bottom:32px; }
 .faq-contact-cta { display:inline-flex; align-items:center; gap:8px; font-size:0.82rem; font-weight:600; color:var(--ink); background:rgba(227,27,35,0.1); border:1px solid rgba(227,27,35,0.22); padding:11px 22px; border-radius:100px; transition:background .2s, border-color .2s, color .2s; }
 .faq-contact-cta:hover { background:var(--red); border-color:var(--red-text); color:#fff; }
@@ -907,7 +921,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .faq-btn { width:100%; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:22px 0; background:none; border:none; cursor:pointer; text-align:left; color:var(--ink); transition:color .2s; }
 .faq-btn:hover { color:#fff; }
 .faq-btn.open { color:var(--red-text); }
-.faq-question { font-family:var(--serif); font-size:1.05rem; line-height:1.35; font-weight:700; font-stretch:104%; letter-spacing:-0.005em; }
+.faq-question { font-family:var(--serif); font-size:1.05rem; font-weight:400; line-height:1.35; letter-spacing:-0.1px; }
 .faq-icon { flex-shrink:0; width:28px; height:28px; border-radius:50%; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; transition:background .25s, border-color .25s, transform .4s cubic-bezier(.22,1,.36,1); }
 .faq-btn.open .faq-icon { background:var(--red); border-color:var(--red-text); transform:rotate(45deg); }
 .faq-icon svg { width:12px; height:12px; color:var(--ink-light); transition:color .25s; }

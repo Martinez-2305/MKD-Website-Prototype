@@ -138,10 +138,12 @@
 <meta name="twitter:title" content="Websites, SEO &amp; Google Business Profile | MartKam Digital">
 <meta name="twitter:description" content="Website design and build, local SEO, Google Business Profile setup and hosting for Surrey and South West London businesses. Prices published up front.">
 <meta name="twitter:image" content="https://www.martkamdigital.com/img/og-image-2026.jpg">
-<link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-stretch:62% 125%;font-display:swap;src:url('fonts/archivo-latin.woff2') format('woff2');}
-@font-face{font-family:'Archivo';font-style:italic;font-weight:100 900;font-stretch:62% 125%;font-display:swap;src:url('fonts/archivo-italic-latin.woff2') format('woff2');}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-latin.woff2') format('woff2');}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-italic-latin.woff2') format('woff2');}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:300 600;font-display:swap;src:url('fonts/dmsans-latin.woff2') format('woff2');}
 
 .core-icon svg{width:30px;height:30px;color:var(--red-text);}
 .add-icon-wrap svg{width:26px;height:26px;color:var(--red-text);}
@@ -158,8 +160,8 @@
   --mist:#180404;
   --white:#0d0101;
   --border:#3a0808;
-  --serif:'Archivo', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
-  --sans:'Archivo', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --serif:'Fraunces', Georgia, serif;
+  --sans:'DM Sans', system-ui, sans-serif;
 }
 
 /* ===== RESET ===== */
@@ -292,15 +294,18 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 }
 
 .hero-heading {
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'Fraunces', Georgia, serif;
   font-size:clamp(2.4rem, 4.4vw, 3.5rem);
+  font-weight:300;
   line-height:1.08;
   color:var(--ink);
-  margin-bottom:24px;font-weight:800;font-stretch:118%;letter-spacing:-0.015em;
+  margin-bottom:24px;
+  letter-spacing:-0.02em;
 }
 .hero-heading em {
-  font-style:normal;
+  font-style:italic;
   color:var(--red-text);
+  font-weight:300;
 }
 
 .hero-sub {
@@ -355,7 +360,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 }
 
 .hero-deco-eyebrow {
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'Fraunces', Georgia, serif;
   font-size:clamp(4.5rem, 8vw, 7rem);
   font-weight:900;
   color:transparent;
@@ -364,7 +369,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   letter-spacing:-0.05em;
   user-select:none;
   pointer-events:none;
-  margin-bottom:16px;font-stretch:125%;
+  margin-bottom:16px;
 }
 
 .hero-deco-cards {
@@ -392,9 +397,10 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 }
 
 .hero-deco-card-num {
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'Fraunces', Georgia, serif;
   font-size:0.78rem;
-  color:rgba(227,27,35,0.65);font-weight:800;font-stretch:112%;letter-spacing:-0.02em;
+  font-weight:700;
+  color:rgba(227,27,35,0.65);
 }
 
 .hero-deco-card-name {
@@ -442,14 +448,17 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 }
 
 .section-title {
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'Fraunces', Georgia, serif;
   font-size:clamp(1.9rem, 3.2vw, 2.9rem);
+  font-weight:700;
   line-height:1.1;
-  color:var(--ink);font-weight:800;font-stretch:118%;letter-spacing:-0.015em;
+  color:var(--ink);
+  letter-spacing:-0.02em;
 }
 .section-title em {
-  font-style:normal;
+  font-style:italic;
   color:var(--red-text);
+  font-weight:300;
 }
 
 /* ===== OVERVIEW: SERVICE CARDS ===== */
@@ -534,16 +543,18 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   line-height:1;
   letter-spacing:-0.05em;
   user-select:none;
-  transition:-webkit-text-stroke-color .3s;font-stretch:125%;
+  transition:-webkit-text-stroke-color .3s;
 }
 .svc-card:hover .svc-num { -webkit-text-stroke-color:rgba(227,27,35,0.35); }
 
 .svc-card-title {
   font-family:var(--serif);
   font-size:1.1rem;
+  font-weight:400;
   line-height:1.3;
   color:var(--ink);
-  margin-bottom:10px;font-weight:700;font-stretch:104%;letter-spacing:-0.005em;
+  margin-bottom:10px;
+  letter-spacing:-0.15px;
 }
 .svc-card-desc {
   font-size:0.83rem;
@@ -695,7 +706,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   position:absolute;
   top:-24px;
   right:-8px;
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'Fraunces', Georgia, serif;
   font-size:10rem;
   font-weight:900;
   color:transparent;
@@ -703,7 +714,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   line-height:1;
   pointer-events:none;
   user-select:none;
-  letter-spacing:-0.05em;font-stretch:125%;
+  letter-spacing:-0.05em;
 }
 
 .core-badge {
@@ -736,11 +747,13 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 }
 
 .core-card h3 {
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'Fraunces', Georgia, serif;
   font-size:1.45rem;
+  font-weight:700;
   color:var(--ink);
   line-height:1.2;
-  margin-bottom:14px;font-weight:700;font-stretch:104%;letter-spacing:-0.005em;
+  margin-bottom:14px;
+  letter-spacing:-0.015em;
 }
 
 .core-card p {
@@ -868,10 +881,12 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 }
 
 .add-card h4 {
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'Fraunces', Georgia, serif;
   font-size:1.2rem;
+  font-weight:700;
   color:var(--ink);
-  margin-bottom:12px;font-weight:700;font-stretch:104%;letter-spacing:-0.005em;
+  margin-bottom:12px;
+  letter-spacing:-0.01em;
 }
 
 .add-card p {
@@ -916,11 +931,12 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   display:flex;
   align-items:center;
   justify-content:center;
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'Fraunces', Georgia, serif;
   font-size:1.15rem;
+  font-weight:700;
   color:var(--red-text);
   transition:background .3s, box-shadow .3s;
-  flex-shrink:0;font-weight:800;font-stretch:112%;letter-spacing:-0.02em;
+  flex-shrink:0;
 }
 .process-node:hover .process-node-num {
   background:var(--red);
@@ -1023,13 +1039,15 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 }
 
 .cta-banner h2 {
-  font-family:'Archivo', system-ui, sans-serif;
+  font-family:'Fraunces', Georgia, serif;
   font-size:clamp(1.8rem, 3.2vw, 2.7rem);
+  font-weight:700;
   color:#fff;
   line-height:1.1;
-  margin-bottom:12px;font-weight:800;font-stretch:118%;letter-spacing:-0.015em;
+  letter-spacing:-0.02em;
+  margin-bottom:12px;
 }
-.cta-banner h2 em { font-style:normal; }
+.cta-banner h2 em { font-style:italic; font-weight:300; }
 
 .cta-banner p {
   font-size:0.93rem;
@@ -1126,8 +1144,8 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .faq-left { position:sticky; top:100px; }
 .faq-eyebrow { display:inline-flex; align-items:center; gap:10px; font-size:0.72rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--red-text); margin-bottom:20px; }
 .faq-eyebrow::before { content:''; display:inline-block; width:20px; height:2px; background:var(--red); flex-shrink:0; }
-.faq-title { font-family:var(--serif); font-size:clamp(2rem,3.5vw,3.2rem); line-height:1.15; color:#fff; margin-bottom:18px; font-weight:800; font-stretch:118%; letter-spacing:-0.015em; }
-.faq-title em { font-style:normal; color:var(--red-text); }
+.faq-title { font-family:var(--serif); font-size:clamp(2rem,3.5vw,3.2rem); font-weight:400; line-height:1.15; letter-spacing:-0.3px; color:#fff; margin-bottom:18px; }
+.faq-title em { font-style:italic; color:rgba(255,255,255,0.68); }
 .faq-subtitle { font-size:0.88rem; line-height:1.8; color:var(--ink-light); margin-bottom:32px; }
 .faq-contact-cta { display:inline-flex; align-items:center; gap:8px; font-size:0.82rem; font-weight:600; color:var(--ink); background:rgba(227,27,35,0.1); border:1px solid rgba(227,27,35,0.22); padding:11px 22px; border-radius:100px; transition:background .2s, border-color .2s, color .2s; }
 .faq-contact-cta:hover { background:var(--red); border-color:var(--red-text); color:#fff; }
@@ -1137,7 +1155,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .faq-btn { width:100%; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:22px 0; background:none; border:none; cursor:pointer; text-align:left; color:var(--ink); transition:color .2s; }
 .faq-btn:hover { color:#fff; }
 .faq-btn.open { color:var(--red-text); }
-.faq-question { font-family:var(--serif); font-size:1.05rem; line-height:1.35; font-weight:700; font-stretch:104%; letter-spacing:-0.005em; }
+.faq-question { font-family:var(--serif); font-size:1.05rem; font-weight:400; line-height:1.35; letter-spacing:-0.1px; }
 .faq-icon { flex-shrink:0; width:28px; height:28px; border-radius:50%; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; transition:background .25s, border-color .25s, transform .4s cubic-bezier(.22,1,.36,1); }
 .faq-btn.open .faq-icon { background:var(--red); border-color:var(--red-text); transform:rotate(45deg); }
 .faq-icon svg { width:12px; height:12px; color:var(--ink-light); transition:color .25s; }

@@ -67,10 +67,12 @@
 <meta name="twitter:title" content="Reviews | Web Design &amp; SEO in Surrey | MartKam Digital">
 <meta name="twitter:description" content="Reviews from local businesses I have built websites for across Epsom, Surrey and South West London. Read them for yourself on my Google profile.">
 <meta name="twitter:image" content="https://www.martkamdigital.com/img/og-image-2026.jpg">
-<link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-stretch:62% 125%;font-display:swap;src:url('fonts/archivo-latin.woff2') format('woff2');}
-@font-face{font-family:'Archivo';font-style:italic;font-weight:100 900;font-stretch:62% 125%;font-display:swap;src:url('fonts/archivo-italic-latin.woff2') format('woff2');}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-latin.woff2') format('woff2');}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-italic-latin.woff2') format('woff2');}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:300 600;font-display:swap;src:url('fonts/dmsans-latin.woff2') format('woff2');}
 </style>
 <style>
 
@@ -84,8 +86,8 @@
   --mist:#180404;
   --white:#0d0101;
   --border:#3a0808;
-  --serif:'Archivo', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
-  --sans:'Archivo', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --serif:'Fraunces', Georgia, serif;
+  --sans:'DM Sans', system-ui, sans-serif;
 }
 
 /* ===== RESET ===== */
@@ -188,10 +190,12 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .section-title {
   font-family:var(--serif);
   font-size:clamp(2.2rem, 4vw, 3.6rem);
+  font-weight:400;
   line-height:1.15;
-  color:#ffffff;font-weight:800;font-stretch:118%;letter-spacing:-0.015em;
+  letter-spacing:-0.3px;
+  color:#ffffff;
 }
-.section-title em { font-style:normal; color:var(--red-text); }
+.section-title em { font-style:italic; color:rgba(255,255,255,0.4); }
 
 /* ===== HERO ===== */
 .hero {
@@ -278,13 +282,16 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .hero-heading {
   font-family:var(--serif);
   font-size:clamp(2.6rem, 4.6vw, 4.1rem);
+  font-weight:300;
   line-height:1.06;
   color:var(--ink);
-  margin-bottom:28px;font-weight:800;font-stretch:118%;letter-spacing:-0.015em;
+  margin-bottom:28px;
+  letter-spacing:-0.025em;
 }
 .hero-heading em {
-  font-style:normal;
+  font-style:italic;
   color:var(--red-text);
+  font-weight:300;
 }
 
 .hero-rating {
@@ -357,9 +364,11 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .stat-num {
   font-family:var(--serif);
   font-size:clamp(2.8rem, 5vw, 4.5rem);
+  font-weight:300;
   color:var(--ink);
   line-height:1;
-  margin-bottom:10px;font-weight:800;font-stretch:112%;letter-spacing:-0.02em;
+  letter-spacing:-0.03em;
+  margin-bottom:10px;
 }
 .stat-num span { color:var(--red-text); }
 .stat-label {
@@ -403,7 +412,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .modernus-logo { background:#ffffff; border-color:#ffffff; padding:8px 12px; display:inline-flex; align-items:center; }
 .cs-logo { background:#ffffff; border-color:#ffffff; padding:8px 12px; display:inline-flex; align-items:center; }
 .stpauls-logo { background:#ffffff; border-color:rgba(184,50,50,0.3); padding:8px 12px; display:inline-flex; align-items:center; }
-.tcard blockquote { font-family:var(--serif); font-size:1rem; color:#fff; line-height:1.7; font-style:italic; margin-bottom:20px; font-weight:400; font-stretch:100%; letter-spacing:0; }
+.tcard blockquote { font-family:var(--serif); font-size:1rem; font-weight:300; color:#fff; line-height:1.7; font-style:italic; margin-bottom:20px; }
 .tcard-name { font-size:0.85rem; font-weight:600; color:#fff; display:block; }
 .tcard-role { font-size:0.75rem; color:rgba(255,255,255,0.72); display:block; margin-top:2px; }
 .testi-source { color:var(--ink-light); font-size:0.93rem; line-height:1.8; max-width:620px; margin:14px auto 0; }
@@ -465,8 +474,10 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .trust-card h3 {
   font-family:var(--serif);
   font-size:1.15rem;
+  font-weight:400;
   color:var(--ink);
-  margin-bottom:12px;font-weight:700;font-stretch:104%;letter-spacing:-0.005em;
+  margin-bottom:12px;
+  letter-spacing:-0.01em;
 }
 .trust-card p {
   font-size:0.86rem;
@@ -497,7 +508,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   line-height:1;
   pointer-events:none;
   user-select:none;
-  z-index:0;font-stretch:125%;
+  z-index:0;
 }
 .leave-review .wrap { position:relative; z-index:2; }
 
@@ -524,11 +535,13 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .leave-review h2 {
   font-family:var(--serif);
   font-size:clamp(1.9rem, 3.5vw, 3rem);
+  font-weight:300;
   line-height:1.15;
   color:var(--ink);
-  margin-bottom:20px;font-weight:800;font-stretch:118%;letter-spacing:-0.015em;
+  margin-bottom:20px;
+  letter-spacing:-0.02em;
 }
-.leave-review h2 em { font-style:normal; color:var(--red-text); }
+.leave-review h2 em { font-style:italic; color:rgba(255,255,255,0.68); }
 
 .leave-review p {
   font-size:0.95rem;
@@ -581,8 +594,8 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   gap:56px;
 }
 .cta-eyebrow { font-size:0.7rem; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; color:rgba(255,255,255,0.7); margin-bottom:16px; }
-.cta-banner h2 { font-family:var(--serif); font-size:clamp(1.8rem, 3.2vw, 2.8rem); color:#fff; line-height:1.1; margin-bottom:12px; font-weight:800; font-stretch:118%; letter-spacing:-0.015em; }
-.cta-banner h2 em { font-style:normal; color:rgba(255,255,255,0.65); }
+.cta-banner h2 { font-family:var(--serif); font-size:clamp(1.8rem, 3.2vw, 2.8rem); font-weight:400; color:#fff; line-height:1.1; letter-spacing:-0.02em; margin-bottom:12px; }
+.cta-banner h2 em { font-style:italic; font-weight:300; color:rgba(255,255,255,0.65); }
 .cta-banner p { font-size:0.93rem; color:rgba(255,255,255,0.6); line-height:1.7; }
 .cta-btns { display:flex; flex-direction:column; gap:12px; align-items:center; flex-shrink:0; }
 .cta-btn-white { background:#fff; color:#6b0f14; font-size:0.88rem; font-weight:700; padding:14px 30px; border-radius:100px; transition:background .2s, transform .2s; white-space:nowrap; text-align:center; width:100%; }
@@ -633,8 +646,8 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .faq-left { position:sticky; top:100px; }
 .faq-eyebrow { display:inline-flex; align-items:center; gap:10px; font-size:0.72rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--red-text); margin-bottom:20px; }
 .faq-eyebrow::before { content:''; display:inline-block; width:20px; height:2px; background:var(--red); flex-shrink:0; }
-.faq-title { font-family:var(--serif); font-size:clamp(2rem,3.5vw,3.2rem); line-height:1.15; color:#fff; margin-bottom:18px; font-weight:800; font-stretch:118%; letter-spacing:-0.015em; }
-.faq-title em { font-style:normal; color:var(--red-text); }
+.faq-title { font-family:var(--serif); font-size:clamp(2rem,3.5vw,3.2rem); font-weight:400; line-height:1.15; letter-spacing:-0.3px; color:#fff; margin-bottom:18px; }
+.faq-title em { font-style:italic; color:rgba(255,255,255,0.68); }
 .faq-subtitle { font-size:0.88rem; line-height:1.8; color:var(--ink-light); margin-bottom:32px; }
 .faq-contact-cta { display:inline-flex; align-items:center; gap:8px; font-size:0.82rem; font-weight:600; color:var(--ink); background:rgba(227,27,35,0.1); border:1px solid rgba(227,27,35,0.22); padding:11px 22px; border-radius:100px; transition:background .2s, border-color .2s, color .2s; }
 .faq-contact-cta:hover { background:var(--red); border-color:var(--red-text); color:#fff; }
@@ -644,7 +657,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .faq-btn { width:100%; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:22px 0; background:none; border:none; cursor:pointer; text-align:left; color:var(--ink); transition:color .2s; }
 .faq-btn:hover { color:#fff; }
 .faq-btn.open { color:var(--red-text); }
-.faq-question { font-family:var(--serif); font-size:1.05rem; line-height:1.35; font-weight:700; font-stretch:104%; letter-spacing:-0.005em; }
+.faq-question { font-family:var(--serif); font-size:1.05rem; font-weight:400; line-height:1.35; letter-spacing:-0.1px; }
 .faq-icon { flex-shrink:0; width:28px; height:28px; border-radius:50%; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; transition:background .25s, border-color .25s, transform .4s cubic-bezier(.22,1,.36,1); }
 .faq-btn.open .faq-icon { background:var(--red); border-color:var(--red-text); transform:rotate(45deg); }
 .faq-icon svg { width:12px; height:12px; color:var(--ink-light); transition:color .25s; }

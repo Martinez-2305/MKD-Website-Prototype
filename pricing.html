@@ -263,10 +263,12 @@
 <meta name="twitter:image" content="https://www.martkamdigital.com/img/og-image-2026.jpg">
 <meta name="twitter:title" content="Website Pricing | Packages from £299 | MartKam Digital">
 <meta name="twitter:description" content="Three website packages with the prices published: £299 Starter and £599 Growth (40% off for the first 5 bookings), £1,995 Bookings and Ordering. Copywriting and SEO groundwork included.">
-<link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-stretch:62% 125%;font-display:swap;src:url('fonts/archivo-latin.woff2') format('woff2');}
-@font-face{font-family:'Archivo';font-style:italic;font-weight:100 900;font-stretch:62% 125%;font-display:swap;src:url('fonts/archivo-italic-latin.woff2') format('woff2');}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-latin.woff2') format('woff2');}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-italic-latin.woff2') format('woff2');}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:300 600;font-display:swap;src:url('fonts/dmsans-latin.woff2') format('woff2');}
 #seo-retainer { scroll-margin-top:90px; }
 </style>
 
@@ -286,8 +288,8 @@ img { display:block; }
   --mist:#180404;
   --white:#0d0101;
   --border:#3a0808;
-  --serif:'Archivo', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
-  --sans:'Archivo', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --serif:'Fraunces', Georgia, serif;
+  --sans:'DM Sans', system-ui, sans-serif;
 }
 
 /* NAV */
@@ -359,11 +361,13 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .policy-hero h1 {
   font-family:var(--serif);
   font-size:clamp(2.2rem, 4vw, 3.25rem);
+  font-weight:300;
   color:var(--ink);
   line-height:1.1;
-  margin-bottom:16px;font-weight:800;font-stretch:118%;letter-spacing:-0.015em;
+  letter-spacing:-0.02em;
+  margin-bottom:16px;
 }
-.policy-hero h1 em { font-style:normal; color:var(--red-text); }
+.policy-hero h1 em { font-style:italic; }
 .policy-meta {
   font-size:0.82rem;
   color:var(--ink-light);
@@ -388,8 +392,9 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .policy-toc h2 {
   font-family:var(--serif);
   font-size:1.1rem;
+  font-weight:400;
   color:var(--ink);
-  margin-bottom:16px;font-weight:700;font-stretch:104%;letter-spacing:-0.005em;
+  margin-bottom:16px;
 }
 .policy-toc ol {
   list-style:decimal;
@@ -412,10 +417,12 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .policy-section h2 {
   font-family:var(--serif);
   font-size:1.6rem;
+  font-weight:300;
   color:var(--ink);
   margin-bottom:20px;
   padding-bottom:14px;
-  border-bottom:1px solid var(--border);font-weight:800;font-stretch:118%;letter-spacing:-0.015em;
+  border-bottom:1px solid var(--border);
+  letter-spacing:-0.01em;
 }
 .policy-section h3 {
   font-size:1rem;
@@ -523,19 +530,19 @@ body > footer {
 /* ===== PRICING ===== */
 .pr-hero{padding:150px 0 56px;border-bottom:1px solid var(--border);}
 .pr-inner{max-width:1120px;margin:0 auto;padding:0 48px;}
-.pr-hero h1{ font-family:var(--serif); font-size:clamp(2.2rem,4.4vw,3.6rem); color:#fff; line-height:1.12; margin-bottom:20px; font-weight:800; font-stretch:118%; letter-spacing:-0.015em; }
-.pr-hero h1 em{ font-style:normal; color:var(--red-text); }
+.pr-hero h1{font-family:var(--serif);font-size:clamp(2.2rem,4.4vw,3.6rem);font-weight:300;color:#fff;line-height:1.12;letter-spacing:-0.5px;margin-bottom:20px;}
+.pr-hero h1 em{font-style:italic;color:rgba(255,255,255,0.5);}
 .pr-lede{max-width:640px;}
 .pr-lede p{color:var(--ink-light);line-height:1.85;margin-bottom:14px;font-size:0.99rem;}
 .pr-body{max-width:1120px;margin:0 auto;padding:64px 48px 88px;}
 .pr-sec{margin-bottom:72px;}
-.pr-sec > h2{ font-family:var(--serif); font-size:clamp(1.6rem,2.6vw,2.3rem); color:#fff; margin-bottom:14px; font-weight:800; font-stretch:118%; letter-spacing:-0.015em; }
+.pr-sec > h2{font-family:var(--serif);font-size:clamp(1.6rem,2.6vw,2.3rem);font-weight:400;color:#fff;margin-bottom:14px;}
 .pr-sec > p{color:var(--ink-light);line-height:1.85;max-width:660px;margin-bottom:12px;}
 .pr-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px;}
 .pr-card{background:rgba(255,255,255,0.035);border:1px solid var(--border);border-radius:18px;padding:36px;display:flex;flex-direction:column;}
 .pr-card.feature{border-color:rgba(227,27,35,0.4);background:rgba(227,27,35,0.05);}
 .pr-card-name{font-size:0.74rem;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--red-text);margin-bottom:14px;}
-.pr-price{ font-family:var(--serif); font-size:2.6rem; color:#fff; line-height:1; margin-bottom:6px; font-weight:800; font-stretch:112%; letter-spacing:-0.02em; }
+.pr-price{font-family:var(--serif);font-size:2.6rem;font-weight:400;color:#fff;line-height:1;margin-bottom:6px;}
 .pr-price span{font-family:var(--sans);font-size:0.95rem;color:var(--ink-light);font-weight:500;}
 .pr-card-sub{font-size:0.9rem;color:var(--ink-light);margin-bottom:22px;line-height:1.7;}
 .pr-list{list-style:none;display:flex;flex-direction:column;gap:11px;margin-top:6px;}
@@ -552,13 +559,13 @@ body > footer {
 .pr-guarantee{border:1px solid rgba(227,27,35,0.35);background:rgba(227,27,35,0.06);border-radius:18px;padding:34px 38px;}
 .pr-guarantee h2{margin-bottom:12px;}
 .pr-cta{text-align:center;background:#6b0f14;border-radius:20px;padding:56px 40px;}
-.pr-cta h2{ font-family:var(--serif); font-size:clamp(1.6rem,3vw,2.4rem); color:#fff; margin-bottom:14px; font-weight:800; font-stretch:118%; letter-spacing:-0.015em; }
+.pr-cta h2{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;color:#fff;margin-bottom:14px;}
 .pr-cta p{color:rgba(255,255,255,0.72);max-width:560px;margin:0 auto 26px;line-height:1.8;font-size:0.95rem;}
 .pr-btn{display:inline-block;background:#fff;color:#8a0f14;font-size:0.95rem;font-weight:700;padding:15px 34px;border-radius:100px;transition:transform .2s;}
 .pr-btn:hover{transform:translateY(-2px);}
 .pr-faq{border-top:1px solid var(--border);}
 .pr-faq details{border-bottom:1px solid var(--border);}
-.pr-faq summary{ cursor:pointer; list-style:none; padding:22px 0; font-family:var(--serif); font-size:1.02rem; color:var(--ink); display:flex; justify-content:space-between; gap:20px; align-items:center; transition:color .2s; font-weight:700; font-stretch:104%; letter-spacing:-0.005em; }
+.pr-faq summary{cursor:pointer;list-style:none;padding:22px 0;font-family:var(--serif);font-size:1.02rem;color:var(--ink);display:flex;justify-content:space-between;gap:20px;align-items:center;transition:color .2s;}
 .pr-faq summary::-webkit-details-marker{display:none;}
 .pr-faq summary:hover{color:#fff;}
 .pr-faq summary::after{content:'+';font-family:var(--sans);font-size:1.3rem;color:var(--red-text);flex-shrink:0;transition:transform .3s;}
@@ -580,7 +587,7 @@ body > footer {
 .pr-sub{font-family:var(--sans);font-size:0.8rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--red-text);margin:34px 0 16px;}
 .pr-steps{list-style:none;counter-reset:step;display:flex;flex-direction:column;gap:14px;margin-top:28px;}
 .pr-steps li{counter-increment:step;position:relative;padding-left:52px;font-size:0.93rem;color:var(--ink-light);line-height:1.75;min-height:34px;display:block;padding-top:4px;}
-.pr-steps li::before{content:counter(step);position:absolute;left:0;top:0;width:34px;height:34px;border-radius:50%;background:rgba(227,27,35,0.1);border:1px solid rgba(227,27,35,0.3);color:var(--red-text);font-family:var(--serif);font-size:0.95rem;display:flex;align-items:center;justify-content:center;font-weight:700;}
+.pr-steps li::before{content:counter(step);position:absolute;left:0;top:0;width:34px;height:34px;border-radius:50%;background:rgba(227,27,35,0.1);border:1px solid rgba(227,27,35,0.3);color:var(--red-text);font-family:var(--serif);font-size:0.95rem;display:flex;align-items:center;justify-content:center;}
 .pr-steps li strong{color:#fff;font-weight:600;}
 .pr-terms{list-style:none;display:flex;flex-direction:column;gap:12px;margin-top:26px;}
 .pr-terms li{font-size:0.87rem;color:var(--ink-light);line-height:1.8;position:relative;padding-left:20px;}
@@ -598,7 +605,7 @@ body > footer {
 .pr-compare thead th{font-family:var(--sans);font-size:0.72rem;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:var(--red-text);border-bottom:1px solid rgba(227,27,35,0.28);}
 .pr-compare tbody th{font-weight:600;color:var(--ink);width:25%;}
 .pr-compare tbody td{color:var(--ink-light);}
-.pr-compare tbody td strong{ color:#fff; font-family:var(--serif); font-size:1.28rem; font-weight:800; font-stretch:112%; letter-spacing:-0.02em; }
+.pr-compare tbody td strong{color:#fff;font-family:var(--serif);font-size:1.28rem;font-weight:400;}
 .pr-compare .is-rec{background:rgba(227,27,35,0.055);}
 .pr-compare .pr-was{color:rgba(245,234,234,0.55);font-size:0.86rem;margin-left:4px;}
 @media(max-width:900px){
@@ -656,7 +663,7 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 .pr-card ul.pr-list { flex:1; }
 .pr-basics { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:20px; margin-top:26px; }
 .pr-basic { border:1px solid var(--border); border-radius:14px; padding:24px; background:rgba(255,255,255,0.025); }
-.pr-basic h3 { font-family:var(--serif); font-size:1.2rem; color:#fff; margin-bottom:10px; font-weight:700; font-stretch:104%; letter-spacing:-0.005em; }
+.pr-basic h3 { font-family:var(--serif); font-size:1.2rem; font-weight:400; color:#fff; margin-bottom:10px; }
 .pr-basic p { font-size:0.9rem; color:var(--ink-light); line-height:1.7; }
 .pr-basic a { color:var(--red-text); font-weight:600; }
 @media (max-width:900px){ .pr-basics { grid-template-columns:1fr; } }
