@@ -494,12 +494,10 @@ ${JSON.stringify(graph, null, 2)}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="${BASE}/img/og-image-2026.jpg">
 
-<link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-@font-face{font-family:'Fraunces';font-style:normal;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-latin.woff2') format('woff2');}
-@font-face{font-family:'Fraunces';font-style:italic;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-italic-latin.woff2') format('woff2');}
-@font-face{font-family:'DM Sans';font-style:normal;font-weight:300 600;font-display:swap;src:url('fonts/dmsans-latin.woff2') format('woff2');}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-stretch:62% 125%;font-display:swap;src:url('fonts/archivo-latin.woff2') format('woff2');}
+@font-face{font-family:'Archivo';font-style:italic;font-weight:100 900;font-stretch:62% 125%;font-display:swap;src:url('fonts/archivo-italic-latin.woff2') format('woff2');}
 .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 </style>
 
@@ -812,12 +810,10 @@ ${JSON.stringify(graph, null, 2)}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="${BASE}/img/og-image-2026.jpg">
 
-<link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-@font-face{font-family:'Fraunces';font-style:normal;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-latin.woff2') format('woff2');}
-@font-face{font-family:'Fraunces';font-style:italic;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-italic-latin.woff2') format('woff2');}
-@font-face{font-family:'DM Sans';font-style:normal;font-weight:300 600;font-display:swap;src:url('fonts/dmsans-latin.woff2') format('woff2');}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-stretch:62% 125%;font-display:swap;src:url('fonts/archivo-latin.woff2') format('woff2');}
+@font-face{font-family:'Archivo';font-style:italic;font-weight:100 900;font-stretch:62% 125%;font-display:swap;src:url('fonts/archivo-italic-latin.woff2') format('woff2');}
 .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 </style>
 
@@ -979,12 +975,10 @@ ${JSON.stringify(graph, null, 2)}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="${BASE}/img/og-image-2026.jpg">
 
-<link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-@font-face{font-family:'Fraunces';font-style:normal;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-latin.woff2') format('woff2');}
-@font-face{font-family:'Fraunces';font-style:italic;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-italic-latin.woff2') format('woff2');}
-@font-face{font-family:'DM Sans';font-style:normal;font-weight:300 600;font-display:swap;src:url('fonts/dmsans-latin.woff2') format('woff2');}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-stretch:62% 125%;font-display:swap;src:url('fonts/archivo-latin.woff2') format('woff2');}
+@font-face{font-family:'Archivo';font-style:italic;font-weight:100 900;font-stretch:62% 125%;font-display:swap;src:url('fonts/archivo-italic-latin.woff2') format('woff2');}
 .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 </style>
 

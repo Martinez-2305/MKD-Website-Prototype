@@ -64,12 +64,10 @@
 <meta name="twitter:image" content="https://www.martkamdigital.com/img/og-image-2026.jpg">
 <meta name="twitter:title" content="Privacy Policy | MartKam Digital">
 <meta name="twitter:description" content="How MartKam Digital collects, uses and protects your personal data under UK GDPR and the Data Protection Act 2018.">
-<link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-@font-face{font-family:'Fraunces';font-style:normal;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-latin.woff2') format('woff2');}
-@font-face{font-family:'Fraunces';font-style:italic;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-italic-latin.woff2') format('woff2');}
-@font-face{font-family:'DM Sans';font-style:normal;font-weight:300 600;font-display:swap;src:url('fonts/dmsans-latin.woff2') format('woff2');}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-stretch:62% 125%;font-display:swap;src:url('fonts/archivo-latin.woff2') format('woff2');}
+@font-face{font-family:'Archivo';font-style:italic;font-weight:100 900;font-stretch:62% 125%;font-display:swap;src:url('fonts/archivo-italic-latin.woff2') format('woff2');}
 </style>
 
 <style>
@@ -88,8 +86,8 @@ img { display:block; }
   --mist:#180404;
   --white:#0d0101;
   --border:#3a0808;
-  --serif:'Fraunces', Georgia, serif;
-  --sans:'DM Sans', system-ui, sans-serif;
+  --serif:'Archivo', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --sans:'Archivo', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
 }
 
 /* NAV */
@@ -161,13 +159,11 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .policy-hero h1 {
   font-family:var(--serif);
   font-size:clamp(2.2rem, 4vw, 3.25rem);
-  font-weight:300;
   color:var(--ink);
   line-height:1.1;
-  letter-spacing:-0.02em;
-  margin-bottom:16px;
+  margin-bottom:16px;font-weight:800;font-stretch:118%;letter-spacing:-0.015em;
 }
-.policy-hero h1 em { font-style:italic; }
+.policy-hero h1 em { font-style:normal; color:var(--red-text); }
 .policy-meta {
   font-size:0.82rem;
   color:var(--ink-light);
@@ -192,9 +188,8 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .policy-toc h2 {
   font-family:var(--serif);
   font-size:1.1rem;
-  font-weight:400;
   color:var(--ink);
-  margin-bottom:16px;
+  margin-bottom:16px;font-weight:700;font-stretch:104%;letter-spacing:-0.005em;
 }
 .policy-toc ol {
   list-style:decimal;
@@ -217,12 +212,10 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 .policy-section h2 {
   font-family:var(--serif);
   font-size:1.6rem;
-  font-weight:300;
   color:var(--ink);
   margin-bottom:20px;
   padding-bottom:14px;
-  border-bottom:1px solid var(--border);
-  letter-spacing:-0.01em;
+  border-bottom:1px solid var(--border);font-weight:800;font-stretch:118%;letter-spacing:-0.015em;
 }
 .policy-section h3 {
   font-size:1rem;
