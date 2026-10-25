@@ -27,6 +27,67 @@ main:focus { outline: none; }
   max-width: 36em;
 }
 
+/* ===== 40% OFFER (first 5 bookings) =====
+   Used on pricing, the homepage and every location page. When the places run
+   out, remove the offer blocks and restore the usual prices everywhere. */
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+.offer-bar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px;
+  margin: 28px 0 0; padding: 18px 22px; border-radius: 16px;
+  background: linear-gradient(120deg, #8a0f14, #c0161d);
+  color: #fff; box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+}
+.offer-bar-tag {
+  font: 700 0.75rem/1 'DM Sans', sans-serif; letter-spacing: 1.2px; text-transform: uppercase;
+  background: #fff; color: #8a0f14; padding: 7px 12px; border-radius: 100px; white-space: nowrap;
+}
+.offer-bar-text { flex: 1 1 320px; font-size: 0.95rem; line-height: 1.6; color: rgba(255, 255, 255, 0.92); margin: 0; }
+.offer-bar-text strong { color: #fff; font-weight: 700; }
+.offer-bar-places { font-size: 0.9rem; color: #fff; white-space: nowrap; margin: 0; }
+.offer-bar-places strong { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; margin-right: 4px; }
+.offer-bar-cta {
+  display: inline-block; background: #fff; color: #8a0f14; font-weight: 700; font-size: 0.9rem;
+  padding: 12px 22px; border-radius: 100px; text-decoration: none; white-space: nowrap;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.offer-bar-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); }
+.offer-bar-cta:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+/* Room for the "Most businesses want this one" flag above the cards */
+.offer-bar + .hp-prices-grid, .offer-bar + .lp-plans { margin-top: 44px; }
+.hp-prices-head + .offer-bar { margin-top: 0; }
+
+/* Usual price, struck through, beside the offer price */
+.price-was {
+  font-family: 'DM Sans', sans-serif !important; font-size: 0.42em !important; font-weight: 500 !important;
+  color: rgba(245, 234, 234, 0.6) !important; text-decoration: line-through; text-decoration-thickness: 1.5px;
+  vertical-align: middle; margin-right: 6px;
+}
+.price-save {
+  display: inline-block; vertical-align: middle; margin-left: 8px;
+  font-family: 'DM Sans', sans-serif !important; font-size: 0.3em !important; font-weight: 700 !important;
+  letter-spacing: 0.06em; text-transform: uppercase; color: #fff !important;
+  background: #c0161d; padding: 5px 9px; border-radius: 100px; line-height: 1.2;
+}
+.price-monthly { font-size: 0.86rem; color: var(--ink-light, #c4a8a8); margin: 0 0 12px; line-height: 1.5; }
+.price-monthly strong { color: var(--ink, #f5eaea); font-weight: 600; }
+
+/* Pay in full / pay monthly switch on the pricing page */
+.pay-toggle {
+  display: inline-flex; gap: 4px; padding: 5px; margin-top: 30px;
+  border: 1px solid rgba(245, 234, 234, 0.16); border-radius: 100px; background: rgba(255, 255, 255, 0.04);
+}
+.pay-toggle button {
+  font: 600 0.9rem/1 'DM Sans', sans-serif; color: var(--ink-light, #c4a8a8);
+  background: none; border: 0; border-radius: 100px; padding: 12px 20px; min-height: 44px; cursor: pointer;
+  transition: background-color .2s ease, color .2s ease;
+}
+.pay-toggle button span { font-weight: 500; font-size: 0.78rem; opacity: 0.85; margin-left: 4px; }
+.pay-toggle button[aria-pressed="true"] { background: #fff; color: #1a1010; }
+.pay-toggle button:focus-visible { outline: 2px solid #ff3b41; outline-offset: 2px; }
+
 /* Notes inside a pricing card: a divider, not a box inside the box */
 .pr-card .pr-note {
   background: none; border: 0; border-top: 1px solid rgba(245, 234, 234, 0.12);

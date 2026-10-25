@@ -126,11 +126,16 @@ const PROJECTS = {
   },
 };
 
+/* 40% offer on Starter and Growth, first 5 bookings only. Update this as
+   bookings come in, along with the "places left" figure on pricing.html and
+   index.html. When it reaches 0, take the offer off and restore £499 / £999. */
+const OFFER_PLACES_LEFT = 5;
+
 /* Shared FAQs, answered from pricing.html. Town FAQs come first. */
 const SHARED_FAQS = [
   {
     q: 'How much does a website cost?',
-    a: 'Three packages, all published. <strong>£499</strong> for Starter, a proven template styled to your brand. <strong>£999</strong> for Growth, a custom design with location and service pages. <strong>£1,995</strong> for Bookings &amp; Ordering, which adds bookings or payments. Ongoing SEO is optional and separate, at £199 a month. I am not VAT registered, so the price you see is the price you pay. <a href="pricing.html">See the full pricing</a>.',
+    a: 'Three packages, all published. <strong>£299</strong> for Starter (usually £499), a proven template styled to your brand. <strong>£599</strong> for Growth (usually £999), a custom design with location and service pages. <strong>£1,995</strong> for Bookings &amp; Ordering, which adds bookings or payments. Starter and Growth are 40% off for the first 5 bookings, and any package can be paid in six interest-free monthly payments. Ongoing SEO is optional and separate, at £199 a month. I am not VAT registered, so the price you see is the price you pay. <a href="pricing.html">See the full pricing</a>.',
   },
   {
     q: 'I already have a website. Can you redesign it?',
@@ -200,11 +205,11 @@ const tierDesign = `      <div class="lp-inc-card">
         <h3>Web design</h3>
         <p>Every package includes the design, build, launch, the words on the page and the SEO groundwork. What changes is how much is designed from scratch and what the site has to do.</p>
         <div class="lp-tier">
-          <h4>Starter <span>&middot; £499 &middot; template</span></h4>
+          <h4>Starter <span>&middot; £299, usually £499 &middot; template</span></h4>
           <p>A proven template styled to your brand: the layout is pre-set, and the colours, type, images and words are yours. Up to 5 pages, live in 2 to 3 weeks.</p>
         </div>
         <div class="lp-tier">
-          <h4>Growth <span>&middot; £999 &middot; custom design</span></h4>
+          <h4>Growth <span>&middot; £599, usually £999 &middot; custom design</span></h4>
           <p>Designed around your business rather than templated. Up to 10 pages, including location and service pages aimed at the searches your customers make. Live in 3 to 4 weeks.</p>
         </div>
         <div class="lp-tier">
@@ -448,8 +453,8 @@ function page(t) {
         areaServed: { '@type': 'Place', name: `${t.fullName}, ${t.region}` },
         provider: { '@id': `${BASE}/#organization` },
         offers: [
-          { '@type': 'Offer', name: 'Starter Site', price: '499', priceCurrency: 'GBP' },
-          { '@type': 'Offer', name: 'Growth Site', price: '999', priceCurrency: 'GBP' },
+          { '@type': 'Offer', name: 'Starter Site', price: '299', priceCurrency: 'GBP' },
+          { '@type': 'Offer', name: 'Growth Site', price: '599', priceCurrency: 'GBP' },
           { '@type': 'Offer', name: 'Bookings & Ordering Site', price: '1995', priceCurrency: 'GBP' },
         ],
       },
@@ -592,11 +597,18 @@ ${incCards.join('\n')}
 <section class="section" id="prices">
   <div class="wrap">
     <h2 class="section-title">Three packages, <em>prices published</em></h2>
-    <p class="section-intro">The same prices for every town I work in. Copywriting and the SEO groundwork are included in all three.</p>
+    <p class="section-intro">The same prices for every town I work in. Copywriting and the SEO groundwork are included in all three, and any package can be paid in six interest-free monthly payments.</p>
+    <div class="offer-bar">
+      <p class="offer-bar-tag">Limited offer</p>
+      <p class="offer-bar-text"><strong>40% off Starter and Growth, for the first 5 bookings only.</strong> Once the places are gone, the prices go back up.</p>
+      <p class="offer-bar-places"><strong>${OFFER_PLACES_LEFT}</strong>places left</p>
+      <a href="#enquire" class="offer-bar-cta">Claim your place</a>
+    </div>
     <div class="lp-plans">
       <div class="lp-plan">
         <h3>Starter Site</h3>
-        <p class="lp-price">£499</p>
+        <p class="lp-price"><span class="price-was"><span class="visually-hidden">Usually </span>£499</span>£299<span class="price-save">40% off</span></p>
+        <p class="price-monthly">or <strong>£49.83 a month</strong> for 6 months, interest-free</p>
         <p>For new businesses that need somewhere credible to send people.</p>
         <ul>
           <li>Template, styled to your brand</li>
@@ -609,7 +621,8 @@ ${incCards.join('\n')}
       <div class="lp-plan is-pick">
         <p class="lp-plan-flag">Most businesses want this one</p>
         <h3>Growth Site</h3>
-        <p class="lp-price">£999</p>
+        <p class="lp-price"><span class="price-was"><span class="visually-hidden">Usually </span>£999</span>£599<span class="price-save">40% off</span></p>
+        <p class="price-monthly">or <strong>£99.83 a month</strong> for 6 months, interest-free</p>
         <p>For established businesses who want the phone to ring.</p>
         <ul>
           <li>Custom design</li>
@@ -623,6 +636,7 @@ ${incCards.join('\n')}
       <div class="lp-plan">
         <h3>Bookings &amp; Ordering Site</h3>
         <p class="lp-price">£1,995</p>
+        <p class="price-monthly">or <strong>£332.50 a month</strong> for 6 months, interest-free</p>
         <p>For businesses taking orders, bookings or payments online.</p>
         <ul>
           <li>Custom design, plus booking or ordering system</li>
@@ -841,7 +855,7 @@ ${keys.map(k => projectCard(k, 2)).join('\n')}
       <div class="lp-prose">
         <h2 class="section-title">Want a website <em>like these?</em></h2>
         <p>Tell me a little about your business and what you need. I&rsquo;ll reply personally, usually the same day, with the next steps and which package fits.</p>
-        <p>Prices are published up front: <strong>£499</strong>, <strong>£999</strong> or <strong>£1,995</strong>, with the copy written for you and the SEO groundwork included. <a href="pricing.html">See what each package includes</a>.</p>
+        <p>Prices are published up front: <strong>£299</strong>, <strong>£599</strong> or <strong>£1,995</strong> (Starter and Growth are 40% off for the first 5 bookings), with the copy written for you and the SEO groundwork included. <a href="pricing.html">See what each package includes</a>.</p>
       </div>
 ${enquiryCard('portfolio', 'New enquiry from the portfolio page', 'Portfolio page')}
     </div>
@@ -1121,7 +1135,7 @@ ${projectCard('cs')}
         </ul>
       </div>
     </div>
-    <p class="lp-small"><strong>Existing website I did not build?</strong> The audit is free. I will tell you plainly whether the site can be worked with; if it can, the retainer is the same £199 a month, with the same 3-month first term. <strong>On a Starter site</strong>, the site is built on a template, so it needs rebuilding from scratch first: that is the move up to Growth, the £500 difference. <a href="pricing.html#seo-retainer">Full SEO Retainer terms</a>.</p>
+    <p class="lp-small"><strong>Existing website I did not build?</strong> The audit is free. I will tell you plainly whether the site can be worked with; if it can, the retainer is the same £199 a month, with the same 3-month first term. <strong>On a Starter site</strong>, the site is built on a template, so it needs rebuilding from scratch first: that is the move up to Growth, the difference between the two prices (£300 while the offer runs). <a href="pricing.html#seo-retainer">Full SEO Retainer terms</a>.</p>
   </div>
 </section>
 
