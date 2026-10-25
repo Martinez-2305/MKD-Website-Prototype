@@ -927,10 +927,10 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
     <div class="tl-bg-pill" id="tlBg"></div>
     <div class="tl-lamp-wrap" id="tlLamp"><div class="tl-lamp-bar"><div class="tl-lamp-glow3"></div></div></div>
     <a href="#" class="tl-item active" data-section="home">Home</a>
+    <a href="portfolio.html" class="tl-item" data-section="portfolio">Client Portfolio</a>
+    <a href="reviews.html" class="tl-item" data-section="reviews">Reviews</a>
     <a href="about.html" class="tl-item" data-section="about">About Me</a>
     <a href="services.html" class="tl-item" data-section="services">Services</a>
-    <a href="reviews.html" class="tl-item" data-section="reviews">Reviews</a>
-    <a href="portfolio.html" class="tl-item" data-section="portfolio">Client Portfolio</a>
     <a href="pricing.html" class="tl-item" data-section="pricing">Pricing</a>
     <a href="#contact" class="tl-item" data-section="contact">Contact</a>
   </div>
@@ -944,10 +944,10 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
 <div class="mob-menu" id="mobMenu">
   <div class="mob-menu-inner">
     <a href="#" class="mob-item">Home</a>
+    <a href="portfolio.html" class="mob-item">Client Portfolio</a>
+    <a href="reviews.html" class="mob-item">Reviews</a>
     <a href="about.html" class="mob-item">About Me</a>
     <a href="services.html" class="mob-item">Services</a>
-    <a href="reviews.html" class="mob-item">Reviews</a>
-    <a href="portfolio.html" class="mob-item">Client Portfolio</a>
     <a href="pricing.html" class="mob-item">Pricing</a>
     <a href="#contact" class="mob-item">Contact</a>
     <a href="#contact" class="mob-cta">Let's Talk</a>
@@ -1816,17 +1816,24 @@ document.addEventListener('click', e => {
     item.addEventListener('click', () => setActive(item));
   });
 
-  // Scroll-spy: highlight nav item based on visible section
-  // [section id on this page, data-section of the nav item it lights up]
-  const spy = [['work','portfolio'],['about','about'],['services','services'],['prices','pricing'],['get-in-touch','contact']]
-    .map(([id, item]) => ({ el: document.getElementById(id), item }))
-    .filter(s => s.el);
+  // Scroll-spy: highlight nav item based on visible section. Listed in page
+  // order, which is also the nav order, so the pill moves one item at a time.
+  // [element on this page, data-section of the nav item it lights up]
+  const spy = [
+    [document.getElementById('work'), 'portfolio'],
+    [document.querySelector('#work .work-quote'), 'reviews'],   // client quotes in the work cards
+    [document.getElementById('about'), 'about'],
+    [document.getElementById('services'), 'services'],
+    [document.getElementById('prices'), 'pricing'],
+    [document.getElementById('get-in-touch'), 'contact']
+  ].map(([el, item]) => ({ el, item })).filter(s => s.el);
+  const pageTop = el => el.getBoundingClientRect().top + window.scrollY;
 
   function onScroll() {
     let active = null;
     const mid = window.scrollY + window.innerHeight * 0.4;
     for (let i = spy.length - 1; i >= 0; i--) {
-      if (spy[i].el.offsetTop <= mid) { active = spy[i].item; break; }
+      if (pageTop(spy[i].el) <= mid) { active = spy[i].item; break; }
     }
     const target = nav.querySelector('[data-section="' + (active || 'home') + '"]');
     if (target && !target.classList.contains('active')) setActive(target);
