@@ -1,5 +1,6 @@
-# Dependencies — restored with `npm install`, never committed
+# Dependencies: restored with `npm install`, never committed
 node_modules/
+package-lock.json
 
 # Build output
 .next/
@@ -28,5 +29,9 @@ Thumbs.db
 desktop.ini
 ehthumbs.db
 
-# Local tooling artefacts
+# Local editor and AI tool settings: personal, never deployed
+.claude/settings.local.json
+.impeccable/
+.agents/
+skills-lock.json
 .playwright-mcp/

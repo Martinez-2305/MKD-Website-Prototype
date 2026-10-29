@@ -1,7 +1,9 @@
 {
-  "dependencies": {
-    "framer-motion": "^12.34.3",
-    "lucide-react": "^0.575.0"
+  "name": "martkam-digital-site",
+  "private": true,
+  "description": "Static website for martkamdigital.com. Not deployed as a Node app: the files are served as they are.",
+  "scripts": {
+    "build:pages": "node tools/build-location-pages.mjs"
   },
   "devDependencies": {
     "sharp": "^0.35.3"

@@ -1,6 +1,10 @@
 # MartKam Digital: Apache / LiteSpeed rules for Hostinger.
-# Note: while the site is still served by Vercel this file is ignored there.
-# It takes effect once the site is deployed to Hostinger.
+# Vercel ignores this file. It takes effect once the site is served by
+# Hostinger (see docs/HOSTINGER-MIGRATION.md).
+
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
 
 RewriteEngine On
 
@@ -9,15 +13,61 @@ RewriteEngine On
 # Hostinger preview domain is left alone. X-Forwarded-Proto covers requests
 # that reach the server through Hostinger's CDN.
 RewriteCond %{HTTP_HOST} ^martkamdigital\.com$ [NC]
-RewriteRule ^ https://www.martkamdigital.com%{REQUEST_URI} [L,R=301]
+RewriteRule ^ https://www.martkamdigital.com%{REQUEST_URI} [L,R=301,NE]
 
 RewriteCond %{HTTP_HOST} ^www\.martkamdigital\.com$ [NC]
 RewriteCond %{HTTPS} !=on
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
-RewriteRule ^ https://www.martkamdigital.com%{REQUEST_URI} [L,R=301]
+RewriteRule ^ https://www.martkamdigital.com%{REQUEST_URI} [L,R=301,NE]
+
+# The retired contact page now lives on the homepage form.
+RewriteRule ^contact\.html$ /#contact [L,R=301,NE]
 
 # Keep working files out of public reach: editor and tool settings, build
 # scripts, notes and package files. They are in the repo, not the website.
-RewriteRule ^(\.claude|\.github|\.impeccable|\.agents|\.vscode|tools|node_modules)(/|$) - [R=404,L]
+RewriteRule ^(\.claude|\.github|\.impeccable|\.agents|\.vscode|\.git|tools|docs|node_modules)(/|$) - [R=404,L]
 RewriteRule \.(md|mjs|lock)$ - [R=404,L]
-RewriteRule ^(package(-lock)?\.json|skills-lock\.json)$ - [R=404,L]
+RewriteRule ^(package(-lock)?\.json|skills-lock\.json|\.gitignore|\.htaccess)$ - [R=404,L]
+
+# Correct types for modern image and font formats.
+<IfModule mod_mime.c>
+  AddType image/avif .avif
+  AddType image/webp .webp
+  AddType font/woff2 .woff2
+  AddType application/manifest+json .webmanifest
+</IfModule>
+
+# Compress text files.
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript application/json image/svg+xml text/xml application/xml text/plain
+</IfModule>
+
+# Browser caching. Pages are rechecked on every visit so edits show at once;
+# images, fonts, CSS and JS are cached. CSS and JS keep the same file names
+# when edited, so they get a week rather than a year.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 week"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/xml "access plus 1 hour"
+  ExpiresByType text/xml "access plus 1 hour"
+  ExpiresByType text/plain "access plus 1 hour"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+  ExpiresByType text/javascript "access plus 1 week"
+  ExpiresByType image/avif "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
