@@ -37,7 +37,7 @@ export const TOWNS = [
       'Web design, with local SEO groundwork included, for businesses in Woking, Surrey.',
 
     crumb: 'Web design in Woking',
-    h1: 'Web design for Woking businesses',
+    h1: 'Web design for Woking and the villages around it',
     benefit: 'A website that says clearly what you do, and brings in enquiries from people searching nearby.',
     heroCopy:
       'I design and build websites for businesses across Woking and the villages around it. Every site includes the words, the SEO groundwork and a contact form that reaches you, and the prices are published before you get in touch.',
@@ -250,7 +250,7 @@ export const TOWNS = [
       'Web design, with local SEO groundwork included, for businesses in Wimbledon, South West London.',
 
     crumb: 'Web design in Wimbledon',
-    h1: 'Web design for Wimbledon businesses',
+    h1: 'Web design for Wimbledon Village, the town centre and Merton',
     benefit: 'A website that tells local customers what you do and where, and makes getting in touch simple.',
     heroCopy:
       'I build websites for businesses in Wimbledon Village, the town centre and the rest of Merton. The copy is written for you, the SEO groundwork is included, and the prices are published up front.',
@@ -372,7 +372,7 @@ export const TOWNS = [
       'Web design, with local SEO groundwork included, for businesses in Richmond upon Thames, South West London.',
 
     crumb: 'Web design in Richmond',
-    h1: 'Web design for Richmond businesses',
+    h1: 'Web design for Richmond, Kew and Twickenham businesses',
     benefit: 'A website that works for regular customers and first-time visitors alike.',
     heroCopy:
       'I build websites for shops, hospitality and service businesses in Richmond, Twickenham, Kew and Teddington. The copy is written for you, the SEO groundwork is included, and the prices are published.',
@@ -529,20 +529,24 @@ export const TOWNS = [
     geoRegion: 'GB-SRY',
     focus: 'design',
 
-    // Title and description kept exactly as they were live.
-    title: 'Web Designer in Epsom & Ewell | Local SEO | MartKam',
+    // 2026-10-29, from Search Console: the HOMEPAGE ranks about 1.7 for "web
+    // design epsom" and this page about 20, so this page was competing with
+    // it. Re-angled as a supporting page (case studies and pricing for Epsom
+    // businesses) that links to the homepage. Do not re-add exact-match
+    // "Web Design Epsom" / "Web Designer in Epsom" wording to the title.
+    title: 'Web Design for Epsom Businesses: Case Studies & Pricing | MartKam Digital',
     description:
-      'A local web designer covering Epsom, Ewell, Stoneleigh and Tadworth. Websites, Google Business Profile and local SEO for businesses on your doorstep.',
+      'Local case studies, published prices and what is included, for businesses in Epsom, Ewell, Stoneleigh and Tadworth. See the work and the costs before you call.',
     ogDescription:
       'Websites and local SEO for businesses in Epsom and Ewell, from a web designer based in the town.',
     schemaDescription:
       'Web design and local SEO for businesses in Epsom and Ewell, Surrey.',
 
-    crumb: 'Web design in Epsom',
+    crumb: 'Epsom businesses',
     h1: 'Web design for Epsom businesses',
-    benefit: 'A website that brings in local enquiries, from a web designer based in the town.',
+    benefit: 'Local case studies and published prices, for businesses in Epsom and Ewell.',
     heroCopy:
-      'I build websites and handle local SEO for businesses in Epsom, Ewell, Stoneleigh and Tadworth. The copy is written for you, the SEO groundwork is included, and because I am based here, meeting in person is easy.',
+      'This page shows the work I have done for local businesses and what each package costs. For an overview of everything I offer, start with my main page on <a href="/">web design in Epsom</a>. I work with businesses in Epsom, Ewell, Stoneleigh and Tadworth, and because I am based here, meeting in person is easy.',
     role: 'Based in Epsom, working with local businesses',
 
     projects: ['stpauls', 'cs', 'modernus'],

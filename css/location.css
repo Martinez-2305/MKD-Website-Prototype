@@ -280,6 +280,8 @@ body > footer {
 .hero-intro h1 { font-family:var(--serif); font-size:clamp(2.3rem, 3.9vw, 3.4rem); font-weight:300; color:var(--ink); line-height:1.08; letter-spacing:-0.02em; margin-bottom:16px; text-wrap:balance; }
 .lp-benefit { font-family:var(--serif); font-style:italic; font-size:clamp(1.2rem, 1.7vw, 1.45rem); line-height:1.35; color:var(--ink); opacity:0.92; margin-bottom:16px; text-wrap:balance; }
 .hero-lede { font-size:1rem; color:var(--ink); opacity:0.86; max-width:560px; line-height:1.7; margin-bottom:24px; }
+.hero-lede a { color:var(--ink); font-weight:600; text-decoration:underline; text-decoration-color:var(--red-text); text-underline-offset:3px; }
+.hero-lede a:hover { color:#fff; }
 .btn-hero-primary { display:inline-block; background:var(--red); color:#fff; font-size:0.9rem; font-weight:600; padding:14px 28px; border-radius:100px; transition:background .2s; }
 .btn-hero-primary:hover { background:var(--red-mid); }
 .hero-jump { display:none; margin-bottom:28px; }

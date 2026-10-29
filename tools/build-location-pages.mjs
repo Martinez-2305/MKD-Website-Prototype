@@ -29,7 +29,9 @@ const BASE = 'https://www.martkamdigital.com';
 /* Every area page that exists, with the label it is linked by. Related-area
    links only ever point at these, so no link lands on an unrelated page. */
 const AREA_PAGES = {
-  epsom: 'Web design in Epsom',
+  // Not "Web design in Epsom": that wording belongs to the homepage, which
+  // ranks for it (Search Console, 2026-10-29). See location-content.mjs.
+  epsom: 'Epsom case studies & prices',
   sutton: 'Web design in Sutton',
   cheam: 'Web design in Cheam',
   kingston: 'Web design in Kingston',
@@ -432,7 +434,7 @@ function page(t) {
         inLanguage: 'en-GB',
         isPartOf: { '@id': `${BASE}/#website` },
         breadcrumb: { '@id': `${url}#breadcrumb` },
-        publisher: { '@id': `${BASE}/#organization` },
+        publisher: { '@id': `${BASE}/#business` },
       },
       {
         '@type': 'FAQPage',
@@ -451,7 +453,7 @@ function page(t) {
         description: plain(t.schemaDescription),
         url,
         areaServed: { '@type': 'Place', name: `${t.fullName}, ${t.region}` },
-        provider: { '@id': `${BASE}/#organization` },
+        provider: { '@id': `${BASE}/#business` },
         offers: [
           { '@type': 'Offer', name: 'Starter Site', price: '299', priceCurrency: 'GBP' },
           { '@type': 'Offer', name: 'Growth Site', price: '599', priceCurrency: 'GBP' },
@@ -926,7 +928,7 @@ function seoPage() {
         serviceType: 'Search engine optimisation',
         description: 'Keyword research, new and improved pages every month, technical checks, Google Business Profile management and plain-English reporting for small businesses.',
         url,
-        provider: { '@id': `${BASE}/#organization` },
+        provider: { '@id': `${BASE}/#business` },
         areaServed: [{ '@type': 'Place', name: 'Surrey' }, { '@type': 'Place', name: 'South West London' }, { '@type': 'Country', name: 'United Kingdom' }],
         offers: [
           { '@type': 'Offer', name: 'SEO Retainer', price: '199', priceCurrency: 'GBP', description: 'Monthly' },
@@ -1179,7 +1181,7 @@ ${SEO_FAQS.map((f, i) => `        <div class="faq-item">
         <h2>SEO by area</h2>
         <ul>
           <li><a href="web-design-byfleet.html">Local SEO in Byfleet &amp; West Byfleet</a><span>Local SEO first, plus web design</span></li>
-          <li><a href="web-design-epsom.html">Web design in Epsom</a><span>Where I am based</span></li>
+          <li><a href="web-design-epsom.html">Epsom case studies &amp; prices</a><span>Where I am based</span></li>
           <li><a href="index.html#areas">Every area I cover</a><span>The full list, across Surrey and South West London</span></li>
         </ul>
       </div>

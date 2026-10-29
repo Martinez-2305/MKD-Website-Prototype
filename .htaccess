@@ -1,0 +1,23 @@
+# MartKam Digital: Apache / LiteSpeed rules for Hostinger.
+# Note: while the site is still served by Vercel this file is ignored there.
+# It takes effect once the site is deployed to Hostinger.
+
+RewriteEngine On
+
+# One permanent hop to https://www.martkamdigital.com for every other
+# combination (http, non-www, or both). Only the live domain is matched, so a
+# Hostinger preview domain is left alone. X-Forwarded-Proto covers requests
+# that reach the server through Hostinger's CDN.
+RewriteCond %{HTTP_HOST} ^martkamdigital\.com$ [NC]
+RewriteRule ^ https://www.martkamdigital.com%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^www\.martkamdigital\.com$ [NC]
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://www.martkamdigital.com%{REQUEST_URI} [L,R=301]
+
+# Keep working files out of public reach: editor and tool settings, build
+# scripts, notes and package files. They are in the repo, not the website.
+RewriteRule ^(\.claude|\.github|\.impeccable|\.agents|\.vscode|tools|node_modules)(/|$) - [R=404,L]
+RewriteRule \.(md|mjs|lock)$ - [R=404,L]
+RewriteRule ^(package(-lock)?\.json|skills-lock\.json)$ - [R=404,L]
