@@ -251,7 +251,7 @@ const navBlock = (active = '') => `<a class="skip-link" href="#main">Skip to con
     <a href="portfolio.html" class="tl-item${active === 'portfolio' ? ' active' : ''}"${active === 'portfolio' ? ' aria-current="page"' : ''}>Client Portfolio</a>
     <a href="reviews.html" class="tl-item">Reviews</a>
     <a href="about.html" class="tl-item">About Me</a>
-    <a href="services.html" class="tl-item">Services</a>
+    <a href="services.html" class="tl-item${active === 'services' ? ' active' : ''}"${active === 'services' ? ' aria-current="page"' : ''}>Services</a>
     <a href="pricing.html" class="tl-item">Pricing</a>
     <a href="index.html#contact" class="tl-item">Contact</a>
   </div>
@@ -995,7 +995,7 @@ ${JSON.stringify(graph, null, 2)}
 </head>
 <body class="lp">
 
-${navBlock()}
+${navBlock('services')}
 <main id="main">
 
 <!-- HERO -->

@@ -684,7 +684,7 @@ p, li, .faq-answer { text-wrap:pretty; } /* no single dangling word on a paragra
     <a href="reviews.html" class="tl-item">Reviews</a>
     <a href="about.html" class="tl-item">About Me</a>
     <a href="services.html" class="tl-item">Services</a>
-    <a href="pricing.html" class="tl-item">Pricing</a>
+    <a href="pricing.html" class="tl-item active" aria-current="page">Pricing</a>
     <a href="index.html#contact" class="tl-item">Contact</a>
   </div>
   <a href="index.html#contact" class="nav-cta">Let's Talk</a>
@@ -1092,6 +1092,8 @@ tlItems.forEach(item => {
   item.addEventListener('mouseenter', () => movePill(item));
   item.addEventListener('mouseleave', () => { const a = tlNav.querySelector('.tl-item.active'); if (a) movePill(a); });
 });
+const activeItem = tlNav.querySelector('.tl-item.active');
+if (activeItem) requestAnimationFrame(() => movePill(activeItem));
 const hamBtn = document.getElementById('hamBtn');
 const mobMenu = document.getElementById('mobMenu');
 hamBtn.addEventListener('click', () => { hamBtn.classList.toggle('open'); mobMenu.classList.toggle('open'); });

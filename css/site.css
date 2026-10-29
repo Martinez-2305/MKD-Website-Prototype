@@ -16,6 +16,13 @@ main:focus { outline: none; }
 /* Menu button: a full 44px tap area */
 .ham-btn { min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
 
+/* Pages with no nav item of their own (town pages, privacy, terms): keep the
+   sliding highlight out of sight until the visitor points at the nav, instead
+   of leaving it parked at its starting position by "Home". */
+.tl-bg-pill, .tl-lamp-wrap { transition-property: left, top, width, height, opacity; }
+.tubelight-nav:not(:has(.tl-item.active)):not(:hover):not(:focus-within) .tl-bg-pill,
+.tubelight-nav:not(:has(.tl-item.active)):not(:hover):not(:focus-within) .tl-lamp-wrap { opacity: 0; }
+
 /* A closed mobile menu cannot be reached with the keyboard */
 .mob-menu:not(.open) { visibility: hidden; }
 .mob-menu.open { visibility: visible; }
