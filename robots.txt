@@ -1,4 +1,46 @@
+# robots.txt for MartKam Digital
+# https://www.martkamdigital.com
+#
+# /404.html is deliberately not disallowed: it carries a noindex tag, and a
+# crawler has to be able to fetch a page to see that.
+
+# Default: allow all search engines
 User-agent: *
+Allow: /
+Disallow: /tools/
+Disallow: /docs/
+
+# Named search crawlers: same policy. A crawler that matches its own group
+# ignores the "*" group entirely, so the rules are repeated here.
+User-agent: Googlebot
+User-agent: Googlebot-Image
+User-agent: Bingbot
+User-agent: Applebot
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /tools/
+Disallow: /docs/
+
+# AI and generative-search crawlers: explicitly welcome, so the site can be
+# read and cited by ChatGPT, Claude, Perplexity, Copilot and AI Overviews.
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: anthropic-ai
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Google-CloudVertexBot
+User-agent: Applebot-Extended
+User-agent: Amazonbot
+User-agent: meta-externalagent
+User-agent: MistralAI-User
+User-agent: cohere-ai
+User-agent: CCBot
 Allow: /
 Disallow: /tools/
 Disallow: /docs/
