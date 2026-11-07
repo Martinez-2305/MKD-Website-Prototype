@@ -116,3 +116,62 @@ main:focus { outline: none; }
   .tl-bg-pill, .tl-lamp-wrap { transition: none !important; }
   .value-card:hover, .svc-card:hover, .why-card:hover, .btn-cta:hover, .btn-primary:hover { transform: none !important; }
 }
+
+/* ===== SEO DROPDOWN (desktop nav) =====
+   "SEO" sits in the tubelight nav like any other item; its area pages open
+   on hover or keyboard focus. Markup is in tools/build-location-pages.mjs
+   (SEO_DROP) and copied into the hand-written pages. */
+.tl-drop { position: relative; display: flex; }
+.tl-caret {
+  display: inline-block; width: 0; height: 0; margin-left: 6px; vertical-align: 2px;
+  border-left: 4px solid transparent; border-right: 4px solid transparent;
+  border-top: 5px solid currentColor; opacity: 0.7;
+}
+.tl-menu {
+  position: absolute; top: calc(100% + 10px); left: 50%; z-index: 400;
+  min-width: 250px; padding: 8px;
+  background: #0d0101; border: 1px solid var(--border, #3a0808);
+  border-radius: 16px; box-shadow: 0 18px 48px rgba(0, 0, 0, 0.55);
+  transform: translate(-50%, -4px);
+  display: flex; flex-direction: column; gap: 2px;
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity .18s ease, transform .18s ease, visibility 0s linear .18s;
+}
+/* Invisible bridge over the gap, so the menu stays open on the way down */
+.tl-menu::before { content: ""; position: absolute; left: 0; right: 0; top: -14px; height: 14px; }
+.tl-drop:hover .tl-menu, .tl-drop:focus-within .tl-menu {
+  opacity: 1; visibility: visible; pointer-events: auto;
+  transform: translate(-50%, 0); transition-delay: 0s;
+}
+.tl-menu a {
+  display: block; padding: 10px 16px; border-radius: 10px; white-space: nowrap;
+  font-size: 0.84rem; font-weight: 600; color: var(--ink-light, #c4a8a8); text-decoration: none;
+  transition: color .15s, background .15s;
+}
+.tl-menu a:hover, .tl-menu a:focus-visible { color: var(--red-text, #ff3b41); background: rgba(227, 27, 35, 0.08); }
+.tl-menu a[aria-current="page"] { color: var(--red-text, #ff3b41); }
+
+/* Mobile menu: SEO areas listed under "SEO", smaller and indented. The menu
+   scrolls if a short phone cannot fit every item. */
+.mob-menu { overflow-y: auto; justify-content: flex-start; }
+.mob-menu-inner { margin: auto 0; padding: 72px 0 40px; }
+.mob-sub { display: flex; flex-direction: column; align-items: center; margin: -6px 0 6px; }
+.mob-item.mob-sub-item {
+  font-size: 1.05rem; padding: 6px 32px; color: var(--ink-light, #c4a8a8);
+}
+.mob-item.mob-sub-item:hover { color: var(--red-text, #ff3b41); }
+
+/* Footer: four columns now there is an SEO Services column. */
+@media (min-width: 981px) {
+  .footer-top { grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px; }
+}
+
+/* The fixed nav bar clips overflow on every page; on desktop it must let the
+   SEO dropdown hang below it. */
+@media (min-width: 981px) { nav { overflow: visible; } }
+
+/* Eight nav items: tighter spacing on small laptops so "Let's Talk" keeps its size. */
+@media (min-width: 981px) and (max-width: 1199px) {
+  .tl-item { padding: 8px 12px; }
+  .nav-cta { flex-shrink: 0; }
+}

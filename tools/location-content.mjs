@@ -98,9 +98,11 @@ export const TOWNS = [
     // Search Console showed SEO-led demand here, so this page leads on SEO.
     focus: 'seo',
 
-    title: 'Local SEO & Web Design Byfleet & West Byfleet | MartKam Digital',
+    // Retitled 2026-11-07: ranks 3.5 for "seo west byfleet" with no clicks, so
+    // the snippet now leads with that search. Keep the URL: it holds the ranking.
+    title: 'SEO West Byfleet & Byfleet | Local SEO Services | MartKam Digital',
     description:
-      'Local SEO and web design for businesses in Byfleet and West Byfleet. The SEO setup in every build, an optional monthly plan, and reporting you can check yourself.',
+      'Local SEO for Byfleet and West Byfleet businesses: keyword research, a new page every month, Google Business Profile and plain-English reports. From £199 a month.',
     ogDescription:
       'Local SEO and web design for Byfleet and West Byfleet businesses, with the work and the numbers visible to you.',
     schemaDescription:
@@ -614,7 +616,7 @@ export const TOWNS = [
     introHeading: 'A Sutton client, <em>and what the work involved</em>',
     intro: [
       'C&amp;S Cleaning Services is based in Sutton and cleans the communal areas of blocks of flats across Surrey and South West London. They had no website and no Google presence. I built their logo, their website and their Google Business Profile, aimed at the building managers and landlords who award that work.',
-      'In the first three months after launch the site had over 5,000 search impressions, around 50 clicks, enquiries coming in, and one paid job won through it. <a href="case-study-cs-cleaning.html">The case study has the details</a>.',
+      'In the first three months after launch the site went from no Google presence to over 5,000 search impressions and around 50 clicks, and it is generating enquiries. <a href="case-study-cs-cleaning.html">The case study has the details</a>.',
       'For most Sutton businesses the website design follows the same pattern: a clear home page, a page for each main service, pages for the parts of the borough you actually cover, and a quick way to call or send an enquiry. Location and service pages come with the <a href="pricing.html">Growth package</a>.',
     ],
     whoFor: [

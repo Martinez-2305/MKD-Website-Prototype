@@ -22,6 +22,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { TOWNS } from './location-content.mjs';
+import { SEO_AREAS } from './seo-area-content.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const BASE = 'https://www.martkamdigital.com';
@@ -78,7 +79,7 @@ const PROJECTS = {
     img: 'work-cs',
     alt: 'Home page of the C&amp;S Cleaning Services website',
     brief: 'A communal block cleaning contractor for managing agents, landlords and freeholders, starting from no website and no Google presence. The site now shows the blocks they clean across Epsom, Sutton, Wimbledon and Kingston, what each visit covers, and their accreditations and insurance, so a property manager can check them before calling.',
-    outcome: 'First three months after launch: <strong>over 5,000 search impressions</strong>, <strong>around 50 clicks</strong>, enquiries coming in, and <strong>one paid job</strong> won through the site.',
+    outcome: 'First three months after launch: <strong>over 5,000 search impressions</strong> and <strong>around 50 clicks</strong>, and the site is generating enquiries.',
     links: [{ href: 'https://www.cs-cleaningservices.co.uk/', label: 'Visit the live site', ext: true }, { href: 'case-study-cs-cleaning.html', label: 'Read the case study' }],
   },
   stpauls: {
@@ -238,6 +239,33 @@ const tierSeo = `      <div class="lp-inc-card">
       </div>`;
 
 
+/* SEO in the nav and footer. The same markup is copied into the hand-written
+   pages (index, about, services, pricing and so on), so if the list changes,
+   change it there too. */
+const SEO_LINKS = [
+  ['seo-services.html', 'Local SEO services'],
+  ['web-design-byfleet.html', 'SEO in Byfleet &amp; West Byfleet'],
+  ['seo-epsom.html', 'SEO in Epsom'],
+  ['seo-wimbledon.html', 'SEO in Wimbledon'],
+];
+const SEO_DROP = (isActive = false) => `    <div class="tl-drop">
+      <a href="seo-services.html" class="tl-item${isActive ? ' active' : ''}"${isActive ? ' aria-current="page"' : ''}>SEO<span class="tl-caret" aria-hidden="true"></span></a>
+      <div class="tl-menu">
+${SEO_LINKS.map(([h, l]) => `        <a href="${h}">${l}</a>`).join('\n')}
+      </div>
+    </div>`;
+const SEO_MOB = `    <a href="seo-services.html" class="mob-item">SEO</a>
+    <div class="mob-sub">
+${SEO_LINKS.slice(1).map(([h, l]) => `      <a href="${h}" class="mob-item mob-sub-item">${l.replace('SEO in ', '')}</a>`).join('\n')}
+    </div>`;
+const SEO_FOOTER_COL = (tag = 'h3') => `    <div class="footer-col">
+      <${tag}>SEO Services</${tag}>
+      <ul>
+${SEO_LINKS.map(([h, l]) => `        <li><a href="${h}">${l}</a></li>`).join('\n')}
+        <li><a href="pricing.html#seo-retainer">SEO prices</a></li>
+      </ul>
+    </div>`;
+
 /* Shared page chrome: used by every location page and the portfolio page. */
 const navBlock = (active = '') => `<a class="skip-link" href="#main">Skip to content</a>
 
@@ -252,6 +280,7 @@ const navBlock = (active = '') => `<a class="skip-link" href="#main">Skip to con
     <a href="reviews.html" class="tl-item">Reviews</a>
     <a href="about.html" class="tl-item">About Me</a>
     <a href="services.html" class="tl-item${active === 'services' ? ' active' : ''}"${active === 'services' ? ' aria-current="page"' : ''}>Services</a>
+${SEO_DROP(active === 'seo')}
     <a href="pricing.html" class="tl-item">Pricing</a>
     <a href="index.html#contact" class="tl-item">Contact</a>
   </div>
@@ -269,6 +298,7 @@ const navBlock = (active = '') => `<a class="skip-link" href="#main">Skip to con
     <a href="reviews.html" class="mob-item">Reviews</a>
     <a href="about.html" class="mob-item">About Me</a>
     <a href="services.html" class="mob-item">Services</a>
+${SEO_MOB}
     <a href="pricing.html" class="mob-item">Pricing</a>
     <a href="index.html#contact" class="mob-item">Contact</a>
     <a href="#enquire" class="mob-cta">Let's Talk</a>
@@ -306,6 +336,7 @@ const footerBlock = () => `<footer>
         <li><a href="case-study-cs-cleaning.html">C&amp;S Cleaning case study</a></li>
       </ul>
     </div>
+${SEO_FOOTER_COL('h3')}
     <div class="footer-col">
       <h3>Areas I cover</h3>
       <ul>
@@ -510,7 +541,7 @@ ${JSON.stringify(graph, null, 2)}
 </head>
 <body class="lp">
 
-${navBlock()}
+${navBlock(t.focus === 'seo' ? 'seo' : '')}
 <main id="main">
 
 <!-- HERO: copy left, enquiry form right; stacked on phones -->
@@ -530,7 +561,7 @@ ${navBlock()}
             <span class="hero-by-role">${t.role}</span>
           </span>
         </div>
-        <p class="hero-proof">C&amp;S Cleaning Services, a communal cleaning contractor based in Sutton, received enquiries and won a paid job through their new website within three months of launch. <a href="case-study-cs-cleaning.html">Read the case study</a></p>
+        <p class="hero-proof">C&amp;S Cleaning Services, a communal cleaning contractor based in Sutton, went from no Google presence to over 5,000 search impressions and around 50 clicks within three months, and the site is generating enquiries. <a href="case-study-cs-cleaning.html">Read the case study</a></p>
         <div class="hero-links">
           <a href="pricing.html">See packages &amp; prices</a>
           <a href="#work">View my work</a>
@@ -876,14 +907,21 @@ ${footerBlock()}
    pricing.html: the SEO Retainer (£199/month), the SEO setup in every build,
    standalone Google Business Profile (£149 one-off), and SEO for sites I did
    not build (free audit first). */
+/* Shared by the SEO hub and the seo-<town> pages, so the answer cannot drift. */
+const SEO_TIME_ANSWER = 'Early movement, such as new searches your site starts appearing for, often shows within weeks. Results that bring in steady enquiries usually take 3 to 6 months, depending on your competition and how much there is to build. As one real example, C&amp;S Cleaning Services, a new site with no history, went from no Google presence to over 5,000 search impressions and around 50 clicks within three months, and the site is generating enquiries. I do not promise a ranking by a date.';
+
 const SEO_FAQS = [
   {
     q: 'Do you guarantee rankings?',
     a: 'No, and nobody honest can. Rankings depend on your competitors, your area, your reviews and changes Google makes without warning. What I promise is the monthly work: if a month passes without it, that month is free.',
   },
   {
-    q: 'How long before I see results?',
-    a: 'It depends on your competition and how much there is to build. As one real example, C&amp;S Cleaning Services, a new site with no history, had over 5,000 search impressions, around 50 clicks, enquiries and one paid job in its first three months.',
+    q: 'How much does local SEO cost in Surrey?',
+    a: 'The SEO Retainer is <strong>£199 a month</strong>, the same wherever you are in Surrey or South West London. The first term is 3 months, then it rolls monthly with 30 days&rsquo; notice. The SEO setup is included in every website I build, a standalone Google Business Profile setup is £149 one-off, and an audit of a site I did not build is free. I am not VAT registered, so the price you see is the price you pay. <a href="pricing.html#seo-retainer">Full SEO Retainer terms</a>.',
+  },
+  {
+    q: 'How long does SEO take to work?',
+    a: SEO_TIME_ANSWER,
   },
   {
     q: 'Can you do SEO on a website you did not build?',
@@ -995,7 +1033,7 @@ ${JSON.stringify(graph, null, 2)}
 </head>
 <body class="lp">
 
-${navBlock('services')}
+${navBlock('seo')}
 <main id="main">
 
 <!-- HERO -->
@@ -1015,7 +1053,7 @@ ${navBlock('services')}
             <span class="hero-by-role">Based in Epsom, running SEO for small businesses</span>
           </span>
         </div>
-        <p class="hero-proof">C&amp;S Cleaning Services, a communal cleaning contractor based in Sutton, had over 5,000 search impressions and won a paid job through their new website within three months of launch. <a href="case-study-cs-cleaning.html">Read the case study</a></p>
+        <p class="hero-proof">C&amp;S Cleaning Services, a communal cleaning contractor based in Sutton, went from no Google presence to over 5,000 search impressions and around 50 clicks within three months, and the site is generating enquiries. <a href="case-study-cs-cleaning.html">Read the case study</a></p>
         <div class="hero-links">
           <a href="#prices">SEO prices</a>
           <a href="#monthly">What happens each month</a>
@@ -1084,7 +1122,7 @@ ${projectCard('cs')}
         <div class="work-sector">From Google Search Console</div>
         <p class="work-outcome"><strong>Over 5,000</strong> search impressions</p>
         <p class="work-outcome"><strong>Around 50</strong> clicks to the site</p>
-        <p class="work-outcome"><strong>Enquiries</strong> coming in, and <strong>one paid job</strong> won through the site</p>
+        <p class="work-outcome"><strong>Enquiries</strong> coming in through the site</p>
         <div class="work-links"><a href="case-study-cs-cleaning.html">Read the full case study &rarr;</a></div>
       </div></article>
       <article class="work-card"><div class="work-body">
@@ -1180,8 +1218,9 @@ ${SEO_FAQS.map((f, i) => `        <div class="faq-item">
       <div>
         <h2>SEO by area</h2>
         <ul>
-          <li><a href="web-design-byfleet.html">Local SEO in Byfleet &amp; West Byfleet</a><span>Local SEO first, plus web design</span></li>
-          <li><a href="web-design-epsom.html">Epsom case studies &amp; prices</a><span>Where I am based</span></li>
+          <li><a href="web-design-byfleet.html">SEO in Byfleet &amp; West Byfleet</a><span>Local SEO first, plus web design</span></li>
+          <li><a href="seo-epsom.html">SEO in Epsom</a><span>Where I am based</span></li>
+          <li><a href="seo-wimbledon.html">SEO in Wimbledon</a><span>Wimbledon and the rest of Merton</span></li>
           <li><a href="index.html#areas">Every area I cover</a><span>The full list, across Surrey and South West London</span></li>
         </ul>
       </div>
@@ -1204,7 +1243,308 @@ ${footerBlock()}
 `;
 }
 
+/* SEO area pages (seo-<slug>.html), from seo-area-content.mjs. They sit under
+   the SEO hub and link across to the matching web-design page. */
+function seoAreaPage(a) {
+  const url = `${BASE}/seo-${a.slug}.html`;
+  const faqs = a.faqs.map(f => (f.a === 'SHARED_TIME' ? { ...f, a: SEO_TIME_ANSWER } : f));
+  const others = SEO_LINKS.slice(1).filter(([h]) => h !== `seo-${a.slug}.html`);
+  const graph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${url}#breadcrumb`,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE}/` },
+          { '@type': 'ListItem', position: 2, name: 'Local SEO services', item: `${BASE}/seo-services.html` },
+          { '@type': 'ListItem', position: 3, name: `SEO in ${a.town}`, item: url },
+        ],
+      },
+      {
+        '@type': 'WebPage',
+        '@id': `${url}#webpage`,
+        url,
+        name: plain(a.title),
+        description: plain(a.description),
+        inLanguage: 'en-GB',
+        isPartOf: { '@id': `${BASE}/#website` },
+        breadcrumb: { '@id': `${url}#breadcrumb` },
+        publisher: { '@id': `${BASE}/#business` },
+      },
+      {
+        '@type': 'Service',
+        '@id': `${url}#service`,
+        name: `Local SEO services in ${a.town}`,
+        serviceType: 'Search engine optimisation',
+        description: plain(a.schemaDescription),
+        url,
+        areaServed: { '@type': 'Place', name: `${a.town}, ${a.region}` },
+        provider: { '@id': `${BASE}/#business` },
+        offers: [
+          { '@type': 'Offer', name: 'SEO Retainer', price: '199', priceCurrency: 'GBP', description: 'Monthly' },
+          { '@type': 'Offer', name: 'SEO audit for an existing website', price: '0', priceCurrency: 'GBP' },
+        ],
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${url}#faq`,
+        mainEntity: faqs.map(f => ({ '@type': 'Question', name: plain(f.q), acceptedAnswer: { '@type': 'Answer', text: plain(f.a) } })),
+      },
+    ],
+  };
+
+  const included = [
+    ['Keyword research', `On the searches your customers actually use, ${a.searchExamples}.`],
+    ['Service and area pages', 'Written for those searches, one page per service or area worth winning, not one page with a list of place names.'],
+    ['Google Business Profile', 'Set up properly, with the right categories and service areas, then kept active with posts and review management.'],
+    ['A technical pass every month', 'Page speed, indexing, broken links and structured data checked and fixed.'],
+    ['A plain-English report', 'Clicks, enquiries and what is changing next, every month, without needing a call to explain it.'],
+  ];
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+<title>${a.title}</title>
+<meta name="description" content="${a.description}">
+<meta name="robots" content="index, follow">
+<meta name="geo.region" content="${a.geoRegion}">
+<meta name="geo.placename" content="${a.town}, ${a.region}">
+<link rel="canonical" href="${url}">
+<script type="application/ld+json">
+${JSON.stringify(graph, null, 2)}
+</script>
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="${url}">
+<meta property="og:title" content="${a.h1} | MartKam Digital">
+<meta property="og:description" content="${a.ogDescription}">
+<meta property="og:image" content="${BASE}/img/og-image-2026.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A laptop and phone showing a website built by MartKam Digital">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${BASE}/img/og-image-2026.jpg">
+
+<link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-latin.woff2') format('woff2');}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-italic-latin.woff2') format('woff2');}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:300 600;font-display:swap;src:url('fonts/dmsans-latin.woff2') format('woff2');}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+</style>
+
+<link rel="stylesheet" href="css/location.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body class="lp">
+
+${navBlock('seo')}
+<main id="main">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-intro">
+      <p class="lp-crumbs"><a href="/">Home</a><span aria-hidden="true">&rsaquo;</span><a href="seo-services.html">Local SEO services</a><span aria-hidden="true">&rsaquo;</span>SEO in ${a.town}</p>
+      <h1>${a.h1}</h1>
+      <p class="lp-benefit">${a.benefit}</p>
+      <p class="hero-lede">${a.heroCopy}</p>
+      <a href="#enquire" class="btn-hero-primary hero-jump">Enquire about SEO</a>
+      <div class="hero-trust">
+        <div class="hero-by">
+          <img decoding="async" width="240" height="240" src="img/martin-face-240.webp" alt="Martin Kaminski, founder of MartKam Digital" class="hero-by-photo">
+          <span class="hero-by-text">
+            <span class="hero-by-name">Martin Kaminski</span>
+            <span class="hero-by-role">${a.role}</span>
+          </span>
+        </div>
+        <p class="hero-proof">${a.heroProof} <a href="${a.heroProofLink.href}">${a.heroProofLink.label}</a></p>
+        <div class="hero-links">
+          <a href="#prices">SEO prices</a>
+          <a href="#monthly">What happens each month</a>
+        </div>
+      </div>
+    </div>
+
+${enquiryCard(`seo_${a.slug}_hero`, `New SEO enquiry from the ${a.town} SEO page`, `SEO page: ${a.town}`)}
+  </div>
+</section>
+
+<!-- LOCAL INTRODUCTION -->
+<section class="section" id="local">
+  <div class="wrap">
+    <h2 class="section-title">${a.introHeading}</h2>
+    <div class="lp-intro-grid">
+      <div class="lp-prose">
+${a.intro.map(p => `        <p>${p}</p>`).join('\n')}
+      </div>
+      <div class="lp-aside">
+        <div class="lp-note">
+          <h3>Who I usually work with</h3>
+          <ul>
+${a.whoFor.map(w => `            <li>${w}</li>`).join('\n')}
+          </ul>
+        </div>
+        <div class="lp-note">
+          <h3>Areas I cover around ${a.town}</h3>
+          <p>${a.areas}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS INCLUDED -->
+<section class="section lp-inc" id="included">
+  <div class="wrap">
+    <h2 class="section-title">What local SEO <em>includes</em></h2>
+    <div class="lp-cols3">
+${included.map(([h, p]) => `      <div class="lp-box"><h3>${h}</h3><p>${p}</p></div>`).join('\n')}
+    </div>
+  </div>
+</section>
+
+<!-- EACH MONTH -->
+<section class="section" id="monthly">
+  <div class="wrap">
+    <h2 class="section-title">How the monthly work <em>runs</em></h2>
+    <p class="section-intro">Each month I review your Search Console and Bing data, publish one new page or rewrite an existing one where the data says it will move faster, run the technical checks and send the report. If a month passes without that work, that month is free.</p>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="work" id="results">
+  <div class="wrap">
+    <div class="work-head">
+      <h2>${a.resultsHeading}</h2>
+${a.resultsIntro.map(p => `      <p>${p}</p>`).join('\n')}
+    </div>
+    <div class="work-grid">
+${a.projects.map(k => projectCard(k)).join('\n')}
+    </div>
+  </div>
+</section>
+
+<!-- PRICES -->
+<section class="section" id="prices">
+  <div class="wrap">
+    <h2 class="section-title">SEO prices <em>for ${a.town} businesses</em></h2>
+    <p class="section-intro">The same prices wherever you are. I am not VAT registered, so the price you see is the price you pay.</p>
+    <div class="lp-plans">
+      <div class="lp-plan is-pick">
+        <p class="lp-plan-flag">The ongoing work</p>
+        <h3>SEO Retainer</h3>
+        <p class="lp-price">£199<span style="font-size:1rem;"> a month</span></p>
+        <p>With a Growth or Bookings &amp; Ordering site I built, or on your existing site after a free audit.</p>
+        <ul>
+          <li>Keyword research, one new or improved page a month</li>
+          <li>Technical pass and Google Business Profile posts</li>
+          <li>Up to 1 hour of site changes a month</li>
+          <li>3-month first term, then 30 days&rsquo; notice</li>
+        </ul>
+      </div>
+      <div class="lp-plan">
+        <h3>SEO setup</h3>
+        <p class="lp-price">Included</p>
+        <p>In every website I build, on every package.</p>
+        <ul>
+          <li>Titles, descriptions, headings and schema</li>
+          <li>Sitemap submitted, Search Console in your name</li>
+          <li>Google Business Profile set up or cleaned up</li>
+        </ul>
+      </div>
+      <div class="lp-plan">
+        <h3>SEO audit</h3>
+        <p class="lp-price">Free</p>
+        <p>For a website I did not build.</p>
+        <ul>
+          <li>A plain answer on whether the site can be worked with</li>
+          <li>What is holding it back, in writing</li>
+          <li>No obligation to start the retainer</li>
+        </ul>
+      </div>
+    </div>
+    <p class="lp-small"><a href="pricing.html#seo-retainer">Full SEO Retainer terms</a> &middot; <a href="seo-services.html">Everything about my SEO services</a>.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="faq-layout">
+      <div class="faq-left">
+        <h2 class="faq-title">Questions about<br><em>SEO in ${a.town}</em></h2>
+        <p class="faq-subtitle">Something else on your mind? Ask in the enquiry form and I&rsquo;ll reply personally.</p>
+        <a href="#enquire" class="faq-contact-cta">Ask me a question &rarr;</a>
+      </div>
+      <div class="faq-list">
+${faqs.map((f, i) => `        <div class="faq-item">
+          <button class="faq-btn" aria-expanded="false" aria-controls="faq-${i}">
+            <span class="faq-question">${f.q}</span>
+            <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+          </button>
+          <div class="faq-body" id="faq-${i}"><div class="faq-body-inner">
+            <p class="faq-answer">${f.a}</p>
+          </div></div>
+        </div>`).join('\n')}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section class="lp-related">
+  <div class="wrap">
+    <div class="lp-related-grid">
+      <div>
+        <h2>Related services</h2>
+        <ul>
+          <li><a href="seo-services.html">Local SEO services</a><span>The full picture: what is included, the monthly work and prices</span></li>
+          <li><a href="${a.webDesignPage.href}">${a.webDesignPage.label}</a><span>${a.webDesignPage.note}</span></li>
+          <li><a href="/">Web design in Epsom</a><span>Websites with the SEO groundwork built in</span></li>
+          <li><a href="case-study-cs-cleaning.html">C&amp;S Cleaning Services case study</a><span>The first three months after launch, with the numbers</span></li>
+        </ul>
+      </div>
+      <div>
+        <h2>SEO in other areas</h2>
+        <ul>
+${others.map(([h, l]) => `          <li><a href="${h}">${l}</a></li>`).join('\n')}
+          <li><a href="index.html#areas">Every area I cover</a><span>The full list, across Surrey and South West London</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <h2>Tell me about<br><em>your ${a.town} business.</em></h2>
+  <p>Free audit for existing sites &middot; Prices published &middot; One person doing the work</p>
+  <a href="#enquire" class="btn-cta">Go to the enquiry form</a>
+</section>
+
+</main>
+
+${footerBlock()}
+</body>
+</html>
+`;
+}
+
 let written = 0;
+for (const a of SEO_AREAS) {
+  const file = path.join(ROOT, `seo-${a.slug}.html`);
+  fs.writeFileSync(file, seoAreaPage(a), 'utf8');
+  console.log(`  seo-${a.slug}.html  ${(fs.statSync(file).size / 1024).toFixed(1)}KB`);
+}
 {
   const file = path.join(ROOT, 'seo-services.html');
   fs.writeFileSync(file, seoPage(), 'utf8');
