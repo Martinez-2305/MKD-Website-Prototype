@@ -8,6 +8,14 @@ ErrorDocument 404 /404.html
 
 RewriteEngine On
 
+# The homepage has one address: /. A request for /index.html (any scheme or
+# host variant) goes there in a single permanent hop, so Google drops the
+# duplicate. THE_REQUEST is what the browser asked for, so the internal
+# DirectoryIndex lookup for "/" never matches and cannot loop. Anchors such as
+# #contact are kept by the browser across the redirect.
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^index\.html$ https://www.martkamdigital.com/ [L,R=301]
+
 # One permanent hop to https://www.martkamdigital.com for every other
 # combination (http, non-www, or both). Only the live domain is matched, so a
 # Hostinger preview domain is left alone. X-Forwarded-Proto covers requests

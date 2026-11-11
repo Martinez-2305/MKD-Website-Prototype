@@ -282,7 +282,7 @@ const navBlock = (active = '') => `<a class="skip-link" href="#main">Skip to con
     <a href="services.html" class="tl-item${active === 'services' ? ' active' : ''}"${active === 'services' ? ' aria-current="page"' : ''}>Services</a>
 ${SEO_DROP(active === 'seo')}
     <a href="pricing.html" class="tl-item">Pricing</a>
-    <a href="index.html#contact" class="tl-item">Contact</a>
+    <a href="/#contact" class="tl-item">Contact</a>
   </div>
   <a href="#enquire" class="nav-cta">Let's Talk</a>
   <button class="ham-btn" id="hamBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobMenu">
@@ -300,7 +300,7 @@ ${SEO_DROP(active === 'seo')}
     <a href="services.html" class="mob-item">Services</a>
 ${SEO_MOB}
     <a href="pricing.html" class="mob-item">Pricing</a>
-    <a href="index.html#contact" class="mob-item">Contact</a>
+    <a href="/#contact" class="mob-item">Contact</a>
     <a href="#enquire" class="mob-cta">Let's Talk</a>
   </div>
 </div>
@@ -551,7 +551,7 @@ ${navBlock(t.focus === 'seo' ? 'seo' : '')}
 <section class="hero">
   <div class="hero-grid">
     <div class="hero-intro">
-      <p class="lp-crumbs"><a href="/">Home</a><span aria-hidden="true">&rsaquo;</span><a href="index.html#areas">Areas I cover</a><span aria-hidden="true">&rsaquo;</span>${t.crumb}</p>
+      <p class="lp-crumbs"><a href="/">Home</a><span aria-hidden="true">&rsaquo;</span><a href="/#areas">Areas I cover</a><span aria-hidden="true">&rsaquo;</span>${t.crumb}</p>
       <h1>${t.h1}</h1>
       <p class="lp-benefit">${t.benefit}</p>
       <p class="hero-lede">${t.heroCopy}</p>
@@ -758,7 +758,7 @@ ${t.relatedServices.map(k => SERVICE_LINKS[k]).map(l => `          <li><a href="
         <h2>Nearby areas</h2>
         <ul>
 ${areaLinks.map(s => `          <li><a href="web-design-${s}.html">${AREA_PAGES[s].replace(/&(?!amp;)/g, '&amp;')}</a><span>${AREA_NOTES[s]}</span></li>`).join('\n')}
-          <li><a href="index.html#areas">Every area I cover</a><span>The full list, across Surrey and South West London</span></li>
+          <li><a href="/#areas">Every area I cover</a><span>The full list, across Surrey and South West London</span></li>
         </ul>
       </div>
     </div>
@@ -1224,7 +1224,7 @@ ${SEO_FAQS.map((f, i) => `        <div class="faq-item">
           <li><a href="web-design-byfleet.html">SEO in Byfleet &amp; West Byfleet</a><span>Local SEO first, plus web design</span></li>
           <li><a href="seo-epsom.html">SEO in Epsom</a><span>Where I am based</span></li>
           <li><a href="seo-wimbledon.html">SEO in Wimbledon</a><span>Wimbledon and the rest of Merton</span></li>
-          <li><a href="index.html#areas">Every area I cover</a><span>The full list, across Surrey and South West London</span></li>
+          <li><a href="/#areas">Every area I cover</a><span>The full list, across Surrey and South West London</span></li>
         </ul>
       </div>
     </div>
@@ -1520,7 +1520,7 @@ ${faqs.map((f, i) => `        <div class="faq-item">
         <h2>SEO in other areas</h2>
         <ul>
 ${others.map(([h, l]) => `          <li><a href="${h}">${l}</a></li>`).join('\n')}
-          <li><a href="index.html#areas">Every area I cover</a><span>The full list, across Surrey and South West London</span></li>
+          <li><a href="/#areas">Every area I cover</a><span>The full list, across Surrey and South West London</span></li>
         </ul>
       </div>
     </div>
